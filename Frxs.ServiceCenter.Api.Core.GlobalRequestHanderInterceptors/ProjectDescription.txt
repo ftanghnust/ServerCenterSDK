@@ -1,0 +1,8 @@
+﻿
+
+此项目为API接口框架系统全局拦截器实现类；注册全局拦截器请使用
+GlobalRequestHanderInterceptorManager.Add(new GlobalRequestHanderInterceptors.DefaultGlobalRequestHanderInterceptor());
+一般通常在应用程序启动项里进行配置，系统构架会根据拦截器的优先级进行执行拦截
+
+
+使用方式：接口HOST项目直接引用此项目即可，无需任何配置

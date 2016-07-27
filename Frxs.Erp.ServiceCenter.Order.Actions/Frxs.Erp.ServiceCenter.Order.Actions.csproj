@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BD46E1BD-FDA5-4ED5-9C6A-14DC5EA8B0B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Frxs.Erp.ServiceCenter.Order.Actions</RootNamespace>
+    <AssemblyName>Frxs.Erp.ServiceCenter.Order.Actions</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Frxs.ServiceCenter.Api.Host.V20\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Frxs.Erp.ServiceCenter.Order.Host\Config\ActionsDocResource.config</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Frxs.Erp.ServiceCenter.Product.SDK">
+      <HintPath>..\..\Frxs.Erp.ServiceCenter.SDK\Frxs.Erp.ServiceCenter.Product.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Frxs.Erp.ServiceCenter.Promotion.SDK">
+      <HintPath>..\..\Frxs.Erp.ServiceCenter.SDK\Frxs.Erp.ServiceCenter.Promotion.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiPluginDescriptor.cs" />
+    <Compile Include="BuyPreApp\BuyPreAppAddOrEditAction.cs" />
+    <Compile Include="BuyPreApp\BuyPreAppChangeStatusAction.cs" />
+    <Compile Include="BuyPreApp\BuyPreAppDelAction.cs" />
+    <Compile Include="BuyPreApp\BuyPreAppGetListAction.cs" />
+    <Compile Include="BuyPreApp\BuyPreAppGetModelAction.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderPreUpdateLineAction.cs" />
+    <Compile Include="Order\仓库订单\OrderAutoConfirmAction.cs" />
+    <Compile Include="Order\仓库订单\OrderPartsServer.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderSendNumberGetSearchOrderAction.cs" />
+    <Compile Include="Order\仓库订单\SaleEditUpdateStatusListAction.cs" />
+    <Compile Include="Order\仓库订单\SaleEditDeleteListAction.cs" />
+    <Compile Include="Order\仓库订单\SaleEditDeleteAction.cs" />
+    <Compile Include="Order\仓库订单\SaleEditGetAction.cs" />
+    <Compile Include="Order\仓库订单\SaleEditQueryAction.cs" />
+    <Compile Include="Order\仓库订单\OrderPreFinishedAction.cs" />
+    <Compile Include="Order\仓库订单\OrderPrePrintAction.cs" />
+    <Compile Include="Order\仓库订单\SaleEditUpdateStatusAction.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderPreGetAction.cs" />
+    <Compile Include="Order\仓库订单\OrderPreCancelAction.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderPreDelAction.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderSendNumberChangeShopOrderAction.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderSendNumberShopListAction.cs" />
+    <Compile Include="Order\仓库订单\vSaleOrderGetAction.cs" />
+    <Compile Include="Order\仓库订单\vSaleOrderQueryAction.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderGetTrackAction.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderAddTrackAction.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderPreSendNumberAction.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderPreAddOrEditAction.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderPreQueryAction.cs" />
+    <Compile Include="Order\仓库订单\vSaleOrderGetExtAction.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderSendNumberLineListAction.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderSendNumberChangeLineOrderAction.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchase\采购订单\BuyOrderPreChangeStatusAction.cs" />
+    <Compile Include="Purchase\采购订单\BuyOrderPreDelAction.cs" />
+    <Compile Include="Purchase\采购订单\BuyOrderPreGetListAction.cs" />
+    <Compile Include="Purchase\采购订单\BuyOrderPreGetModelAction.cs" />
+    <Compile Include="Purchase\采购订单\BuyOrderPreAddOrEditAction.cs" />
+    <Compile Include="Purchase\采购退货\BuyBackPreChangeStatusAction.cs" />
+    <Compile Include="Purchase\采购退货\BuyBackPreDelAction.cs" />
+    <Compile Include="Purchase\采购退货\BuyBackPreGetListAction.cs" />
+    <Compile Include="Purchase\采购退货\BuyBackPreGetModelAction.cs" />
+    <Compile Include="Purchase\采购退货\BuyBackPreAddOrEditAction.cs" />
+    <Compile Include="Order\销售退货\SaleBackPreAddOrEditAction.cs" />
+    <Compile Include="Order\销售退货\SaleBackPreChangeStatusAction.cs" />
+    <Compile Include="Order\销售退货\SaleBackPreDelAction.cs" />
+    <Compile Include="Order\销售退货\SaleBackPreGetListAction.cs" />
+    <Compile Include="Order\销售退货\SaleBackPreGetModelAction.cs" />
+    <Compile Include="RequestDto\BuyOrderPreRequestDto.cs" />
+    <Compile Include="RequestDto\BuyBackPreRequestDto.cs" />
+    <Compile Include="Order\仓库订单\SaleEditAddOrEditAction.cs" />
+    <Compile Include="RequestDto\Order\SaleOrderPreUpdateLineRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleEditAddRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleEditBaseRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleEditDetailExtsRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleEditDetailsRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleEditOrderRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleEditQueryRequestDto.cs" />
+    <Compile Include="RequestDto\Order\OrderPrintRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleEditModelRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleEditUpdateStatusRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleOrderPreShelfAreaRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleOrderPreDetailsPickRequestDto.cs" />
+    <Compile Include="RequestDto\Order\OrderCancelRequestDto.cs" />
+    <Compile Include="RequestDto\Order\OrderBaseRequestDto.cs" />
+    <Compile Include="RequestDto\Order\OrderTrackAddRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleOrderPreAddOrEditRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleOrderPreBaseRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleOrderSendNumberChangeLineOrderRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleOrderSendNumberGetSearchOrderRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleOrderSendNumberLineListRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleOrderSendNumberShopListRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleOrderSendNumberChangeShopOrderRequestDto.cs" />
+    <Compile Include="RequestDto\SettlementRequsetDto.cs" />
+    <Compile Include="ResponseDto\Order\SaleOrderSendNumberChangeLineOrderResponseDto.cs" />
+    <Compile Include="ResponseDto\Order\SaleOrderSendNumberGetSearchOrderResponseDto.cs" />
+    <Compile Include="ResponseDto\Order\SaleOrderSendNumberOrderResponseDto.cs" />
+    <Compile Include="RequestDto\RequestDtoParent.cs" />
+    <Compile Include="RequestDto\SaleBackPreRequestDto.cs" />
+    <Compile Include="RequestDto\SaleFeeRequestDto.cs" />
+    <Compile Include="RequestDto\SaleSettleRequestDto.cs" />
+    <Compile Include="RequestDto\ReportGetRequestDto.cs" />
+    <Compile Include="ResponseDto\BuyOrderPreResponseDto.cs" />
+    <Compile Include="ResponseDto\BuyBackPreResponseDto.cs" />
+    <Compile Include="ResponseDto\Order\SaleEditDetailExtsResponseDto.cs" />
+    <Compile Include="ResponseDto\Order\SaleEditDetailResponseDto.cs" />
+    <Compile Include="ResponseDto\Order\SaleEditGetResponseDto.cs" />
+    <Compile Include="ResponseDto\Order\SaleEditOrderResponseDto.cs" />
+    <Compile Include="ResponseDto\Order\SaleEditQueryResponseDto.cs" />
+    <Compile Include="ResponseDto\Order\SaleEditResponseDto.cs" />
+    <Compile Include="ResponseDto\Order\SaleOrderTracksGetResponseDto.cs" />
+    <Compile Include="ResponseDto\Order\SaleOrderPreGetResponseDto.cs" />
+    <Compile Include="ResponseDto\Order\SaleOrderPreQueryResponseDto.cs" />
+    <Compile Include="ResponseDto\Order\SaleOrderPreResponseDto.cs" />
+    <Compile Include="ResponseDto\Order\SaleOrderSendNumberChangeShopOrderResponseDto.cs" />
+    <Compile Include="ResponseDto\SaleBackPreResponseDto.cs" />
+    <Compile Include="ResponseDto\SaleFeeResponseDto.cs" />
+    <Compile Include="ResponseDto\SaleSettleResponseDto.cs" />
+    <Compile Include="SaleFee\门店费用\SaleFeeAddOrEditAction.cs" />
+    <Compile Include="SaleFee\门店费用\SaleFeeChangeStatusAction.cs" />
+    <Compile Include="SaleFee\门店费用\SaleFeeDelAction.cs" />
+    <Compile Include="SaleFee\门店费用\SaleFeeGetListAction.cs" />
+    <Compile Include="SaleFee\门店费用\SaleFeeGetModelAction.cs" />
+    <Compile Include="SaleFee\门店费用\SaleFeeDetailGetModelAction.cs" />
+    <Compile Include="SaleSettle\SaleSettleAddOrEditAction.cs" />
+    <Compile Include="SaleSettle\SaleSettleGetListAction.cs" />
+    <Compile Include="SaleSettle\SaleSettleGetListActionGetModelAction.cs" />
+    <Compile Include="SaleSettle\SaleSettleGetPrinteActionGetModelAction.cs" />
+    <Compile Include="SaleSettle\SaleOrderFreeGetListAction.cs" />
+    <Compile Include="SaleSettle\SaleSettleAddAction.cs" />
+    <Compile Include="SaleSettle\SaleSettleEditAction.cs" />
+    <Compile Include="SaleSettle\SaleSettleDeleteAction.cs" />
+    <Compile Include="SaleSettle\SaleSettleSureOrNoAction.cs" />
+    <Compile Include="SaleSettle\SaleSettlePostAction.cs" />
+    <Compile Include="Settlement\GetSettlementDetailListAction.cs" />
+    <Compile Include="Settlement\GetSettlementListAction.cs" />
+    <Compile Include="Settlement\SettlementAddAction.cs" />
+    <Compile Include="Settlement\SettlementDeleteAction.cs" />
+    <Compile Include="Shop\ShopInfoGetAction.cs" />
+    <Compile Include="Stock\BatStockInAction.cs" />
+    <Compile Include="Stock\QueryStockQtyListAction.cs" />
+    <Compile Include="Stock\QueryStockQtyAction.cs" />
+    <Compile Include="Stock\StockAdjConfirmAction.cs" />
+    <Compile Include="Stock\StockAdjCreateAutoSurplusAction.cs" />
+    <Compile Include="Stock\StockAdjCreateDeficitAction.cs" />
+    <Compile Include="Stock\StockAdjDelAction.cs" />
+    <Compile Include="Stock\StockAdjQtyAmtSumGetAction.cs" />
+    <Compile Include="Stock\StockAdjDetailCountGetAction.cs" />
+    <Compile Include="Stock\StockAdjDetailDelAction.cs" />
+    <Compile Include="Stock\StockAdjDetailGetAction.cs" />
+    <Compile Include="Stock\StockAdjDetailListGetAction.cs" />
+    <Compile Include="Stock\StockAdjDetailImportAction.cs" />
+    <Compile Include="Stock\StockAdjDetailSaveAction.cs" />
+    <Compile Include="Stock\StockAdjGetAction.cs" />
+    <Compile Include="Stock\StockAdjListGetAction.cs" />
+    <Compile Include="Stock\StockAdjPostingAction.cs" />
+    <Compile Include="Stock\StockAdjSaveAction.cs" />
+    <Compile Include="Stock\StockQtyMinDateAction.cs" />
+    <Compile Include="Warehouse\WarehouseInfoGetAction.cs" />
+    <Compile Include="报表\ReportBuyOrderDetailsAction.cs" />
+    <Compile Include="报表\ReportGetAction.cs" />
+    <Compile Include="报表\SyncReportGetAction.cs" />
+    <Compile Include="报表\SyncReportSetAction.cs" />
+    <Compile Include="报表\SyncTradeSetAction.cs" />
+    <Compile Include="拣货\GetAtPickingOrderListAction.cs" />
+    <Compile Include="拣货\GetWaitPickDetailsAction.cs" />
+    <Compile Include="拣货\GetWaitPickingNumAction.cs" />
+    <Compile Include="拣货\GetWaitPickListAction.cs" />
+    <Compile Include="拣货\PickingStartPickAction.cs" />
+    <Compile Include="拣货\SinglePickAction.cs" />
+    <Compile Include="拣货\SubmitPickAction.cs" />
+    <Compile Include="装箱\CheckedGoodsAction.cs" />
+    <Compile Include="装箱\GetPackingListAction.cs" />
+    <Compile Include="装箱\GetPrintOrderListAction.cs" />
+    <Compile Include="装箱\GetModelByOrderIdAction.cs" />
+    <Compile Include="装箱\PickingCheckPickAction.cs" />
+    <Compile Include="配送APP\GetWaitDeliverInfoAction.cs" />
+    <Compile Include="配送APP\SetDeliverStatusAction.cs" />
+    <Compile Include="配送APP\GetDeliverOrderInfoAction.cs" />
+    <Compile Include="配送APP\GetDeliverProductInfoAction.cs" />
+    <Compile Include="配送APP\GetDeliverOrderListAction.cs" />
+    <Compile Include="配送APP\SetDeliveredStatusAction.cs" />
+    <Compile Include="配送APP\GetSaleOrderTotalInfoAction.cs" />
+    <Compile Include="配送APP\GetSaleOrderDetailInfoAction.cs" />
+    <Compile Include="配送后台\GetDeliverOrderInfoExtAction.cs" />
+    <Compile Include="配送后台\GetDeliverProductInfoExtAction.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Frxs.Platform\Frxs.Platform.IOCFactory\Frxs.Platform.IOCFactory.csproj">
+      <Project>{e30d3ed3-975c-4d4f-a69b-2cd2725614a1}</Project>
+      <Name>Frxs.Platform.IOCFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frxs.Platform\Frxs.Platform.Utility\Frxs.Platform.Utility.csproj">
+      <Project>{0C08602C-3A43-48BA-AC95-D18C21217165}</Project>
+      <Name>Frxs.Platform.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.Erp.ServiceCenter.Order.BLL\Frxs.Erp.ServiceCenter.Order.BLL.csproj">
+      <Project>{280c850b-269c-4a13-8685-0fda256ae0a5}</Project>
+      <Name>Frxs.Erp.ServiceCenter.Order.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.Erp.ServiceCenter.Order.IDAL\Frxs.Erp.ServiceCenter.Order.IDAL.csproj">
+      <Project>{bccaeab9-3e63-4c39-aec7-35be8315c243}</Project>
+      <Name>Frxs.Erp.ServiceCenter.Order.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.Erp.ServiceCenter.Order.Model\Frxs.Erp.ServiceCenter.Order.Model.csproj">
+      <Project>{460f8bf2-e6bb-4da7-980f-ae2bfb748c46}</Project>
+      <Name>Frxs.Erp.ServiceCenter.Order.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.Erp.ServiceCenter.Order.MSSQLDAL\Frxs.Erp.ServiceCenter.Order.MSSQLDAL.csproj">
+      <Project>{0926c1f2-1991-4706-8df2-75a70b05bba7}</Project>
+      <Name>Frxs.Erp.ServiceCenter.Order.MSSQLDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.ServiceCenter.Api.Core.ApiTestTool\1.2.1Frxs.ServiceCenter.Api.Core.ApiTestTool.csproj">
+      <Project>{6fe13611-8573-4955-96a1-e930b551334e}</Project>
+      <Name>1.2.1Frxs.ServiceCenter.Api.Core.ApiTestTool</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.ServiceCenter.Api.Core.V20\0.1.Frxs.ServiceCenter.Api.Core.V20.csproj">
+      <Project>{43e01449-2168-43c9-accd-e2fa7234c14c}</Project>
+      <Name>0.1.Frxs.ServiceCenter.Api.Core.V20</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="采购补货返配\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\Logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

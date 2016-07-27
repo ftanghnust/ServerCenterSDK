@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Frxs.Erp.ServiceCenter.Member.Host</name>
+    </assembly>
+    <members>
+        <member name="T:Frxs.Erp.ServiceCenter.Member.Host.ApiHostApplication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.Member.Host.ApiHostApplication.Application_Start(System.Object,System.EventArgs)">
+            <summary>
+            应用程序启动时，需要进行下面注册; 初始化顺序请不要更改
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.Member.Host.ApiHostApplication.Application_Error(System.Object,System.EventArgs)">
+            <summary>
+            记录错误信息
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+    </members>
+</doc>

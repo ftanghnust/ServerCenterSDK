@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9151F6CE-D698-4258-A59A-7F0B2E2C0165}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Frxs.Erp.ServiceCenter.ID.Actions</RootNamespace>
+    <AssemblyName>Frxs.Erp.ServiceCenter.ID.Actions</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Frxs.ServiceCenter.Api.Host.V20\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Frxs.Erp.ServiceCenter.ID.Host\Config\Frxs.Erp.ServiceCenter.ID.Actions.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiPluginDescriptor.cs" />
+    <Compile Include="IdsGetAction.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestDto\IdsGetActionRequestDto.cs" />
+    <Compile Include="RequestDto\XSOperatorLogGetListRequestDto.cs" />
+    <Compile Include="ResponseDto\XSOperatorLogGetListResponseDto.cs" />
+    <Compile Include="ResponseDto\XSOperatorLogGetMenuResponseDto.cs" />
+    <Compile Include="XSOperatorLogGetList.cs" />
+    <Compile Include="XSOperatorLogGetMenu.cs" />
+    <Compile Include="XSOperatorLogWrite.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Frxs.Platform\Frxs.Platform.Utility\Frxs.Platform.Utility.csproj">
+      <Project>{0c08602c-3a43-48ba-ac95-d18c21217165}</Project>
+      <Name>Frxs.Platform.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.Erp.ServiceCenter.ID.BLL\Frxs.Erp.ServiceCenter.ID.BLL.csproj">
+      <Project>{0e91df61-ab66-4206-b4e5-236103397500}</Project>
+      <Name>Frxs.Erp.ServiceCenter.ID.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.Erp.ServiceCenter.ID.Model\Frxs.Erp.ServiceCenter.ID.Model.csproj">
+      <Project>{0ab6ec59-ed1d-471a-93ad-61802972e0f1}</Project>
+      <Name>Frxs.Erp.ServiceCenter.ID.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.ServiceCenter.Api.Core.V20\0.1.Frxs.ServiceCenter.Api.Core.V20.csproj">
+      <Project>{43e01449-2168-43c9-accd-e2fa7234c14c}</Project>
+      <Name>0.1.Frxs.ServiceCenter.Api.Core.V20</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\Logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

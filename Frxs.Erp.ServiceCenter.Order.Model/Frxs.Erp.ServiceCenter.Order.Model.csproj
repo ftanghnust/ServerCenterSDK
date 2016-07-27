@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{460F8BF2-E6BB-4DA7-980F-AE2BFB748C46}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Frxs.Erp.ServiceCenter.Order.Model</RootNamespace>
+    <AssemblyName>Frxs.Erp.ServiceCenter.Order.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Frxs.Erp.ServiceCenter.Order.Host\Config\Frxs.Erp.ServiceCenter.Order.Model.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseModel.cs" />
+    <Compile Include="BuyPreApp\BuyPreApp.cs" />
+    <Compile Include="BuyPreApp\BuyPreAppBills.cs" />
+    <Compile Include="BuyPreApp\BuyPreAppDetails.cs" />
+    <Compile Include="BuyPreApp\BuyPreAppDetailsExt.cs" />
+    <Compile Include="Deliver\CheckedGoodsNumInfo.cs" />
+    <Compile Include="Deliver\WaitDeliver.cs" />
+    <Compile Include="Order\仓库订单\BaseUserModel.cs" />
+    <Compile Include="Order\仓库订单\PickTimeMoel.cs" />
+    <Compile Include="Order\仓库订单\PickUserIdAndUserName.cs" />
+    <Compile Include="Order\仓库订单\ProductUserQty.cs" />
+    <Compile Include="Order\仓库订单\ReturnSubmitInfo.cs" />
+    <Compile Include="Order\仓库订单\SaleEditDetails.cs" />
+    <Compile Include="Order\仓库订单\SaleEditDetailsExt.cs" />
+    <Compile Include="Order\仓库订单\SaleEditOrders.cs" />
+    <Compile Include="Order\仓库订单\SaleEdit.cs" />
+    <Compile Include="Order\仓库订单\SaleEditQuery.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderPacking.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderSendNumberLine.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderSendNumberShop.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderShelfArea.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderPreShelfArea.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderTrack.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderDetailsPick.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderSendNumber.cs" />
+    <Compile Include="Order\仓库订单\OrderQuery.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderPre7ShelfArea.cs" />
+    <Compile Include="Order\仓库订单\OrderStatus.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderPreDetailsExt.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderPreDetails.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderDetailsExt.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderDetails.cs" />
+    <Compile Include="Order\仓库订单\SaleOrder.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderPre.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderPreDetailsPick.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderPreWaitPickingList.cs" />
+    <Compile Include="Order\仓库订单\SubmitPickOrder.cs" />
+    <Compile Include="Order\仓库订单\vSaleOrder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchase\采购订单\BuyOrder.cs" />
+    <Compile Include="Purchase\采购订单\BuyOrderDetails.cs" />
+    <Compile Include="Purchase\采购订单\BuyOrderPreDetailsExt.cs" />
+    <Compile Include="Purchase\采购订单\BuyOrderDetailsExt.cs" />
+    <Compile Include="Purchase\采购订单\BuyOrderPageModel.cs" />
+    <Compile Include="Purchase\采购退货\BuyBack.cs" />
+    <Compile Include="Purchase\采购退货\BuyBackDetails.cs" />
+    <Compile Include="Purchase\采购订单\BuyOrderPre.cs" />
+    <Compile Include="Purchase\采购订单\BuyOrderPreDetails.cs" />
+    <Compile Include="Purchase\采购退货\BuyBackPre.cs" />
+    <Compile Include="Purchase\采购退货\BuyBackPreDetails.cs" />
+    <Compile Include="Order\销售退货\SaleBack.cs" />
+    <Compile Include="Order\销售退货\SaleBackDetails.cs" />
+    <Compile Include="Order\销售退货\SaleBackDetailsExt.cs" />
+    <Compile Include="Order\销售退货\SaleBackPreDetailsExt.cs" />
+    <Compile Include="Order\销售退货\SaleBackPreDetails.cs" />
+    <Compile Include="Order\销售退货\SaleBackPre.cs" />
+    <Compile Include="Purchase\采购退货\BuyBackPreDetailsExt.cs" />
+    <Compile Include="Purchase\采购退货\BuyBackDetailsExt.cs" />
+    <Compile Include="Purchase\采购退货\BuyBackPageModel.cs" />
+    <Compile Include="SaleFee\门店费用\SaleFee.cs" />
+    <Compile Include="SaleFee\门店费用\SaleFeeDetails.cs" />
+    <Compile Include="SaleFee\门店费用\SaleFeePre.cs" />
+    <Compile Include="SaleFee\门店费用\SaleFeePreDetails.cs" />
+    <Compile Include="SaleOrderPrePacking\SaleOrderPrePacking.cs" />
+    <Compile Include="SaleSettle\SaleSettleTemp.cs" />
+    <Compile Include="SettlementDetail\SettlementDetail.cs" />
+    <Compile Include="SettlementDetail\SettlementDetailsList.cs" />
+    <Compile Include="Settlement\Settlement.cs" />
+    <Compile Include="Shop\ShopBillExt.cs" />
+    <Compile Include="Stock\BatStockInModel.cs" />
+    <Compile Include="Stock\BatStockOutModel.cs" />
+    <Compile Include="Stock\QueryStockFIFOInModel.cs" />
+    <Compile Include="Stock\StockAdj.cs" />
+    <Compile Include="Stock\StockAdjDetail.cs" />
+    <Compile Include="Stock\StockAdjDetailsExt.cs" />
+    <Compile Include="Stock\StockFIFOInModel.cs" />
+    <Compile Include="Stock\StockFIFOOutModel.cs" />
+    <Compile Include="SaleSettleDetail\SaleSettleDetail.cs" />
+    <Compile Include="SaleSettle\SaleSettle.cs" />
+    <Compile Include="Stock\StockOutInPutInModel.cs" />
+    <Compile Include="Stock\StockQtyModel.cs" />
+    <Compile Include="Stock\StockQtyQueryModel.cs" />
+    <Compile Include="Stock\StockSreachQtyModel.cs" />
+    <Compile Include="Stock\StockQtyQuery.cs" />
+    <Compile Include="Stock\StockType.cs" />
+    <Compile Include="Warehouse\WarehouseBillExt.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Frxs.Platform\Frxs.Platform.Utility\Frxs.Platform.Utility.csproj">
+      <Project>{0c08602c-3a43-48ba-ac95-d18c21217165}</Project>
+      <Name>Frxs.Platform.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

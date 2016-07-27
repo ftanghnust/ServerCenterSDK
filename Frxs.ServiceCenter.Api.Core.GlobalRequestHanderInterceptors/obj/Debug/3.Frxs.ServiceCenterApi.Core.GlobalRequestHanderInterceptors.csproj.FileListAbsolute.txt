@@ -1,0 +1,15 @@
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.GlobalRequestHanderInterceptors\bin\Debug\Frxs.ServiceCenter.Product.Api.GlobalRequestHanderInterceptors.xml
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.GlobalRequestHanderInterceptors\bin\Debug\Frxs.ServiceCenter.Product.Api.GlobalRequestHanderInterceptors.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.GlobalRequestHanderInterceptors\bin\Debug\Frxs.ServiceCenter.Product.Api.GlobalRequestHanderInterceptors.pdb
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.GlobalRequestHanderInterceptors\bin\Debug\Autofac.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.GlobalRequestHanderInterceptors\bin\Debug\Frxs.ServiceCenter.Api.Core.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.GlobalRequestHanderInterceptors\bin\Debug\Autofac.Integration.Mvc.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.GlobalRequestHanderInterceptors\bin\Debug\Newtonsoft.Json.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.GlobalRequestHanderInterceptors\bin\Debug\Frxs.ServiceCenter.Api.Core.pdb
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.GlobalRequestHanderInterceptors\bin\Debug\Frxs.ServiceCenter.Api.Core.xml
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.GlobalRequestHanderInterceptors\bin\Debug\Autofac.xml
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.GlobalRequestHanderInterceptors\bin\Debug\Autofac.Integration.Mvc.xml
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.GlobalRequestHanderInterceptors\bin\Debug\Newtonsoft.Json.xml
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.GlobalRequestHanderInterceptors\obj\Debug\3.Frxs.ServiceCenterApi.Core.GlobalRequestHanderInterceptors.csprojResolveAssemblyReference.cache
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.GlobalRequestHanderInterceptors\obj\Debug\Frxs.ServiceCenter.Product.Api.GlobalRequestHanderInterceptors.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.GlobalRequestHanderInterceptors\obj\Debug\Frxs.ServiceCenter.Product.Api.GlobalRequestHanderInterceptors.pdb

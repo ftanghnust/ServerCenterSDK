@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E644CDB-B4AB-4806-8776-369291C62ADC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Frxs.ServiceCenter.DataSync.Message.DataSyncClient</RootNamespace>
+    <AssemblyName>Frxs.ServiceCenter.DataSync.Message.DataSyncClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Frxs.ServiceCenter.DataSync.Message.ApiHost.SDK">
+      <HintPath>..\Frxs.ServiceCenter.DataSync.Message.ApiHost.DataBase\App_Data\sdkdll\Frxs.ServiceCenter.DataSync.Message.ApiHost.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDataSync0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDataSync0.Designer.cs">
+      <DependentUpon>frmDataSync0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDataSync.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDataSync.Designer.cs">
+      <DependentUpon>frmDataSync.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\Event\Base\CategoryMessageHandler.cs" />
+    <Compile Include="Handler\Event\Base\DefaultMessageHandler.cs" />
+    <Compile Include="Handler\Event\Base\AttributeMessageHandler.cs" />
+    <Compile Include="Handler\Event\Base\BrandCategoryMessageHandler.cs" />
+    <Compile Include="Handler\Event\Base\ProductMessageHandler.cs" />
+    <Compile Include="Handler\Event\Base\ShopCategoryMessageHandler.cs" />
+    <Compile Include="Handler\Event\Base\ShopMessageHandler.cs" />
+    <Compile Include="Handler\Event\Base\SysDictMessageHandler.cs" />
+    <Compile Include="Handler\Event\Base\VendorMessageHandler.cs" />
+    <Compile Include="Handler\Event\Base\VendorTypeMessageHandler.cs" />
+    <Compile Include="Handler\Event\Base\WarehouseMessageHandler.cs" />
+    <Compile Include="Handler\Sync\Base\CategoryDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\BrandCategoryDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\BaseProductDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\AttributeDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\AttributesValueDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\SysDictDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\SysDictDetailDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\ShopCategoryDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\VendorTypeDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\VendorDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\ShopDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\WarehouseDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\ProductsVendorDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\ProductsUnitDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\ProductsSKUNumberServiceDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\ProductsPictureDetailDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\ProductsDescriptionPictureDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\ProductsDescriptionDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\ProductsBarCodeDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\ProductsAttributesPictureDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\ProductsAttributeDataSyncHandler.cs" />
+    <Compile Include="Infrastructure\ConfigurationFactory.cs" />
+    <Compile Include="Infrastructure\DataSync.cs" />
+    <Compile Include="Infrastructure\DataSyncConfig.cs" />
+    <Compile Include="Infrastructure\DataSyncHandler.cs" />
+    <Compile Include="Infrastructure\DataSyncHandlerManager.cs" />
+    <Compile Include="Infrastructure\DataSyncStep.cs" />
+    <Compile Include="Infrastructure\DbContextExtensions.cs" />
+    <Compile Include="Infrastructure\ExecutedEventArgs.cs" />
+    <Compile Include="Infrastructure\ExecutingEventArgs.cs" />
+    <Compile Include="Infrastructure\IDataSyncHandler.cs" />
+    <Compile Include="Handler\Sync\Base\ProductDataSyncHandler.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\ApiClientRoute.cs" />
+    <Compile Include="Infrastructure\DbContextFactory.cs" />
+    <Compile Include="Infrastructure\DefaultJosnSerializer.cs" />
+    <Compile Include="Infrastructure\ItemSyncCompleteEventArgs.cs" />
+    <Compile Include="Infrastructure\ObjectExtensions.cs" />
+    <Compile Include="Infrastructure\Configuration.cs" />
+    <Compile Include="Infrastructure\SNFile.cs" />
+    <Compile Include="Infrastructure\StringExtension.cs" />
+    <Compile Include="Infrastructure\SyncStatus.cs" />
+    <Compile Include="Models\DataBase\AppVersion.cs" />
+    <Compile Include="Models\DataBase\Attribute.cs" />
+    <Compile Include="Models\DataBase\AttributesValue.cs" />
+    <Compile Include="Models\DataBase\BaseDataContext.cs" />
+    <Compile Include="Models\DataBase\BaseProduct.cs" />
+    <Compile Include="Models\DataBase\BrandCategory.cs" />
+    <Compile Include="Models\DataBase\Category.cs" />
+    <Compile Include="Models\DataBase\Mapping\AppVersionMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\AttributeMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\AttributesValueMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\BaseProductMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\BrandCategoryMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\CategoryMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\ProductMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\ProductsAttributeMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\ProductsAttributesPictureMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\ProductsBarCodeMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\ProductsDescriptionMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\ProductsDescriptionPictureMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\ProductsPictureDetailMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\ProductsSKUNumberServiceMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\ProductsUnitMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\ProductsVendorMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\ShelfAreaMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\ShelfMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\ShopCategoryMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\ShopGroupDetailMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\ShopGroupMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\ShopMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\SysAppSettingMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\SysAreaMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\SysDictDetailMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\SysDictMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\SysParamMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\SysParamsWHMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\SYS_DB_CONFIGMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\VendorMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\VendorTypeMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\VendorWarehouseMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\WarehouseEmpMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\WarehouseEmpShelfMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\WarehouseLineMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\WarehouseLineShopMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\WarehouseMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\WProductAdjPriceDetailMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\WProductAdjPriceMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\WProductAdjShelfDetailMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\WProductAdjShelfMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\WProductMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\WProductNoSaleDetailMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\WProductNoSaleMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\WProductNoSaleShopMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\WProductsBuyEmpMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\WProductsBuyMap.cs" />
+    <Compile Include="Models\DataBase\Mapping\WStationNumberMap.cs" />
+    <Compile Include="Models\DataBase\Product.cs" />
+    <Compile Include="Models\DataBase\ProductsAttribute.cs" />
+    <Compile Include="Models\DataBase\ProductsAttributesPicture.cs" />
+    <Compile Include="Models\DataBase\ProductsBarCode.cs" />
+    <Compile Include="Models\DataBase\ProductsDescription.cs" />
+    <Compile Include="Models\DataBase\ProductsDescriptionPicture.cs" />
+    <Compile Include="Models\DataBase\ProductsPictureDetail.cs" />
+    <Compile Include="Models\DataBase\ProductsSKUNumberService.cs" />
+    <Compile Include="Models\DataBase\ProductsUnit.cs" />
+    <Compile Include="Models\DataBase\ProductsVendor.cs" />
+    <Compile Include="Models\DataBase\Shelf.cs" />
+    <Compile Include="Models\DataBase\ShelfArea.cs" />
+    <Compile Include="Models\DataBase\Shop.cs" />
+    <Compile Include="Models\DataBase\ShopCategory.cs" />
+    <Compile Include="Models\DataBase\ShopGroup.cs" />
+    <Compile Include="Models\DataBase\ShopGroupDetail.cs" />
+    <Compile Include="Models\DataBase\SysAppSetting.cs" />
+    <Compile Include="Models\DataBase\SysArea.cs" />
+    <Compile Include="Models\DataBase\SysDict.cs" />
+    <Compile Include="Models\DataBase\SysDictDetail.cs" />
+    <Compile Include="Models\DataBase\SysParam.cs" />
+    <Compile Include="Models\DataBase\SysParamsWH.cs" />
+    <Compile Include="Models\DataBase\SYS_DB_CONFIG.cs" />
+    <Compile Include="Models\DataBase\Vendor.cs" />
+    <Compile Include="Models\DataBase\VendorType.cs" />
+    <Compile Include="Models\DataBase\VendorWarehouse.cs" />
+    <Compile Include="Models\DataBase\Warehouse.cs" />
+    <Compile Include="Models\DataBase\WarehouseEmp.cs" />
+    <Compile Include="Models\DataBase\WarehouseEmpShelf.cs" />
+    <Compile Include="Models\DataBase\WarehouseLine.cs" />
+    <Compile Include="Models\DataBase\WarehouseLineShop.cs" />
+    <Compile Include="Models\DataBase\WProduct.cs" />
+    <Compile Include="Models\DataBase\WProductAdjPrice.cs" />
+    <Compile Include="Models\DataBase\WProductAdjPriceDetail.cs" />
+    <Compile Include="Models\DataBase\WProductAdjShelf.cs" />
+    <Compile Include="Models\DataBase\WProductAdjShelfDetail.cs" />
+    <Compile Include="Models\DataBase\WProductNoSale.cs" />
+    <Compile Include="Models\DataBase\WProductNoSaleDetail.cs" />
+    <Compile Include="Models\DataBase\WProductNoSaleShop.cs" />
+    <Compile Include="Models\DataBase\WProductsBuy.cs" />
+    <Compile Include="Models\DataBase\WProductsBuyEmp.cs" />
+    <Compile Include="Models\DataBase\WStationNumber.cs" />
+    <Compile Include="Models\Order\BuyBack.cs" />
+    <Compile Include="Models\Order\BuyBackDetail.cs" />
+    <Compile Include="Models\Order\BuyBackDetailsExt.cs" />
+    <Compile Include="Models\Order\BuyBackPre.cs" />
+    <Compile Include="Models\Order\BuyBackPreDetail.cs" />
+    <Compile Include="Models\Order\BuyBackPreDetailsExt.cs" />
+    <Compile Include="Models\Order\BuyOrder.cs" />
+    <Compile Include="Models\Order\BuyOrderDetail.cs" />
+    <Compile Include="Models\Order\BuyOrderDetailsExt.cs" />
+    <Compile Include="Models\Order\BuyOrderPre.cs" />
+    <Compile Include="Models\Order\BuyOrderPreDetail.cs" />
+    <Compile Include="Models\Order\BuyOrderPreDetailsExt.cs" />
+    <Compile Include="Models\Order\BuyPreApp.cs" />
+    <Compile Include="Models\Order\BuyPreAppBill.cs" />
+    <Compile Include="Models\Order\BuyPreAppDetail.cs" />
+    <Compile Include="Models\Order\BuyPreAppDetailsExt.cs" />
+    <Compile Include="Models\Order\Mapping\BuyBackDetailMap.cs" />
+    <Compile Include="Models\Order\Mapping\BuyBackDetailsExtMap.cs" />
+    <Compile Include="Models\Order\Mapping\BuyBackMap.cs" />
+    <Compile Include="Models\Order\Mapping\BuyBackPreDetailMap.cs" />
+    <Compile Include="Models\Order\Mapping\BuyBackPreDetailsExtMap.cs" />
+    <Compile Include="Models\Order\Mapping\BuyBackPreMap.cs" />
+    <Compile Include="Models\Order\Mapping\BuyOrderDetailMap.cs" />
+    <Compile Include="Models\Order\Mapping\BuyOrderDetailsExtMap.cs" />
+    <Compile Include="Models\Order\Mapping\BuyOrderMap.cs" />
+    <Compile Include="Models\Order\Mapping\BuyOrderPreDetailMap.cs" />
+    <Compile Include="Models\Order\Mapping\BuyOrderPreDetailsExtMap.cs" />
+    <Compile Include="Models\Order\Mapping\BuyOrderPreMap.cs" />
+    <Compile Include="Models\Order\Mapping\BuyPreAppBillMap.cs" />
+    <Compile Include="Models\Order\Mapping\BuyPreAppDetailMap.cs" />
+    <Compile Include="Models\Order\Mapping\BuyPreAppDetailsExtMap.cs" />
+    <Compile Include="Models\Order\Mapping\BuyPreAppMap.cs" />
+    <Compile Include="Models\Order\Mapping\PreBuyOrderMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleBackDetailMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleBackDetailsExtMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleBackMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleBackPreDetailMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleBackPreDetailsExtMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleBackPreMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleEditDetailMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleEditDetailsExtMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleEditMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleEditOrderMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleFeeDetailMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleFeeMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleFeePreDetailMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleFeePreMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleOrderDetailMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleOrderDetailsExtMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleOrderDetailsPickMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleOrderMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleOrderPackingMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleOrderPreDetailMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleOrderPreDetailsExtMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleOrderPreDetailsPickMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleOrderPreMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleOrderPrePackingMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleOrderPreShelfAreaMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleOrderSendNumberMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleOrderShelfAreaMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleOrderTrackMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleOrdeSendNumberMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleSettleDetailMap.cs" />
+    <Compile Include="Models\Order\Mapping\SaleSettleMap.cs" />
+    <Compile Include="Models\Order\Mapping\SettlementDetailMap.cs" />
+    <Compile Include="Models\Order\Mapping\SettlementMap.cs" />
+    <Compile Include="Models\Order\Mapping\StockAdjDetailMap.cs" />
+    <Compile Include="Models\Order\Mapping\StockAdjDetailsExtMap.cs" />
+    <Compile Include="Models\Order\Mapping\StockAdjMap.cs" />
+    <Compile Include="Models\Order\Mapping\StockCheckDetailMap.cs" />
+    <Compile Include="Models\Order\Mapping\StockCheckMap.cs" />
+    <Compile Include="Models\Order\Mapping\StockCheckPlanDetailMap.cs" />
+    <Compile Include="Models\Order\Mapping\StockCheckPlanMap.cs" />
+    <Compile Include="Models\Order\Mapping\StockFIFOInMap.cs" />
+    <Compile Include="Models\Order\Mapping\StockFIFOOutMap.cs" />
+    <Compile Include="Models\Order\Mapping\StockQtyMap.cs" />
+    <Compile Include="Models\Order\OrderContext.cs" />
+    <Compile Include="Models\Order\PreBuyOrder.cs" />
+    <Compile Include="Models\Order\SaleBack.cs" />
+    <Compile Include="Models\Order\SaleBackDetail.cs" />
+    <Compile Include="Models\Order\SaleBackDetailsExt.cs" />
+    <Compile Include="Models\Order\SaleBackPre.cs" />
+    <Compile Include="Models\Order\SaleBackPreDetail.cs" />
+    <Compile Include="Models\Order\SaleBackPreDetailsExt.cs" />
+    <Compile Include="Models\Order\SaleEdit.cs" />
+    <Compile Include="Models\Order\SaleEditDetail.cs" />
+    <Compile Include="Models\Order\SaleEditDetailsExt.cs" />
+    <Compile Include="Models\Order\SaleEditOrder.cs" />
+    <Compile Include="Models\Order\SaleFee.cs" />
+    <Compile Include="Models\Order\SaleFeeDetail.cs" />
+    <Compile Include="Models\Order\SaleFeePre.cs" />
+    <Compile Include="Models\Order\SaleFeePreDetail.cs" />
+    <Compile Include="Models\Order\SaleOrder.cs" />
+    <Compile Include="Models\Order\SaleOrderDetail.cs" />
+    <Compile Include="Models\Order\SaleOrderDetailsExt.cs" />
+    <Compile Include="Models\Order\SaleOrderDetailsPick.cs" />
+    <Compile Include="Models\Order\SaleOrderPacking.cs" />
+    <Compile Include="Models\Order\SaleOrderPre.cs" />
+    <Compile Include="Models\Order\SaleOrderPreDetail.cs" />
+    <Compile Include="Models\Order\SaleOrderPreDetailsExt.cs" />
+    <Compile Include="Models\Order\SaleOrderPreDetailsPick.cs" />
+    <Compile Include="Models\Order\SaleOrderPrePacking.cs" />
+    <Compile Include="Models\Order\SaleOrderPreShelfArea.cs" />
+    <Compile Include="Models\Order\SaleOrderSendNumber.cs" />
+    <Compile Include="Models\Order\SaleOrderShelfArea.cs" />
+    <Compile Include="Models\Order\SaleOrderTrack.cs" />
+    <Compile Include="Models\Order\SaleOrdeSendNumber.cs" />
+    <Compile Include="Models\Order\SaleSettle.cs" />
+    <Compile Include="Models\Order\SaleSettleDetail.cs" />
+    <Compile Include="Models\Order\Settlement.cs" />
+    <Compile Include="Models\Order\SettlementDetail.cs" />
+    <Compile Include="Models\Order\StockAdj.cs" />
+    <Compile Include="Models\Order\StockAdjDetail.cs" />
+    <Compile Include="Models\Order\StockAdjDetailsExt.cs" />
+    <Compile Include="Models\Order\StockCheck.cs" />
+    <Compile Include="Models\Order\StockCheckDetail.cs" />
+    <Compile Include="Models\Order\StockCheckPlan.cs" />
+    <Compile Include="Models\Order\StockCheckPlanDetail.cs" />
+    <Compile Include="Models\Order\StockFIFOIn.cs" />
+    <Compile Include="Models\Order\StockFIFOOut.cs" />
+    <Compile Include="Models\Order\StockQty.cs" />
+    <Compile Include="Models\Promo\Mapping\SaleCartMap.cs" />
+    <Compile Include="Models\Promo\Mapping\SaleOrderShopDetailMap.cs" />
+    <Compile Include="Models\Promo\Mapping\SaleOrderShopDetailsExtMap.cs" />
+    <Compile Include="Models\Promo\Mapping\SaleOrderShopMap.cs" />
+    <Compile Include="Models\Promo\Mapping\WAdvertisementMap.cs" />
+    <Compile Include="Models\Promo\Mapping\WAdvertisementProductMap.cs" />
+    <Compile Include="Models\Promo\Mapping\WarehouseMessageMap.cs" />
+    <Compile Include="Models\Promo\Mapping\WarehouseMessageShopMap.cs" />
+    <Compile Include="Models\Promo\Mapping\WProductAddPercDetailMap.cs" />
+    <Compile Include="Models\Promo\Mapping\WProductAddPercMap.cs" />
+    <Compile Include="Models\Promo\Mapping\WProductAddPercShopMap.cs" />
+    <Compile Include="Models\Promo\Mapping\WProductPromotionDetailMap.cs" />
+    <Compile Include="Models\Promo\Mapping\WProductPromotionMap.cs" />
+    <Compile Include="Models\Promo\Mapping\WProductPromotionShopMap.cs" />
+    <Compile Include="Models\Promo\PromoContext.cs" />
+    <Compile Include="Models\Promo\SaleCart.cs" />
+    <Compile Include="Models\Promo\SaleOrderShop.cs" />
+    <Compile Include="Models\Promo\SaleOrderShopDetail.cs" />
+    <Compile Include="Models\Promo\SaleOrderShopDetailsExt.cs" />
+    <Compile Include="Models\Promo\WAdvertisement.cs" />
+    <Compile Include="Models\Promo\WAdvertisementProduct.cs" />
+    <Compile Include="Models\Promo\WarehouseMessage.cs" />
+    <Compile Include="Models\Promo\WarehouseMessageShop.cs" />
+    <Compile Include="Models\Promo\WProductAddPerc.cs" />
+    <Compile Include="Models\Promo\WProductAddPercDetail.cs" />
+    <Compile Include="Models\Promo\WProductAddPercShop.cs" />
+    <Compile Include="Models\Promo\WProductPromotion.cs" />
+    <Compile Include="Models\Promo\WProductPromotionDetail.cs" />
+    <Compile Include="Models\Promo\WProductPromotionShop.cs" />
+    <Compile Include="Models\User\Mapping\XSUserMap.cs" />
+    <Compile Include="Models\User\Mapping\XSUserShopMap.cs" />
+    <Compile Include="Models\User\UserContext.cs" />
+    <Compile Include="Models\User\XSUser.cs" />
+    <Compile Include="Models\User\XSUserShop.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\ListViewEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Content Include="logo.ico" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDataSync0.resx">
+      <DependentUpon>frmDataSync0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDataSync.resx">
+      <DependentUpon>frmDataSync.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Content Include="DataSync.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Frxs.ServiceCenter.DataSync.Message\ConsumerClient\2.Frxs.ServiceCenter.DataSync.Message.ConsumerClient.csproj">
+      <Project>{3a0f508d-0559-4548-a7fc-7b2d20e022d1}</Project>
+      <Name>2.Frxs.ServiceCenter.DataSync.Message.ConsumerClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Handler\Event\Order\" />
+    <Folder Include="Handler\Event\Promo\" />
+    <Folder Include="Handler\Event\User\" />
+    <Folder Include="Handler\Sync\Order\" />
+    <Folder Include="Handler\Sync\Promo\" />
+    <Folder Include="Handler\Sync\User\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

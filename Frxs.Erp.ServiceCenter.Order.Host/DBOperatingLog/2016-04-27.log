@@ -1,0 +1,86 @@
+
+2016/4/27 16:00:12
+[操作]Frxs.Erp.ServiceCenter.Order.MSSQLDAL.BuyOrderPre.Save
+[数据源](null)
+[SQL语句]
+System.OverflowException: 算术溢出。
+   在 System.Data.SqlClient.TdsParser.TdsExecuteRPC(_SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Frxs.Platform.DBUtility.DBHelper.ExecNonQuery(IDbConnection connection, IDbTransaction transaction, String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Platform\Frxs.Platform.DBUtility\DBHelper.cs:行号 671
+   在 Frxs.Erp.ServiceCenter.Order.MSSQLDAL.BuyOrderPreDAO.Save(BuyOrderPre model, IDbConnection conn, IDbTransaction tran) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Order.MSSQLDAL\Purchase\采购订单\BuyOrderPreDAO.cs:行号 169
+
+2016/4/27 16:00:24
+[操作]Frxs.Erp.ServiceCenter.Order.MSSQLDAL.BuyOrderPre.Save
+[数据源](null)
+[SQL语句]
+System.OverflowException: 算术溢出。
+   在 System.Data.SqlClient.TdsParser.TdsExecuteRPC(_SqlRPC[] rpcArray, Int32 timeout, Boolean inSchema, SqlNotificationRequest notificationRequest, TdsParserStateObject stateObj, Boolean isCommandProc, Boolean sync, TaskCompletionSource`1 completion, Int32 startRpc, Int32 startParam)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Frxs.Platform.DBUtility.DBHelper.ExecNonQuery(IDbConnection connection, IDbTransaction transaction, String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Platform\Frxs.Platform.DBUtility\DBHelper.cs:行号 671
+   在 Frxs.Erp.ServiceCenter.Order.MSSQLDAL.BuyOrderPreDAO.Save(BuyOrderPre model, IDbConnection conn, IDbTransaction tran) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Order.MSSQLDAL\Purchase\采购订单\BuyOrderPreDAO.cs:行号 169
+
+2016/4/27 16:20:31
+[操作]Frxs.Erp.ServiceCenter.Order.MSSQLDAL.BuyOrderPreDetails.Save
+[数据源]server=192.168.3.32;database=FRXS_ERP_ORDER_105;
+[SQL语句]SELECT ID,105000001250,WID,ProductId,SKU,ProductName,BarCode,ProductImageUrl200,ProductImageUrl400,BuyUnit,BuyPackingQty,BuyQty,BuyPrice,Unit,UnitQty,UnitPrice,SubAmt,Remark,SerialNumber,ModifyTime,ModifyUserID,ModifyUserName From (SELECT ID,105000001250,WID,ProductId,SKU,ProductName,BarCode,ProductImageUrl200,ProductImageUrl400,BuyUnit,BuyPackingQty,BuyQty,BuyPrice,Unit,UnitQty,UnitPrice,SubAmt,Remark,SerialNumber,ModifyTime,ModifyUserID,ModifyUserName FROM BuyOrderPreDetails UNION ALL
+        SELECT ID,105000001250,WID,ProductId,SKU,ProductName,BarCode,ProductImageUrl200,ProductImageUrl400,BuyUnit,BuyPackingQty,BuyQty,BuyPrice,Unit,UnitQty,UnitPrice,SubAmt,Remark,SerialNumber,ModifyTime,ModifyUserID,ModifyUserName FROM BuyOrderDetails
+        ) as temp WHERE 1=1  AND 105000001250=@105000001250
+System.Data.SqlClient.SqlException (0x80131904): 将 numeric 转换为数据类型 numeric 时出现算术溢出错误。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Frxs.Platform.DBUtility.DBHelper.ExecNonQuery(IDbConnection connection, IDbTransaction transaction, String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Platform\Frxs.Platform.DBUtility\DBHelper.cs:行号 671
+   在 Frxs.Erp.ServiceCenter.Order.MSSQLDAL.BuyOrderPreDetailsDAO.Save(BuyOrderPreDetails model, IDbConnection conn, IDbTransaction tran) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Order.MSSQLDAL\Purchase\采购订单\BuyOrderPreDetailsDAO.cs:行号 112
+ClientConnectionId:121ce420-466a-4a21-9a5f-da26c51cfc2f
+
+2016/4/27 16:23:20
+[操作]Frxs.Erp.ServiceCenter.Order.MSSQLDAL.BuyOrderPreDetails.Save
+[数据源]server=192.168.3.32;database=FRXS_ERP_ORDER_105;
+[SQL语句]SELECT ID,105000001250,WID,ProductId,SKU,ProductName,BarCode,ProductImageUrl200,ProductImageUrl400,BuyUnit,BuyPackingQty,BuyQty,BuyPrice,Unit,UnitQty,UnitPrice,SubAmt,Remark,SerialNumber,ModifyTime,ModifyUserID,ModifyUserName From (SELECT ID,105000001250,WID,ProductId,SKU,ProductName,BarCode,ProductImageUrl200,ProductImageUrl400,BuyUnit,BuyPackingQty,BuyQty,BuyPrice,Unit,UnitQty,UnitPrice,SubAmt,Remark,SerialNumber,ModifyTime,ModifyUserID,ModifyUserName FROM BuyOrderPreDetails UNION ALL
+        SELECT ID,105000001250,WID,ProductId,SKU,ProductName,BarCode,ProductImageUrl200,ProductImageUrl400,BuyUnit,BuyPackingQty,BuyQty,BuyPrice,Unit,UnitQty,UnitPrice,SubAmt,Remark,SerialNumber,ModifyTime,ModifyUserID,ModifyUserName FROM BuyOrderDetails
+        ) as temp WHERE 1=1  AND 105000001250=@105000001250
+System.Data.SqlClient.SqlException (0x80131904): 将 numeric 转换为数据类型 numeric 时出现算术溢出错误。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Frxs.Platform.DBUtility.DBHelper.ExecNonQuery(IDbConnection connection, IDbTransaction transaction, String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Platform\Frxs.Platform.DBUtility\DBHelper.cs:行号 671
+   在 Frxs.Erp.ServiceCenter.Order.MSSQLDAL.BuyOrderPreDetailsDAO.Save(BuyOrderPreDetails model, IDbConnection conn, IDbTransaction tran) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Order.MSSQLDAL\Purchase\采购订单\BuyOrderPreDetailsDAO.cs:行号 112
+ClientConnectionId:121ce420-466a-4a21-9a5f-da26c51cfc2f
+
+2016/4/27 16:24:06
+[操作]Frxs.Erp.ServiceCenter.Order.MSSQLDAL.BuyOrderPreDetails.Save
+[数据源]server=192.168.3.32;database=FRXS_ERP_ORDER_105;
+[SQL语句]SELECT ID,105000001250,WID,ProductId,SKU,ProductName,BarCode,ProductImageUrl200,ProductImageUrl400,BuyUnit,BuyPackingQty,BuyQty,BuyPrice,Unit,UnitQty,UnitPrice,SubAmt,Remark,SerialNumber,ModifyTime,ModifyUserID,ModifyUserName From (SELECT ID,105000001250,WID,ProductId,SKU,ProductName,BarCode,ProductImageUrl200,ProductImageUrl400,BuyUnit,BuyPackingQty,BuyQty,BuyPrice,Unit,UnitQty,UnitPrice,SubAmt,Remark,SerialNumber,ModifyTime,ModifyUserID,ModifyUserName FROM BuyOrderPreDetails UNION ALL
+        SELECT ID,105000001250,WID,ProductId,SKU,ProductName,BarCode,ProductImageUrl200,ProductImageUrl400,BuyUnit,BuyPackingQty,BuyQty,BuyPrice,Unit,UnitQty,UnitPrice,SubAmt,Remark,SerialNumber,ModifyTime,ModifyUserID,ModifyUserName FROM BuyOrderDetails
+        ) as temp WHERE 1=1  AND 105000001250=@105000001250
+System.Data.SqlClient.SqlException (0x80131904): 将 numeric 转换为数据类型 numeric 时出现算术溢出错误。
+语句已终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 Frxs.Platform.DBUtility.DBHelper.ExecNonQuery(IDbConnection connection, IDbTransaction transaction, String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Platform\Frxs.Platform.DBUtility\DBHelper.cs:行号 671
+   在 Frxs.Erp.ServiceCenter.Order.MSSQLDAL.BuyOrderPreDetailsDAO.Save(BuyOrderPreDetails model, IDbConnection conn, IDbTransaction tran) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Order.MSSQLDAL\Purchase\采购订单\BuyOrderPreDetailsDAO.cs:行号 112
+ClientConnectionId:121ce420-466a-4a21-9a5f-da26c51cfc2f

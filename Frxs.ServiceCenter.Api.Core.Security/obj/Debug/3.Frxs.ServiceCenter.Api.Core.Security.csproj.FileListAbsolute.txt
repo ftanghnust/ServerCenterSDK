@@ -1,0 +1,14 @@
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.Security\bin\Debug\Frxs.ServiceCenter.Api.Core.Security.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.Security\bin\Debug\Frxs.ServiceCenter.Api.Core.Security.pdb
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.Security\bin\Debug\Autofac.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.Security\bin\Debug\Frxs.ServiceCenter.Api.Core.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.Security\bin\Debug\Autofac.Integration.Mvc.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.Security\bin\Debug\Newtonsoft.Json.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.Security\bin\Debug\Frxs.ServiceCenter.Api.Core.pdb
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.Security\bin\Debug\Frxs.ServiceCenter.Api.Core.xml
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.Security\bin\Debug\Autofac.xml
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.Security\bin\Debug\Autofac.Integration.Mvc.xml
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.Security\bin\Debug\Newtonsoft.Json.xml
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.Security\obj\Debug\3.Frxs.ServiceCenter.Api.Core.Security.csprojResolveAssemblyReference.cache
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.Security\obj\Debug\Frxs.ServiceCenter.Api.Core.Security.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.Security\obj\Debug\Frxs.ServiceCenter.Api.Core.Security.pdb

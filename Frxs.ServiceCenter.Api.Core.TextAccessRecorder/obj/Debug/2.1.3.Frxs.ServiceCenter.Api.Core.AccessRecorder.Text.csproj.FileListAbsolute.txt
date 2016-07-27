@@ -1,0 +1,7 @@
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.TextAccessRecorder\bin\Debug\Fexs.ServiceCenter.Api.Core.TextAccessRecorder.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.TextAccessRecorder\bin\Debug\Fexs.ServiceCenter.Api.Core.TextAccessRecorder.pdb
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.TextAccessRecorder\bin\Debug\Autofac.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.TextAccessRecorder\bin\Debug\Autofac.xml
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.TextAccessRecorder\obj\Debug\2.1.3.Frxs.ServiceCenter.Api.Core.AccessRecorder.Text.csprojResolveAssemblyReference.cache
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.TextAccessRecorder\obj\Debug\Fexs.ServiceCenter.Api.Core.TextAccessRecorder.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.TextAccessRecorder\obj\Debug\Fexs.ServiceCenter.Api.Core.TextAccessRecorder.pdb

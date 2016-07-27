@@ -1,0 +1,200 @@
+/*****************************
+* Author:
+*
+* Date:2016-04-07
+******************************/
+
+using System;
+using System.Collections.Generic;
+
+
+using Frxs.Erp.ServiceCenter.Promotion.Model;
+using System.Data;
+using Frxs.Platform.Utility.Pager;
+
+
+namespace Frxs.Erp.ServiceCenter.Promotion.IDAL
+{
+    /// <summary>
+    /// ### WProductPromotion数据库访问接口
+    /// </summary>
+    public partial interface IWProductPromotionDAO : IBaseDAO
+    {
+
+
+        #region  成员方法
+        #region 根据主键验证WProductPromotion是否存在
+        /// <summary>
+        /// 根据主键验证WProductPromotion是否存在
+        /// </summary>
+        /// <param name="model">WProductPromotion对象</param>
+        /// <returns>是否存在</returns>
+        bool Exists(WProductPromotion model);
+        #endregion
+
+
+        #region 添加一个WProductPromotion
+        /// <summary>
+        /// 添加一个WProductPromotion
+        /// </summary>
+        /// <param name="model">WProductPromotion对象</param>
+        /// <returns>数据库影响行数</returns>
+        int Save(WProductPromotion model);
+        #endregion
+
+
+        #region 更新一个WProductPromotion
+        /// <summary>
+        /// 更新一个WProductPromotion
+        /// </summary>
+        /// <param name="model">WProductPromotion对象</param>
+        /// <returns>数据库影响行数</returns>
+        int Edit(WProductPromotion model);
+        #endregion
+
+
+        #region 删除一个WProductPromotion
+        /// <summary>
+        /// 删除一个WProductPromotion
+        /// </summary>
+        /// <param name="model">WProductPromotion对象</param>
+        /// <returns>数据库影响行数</returns>
+        int Delete(WProductPromotion model);
+        #endregion
+
+
+        #region 根据主键逻辑删除一个WProductPromotion
+        /// <summary>
+        /// 根据主键逻辑删除一个WProductPromotion
+        /// </summary>
+        /// <param name="promotionID">主键ID(WID+ID服务表)</param>
+        /// <returns>数据库影响行数</returns>
+        int LogicDelete(string promotionID);
+        #endregion
+
+
+        #region 根据字典获取WProductPromotion对象
+        /// <summary>
+        /// 根据字典获取WProductPromotion对象
+        /// </summary>
+        /// <param name="conditionDict">条件参数</param>
+        /// <returns>WProductPromotion对象</returns>
+        WProductPromotion GetModel(IDictionary<string, object> conditionDict);
+        #endregion
+
+
+        #region 根据主键获取WProductPromotion对象
+        /// <summary>
+        /// 根据主键获取WProductPromotion对象
+        /// </summary>
+        /// <param name="promotionID">主键ID(WID+ID服务表)</param>
+        /// <returns>WProductPromotion对象</returns>
+        WProductPromotion GetModel(string promotionID);
+        #endregion
+
+
+        #region 根据字典获取WProductPromotion集合
+        /// <summary>
+        /// 根据字典获取WProductPromotion集合
+        /// </summary>
+        /// <param name="conditionDict">条件参数
+        /// <returns>数据集合</returns>
+        IList<WProductPromotion> GetList(IDictionary<string, object> conditionDict);
+        #endregion
+
+
+        #region 根据字典获取WProductPromotion数据集
+        /// <summary>
+        /// 根据字典获取WProductPromotion数据集
+        /// </summary>
+        /// <param name="conditionDict">条件参数</param>
+        /// <param name="sqlConfigName">SQL配置名称</param>
+        /// <returns>数据集</returns>
+        DataSet GetDataSet(IDictionary<string, object> conditionDict, string sqlConfigName);
+        #endregion
+
+
+        #region 分页获取WProductPromotion集合
+        /// <summary>
+        /// 分页获取WProductPromotion集合
+        /// </summary>
+        /// <param name="page">分页对象</param>
+        /// <param name="conditionDict">查询条件</param>
+        /// <returns>分页对象集合</returns>
+        PageListBySql<WProductPromotion> GetPageList(PageListBySql<WProductPromotion> page, IDictionary<string, object> conditionDict);
+        #endregion
+
+
+        #region 更新字段
+        /// <summary>
+        /// 更新字段
+        /// </summary>
+        /// <param name="fieldList">需更新字段集合</param>
+        /// <param name="whereConditionList">更新条件字段集合</param>
+        /// <returns>数据库影响行数</returns>
+        int UpdateField(IList<Field> fieldList, IList<WhereCondition> whereConditionList);
+        #endregion
+
+
+        #endregion
+
+
+    }
+
+    public partial interface IWProductPromotionDAO : IBaseDAO
+    {
+        #region 添加一个WProductPromotion 事务操作
+        /// <summary>
+        /// 添加一个WProductPromotion 事务操作
+        /// </summary>
+        /// <param name="model">WProductPromotion对象</param>
+        /// <param name="conn">连接对象</param>
+        /// <param name="tran">事务对象</param>
+        /// <returns>数据库影响行数</returns>
+        int Save(WProductPromotion model, IDbConnection conn, IDbTransaction tran);
+        #endregion
+
+        #region 更新一个WProductPromotion 事务操作
+        /// <summary>
+        /// 更新一个WProductPromotion 事务操作
+        /// </summary>
+        /// <param name="model">WProductPromotion对象</param>
+        /// <param name="conn">连接对象</param>
+        /// <param name="tran">事务对象</param>
+        /// <returns>数据库影响行数</returns>
+        int Edit(WProductPromotion model, IDbConnection conn, IDbTransaction tran);
+        #endregion
+
+        #region 删除一个WProductPromotion 事务操作
+        /// <summary>
+        /// 删除一个WProductPromotion 事务操作
+        /// </summary>        
+        /// <param name="conn">连接对象</param>
+        /// <param name="tran">事务对象</param>
+        /// <param name="promotionID">促销ID</param>
+        /// <returns>数据库影响行数</returns>
+        int Delete(IDbConnection conn, IDbTransaction tran, string promotionID);
+        #endregion
+
+
+        #region 获取 平台费率调整单 互斥条件信息
+        /// <summary>
+        /// 获取 平台费率调整单 互斥条件信息
+        /// </summary>
+        /// <param name="promotionID">促销ID</param>
+        /// <param name="PromotionType">促销类型(1:门店积分促销;2:平台费率促销)</param>
+        /// <param name="wid">仓库ID</param>        
+        /// <returns>是否存在</returns>
+        RepeatPromotionInfo GetRepeatInfo(string promotionID, int PromotionType, int wid);
+        #endregion
+
+        /// <summary>
+        /// 批量自动确认促销生效
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="userName"></param>
+        /// <returns></returns>
+        int TimerWProductPromotionPosting(int promotionType, int userId, string userName);
+    }
+
+}

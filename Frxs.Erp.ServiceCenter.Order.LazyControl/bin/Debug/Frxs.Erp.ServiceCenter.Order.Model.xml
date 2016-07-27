@@ -1,0 +1,2877 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Frxs.Erp.ServiceCenter.Order.Model</name>
+    </assembly>
+    <members>
+        <member name="T:Frxs.ServiceCenter.Order.Model.BuyOrder">
+            <summary>
+            BuyOrder实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.BuyID">
+            <summary>
+            采购单编号
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.WID">
+            <summary>
+            仓库ID(Warehouse.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.SubWID">
+            <summary>
+            仓库柜台
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.PreBuyID">
+            <summary>
+            预定订单编号(预留)
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.OrderDate">
+            <summary>
+            采购入库时间(OrderStatus=1;格式:yyyy-MM-dd HH:mm:ss)
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.WCode">
+            <summary>
+            仓库编号(Warehouse.WCode)
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.WName">
+            <summary>
+            仓库名称(Warehouse.WName)
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.SubWCode">
+            <summary>
+            仓库子机构编号(Warehouse.WCode)
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.SubWName">
+            <summary>
+            仓库子机构名称(Warehouse.WName)
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.VendorID">
+            <summary>
+            供应商分类ID
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.VendorCode">
+            <summary>
+            供应商编号
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.VendorName">
+            <summary>
+            供应商名称
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.Status">
+            <summary>
+            状态(0:未提交;1:已提交;2:已过帐;3:已结算)
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.TotalOrderAmt">
+            <summary>
+            采购总金额(BuyOrderDetails.SubBuyAmt)
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.ConfTime">
+            <summary>
+            提交时间
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.ConfUserID">
+            <summary>
+            提交用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.ConfUserName">
+            <summary>
+            提交用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.PostingTime">
+            <summary>
+            过帐时间
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.PostingUserID">
+            <summary>
+            过帐用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.PostingUserName">
+            <summary>
+            过帐用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.SettleTime">
+            <summary>
+            结算时间
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.SettleUserID">
+            <summary>
+            结算用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.SettleUserName">
+            <summary>
+            结算用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.SettleID">
+            <summary>
+            结算ID(BuySettle.SettleID)
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.CreateTime">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Order.Model.BuyOrder.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails">
+            <summary>
+            BuyOrderDetails实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.ID">
+            <summary>
+            编号（仓库ID+GUID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.WID">
+            <summary>
+            仓库ID(Warehouse.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.BuyID">
+            <summary>
+            采购编号(BuyOrder.OrderID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.ProductId">
+            <summary>
+            商品编号(Prouct.ProductID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.SKU">
+            <summary>
+            商品SKU(ERP编码)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.ProductName">
+            <summary>
+            描述商品名称(Product.ProductName)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.BarCode">
+            <summary>
+            商品的国际条码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.ProductImageUrl200">
+            <summary>
+            商品图片用于移动端(Products.ImageUrl200*200)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.ProductImageUrl400">
+            <summary>
+            商品图片用于PC端(Products.ImageUrl400*400)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.BuyUnit">
+            <summary>
+            采购单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.BuyPackingQty">
+            <summary>
+            采购单位包装数
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.BuyQty">
+            <summary>
+            采购单位数量
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.BuyPrice">
+            <summary>
+            采购单位价格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.Unit">
+            <summary>
+            库存单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.UnitQty">
+            <summary>
+            库存单位数量=(BuyPackingQty*BuyQty)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.UnitPrice">
+            <summary>
+            库存单位价格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.SubAmt">
+            <summary>
+            采购的总金额(=UnitQty*UnitPrice)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.SerialNumber">
+            <summary>
+            序号(输入的序号,每一个单据从1开始)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetails.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt">
+            <summary>
+            BuyOrderPreDetailsExt实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.ID">
+            <summary>
+            编号(BuyOrderPreDetails.ID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.BuyID">
+            <summary>
+            BuyID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.CategoryId1">
+            <summary>
+            基本分类一级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.CategoryId1Name">
+            <summary>
+            基本分类一级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.CategoryId2">
+            <summary>
+            基本分类二级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.CategoryId2Name">
+            <summary>
+            基本分类二级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.CategoryId3">
+            <summary>
+            基本分类三级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.CategoryId3Name">
+            <summary>
+            基本分类三级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.ShopCategoryId1">
+            <summary>
+            运营一级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.ShopCategoryId1Name">
+            <summary>
+            运营一级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.ShopCategoryId2">
+            <summary>
+            运营二级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.ShopCategoryId2Name">
+            <summary>
+            运营二级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.ShopCategoryId3">
+            <summary>
+            运营三级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.ShopCategoryId3Name">
+            <summary>
+            运营三级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.BrandId1">
+            <summary>
+            品牌ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.BrandId1Name">
+            <summary>
+            品牌ID名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.BrandId2">
+            <summary>
+            子品牌ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.BrandId2Name">
+            <summary>
+            子品牌名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetailsExt.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt">
+            <summary>
+            BuyOrderDetailsExt实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt.ID">
+            <summary>
+            编号(BuyOrderDetails.ID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt.CategoryId1">
+            <summary>
+            基本分类一级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt.CategoryId1Name">
+            <summary>
+            基本分类一级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt.CategoryId2">
+            <summary>
+            基本分类二级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt.CategoryId2Name">
+            <summary>
+            基本分类二级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt.CategoryId3">
+            <summary>
+            基本分类三级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt.CategoryId3Name">
+            <summary>
+            基本分类三级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt.ShopCategoryId1">
+            <summary>
+            运营一级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt.ShopCategoryId1Name">
+            <summary>
+            运营一级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt.ShopCategoryId2">
+            <summary>
+            运营二级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt.ShopCategoryId2Name">
+            <summary>
+            运营二级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt.ShopCategoryId3">
+            <summary>
+            运营三级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt.ShopCategoryId3Name">
+            <summary>
+            运营三级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt.BrandId1">
+            <summary>
+            品牌ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt.BrandId1Name">
+            <summary>
+            品牌ID名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt.BrandId2">
+            <summary>
+            子品牌ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt.BrandId2Name">
+            <summary>
+            子品牌名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderDetailsExt.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.BuyBack">
+            <summary>
+            BuyBack实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.BackID">
+            <summary>
+            采购单编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.WID">
+            <summary>
+            仓库ID(Warehouse.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.SubWID">
+            <summary>
+            仓库柜台
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.PreBuyID">
+            <summary>
+            预定订单编号(预留)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.OrderDate">
+            <summary>
+            采购入库时间(OrderStatus=1;格式:yyyy-MM-dd HH:mm:ss)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.WCode">
+            <summary>
+            仓库编号(Warehouse.WCode)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.WName">
+            <summary>
+            仓库名称(Warehouse.WName)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.SubWCode">
+            <summary>
+            仓库柜台编号(Warehouse.WCode)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.SubWName">
+            <summary>
+            仓库柜台名称(Warehouse.WName)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.VendorID">
+            <summary>
+            供应商分类ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.VendorCode">
+            <summary>
+            供应商编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.VendorName">
+            <summary>
+            供应商名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.Status">
+            <summary>
+            状态(0:未提交;1:已提交;2:已过帐;3:已结算)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.TotalAmt">
+            <summary>
+            采购总金额sum(BuyBackDetails.SubAmt)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.ConfTime">
+            <summary>
+            提交时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.ConfUserID">
+            <summary>
+            提交用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.ConfUserName">
+            <summary>
+            提交用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.PostingTime">
+            <summary>
+            过帐时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.PostingUserID">
+            <summary>
+            过帐用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.PostingUserName">
+            <summary>
+            过帐用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.SettleTime">
+            <summary>
+            结算时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.SettleUserID">
+            <summary>
+            结算用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.SettleUserName">
+            <summary>
+            结算用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.SettleID">
+            <summary>
+            结算ID(BuySettle.SettleID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.CreateTime">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBack.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails">
+            <summary>
+            BuyBackDetails实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.ID">
+            <summary>
+            编号(仓库ID+GUID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.BackID">
+            <summary>
+            采购单编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.WID">
+            <summary>
+            仓库ID(Warehouse.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.ProductId">
+            <summary>
+            商品编号(Prouct.ProductID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.SKU">
+            <summary>
+            商品SKU(ERP编码)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.ProductName">
+            <summary>
+            描述商品名称(Product.ProductName)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.BarCode">
+            <summary>
+            商品的国际条码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.ProductImageUrl200">
+            <summary>
+            商品图片用于移动端(Products.ImageUrl200*200)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.ProductImageUrl400">
+            <summary>
+            商品图片用于PC端(Products.ImageUrl400*400)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.BackUnit">
+            <summary>
+            采购单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.BackPackingQty">
+            <summary>
+            采购单位包装数(固定为库存单位)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.BackQty">
+            <summary>
+            采购单位数量
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.BackPrice">
+            <summary>
+            采购单位价格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.Unit">
+            <summary>
+            库存单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.UnitQty">
+            <summary>
+            库存单位数量(=BackPackingQty*BackQty)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.UnitPrice">
+            <summary>
+            库存单位价格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.SubAmt">
+            <summary>
+            采购的总金额(=UnitQty*UnitPrice)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.SerialNumber">
+            <summary>
+            序号(输入的序号,每一个单据从1开始)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetails.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre">
+            <summary>
+            BuyOrderPre实体类
+            </summary>
+            <summary>
+            查询显示实体
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.BuyID">
+            <summary>
+            采购单编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.WID">
+            <summary>
+            仓库ID(Warehouse.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.SubWID">
+            <summary>
+            仓库柜台
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.PreBuyID">
+            <summary>
+            预定订单编号(预留)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.OrderDate">
+            <summary>
+            采购入库时间(OrderStatus=1;格式:yyyy-MM-dd HH:mm:ss)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.WCode">
+            <summary>
+            仓库编号(Warehouse.WCode)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.WName">
+            <summary>
+            仓库名称(Warehouse.WName)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.SubWCode">
+            <summary>
+            仓库子机构编号(Warehouse.WCode)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.SubWName">
+            <summary>
+            仓库子机构名称(Warehouse.WName)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.BuyEmpID">
+            <summary>
+            采购员ID(WarehouseEmp.EmpID and UserType=4)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.BuyEmpName">
+            <summary>
+            采购员名称(WarehouseEmp.EmpName and UserType=4)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.VendorID">
+            <summary>
+            供应商分类ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.VendorCode">
+            <summary>
+            供应商编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.VendorName">
+            <summary>
+            供应商名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.Status">
+            <summary>
+            状态(0:未提交;1:已提交;2:已过帐;3:已结算)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.TotalOrderAmt">
+            <summary>
+            采购总金额(BuyOrderDetails.SubBuyAmt)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.ConfTime">
+            <summary>
+            提交时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.ConfUserID">
+            <summary>
+            提交用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.ConfUserName">
+            <summary>
+            提交用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.PostingTime">
+            <summary>
+            过帐时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.PostingUserID">
+            <summary>
+            过帐用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.PostingUserName">
+            <summary>
+            过帐用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.SettleTime">
+            <summary>
+            结算时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.SettleUserID">
+            <summary>
+            结算用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.SettleUserName">
+            <summary>
+            结算用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.SettleID">
+            <summary>
+            结算ID(BuySettle.SettleID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.CreateTime">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.StatusStr">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPre.WNameStr">
+            <summary>
+            仓库名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails">
+            <summary>
+            BuyOrderPreDetails实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.ID">
+            <summary>
+            编号（仓库ID+GUID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.BuyID">
+            <summary>
+            采购单编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.WID">
+            <summary>
+            仓库ID(Warehouse.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.ProductId">
+            <summary>
+            商品编号(Prouct.ProductID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.SKU">
+            <summary>
+            商品SKU(ERP编码)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.ProductName">
+            <summary>
+            描述商品名称(Product.ProductName)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.BarCode">
+            <summary>
+            商品的国际条码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.ProductImageUrl200">
+            <summary>
+            商品图片用于移动端(Products.ImageUrl200*200)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.ProductImageUrl400">
+            <summary>
+            商品图片用于PC端(Products.ImageUrl400*400)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.BuyUnit">
+            <summary>
+            采购单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.BuyPackingQty">
+            <summary>
+            采购单位包装数
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.BuyQty">
+            <summary>
+            采购单位数量
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.BuyPrice">
+            <summary>
+            采购单位价格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.Unit">
+            <summary>
+            库存单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.UnitQty">
+            <summary>
+            库存单位数量=(BuyPackingQty*BuyQty)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.UnitPrice">
+            <summary>
+            库存单位价格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.SubAmt">
+            <summary>
+            采购的总金额(=UnitQty*UnitPrice)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.SerialNumber">
+            <summary>
+            序号(输入的序号,每一个单据从1开始)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyOrderPreDetails.Status">
+            <summary>
+            状态 add:1 edit:2 del:3
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre">
+            <summary>
+            BuyBackPre实体类
+            </summary>
+            <summary>
+            查询显示实体
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.BackID">
+            <summary>
+            退货单编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.WID">
+            <summary>
+            仓库ID(Warehouse.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.SubWID">
+            <summary>
+            仓库柜台
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.PreBuyID">
+            <summary>
+            预定退货单编号(预留)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.OrderDate">
+            <summary>
+            采购入库时间(OrderStatus=1;格式:yyyy-MM-dd HH:mm:ss)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.WCode">
+            <summary>
+            仓库编号(Warehouse.WCode)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.WName">
+            <summary>
+            仓库名称(Warehouse.WName)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.SubWCode">
+            <summary>
+            仓库子机构编号(Warehouse.WCode)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.SubWName">
+            <summary>
+            仓库子机构名称(Warehouse.WName)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.BuyEmpID">
+            <summary>
+            采购员ID(WarehouseEmp.EmpID and UserType=4)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.BuyEmpName">
+            <summary>
+            采购员名称(WarehouseEmp.EmpName and UserType=4)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.VendorID">
+            <summary>
+            供应商分类ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.VendorCode">
+            <summary>
+            供应商编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.VendorName">
+            <summary>
+            供应商名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.Status">
+            <summary>
+            状态(0:未提交;1:已提交;2:已过帐;3:已结算)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.TotalAmt">
+            <summary>
+            采购总金额(BuyBackDetails.SubBuyAmt)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.ConfTime">
+            <summary>
+            提交时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.ConfUserID">
+            <summary>
+            提交用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.ConfUserName">
+            <summary>
+            提交用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.PostingTime">
+            <summary>
+            过帐时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.PostingUserID">
+            <summary>
+            过帐用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.PostingUserName">
+            <summary>
+            过帐用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.SettleTime">
+            <summary>
+            结算时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.SettleUserID">
+            <summary>
+            结算用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.SettleUserName">
+            <summary>
+            结算用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.SettleID">
+            <summary>
+            结算ID(BuySettle.SettleID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.CreateTime">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.StatusStr">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPre.WNameStr">
+            <summary>
+            仓库名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails">
+            <summary>
+            BuyBackPreDetails实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.ID">
+            <summary>
+            编号（仓库ID+GUID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.BackID">
+            <summary>
+            采购单编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.WID">
+            <summary>
+            仓库ID(Warehouse.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.ProductId">
+            <summary>
+            商品编号(Prouct.ProductID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.SKU">
+            <summary>
+            商品SKU(ERP编码)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.ProductName">
+            <summary>
+            描述商品名称(Product.ProductName)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.BarCode">
+            <summary>
+            商品的国际条码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.ProductImageUrl200">
+            <summary>
+            商品图片用于移动端(Products.ImageUrl200*200)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.ProductImageUrl400">
+            <summary>
+            商品图片用于PC端(Products.ImageUrl400*400)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.BackUnit">
+            <summary>
+            采购单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.BackPackingQty">
+            <summary>
+            采购单位包装数
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.BackQty">
+            <summary>
+            采购单位数量
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.BackPrice">
+            <summary>
+            采购单位价格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.Unit">
+            <summary>
+            库存单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.UnitQty">
+            <summary>
+            库存单位数量=(BuyPackingQty*BuyQty)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.UnitPrice">
+            <summary>
+            库存单位价格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.SubAmt">
+            <summary>
+            采购的总金额(=UnitQty*UnitPrice)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.SerialNumber">
+            <summary>
+            序号(输入的序号,每一个单据从1开始)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetails.Status">
+            <summary>
+            状态 add:1 edit:2 del:3
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.SaleBack">
+            <summary>
+            SaleBack实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.BackID">
+            <summary>
+            退货单编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.SettleID">
+            <summary>
+            结算ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.WID">
+            <summary>
+            仓库ID(Warehouse.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.WCode">
+            <summary>
+            仓库编号(Warehouse.WCode)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.WName">
+            <summary>
+            仓库名称(Warehouse.WName)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.SubWID">
+            <summary>
+            仓库子机构ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.SubWCode">
+            <summary>
+            仓库子机构编号(Warehouse.WCode)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.SubWName">
+            <summary>
+            仓库子机构名称(Warehouse.WName)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.BackDate">
+            <summary>
+            退货日期(格式:yyyy-MM-dd)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.XSUserID">
+            <summary>
+            兴盛用户ID(预留)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.ShopID">
+            <summary>
+            下单门店ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.ShopCode">
+            <summary>
+            下单门店编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.ShopName">
+            <summary>
+            下单门店名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.Status">
+            <summary>
+            状态(0:未提交;1:已提交;2:已过帐;3:已结算)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.TotalBackAmt">
+            <summary>
+            退货金额(SaleBackDetails.BackAmt)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.TotalBasePoint">
+            <summary>
+            积分合计
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.TotalBackQty">
+            <summary>
+            总数量
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.ConfTime">
+            <summary>
+            提交时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.ConfUserID">
+            <summary>
+            提交用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.ConfUserName">
+            <summary>
+            提交用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.PostingTime">
+            <summary>
+            过帐时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.PostingUserID">
+            <summary>
+            过帐用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.PostingUserName">
+            <summary>
+            过帐用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.SettleTime">
+            <summary>
+            结算时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.SettleUserID">
+            <summary>
+            结算用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.SettleUserName">
+            <summary>
+            结算用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.CreateTime">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBack.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails">
+            <summary>
+            SaleBackDetails实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.ID">
+            <summary>
+            编号(GUID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.BackID">
+            <summary>
+            退货单编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.WID">
+            <summary>
+            仓库ID(Warehouse.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.ProductId">
+            <summary>
+            商品编号(Prouct.ProductID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.SKU">
+            <summary>
+            商品SKU(ERP编码)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.ProductName">
+            <summary>
+            描述商品名称(Product.ProductName)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.BarCode">
+            <summary>
+            商品的国际条码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.ProductImageUrl200">
+            <summary>
+            商品图片用于移动端(Products.ImageUrl200*200)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.ProductImageUrl400">
+            <summary>
+            商品图片用于PC端(Products.ImageUrl400*400)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.BackUnit">
+            <summary>
+            退货单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.BackPackingQty">
+            <summary>
+            退货单位包装数(固定为库存单位)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.BackQty">
+            <summary>
+            退货单位数量
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.BackPrice">
+            <summary>
+            采购单位价格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.Unit">
+            <summary>
+            库存单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.UnitQty">
+            <summary>
+            库存单位数量(=BackPackingQty*BackQty)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.UnitPrice">
+            <summary>
+            库存单位价格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.BasePoint">
+            <summary>
+            库存单位积分
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.SubAmt">
+            <summary>
+            调整后的金额(=UnitQty*UnitPrice)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.SubBasePoint">
+            <summary>
+            小计积分(=ShopPoint*UnitQty)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.SerialNumber">
+            <summary>
+            序号(输入的序号,每一个单据从1开始)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetails.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt">
+            <summary>
+            SaleBackDetailsExt实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt.ID">
+            <summary>
+            编号(SaleBackDetails.ID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt.CategoryId1">
+            <summary>
+            基本分类一级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt.CategoryId1Name">
+            <summary>
+            基本分类一级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt.CategoryId2">
+            <summary>
+            基本分类二级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt.CategoryId2Name">
+            <summary>
+            基本分类二级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt.CategoryId3">
+            <summary>
+            基本分类三级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt.CategoryId3Name">
+            <summary>
+            基本分类三级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt.ShopCategoryId1">
+            <summary>
+            运营一级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt.ShopCategoryId1Name">
+            <summary>
+            运营一级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt.ShopCategoryId2">
+            <summary>
+            运营二级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt.ShopCategoryId2Name">
+            <summary>
+            运营二级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt.ShopCategoryId3">
+            <summary>
+            运营三级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt.ShopCategoryId3Name">
+            <summary>
+            运营三级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt.BrandId1">
+            <summary>
+            品牌ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt.BrandId1Name">
+            <summary>
+            品牌ID名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt.BrandId2">
+            <summary>
+            子品牌ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt.BrandId2Name">
+            <summary>
+            子品牌名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackDetailsExt.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt">
+            <summary>
+            SaleBackPreDetailsExt实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.ID">
+            <summary>
+            编号(SaleBackDetails.ID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.BackID">
+            <summary>
+            BackID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.CategoryId1">
+            <summary>
+            基本分类一级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.CategoryId1Name">
+            <summary>
+            基本分类一级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.CategoryId2">
+            <summary>
+            基本分类二级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.CategoryId2Name">
+            <summary>
+            基本分类二级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.CategoryId3">
+            <summary>
+            基本分类三级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.CategoryId3Name">
+            <summary>
+            基本分类三级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.ShopCategoryId1">
+            <summary>
+            运营一级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.ShopCategoryId1Name">
+            <summary>
+            运营一级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.ShopCategoryId2">
+            <summary>
+            运营二级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.ShopCategoryId2Name">
+            <summary>
+            运营二级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.ShopCategoryId3">
+            <summary>
+            运营三级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.ShopCategoryId3Name">
+            <summary>
+            运营三级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.BrandId1">
+            <summary>
+            品牌ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.BrandId1Name">
+            <summary>
+            品牌ID名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.BrandId2">
+            <summary>
+            子品牌ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.BrandId2Name">
+            <summary>
+            子品牌名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetailsExt.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails">
+            <summary>
+            SaleBackPreDetails实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.ID">
+            <summary>
+            编号(GUID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.WID">
+            <summary>
+            仓库ID(Warehouse.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.BackID">
+            <summary>
+            退货编号(SaleOrders.OrderID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.ProductId">
+            <summary>
+            商品编号(Prouct.ProductID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.SKU">
+            <summary>
+            商品SKU(ERP编码)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.ProductName">
+            <summary>
+            描述商品名称(Product.ProductName)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.BarCode">
+            <summary>
+            商品的国际条码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.ProductImageUrl200">
+            <summary>
+            商品图片用于移动端(Products.ImageUrl200*200)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.ProductImageUrl400">
+            <summary>
+            商品图片用于PC端(Products.ImageUrl400*400)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.BackUnit">
+            <summary>
+            退货单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.BackPackingQty">
+            <summary>
+            退货单位包装数(固定为库存单位)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.BackQty">
+            <summary>
+            退货单位数量
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.BackPrice">
+            <summary>
+            采购单位价格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.Unit">
+            <summary>
+            库存单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.UnitQty">
+            <summary>
+            库存单位数量(=BackPackingQty*BackQty)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.UnitPrice">
+            <summary>
+            库存单位价格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.BasePoint">
+            <summary>
+            库存单位积分
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.SubAmt">
+            <summary>
+            调整后的金额(=UnitQty*UnitPrice)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.SubBasePoint">
+            <summary>
+            小计积分(=ShopPoint*UnitQty)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.SerialNumber">
+            <summary>
+            序号(输入的序号,每一个单据从1开始)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPreDetails.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre">
+            <summary>
+            SaleBackPre实体类
+            </summary>
+            <summary>
+            查询显示实体
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.BackID">
+            <summary>
+            退货单编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.WID">
+            <summary>
+            仓库ID(Warehouse.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.WCode">
+            <summary>
+            仓库编号(Warehouse.WCode)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.WName">
+            <summary>
+            仓库名称(Warehouse.WName)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.SubWID">
+            <summary>
+            仓库柜台ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.SubWCode">
+            <summary>
+            仓库柜台编号(Warehouse.WCode)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.SubWName">
+            <summary>
+            仓库柜台名称(Warehouse.WName)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.BackDate">
+            <summary>
+            退货日期(格式:yyyy-MM-dd)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.XSUserID">
+            <summary>
+            兴盛用户ID(预留)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.ShopID">
+            <summary>
+            下单门店ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.ShopCode">
+            <summary>
+            下单门店编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.ShopName">
+            <summary>
+            下单门店名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.Status">
+            <summary>
+            状态(0:未提交;1:已确认;2:已过帐;3:已结算)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.TotalBackAmt">
+            <summary>
+            退货金额(SaleBackDetails.BackAmt)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.TotalBasePoint">
+            <summary>
+            积分(SaleBackDetails.SubPoint)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.TotalBackQty">
+            <summary>
+            总数量
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.ConfTime">
+            <summary>
+            提交时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.ConfUserID">
+            <summary>
+            提交用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.ConfUserName">
+            <summary>
+            提交用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.PostingTime">
+            <summary>
+            过帐时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.PostingUserID">
+            <summary>
+            过帐用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.PostingUserName">
+            <summary>
+            过帐用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.SettleTime">
+            <summary>
+            结算时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.SettleUserID">
+            <summary>
+            结算用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.SettleUserName">
+            <summary>
+            结算用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.SettleID">
+            <summary>
+            结算ID(SaleSettle.SettleID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.CreateTime">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleBackPre.StatusStr">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt">
+            <summary>
+            BuyBackPreDetailsExt实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.ID">
+            <summary>
+            编号(BuyBackDetails.ID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.BackID">
+            <summary>
+            BackID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.CategoryId1">
+            <summary>
+            基本分类一级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.CategoryId1Name">
+            <summary>
+            基本分类一级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.CategoryId2">
+            <summary>
+            基本分类二级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.CategoryId2Name">
+            <summary>
+            基本分类二级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.CategoryId3">
+            <summary>
+            基本分类三级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.CategoryId3Name">
+            <summary>
+            基本分类三级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.ShopCategoryId1">
+            <summary>
+            运营一级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.ShopCategoryId1Name">
+            <summary>
+            运营一级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.ShopCategoryId2">
+            <summary>
+            运营二级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.ShopCategoryId2Name">
+            <summary>
+            运营二级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.ShopCategoryId3">
+            <summary>
+            运营三级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.ShopCategoryId3Name">
+            <summary>
+            运营三级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.BrandId1">
+            <summary>
+            品牌ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.BrandId1Name">
+            <summary>
+            品牌ID名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.BrandId2">
+            <summary>
+            子品牌ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.BrandId2Name">
+            <summary>
+            子品牌名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackPreDetailsExt.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt">
+            <summary>
+            BuyBackDetailsExt实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt.ID">
+            <summary>
+            编号(BuyBackDetails.ID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt.CategoryId1">
+            <summary>
+            基本分类一级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt.CategoryId1Name">
+            <summary>
+            基本分类一级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt.CategoryId2">
+            <summary>
+            基本分类二级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt.CategoryId2Name">
+            <summary>
+            基本分类二级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt.CategoryId3">
+            <summary>
+            基本分类三级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt.CategoryId3Name">
+            <summary>
+            基本分类三级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt.ShopCategoryId1">
+            <summary>
+            运营一级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt.ShopCategoryId1Name">
+            <summary>
+            运营一级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt.ShopCategoryId2">
+            <summary>
+            运营二级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt.ShopCategoryId2Name">
+            <summary>
+            运营二级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt.ShopCategoryId3">
+            <summary>
+            运营三级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt.ShopCategoryId3Name">
+            <summary>
+            运营三级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt.BrandId1">
+            <summary>
+            品牌ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt.BrandId1Name">
+            <summary>
+            品牌ID名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt.BrandId2">
+            <summary>
+            子品牌ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt.BrandId2Name">
+            <summary>
+            子品牌名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.BuyBackDetailsExt.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.SaleFee">
+            <summary>
+            SaleFee实体类
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.detailList">
+            <summary>
+            明细列表
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.FeeID">
+            <summary>
+            费用ID(SaleFee.FeeID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.WID">
+            <summary>
+            仓库ID(WarehouseID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.WCode">
+            <summary>
+            仓库编号(Warehouse.WCode)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.WName">
+            <summary>
+            仓库名称(Warehouse.WarehouseName)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.SubWID">
+            <summary>
+            仓库子机构ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.SubWCode">
+            <summary>
+            仓库子机构编号(Warehouse.WCode)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.SubWName">
+            <summary>
+            仓库子机构名称(Warehouse.WName)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.Status">
+            <summary>
+            状态(0:未提交;1:已提交;2:已过帐;3:已结算)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.TotalFeeAmt">
+            <summary>
+            费用金额(小于0代表销售退回;大于0代表销售增加)(=sum(SaleFeeDetail.FeeAmt)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.ConfTime">
+            <summary>
+            提交时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.ConfUserID">
+            <summary>
+            提交用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.ConfUserName">
+            <summary>
+            提交用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.PostingTime">
+            <summary>
+            过帐时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.PostingUserID">
+            <summary>
+            过帐用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.PostingUserName">
+            <summary>
+            过帐用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.SettleTime">
+            <summary>
+            结算完成时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.SettleUserID">
+            <summary>
+            结算用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.SettleUserName">
+            <summary>
+            结算用户
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.FeeDate">
+            <summary>
+            费用日期
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFee.StatusToStr">
+            <summary>
+            状态(0:未提交;1:已提交;2:已过帐;3:已结算)
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.SaleFeeDetails">
+            <summary>
+            SaleFeeDetails实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeeDetails.ID">
+            <summary>
+            主键ID(GUID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeeDetails.WID">
+            <summary>
+            仓库ID(WarehouseID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeeDetails.FeeID">
+            <summary>
+            费用ID(SaleFee.FeeID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeeDetails.SettleID">
+            <summary>
+            结算ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeeDetails.ShopID">
+            <summary>
+            门店ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeeDetails.ShopCode">
+            <summary>
+            门店编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeeDetails.ShopName">
+            <summary>
+            门店名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeeDetails.FeeCode">
+            <summary>
+            费用项目ID(数据字典; SaleFeeCode)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeeDetails.FeeName">
+            <summary>
+            费用项目名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeeDetails.Reason">
+            <summary>
+            费用原因
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeeDetails.OrderId">
+            <summary>
+            费用订单编号(SaleOrders.OrderId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeeDetails.FeeAmt">
+            <summary>
+            费用金额(小于0代表销售退回;大于0代表销售增加)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeeDetails.SettleTime">
+            <summary>
+            结算完成时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeeDetails.SerialNumber">
+            <summary>
+            序号(输入的序号,每一个单据从1开始)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeeDetails.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeeDetails.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeeDetails.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre">
+            <summary>
+            SaleFeePre实体类
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.detailList">
+            <summary>
+            明细列表
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.FeeID">
+            <summary>
+            费用ID(SaleFee.FeeID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.WID">
+            <summary>
+            仓库ID(WarehouseID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.WCode">
+            <summary>
+            仓库编号(Warehouse.WCode)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.WName">
+            <summary>
+            仓库名称(Warehouse.WarehouseName)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.SubWID">
+            <summary>
+            仓库子机构ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.SubWCode">
+            <summary>
+            仓库子机构编号(Warehouse.WCode)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.SubWName">
+            <summary>
+            仓库子机构名称(Warehouse.WName)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.Status">
+            <summary>
+            状态(0:未提交;1:已提交;2:已过帐;3:已结算)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.TotalFeeAmt">
+            <summary>
+            费用金额(小于0代表销售退回;大于0代表销售增加)(=sum(SaleFeeDetail.FeeAmt)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.ConfTime">
+            <summary>
+            提交时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.ConfUserID">
+            <summary>
+            提交用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.ConfUserName">
+            <summary>
+            提交用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.PostingTime">
+            <summary>
+            过帐时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.PostingUserID">
+            <summary>
+            过帐用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.PostingUserName">
+            <summary>
+            过帐用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.SettleTime">
+            <summary>
+            结算时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.SettleUserID">
+            <summary>
+            结算用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.SettleUserName">
+            <summary>
+            结算用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.FeeDate">
+            <summary>
+            费用日期
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePre.StatusToStr">
+            <summary>
+            状态(0:未提交;1:已提交;2:已过帐;3:已结算)
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePreDetails">
+            <summary>
+            SaleFeePreDetails实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePreDetails.ID">
+            <summary>
+            主键ID(GUID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePreDetails.WID">
+            <summary>
+            仓库ID(WarehouseID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePreDetails.FeeID">
+            <summary>
+            费用ID(SaleFee.FeeID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePreDetails.ShopID">
+            <summary>
+            门店ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePreDetails.ShopCode">
+            <summary>
+            门店编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePreDetails.ShopName">
+            <summary>
+            门店名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePreDetails.FeeCode">
+            <summary>
+            费用项目ID(数据字典; SaleFeeCode)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePreDetails.FeeName">
+            <summary>
+            费用项目名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePreDetails.Reason">
+            <summary>
+            费用原因
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePreDetails.OrderId">
+            <summary>
+            费用订单编号(SaleOrders.OrderId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePreDetails.FeeAmt">
+            <summary>
+            费用金额(小于0代表销售退回;大于0代表销售增加)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePreDetails.SettleID">
+            <summary>
+            结算ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePreDetails.SettleTime">
+            <summary>
+            结算完成时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePreDetails.SerialNumber">
+            <summary>
+            序号(输入的序号,每一个单据从1开始)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePreDetails.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePreDetails.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Order.Model.SaleFeePreDetails.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+    </members>
+</doc>

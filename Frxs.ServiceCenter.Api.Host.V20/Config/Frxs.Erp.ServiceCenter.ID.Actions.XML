@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Frxs.Erp.ServiceCenter.ID.Actions</name>
+    </assembly>
+    <members>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.Actions.IdsGetAction">
+            <summary>
+            获取各个服务ID流水主键
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.Actions.IdsGetAction.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.Actions.RequestDto.IdsGetRequestDto">
+            <summary>
+            Ids.Get
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.Actions.RequestDto.IdsGetRequestDto.Valid">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.Actions.RequestDto.IdsGetRequestDto.WID">
+            <summary>
+            仓库ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.Actions.RequestDto.IdsGetRequestDto.Type">
+            <summary>
+            请求的ID类型；空的数据类型为
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.Actions.XSOperatorLogWrite">
+            <summary>
+            操作日志写方法
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.Actions.XSOperatorLogWrite.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.Actions.XSOperatorLogWrite.XSOperatorLogWriteRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.Actions.XSOperatorLogWrite.XSOperatorLogWriteRequestDto.Valid">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.Actions.XSOperatorLogWrite.XSOperatorLogWriteRequestDto.WID">
+            <summary>
+            系统ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.Actions.XSOperatorLogWrite.XSOperatorLogWriteRequestDto.IPAddress">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.Actions.XSOperatorLogWrite.XSOperatorLogWriteRequestDto.MenuID">
+            <summary>
+            菜单ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.Actions.XSOperatorLogWrite.XSOperatorLogWriteRequestDto.Action">
+            <summary>
+            动作值
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.Actions.XSOperatorLogWrite.XSOperatorLogWriteRequestDto.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+    </members>
+</doc>

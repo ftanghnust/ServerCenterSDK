@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A42B03B4-867A-4CDE-A92D-4C511B19A1C8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Frxs.ServiceCenter.DataSync.Message.ApiHost.Order</RootNamespace>
+    <AssemblyName>Frxs.ServiceCenter.DataSync.Message.ApiHost.Order</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.xml</DocumentationFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.3.1.0\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.Mvc4.3.1.0\lib\net40\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=6.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FluentValidation.6.2.1.0\lib\Net45\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\Frxs.Erp.ServiceCenter.Order.Model\bin\Debug\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ProjectDescription.txt" />
+    <Content Include="Global.asax" />
+    <EmbeddedResource Include="Resource\Logo.png" />
+    <EmbeddedResource Include="Views\DataSync.Order.Api.CodeGenerator.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <EmbeddedResource Include="Resource\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\BuyBackGetDetailAction.cs" />
+    <Compile Include="Actions\BuyBackPreGetDetailAction.cs" />
+    <Compile Include="Actions\BuyOrderGetDetailAction.cs" />
+    <Compile Include="Actions\BuyOrderPreGetDetailAction.cs" />
+    <Compile Include="Actions\BuyPreAppGetDetailAction.cs" />
+    <Compile Include="Actions\CodeGenerator\ApiCodeGenerator.cs" />
+    <Compile Include="Actions\CodeGenerator\ApiCodeGeneratorV10.cs" />
+    <Compile Include="Actions\SaleBackGetDetailAction.cs" />
+    <Compile Include="Actions\SaleBackPreGetDetailAction.cs" />
+    <Compile Include="Actions\SaleEditGetDetailAction.cs" />
+    <Compile Include="Actions\SaleFeeGetDetailAction.cs" />
+    <Compile Include="Actions\SaleFeePreGetDetailAction.cs" />
+    <Compile Include="Actions\SaleOrderGetDetailAction.cs" />
+    <Compile Include="Actions\SaleOrderPreGetDetailAction.cs" />
+    <Compile Include="Actions\SaleSettleGetDetailAction.cs" />
+    <Compile Include="Actions\SettlementGetDetailAction.cs" />
+    <Compile Include="Actions\StockAdjGetDetailAction.cs" />
+    <Compile Include="Actions\StockCheckGetDetailAction.cs" />
+    <Compile Include="Actions\StockCheckPlanGetDetailAction.cs" />
+    <Compile Include="Actions\System\BuyBack.cs" />
+    <Compile Include="Actions\System\BuyBackDetail.cs" />
+    <Compile Include="Actions\System\BuyBackDetailsExt.cs" />
+    <Compile Include="Actions\System\BuyBackPre.cs" />
+    <Compile Include="Actions\System\BuyBackPreDetail.cs" />
+    <Compile Include="Actions\System\BuyBackPreDetailsExt.cs" />
+    <Compile Include="Actions\System\BuyOrder.cs" />
+    <Compile Include="Actions\System\BuyOrderDetail.cs" />
+    <Compile Include="Actions\System\BuyOrderDetailsExt.cs" />
+    <Compile Include="Actions\System\BuyOrderPre.cs" />
+    <Compile Include="Actions\System\BuyOrderPreDetail.cs" />
+    <Compile Include="Actions\System\BuyOrderPreDetailsExt.cs" />
+    <Compile Include="Actions\System\BuyPreApp.cs" />
+    <Compile Include="Actions\System\BuyPreAppBill.cs" />
+    <Compile Include="Actions\System\BuyPreAppDetail.cs" />
+    <Compile Include="Actions\System\BuyPreAppDetailsExt.cs" />
+    <Compile Include="Actions\System\SaleBack.cs" />
+    <Compile Include="Actions\System\SaleBackDetail.cs" />
+    <Compile Include="Actions\System\SaleBackDetailsExt.cs" />
+    <Compile Include="Actions\System\SaleBackPre.cs" />
+    <Compile Include="Actions\System\SaleBackPreDetail.cs" />
+    <Compile Include="Actions\System\SaleBackPreDetailsExt.cs" />
+    <Compile Include="Actions\System\SaleEdit.cs" />
+    <Compile Include="Actions\System\SaleEditDetail.cs" />
+    <Compile Include="Actions\System\SaleEditDetailsExt.cs" />
+    <Compile Include="Actions\System\SaleEditOrder.cs" />
+    <Compile Include="Actions\System\SaleFee.cs" />
+    <Compile Include="Actions\System\SaleFeeDetail.cs" />
+    <Compile Include="Actions\System\SaleFeePre.cs" />
+    <Compile Include="Actions\System\SaleFeePreDetail.cs" />
+    <Compile Include="Actions\System\SaleOrder.cs" />
+    <Compile Include="Actions\System\SaleOrderDetail.cs" />
+    <Compile Include="Actions\System\SaleOrderDetailsExt.cs" />
+    <Compile Include="Actions\System\SaleOrderDetailsPick.cs" />
+    <Compile Include="Actions\System\SaleOrderPacking.cs" />
+    <Compile Include="Actions\System\SaleOrderPre.cs" />
+    <Compile Include="Actions\System\SaleOrderPreDetail.cs" />
+    <Compile Include="Actions\System\SaleOrderPreDetailsExt.cs" />
+    <Compile Include="Actions\System\SaleOrderPreDetailsPick.cs" />
+    <Compile Include="Actions\System\SaleOrderPrePacking.cs" />
+    <Compile Include="Actions\System\SaleOrderPreShelfArea.cs" />
+    <Compile Include="Actions\System\SaleOrderSendNumber.cs" />
+    <Compile Include="Actions\System\SaleOrderShelfArea.cs" />
+    <Compile Include="Actions\System\SaleOrderTrack.cs" />
+    <Compile Include="Actions\System\SaleOrdeSendNumber.cs" />
+    <Compile Include="Actions\System\SaleSettle.cs" />
+    <Compile Include="Actions\System\SaleSettleDetail.cs" />
+    <Compile Include="Actions\System\Settlement.cs" />
+    <Compile Include="Actions\System\SettlementDetail.cs" />
+    <Compile Include="Actions\System\StockAdj.cs" />
+    <Compile Include="Actions\System\StockAdjDetail.cs" />
+    <Compile Include="Actions\System\StockAdjDetailsExt.cs" />
+    <Compile Include="Actions\System\StockCheck.cs" />
+    <Compile Include="Actions\System\StockCheckDetail.cs" />
+    <Compile Include="Actions\System\StockCheckPlan.cs" />
+    <Compile Include="Actions\System\StockCheckPlanDetail.cs" />
+    <Compile Include="Actions\System\StockFIFOIn.cs" />
+    <Compile Include="Actions\System\StockFIFOOut.cs" />
+    <Compile Include="Actions\System\StockQty.cs" />
+    <Compile Include="ApiPluginDescriptor.cs" />
+    <Compile Include="Data\OrderContext.cs" />
+    <Compile Include="Infrastructure\DbConfig.cs" />
+    <Compile Include="Infrastructure\DependencyRegistar.cs" />
+    <Compile Include="Infrastructure\PagedList.cs" />
+    <Compile Include="Models\BuyBack.cs" />
+    <Compile Include="Models\BuyBackDetail.cs" />
+    <Compile Include="Models\BuyBackDetailsExt.cs" />
+    <Compile Include="Models\BuyBackPre.cs" />
+    <Compile Include="Models\BuyBackPreDetail.cs" />
+    <Compile Include="Models\BuyBackPreDetailsExt.cs" />
+    <Compile Include="Models\BuyOrder.cs" />
+    <Compile Include="Models\BuyOrderDetail.cs" />
+    <Compile Include="Models\BuyOrderDetailsExt.cs" />
+    <Compile Include="Models\BuyOrderPre.cs" />
+    <Compile Include="Models\BuyOrderPreDetail.cs" />
+    <Compile Include="Models\BuyOrderPreDetailsExt.cs" />
+    <Compile Include="Models\BuyPreApp.cs" />
+    <Compile Include="Models\BuyPreAppBill.cs" />
+    <Compile Include="Models\BuyPreAppDetail.cs" />
+    <Compile Include="Models\BuyPreAppDetailsExt.cs" />
+    <Compile Include="Data\Mapping\BuyBackDetailMap.cs" />
+    <Compile Include="Data\Mapping\BuyBackDetailsExtMap.cs" />
+    <Compile Include="Data\Mapping\BuyBackMap.cs" />
+    <Compile Include="Data\Mapping\BuyBackPreDetailMap.cs" />
+    <Compile Include="Data\Mapping\BuyBackPreDetailsExtMap.cs" />
+    <Compile Include="Data\Mapping\BuyBackPreMap.cs" />
+    <Compile Include="Data\Mapping\BuyOrderDetailMap.cs" />
+    <Compile Include="Data\Mapping\BuyOrderDetailsExtMap.cs" />
+    <Compile Include="Data\Mapping\BuyOrderMap.cs" />
+    <Compile Include="Data\Mapping\BuyOrderPreDetailMap.cs" />
+    <Compile Include="Data\Mapping\BuyOrderPreDetailsExtMap.cs" />
+    <Compile Include="Data\Mapping\BuyOrderPreMap.cs" />
+    <Compile Include="Data\Mapping\BuyPreAppBillMap.cs" />
+    <Compile Include="Data\Mapping\BuyPreAppDetailMap.cs" />
+    <Compile Include="Data\Mapping\BuyPreAppDetailsExtMap.cs" />
+    <Compile Include="Data\Mapping\BuyPreAppMap.cs" />
+    <Compile Include="Data\Mapping\SaleBackDetailMap.cs" />
+    <Compile Include="Data\Mapping\SaleBackDetailsExtMap.cs" />
+    <Compile Include="Data\Mapping\SaleBackMap.cs" />
+    <Compile Include="Data\Mapping\SaleBackPreDetailMap.cs" />
+    <Compile Include="Data\Mapping\SaleBackPreDetailsExtMap.cs" />
+    <Compile Include="Data\Mapping\SaleBackPreMap.cs" />
+    <Compile Include="Data\Mapping\SaleEditDetailMap.cs" />
+    <Compile Include="Data\Mapping\SaleEditDetailsExtMap.cs" />
+    <Compile Include="Data\Mapping\SaleEditMap.cs" />
+    <Compile Include="Data\Mapping\SaleEditOrderMap.cs" />
+    <Compile Include="Data\Mapping\SaleFeeDetailMap.cs" />
+    <Compile Include="Data\Mapping\SaleFeeMap.cs" />
+    <Compile Include="Data\Mapping\SaleFeePreDetailMap.cs" />
+    <Compile Include="Data\Mapping\SaleFeePreMap.cs" />
+    <Compile Include="Data\Mapping\SaleOrderDetailMap.cs" />
+    <Compile Include="Data\Mapping\SaleOrderDetailsExtMap.cs" />
+    <Compile Include="Data\Mapping\SaleOrderDetailsPickMap.cs" />
+    <Compile Include="Data\Mapping\SaleOrderMap.cs" />
+    <Compile Include="Data\Mapping\SaleOrderPackingMap.cs" />
+    <Compile Include="Data\Mapping\SaleOrderPreDetailMap.cs" />
+    <Compile Include="Data\Mapping\SaleOrderPreDetailsExtMap.cs" />
+    <Compile Include="Data\Mapping\SaleOrderPreDetailsPickMap.cs" />
+    <Compile Include="Data\Mapping\SaleOrderPreMap.cs" />
+    <Compile Include="Data\Mapping\SaleOrderPrePackingMap.cs" />
+    <Compile Include="Data\Mapping\SaleOrderPreShelfAreaMap.cs" />
+    <Compile Include="Data\Mapping\SaleOrderSendNumberMap.cs" />
+    <Compile Include="Data\Mapping\SaleOrderShelfAreaMap.cs" />
+    <Compile Include="Data\Mapping\SaleOrderTrackMap.cs" />
+    <Compile Include="Data\Mapping\SaleOrdeSendNumberMap.cs" />
+    <Compile Include="Data\Mapping\SaleSettleDetailMap.cs" />
+    <Compile Include="Data\Mapping\SaleSettleMap.cs" />
+    <Compile Include="Data\Mapping\SettlementDetailMap.cs" />
+    <Compile Include="Data\Mapping\SettlementMap.cs" />
+    <Compile Include="Data\Mapping\StockAdjDetailMap.cs" />
+    <Compile Include="Data\Mapping\StockAdjDetailsExtMap.cs" />
+    <Compile Include="Data\Mapping\StockAdjMap.cs" />
+    <Compile Include="Data\Mapping\StockCheckDetailMap.cs" />
+    <Compile Include="Data\Mapping\StockCheckMap.cs" />
+    <Compile Include="Data\Mapping\StockCheckPlanDetailMap.cs" />
+    <Compile Include="Data\Mapping\StockCheckPlanMap.cs" />
+    <Compile Include="Data\Mapping\StockFIFOInMap.cs" />
+    <Compile Include="Data\Mapping\StockFIFOOutMap.cs" />
+    <Compile Include="Data\Mapping\StockQtyMap.cs" />
+    <Compile Include="Models\SaleBack.cs" />
+    <Compile Include="Models\SaleBackDetail.cs" />
+    <Compile Include="Models\SaleBackDetailsExt.cs" />
+    <Compile Include="Models\SaleBackPre.cs" />
+    <Compile Include="Models\SaleBackPreDetail.cs" />
+    <Compile Include="Models\SaleBackPreDetailsExt.cs" />
+    <Compile Include="Models\SaleEdit.cs" />
+    <Compile Include="Models\SaleEditDetail.cs" />
+    <Compile Include="Models\SaleEditDetailsExt.cs" />
+    <Compile Include="Models\SaleEditOrder.cs" />
+    <Compile Include="Models\SaleFee.cs" />
+    <Compile Include="Models\SaleFeeDetail.cs" />
+    <Compile Include="Models\SaleFeePre.cs" />
+    <Compile Include="Models\SaleFeePreDetail.cs" />
+    <Compile Include="Models\SaleOrder.cs" />
+    <Compile Include="Models\SaleOrderDetail.cs" />
+    <Compile Include="Models\SaleOrderDetailsExt.cs" />
+    <Compile Include="Models\SaleOrderDetailsPick.cs" />
+    <Compile Include="Models\SaleOrderPacking.cs" />
+    <Compile Include="Models\SaleOrderPre.cs" />
+    <Compile Include="Models\SaleOrderPreDetail.cs" />
+    <Compile Include="Models\SaleOrderPreDetailsExt.cs" />
+    <Compile Include="Models\SaleOrderPreDetailsPick.cs" />
+    <Compile Include="Models\SaleOrderPrePacking.cs" />
+    <Compile Include="Models\SaleOrderPreShelfArea.cs" />
+    <Compile Include="Models\SaleOrderSendNumber.cs" />
+    <Compile Include="Models\SaleOrderShelfArea.cs" />
+    <Compile Include="Models\SaleOrderTrack.cs" />
+    <Compile Include="Models\SaleOrdeSendNumber.cs" />
+    <Compile Include="Models\SaleSettle.cs" />
+    <Compile Include="Models\SaleSettleDetail.cs" />
+    <Compile Include="Models\Settlement.cs" />
+    <Compile Include="Models\SettlementDetail.cs" />
+    <Compile Include="Models\StockAdj.cs" />
+    <Compile Include="Models\StockAdjDetail.cs" />
+    <Compile Include="Models\StockAdjDetailsExt.cs" />
+    <Compile Include="Models\StockCheck.cs" />
+    <Compile Include="Models\StockCheckDetail.cs" />
+    <Compile Include="Models\StockCheckPlan.cs" />
+    <Compile Include="Models\StockCheckPlanDetail.cs" />
+    <Compile Include="Models\StockFIFOIn.cs" />
+    <Compile Include="Models\StockFIFOOut.cs" />
+    <Compile Include="Models\StockQty.cs" />
+    <Compile Include="Infrastructure\SystemRequestDtoBase.cs" />
+    <Compile Include="Resource\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\TaskSchedulerRegistar.cs" />
+    <Content Include="WebApiConfig.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\DependencyRegistar.cs" />
+    <Compile Include="StartUp\StartUp.cs" />
+    <Compile Include="Infrastructure\SysConfig.cs" />
+    <None Include="Properties\PublishProfiles\order.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\log4net\" />
+    <Folder Include="Config\" />
+    <Folder Include="Validors\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Frxs.ServiceCenter.Api.Core.ApiTestTool\1.2.1Frxs.ServiceCenter.Api.Core.ApiTestTool.csproj">
+      <Project>{6fe13611-8573-4955-96a1-e930b551334e}</Project>
+      <Name>1.2.1Frxs.ServiceCenter.Api.Core.ApiTestTool</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Frxs.ServiceCenter.Api.Core.FluentValidation\1.5.1Frxs.ServiceCenter.Api.Core.FluentValidation.csproj">
+      <Project>{1ae9fa27-5537-4905-a169-2cef7e28abc7}</Project>
+      <Name>1.5.1Frxs.ServiceCenter.Api.Core.FluentValidation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Frxs.ServiceCenter.Api.Core.Logging\2.3.1.Frxs.ServiceCenter.Api.Core.Logging.Log4Net.csproj">
+      <Project>{24937e0e-b8cc-466c-97bd-5d4d04201cfb}</Project>
+      <Name>2.3.1.Frxs.ServiceCenter.Api.Core.Logging.Log4Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Frxs.ServiceCenter.Api.Core.SdkBuilder\1.1.2.Frxs.ServiceCenter.Api.Core.SdkBuilder.CSharp.csproj">
+      <Project>{d6f1fbc3-0407-4633-aed5-d400edebd621}</Project>
+      <Name>1.1.2.Frxs.ServiceCenter.Api.Core.SdkBuilder.CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Frxs.ServiceCenter.Api.Core.Task.Management\1.3.1Frxs.ServiceCenter.Api.Core.Task.Management.csproj">
+      <Project>{c8d94353-346c-4628-86e7-2c71820a8cc5}</Project>
+      <Name>1.3.1Frxs.ServiceCenter.Api.Core.Task.Management</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Frxs.ServiceCenter.Api.Core.V20\0.1.Frxs.ServiceCenter.Api.Core.V20.csproj">
+      <Project>{43e01449-2168-43c9-accd-e2fa7234c14c}</Project>
+      <Name>0.1.Frxs.ServiceCenter.Api.Core.V20</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Frxs.ServiceCenter.Core.Data.V20\0.2.Frxs.ServiceCenter.Data.Core.V20.csproj">
+      <Project>{adbb0d2c-54a5-44c1-8249-ef3a02c06be1}</Project>
+      <Name>0.2.Frxs.ServiceCenter.Data.Core.V20</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1478</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:9001</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

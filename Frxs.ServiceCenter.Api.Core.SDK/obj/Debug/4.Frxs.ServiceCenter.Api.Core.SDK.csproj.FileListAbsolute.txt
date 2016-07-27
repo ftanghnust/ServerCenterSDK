@@ -1,0 +1,7 @@
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.SDK\bin\Debug\Frxs.ServiceCenter.Api.Core.SDK.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.SDK\bin\Debug\Frxs.ServiceCenter.Api.Core.SDK.pdb
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.SDK\bin\Debug\Newtonsoft.Json.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.SDK\bin\Debug\Newtonsoft.Json.xml
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.SDK\obj\Debug\Frxs.ServiceCenter.Api.Core.SDK.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.SDK\obj\Debug\Frxs.ServiceCenter.Api.Core.SDK.pdb
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.SDK\obj\Debug\4.Frxs.ServiceCenter.Api.Core.SDK.csprojResolveAssemblyReference.cache

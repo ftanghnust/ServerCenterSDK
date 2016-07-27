@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1FDF6AF9-4A3B-46F5-B957-D0F822851D7A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Frxs.Erp.ServiceCenter.Promotion.Actions</RootNamespace>
+    <AssemblyName>Frxs.Erp.ServiceCenter.Promotion.Actions</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Frxs.ServiceCenter.Api.Host.V20\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Frxs.Erp.ServiceCenter.Promotion.Host\Config\ActionsDocResource.config</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Frxs.Erp.ServiceCenter.Product.SDK, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Frxs.Erp.ServiceCenter.SDK\Frxs.Erp.ServiceCenter.Product.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiPluginDescriptor.cs" />
+    <Compile Include="Order\OrderPartServer.cs" />
+    <Compile Include="Order\OrderShopConfirmAction.cs" />
+    <Compile Include="Order\OrderShopEditRemarkAction.cs" />
+    <Compile Include="Order\OrderShopEditSingleAction.cs" />
+    <Compile Include="Order\OrderShopGetAction.cs" />
+    <Compile Include="Order\OrderShopGetUnConfirmAction.cs" />
+    <Compile Include="Order\OrderShopLoadToCartAction.cs" />
+    <Compile Include="Order\OrderShopQueryAction.cs" />
+    <Compile Include="Order\OrderShopCancelAction.cs" />
+    <Compile Include="Order\OrderShopExistUnConfirmOrderAction.cs" />
+    <Compile Include="Order\OrderShopReceivedAction.cs" />
+    <Compile Include="Order\OrderShopSubmitAction.cs" />
+    <Compile Include="Order\SaleCartCountAction.cs" />
+    <Compile Include="Order\SaleCartEditSingleAction.cs" />
+    <Compile Include="Order\SaleCartAddAction.cs" />
+    <Compile Include="Order\SaleCartDeleteAction.cs" />
+    <Compile Include="Order\SaleCartGetAllData.cs" />
+    <Compile Include="Order\SaleCartGetByShopId.cs" />
+    <Compile Include="Order\SaleCartQueryAction.cs" />
+    <Compile Include="Order\SaleOrderShopGetAction.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestDto\Order\OrderShopEditSingleRequestDto.cs" />
+    <Compile Include="RequestDto\Order\OrderEditRemarkRequestDto.cs" />
+    <Compile Include="RequestDto\Order\OrderQueryRequestDto.cs" />
+    <Compile Include="RequestDto\Order\OrderCancelRequestDto.cs" />
+    <Compile Include="RequestDto\Order\OrderBaseRequestDto.cs" />
+    <Compile Include="RequestDto\Order\OrderShopReceivedRequestDto.cs" />
+    <Compile Include="RequestDto\Order\OrderSubmitRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleCartAddOrEditListRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleCartBaseRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleCartDeleteRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleCartEditSingleRequestDto.cs" />
+    <Compile Include="RequestDto\Order\SaleCartQueryRequestDto.cs" />
+    <Compile Include="RequestDto\RequestDtoParent.cs" />
+    <Compile Include="RequestDto\WAdvertisementProductRequestDto.cs" />
+    <Compile Include="RequestDto\WAdvertisementRequestDto.cs" />
+    <Compile Include="RequestDto\WarehouseMessageRequestDto.cs" />
+    <Compile Include="RequestDto\WarehouseMessageShopsRequestDto.cs" />
+    <Compile Include="ResponseDto\Order\OrderShopResponseDto.cs" />
+    <Compile Include="ResponseDto\Order\OrderShopGetResoponseDto.cs" />
+    <Compile Include="ResponseDto\Order\OrderShopQueryResponseDto.cs" />
+    <Compile Include="ResponseDto\Order\SaleCartBaseResponseDto.cs" />
+    <Compile Include="ResponseDto\Order\SaleCartGetAllDataResponseDto.cs" />
+    <Compile Include="ResponseDto\Order\SaleCartGetByShopIdResponseDto.cs" />
+    <Compile Include="ResponseDto\Order\SaleCartQueryResponseDto.cs" />
+    <Compile Include="ResponseDto\WAdvertisementResponseDto.cs" />
+    <Compile Include="ResponseDto\WarehouseMessageResponseDto.cs" />
+    <Compile Include="ResponseDto\WarehouseMessageShopsResponseDto.cs" />
+    <Compile Include="WorkContext.cs" />
+    <Compile Include="促销积分及平台费率\WProductPromotionConfirmAction.cs" />
+    <Compile Include="促销积分及平台费率\WProductPromotionDelAction.cs" />
+    <Compile Include="促销积分及平台费率\WProductPromotionDetailsListModelGetAction.cs" />
+    <Compile Include="促销积分及平台费率\WProductPromotionGetAction.cs" />
+    <Compile Include="促销积分及平台费率\WProductPromotionListGetAction.cs" />
+    <Compile Include="促销积分及平台费率\WProductPromotionPostingAction.cs" />
+    <Compile Include="促销积分及平台费率\WProductPromotionSaveAction.cs" />
+    <Compile Include="促销积分及平台费率\WProductPromotionStopAction.cs" />
+    <Compile Include="定时任务\JobWProductPromotionPostingAction.cs" />
+    <Compile Include="广告橱窗管理\WAdvertisementAddOrEditAction.cs" />
+    <Compile Include="广告橱窗管理\WAdvertisementDelAction.cs" />
+    <Compile Include="广告橱窗管理\WAdvertisementGetListAction.cs" />
+    <Compile Include="广告橱窗管理\WAdvertisementGetModelAction.cs" />
+    <Compile Include="广告橱窗管理\WAdvertisementProductGetListAction.cs" />
+    <Compile Include="广告橱窗管理\WAdvertisementGetListModelAction.cs" />
+    <Compile Include="消息管理\WarehouseMessageAddOrEditAction.cs" />
+    <Compile Include="消息管理\WarehouseMessageChangeStatusAction.cs" />
+    <Compile Include="消息管理\WarehouseMessageDelAction.cs" />
+    <Compile Include="消息管理\WarehouseMessageGetListAction.cs" />
+    <Compile Include="消息管理\WarehouseMessageGetModelAction.cs" />
+    <Compile Include="消息管理\WarehouseMessageShopsGetListAction.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Frxs.Platform\Frxs.Platform.IOCFactory\Frxs.Platform.IOCFactory.csproj">
+      <Project>{e30d3ed3-975c-4d4f-a69b-2cd2725614a1}</Project>
+      <Name>Frxs.Platform.IOCFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frxs.Platform\Frxs.Platform.Utility\Frxs.Platform.Utility.csproj">
+      <Project>{0c08602c-3a43-48ba-ac95-d18c21217165}</Project>
+      <Name>Frxs.Platform.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.Erp.ServiceCenter.Promotion.BLL\Frxs.Erp.ServiceCenter.Promotion.BLL.csproj">
+      <Project>{7cc9be1b-06c3-43b9-8ebf-cc6325520e25}</Project>
+      <Name>Frxs.Erp.ServiceCenter.Promotion.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.Erp.ServiceCenter.Promotion.IDAL\Frxs.Erp.ServiceCenter.Promotion.IDAL.csproj">
+      <Project>{ddc761ab-cabb-4ada-9395-31096b4e8799}</Project>
+      <Name>Frxs.Erp.ServiceCenter.Promotion.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.Erp.ServiceCenter.Promotion.Model\Frxs.Erp.ServiceCenter.Promotion.Model.csproj">
+      <Project>{b560f92e-5cda-4986-bfa6-7f4ff28dc174}</Project>
+      <Name>Frxs.Erp.ServiceCenter.Promotion.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.ServiceCenter.Api.Core.V20\0.1.Frxs.ServiceCenter.Api.Core.V20.csproj">
+      <Project>{43e01449-2168-43c9-accd-e2fa7234c14c}</Project>
+      <Name>0.1.Frxs.ServiceCenter.Api.Core.V20</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\Logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

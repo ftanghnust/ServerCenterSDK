@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DATABASES>
+  <DATABASE name="FRXS_ERP_PROMOTION_105">
+    <TABLE name="WarehouseMessage" desc="仓库消息表">
+      <SQL name="Exists">
+        SELECT COUNT(1) FROM WarehouseMessage WHERE ID=@ID
+      </SQL>
+      <SQL name="Save">
+        INSERT INTO WarehouseMessage ( WID, Title, MessageType, RangType, BeginTime, EndTime, Message, Status, IsFirst, CreateTime, CreateUserID, CreateUserName, ModityTime, ModityUserID, ModityUserName )VALUES( @WID,@Title,@MessageType,@RangType,@BeginTime,@EndTime,@Message,@Status,@IsFirst,@CreateTime,@CreateUserID,@CreateUserName,@ModityTime,@ModityUserID,@ModityUserName);SELECT SCOPE_IDENTITY();
+      </SQL>
+      <SQL name="Edit">
+        UPDATE WarehouseMessage SET WID=@WID,Title=@Title,MessageType=@MessageType,RangType=@RangType,BeginTime=@BeginTime,EndTime=@EndTime,Message=@Message,Status=@Status,ConfTime=@ConfTime,ConfUserID=@ConfUserID,ConfUserName=@ConfUserName,IsFirst=@IsFirst,ModityTime=@ModityTime,ModityUserID=@ModityUserID,ModityUserName=@ModityUserName WHERE ID=@ID
+      </SQL>
+      <SQL name="Delete">
+        DELETE FROM WarehouseMessage WHERE ID=@ID
+      </SQL>
+      <SQL name="LogicDelete">
+        DELETE FROM WarehouseMessage WHERE Status=0 and ID=@ID
+      </SQL>
+      <SQL name="Read">
+        SELECT ID,WID,Title,MessageType,RangType,BeginTime,EndTime,Message,Status,ConfTime,ConfUserID,ConfUserName,IsFirst,CreateTime,CreateUserID,CreateUserName,ModityTime,ModityUserID,ModityUserName FROM WarehouseMessage
+      </SQL>
+      <SQL name="GetModelById">
+        SELECT ID,WID,Title,MessageType,RangType,BeginTime,EndTime,Message,Status,ConfTime,ConfUserID,ConfUserName,IsFirst,CreateTime,CreateUserID,CreateUserName,ModityTime,ModityUserID,ModityUserName FROM WarehouseMessage WHERE ID=@ID
+      </SQL>
+    </TABLE>
+
+    <TABLE name="WAdvertisement" desc="仓库--广告、橱窗信息表">
+      <SQL name="Exists">
+        SELECT COUNT(1) FROM WAdvertisement WHERE AdvertisementID=@AdvertisementID
+      </SQL>
+      <SQL name="Save">
+        INSERT INTO WAdvertisement ( WID, AdvertisementPosition, AdvertisementName, Sort, ImagesSrc, SelectImagesSrc, AdvertisementType, IsDelete, IsLocked, StartTime, EndTime, CreateTime, CreateUserID, CreateUserName, ModityTime, ModityUserID, ModityUserName )VALUES( @WID,@AdvertisementPosition,@AdvertisementName,@Sort,@ImagesSrc,@SelectImagesSrc,@AdvertisementType,@IsDelete,@IsLocked,@StartTime,@EndTime,@CreateTime,@CreateUserID,@CreateUserName,@ModityTime,@ModityUserID,@ModityUserName);SELECT SCOPE_IDENTITY();
+      </SQL>
+      <SQL name="Edit">
+        UPDATE WAdvertisement SET WID=@WID,AdvertisementPosition=@AdvertisementPosition,AdvertisementName=@AdvertisementName,Sort=@Sort,ImagesSrc=@ImagesSrc,SelectImagesSrc=@SelectImagesSrc,AdvertisementType=@AdvertisementType,IsDelete=@IsDelete,IsLocked=@IsLocked,StartTime=@StartTime,EndTime=@EndTime,ModityTime=@ModityTime,ModityUserID=@ModityUserID,ModityUserName=@ModityUserName WHERE AdvertisementID=@AdvertisementID
+      </SQL>
+      <SQL name="Delete">
+        DELETE FROM WAdvertisement WHERE AdvertisementID=@AdvertisementID
+      </SQL>
+      <SQL name="LogicDelete">
+        UPDATE WAdvertisement SET IsDelete=1 WHERE AdvertisementID=@AdvertisementID
+      </SQL>
+      <SQL name="Read">
+        SELECT AdvertisementID,WID,AdvertisementPosition,AdvertisementName,Sort,ImagesSrc,SelectImagesSrc,AdvertisementType,IsDelete,IsLocked,StartTime,EndTime,CreateTime,CreateUserID,CreateUserName,ModityTime,ModityUserID,ModityUserName FROM WAdvertisement
+      </SQL>
+      <SQL name="GetModelById">
+        SELECT AdvertisementID,WID,AdvertisementPosition,AdvertisementName,Sort,ImagesSrc,SelectImagesSrc,AdvertisementType,IsDelete,IsLocked,StartTime,EndTime,CreateTime,CreateUserID,CreateUserName,ModityTime,ModityUserID,ModityUserName FROM WAdvertisement WHERE AdvertisementID=@AdvertisementID
+      </SQL>
+    </TABLE>
+
+    <TABLE name="WAdvertisementProduct" desc="仓库--广告商品表">
+      <SQL name="Exists">
+        SELECT COUNT(1) FROM WAdvertisementProduct WHERE ID=@ID
+      </SQL>
+      <SQL name="Save">
+        INSERT INTO WAdvertisementProduct ( WID, AdvertisementID, ProductID, CreateTime, CreateUserID, CreateUserName )VALUES( @WID,@AdvertisementID,@ProductID,@CreateTime,@CreateUserID,@CreateUserName);SELECT SCOPE_IDENTITY();
+      </SQL>
+      <SQL name="Edit">
+        UPDATE WAdvertisementProduct SET WID=@WID,AdvertisementID=@AdvertisementID,ProductID=@ProductID WHERE ID=@ID
+      </SQL>
+      <SQL name="Delete">
+        DELETE FROM WAdvertisementProduct WHERE ID=@ID
+      </SQL>
+      <SQL name="LogicDelete">
+        UPDATE WAdvertisementProduct SET IsDeleted=1 WHERE ID=@ID
+      </SQL>
+      <SQL name="Read">
+        SELECT ID,WID,AdvertisementID,ProductID,CreateTime,CreateUserID,CreateUserName FROM WAdvertisementProduct
+      </SQL>
+      <SQL name="GetModelById">
+        SELECT ID,WID,AdvertisementID,ProductID,CreateTime,CreateUserID,CreateUserName FROM WAdvertisementProduct WHERE ID=@ID
+      </SQL>
+      <SQL name="DeleteByWAdvertisement">
+        DELETE FROM WAdvertisementProduct WHERE WID=@WID AND AdvertisementID=@AdvertisementID
+      </SQL>
+    </TABLE>
+    <TABLE name="WarehouseMessageShops" desc="仓库消息所属群组表">
+      <SQL name="Exists">
+        SELECT COUNT(1) FROM WarehouseMessageShops WHERE ID=@ID
+      </SQL>
+      <SQL name="Save">
+        INSERT INTO WarehouseMessageShops ( WarehouseMessageID, WID, GroupID, GroupCode, GroupName, CreateTime, CreateUserID, CreateUserName )VALUES( @WarehouseMessageID,@WID,@GroupID,@GroupCode,@GroupName,@CreateTime,@CreateUserID,@CreateUserName);SELECT SCOPE_IDENTITY();
+      </SQL>
+      <SQL name="Edit">
+        UPDATE WarehouseMessageShops SET WarehouseMessageID=@WarehouseMessageID,WID=@WID,GroupID=@GroupID,GroupName=@GroupName,GroupCode=@GroupCode WHERE ID=@ID
+      </SQL>
+      <SQL name="Delete">
+        DELETE FROM WarehouseMessageShops WHERE ID=@ID
+      </SQL>
+      <SQL name="LogicDelete">
+        DELETE FROM WarehouseMessageShops WHERE WarehouseMessageID=@WarehouseMessageID
+      </SQL>
+      <SQL name="Read">
+        SELECT ID,WarehouseMessageID,WID,GroupID,GroupCode,GroupName,CreateTime,CreateUserID,CreateUserName FROM WarehouseMessageShops
+      </SQL>
+      <SQL name="GetModelById">
+        SELECT ID,WarehouseMessageID,WID,GroupID,GroupCode,GroupName,CreateTime,CreateUserID,CreateUserName FROM WarehouseMessageShops WHERE ID=@ID
+      </SQL>
+    </TABLE>
+    <TABLE name="SaleCart" desc="销售购物车表">
+      <SQL name="Exists">
+        SELECT COUNT(1) FROM SaleCart WHERE ID=@ID
+      </SQL>
+      <SQL name="Save">
+        INSERT INTO SaleCart ( WID, ShopID, XSUserID, ProductID, PreQty, CreateTime, ModifyTime, ModifyUserID, ModifyUserName ,Remark )VALUES( @WID,@ShopID,@XSUserID,@ProductID,@PreQty,@CreateTime,@ModifyTime,@ModifyUserID,@ModifyUserName,@Remark);SELECT SCOPE_IDENTITY();
+      </SQL>
+      <SQL name="Edit">
+        UPDATE SaleCart SET WID=@WID,ShopID=@ShopID,XSUserID=@XSUserID,ProductID=@ProductID,PreQty=@PreQty,ModifyTime=@ModifyTime,ModifyUserID=@ModifyUserID,ModifyUserName=@ModifyUserName ,Remark=@Remark WHERE ID=@ID
+      </SQL>
+      <SQL name="Delete">
+        DELETE FROM SaleCart WHERE ID=@ID
+      </SQL>
+      <SQL name="LogicDelete">
+        UPDATE SaleCart SET IsDeleted=1 WHERE ID=@ID
+      </SQL>
+      <SQL name="Read">
+        SELECT ID,WID,ShopID,XSUserID,ProductID,PreQty,CreateTime,ModifyTime,ModifyUserID,ModifyUserName,Remark FROM SaleCart
+      </SQL>
+      <SQL name="GetModelById">
+        SELECT ID,WID,ShopID,XSUserID,ProductID,PreQty,CreateTime,ModifyTime,ModifyUserID,ModifyUserName,Remark FROM SaleCart WHERE ID=@ID
+      </SQL>
+      <SQL name="DeleteList">
+        DELETE FROM SaleCart WHERE ShopID=@ShopID
+      </SQL>
+      <SQL name="Count">
+        select sum(PreQty) from SaleCart where ShopID=@ShopID
+      </SQL>
+    </TABLE>
+    <TABLE name="SaleOrderShop" desc="门店订单表">
+      <SQL name="Exists">
+        SELECT COUNT(1) FROM SaleOrderShop WHERE OrderId=@OrderId
+      </SQL>
+      <SQL name="Save">
+        INSERT INTO SaleOrderShop ( OrderId, SettleID, WID, SubWID, OrderDate, OrderType, WCode, WName, ShopType, SubWCode, SubWName, ShopID, XSUserID, ShopCode, ShopName, Status, ProvinceID, CityID, RegionID, ProvinceName, CityName, RegionName, Address, FullAddress, RevLinkMan, RevTelephone, ConfDate, SendDate, LineID, StationNumber, PickingBeginDate, PickingEndDate, PackingEmpID, PackingEmpName, PackingTime, IsPrinted, PrintDate, PrintUserID, PrintUserName, ShippingBeginDate, ShippingUserID, ShippingUserName, ShippingEndDate, FinishDate, CancelDate, CloseDate, CloseReason, Remark, TotalProductAmt, CouponAmt, TotalAddAmt, PayAmount, TotalPoint, TotalBasePoint, UserShowFlag, ClientType, CreateTime, CreateUserID, CreateUserName, ModifyTime, ModifyUserID, ModifyUserName,LineName)VALUES( @OrderId,@SettleID,@WID,@SubWID,@OrderDate,@OrderType,@WCode,@WName,@ShopType,@SubWCode,@SubWName,@ShopID,@XSUserID,@ShopCode,@ShopName,@Status,@ProvinceID,@CityID,@RegionID,@ProvinceName,@CityName,@RegionName,@Address,@FullAddress,@RevLinkMan,@RevTelephone,@ConfDate,@SendDate,@LineID,@StationNumber,@PickingBeginDate,@PickingEndDate,@PackingEmpID,@PackingEmpName,@PackingTime,@IsPrinted,@PrintDate,@PrintUserID,@PrintUserName,@ShippingBeginDate,@ShippingUserID,@ShippingUserName,@ShippingEndDate,@FinishDate,@CancelDate,@CloseDate,@CloseReason,@Remark,@TotalProductAmt,@CouponAmt,@TotalAddAmt,@PayAmount,@TotalPoint,@TotalBasePoint,@UserShowFlag,@ClientType,@CreateTime,@CreateUserID,@CreateUserName,@ModifyTime,@ModifyUserID,@ModifyUserName,@LineName)
+      </SQL>
+      <SQL name="Edit">
+        UPDATE SaleOrderShop SET SettleID=@SettleID,WID=@WID,SubWID=@SubWID,OrderDate=@OrderDate,OrderType=@OrderType,WCode=@WCode,WName=@WName,ShopType=@ShopType,SubWCode=@SubWCode,SubWName=@SubWName,ShopID=@ShopID,XSUserID=@XSUserID,ShopCode=@ShopCode,ShopName=@ShopName,Status=@Status,ProvinceID=@ProvinceID,CityID=@CityID,RegionID=@RegionID,ProvinceName=@ProvinceName,CityName=@CityName,RegionName=@RegionName,Address=@Address,FullAddress=@FullAddress,RevLinkMan=@RevLinkMan,RevTelephone=@RevTelephone,ConfDate=@ConfDate,SendDate=@SendDate,LineID=@LineID,StationNumber=@StationNumber,PickingBeginDate=@PickingBeginDate,PickingEndDate=@PickingEndDate,PackingEmpID=@PackingEmpID,PackingEmpName=@PackingEmpName,PackingTime=@PackingTime,IsPrinted=@IsPrinted,PrintDate=@PrintDate,PrintUserID=@PrintUserID,PrintUserName=@PrintUserName,ShippingBeginDate=@ShippingBeginDate,ShippingUserID=@ShippingUserID,ShippingUserName=@ShippingUserName,ShippingEndDate=@ShippingEndDate,FinishDate=@FinishDate,CancelDate=@CancelDate,CloseDate=@CloseDate,CloseReason=@CloseReason,Remark=@Remark,TotalProductAmt=@TotalProductAmt,CouponAmt=@CouponAmt,TotalAddAmt=@TotalAddAmt,PayAmount=@PayAmount,TotalPoint=@TotalPoint,TotalBasePoint=@TotalBasePoint,UserShowFlag=@UserShowFlag,ClientType=@ClientType,ModifyTime=@ModifyTime,ModifyUserID=@ModifyUserID,ModifyUserName=@ModifyUserName,LineName=@LineName WHERE OrderId=@OrderId
+      </SQL>
+      <SQL name="Delete">
+        DELETE FROM SaleOrderShop WHERE OrderId=@OrderId
+      </SQL>
+      <SQL name="LogicDelete">
+        UPDATE SaleOrderShop SET IsDeleted=1 WHERE OrderId=@OrderId
+      </SQL>
+      <SQL name="Read">
+        SELECT * FROM SaleOrderShop
+      </SQL>
+      <SQL name="GetModelById">
+        SELECT * FROM SaleOrderShop WHERE OrderId=@OrderId
+      </SQL>
+
+      <SQL name="ReadShopOrder">
+        SELECT ShopID, MAX(OrderId) as OrderId FROM SaleOrderShop WHERE WID=@WID AND CONVERT(varchar(12) , SendDate, 112 )=@SendDate AND Status=1 group by ShopID
+      </SQL>
+      <SQL name="UnConfirmOrder">
+        <![CDATA[
+             SELECT * FROM SaleOrderShop where ShopID=@ShopID and (Status is null or Status<2)
+         ]]>
+      </SQL>
+      <SQL name="Query">
+        SELECT  ROW_NUMBER() OVER (ORDER BY {0}) AS RowNum,OrderId,SettleID,WID,SubWID,OrderDate,OrderType,WCode,WName,ShopType,SubWCode,SubWName,ShopID,XSUserID,ShopCode,ShopName,Status,ProvinceID,CityID,RegionID,ProvinceName,CityName,RegionName,Address,FullAddress,RevLinkMan,RevTelephone,ConfDate,SendDate,LineID,StationNumber,PickingBeginDate,PickingEndDate,PackingEmpID,PackingEmpName,PackingTime,IsPrinted,PrintDate,PrintUserID,PrintUserName,ShippingBeginDate,ShippingUserID,ShippingUserName,ShippingEndDate,FinishDate,CancelDate,CloseDate,CloseReason,Remark,TotalProductAmt,CouponAmt,TotalAddAmt,PayAmount,TotalPoint,TotalBasePoint,UserShowFlag,ClientType,CreateTime,CreateUserID,CreateUserName,ModifyTime,ModifyUserID,ModifyUserName,LineName FROM SaleOrderShop
+
+      </SQL>
+    </TABLE>
+
+
+    <TABLE name="SaleOrderShopDetails" desc="门店订单商品列表">
+      <SQL name="Exists">
+        SELECT COUNT(1) FROM SaleOrderShopDetails WHERE ID=@ID
+      </SQL>
+      <SQL name="Save">
+        INSERT INTO SaleOrderShopDetails ( ID, OrderID, WID, ProductId, SKU, ProductName, BarCode, ProductImageUrl200, ProductImageUrl400, WCProductID, PreQty, SaleUnit, SalePackingQty, SalePrice, SaleQty, Unit, UnitQty, UnitPrice, PromotionUnitPrice, SubAmt, ShopAddPerc, ShopPoint, PromotionShopPoint, BasePoint, VendorPerc1, VendorPerc2, SubAddAmt, SubPoint, SubBasePoint, SubVendor1Amt, SubVendor2Amt, IsAppend, EditID, IsStockOut, PromotionID, PromotionName, Remark, SerialNumber, ModifyTime, ModifyUserID, ModifyUserName )VALUES( @ID,@OrderID,@WID,@ProductId,@SKU,@ProductName,@BarCode,@ProductImageUrl200,@ProductImageUrl400,@WCProductID,@PreQty,@SaleUnit,@SalePackingQty,@SalePrice,@SaleQty,@Unit,@UnitQty,@UnitPrice,@PromotionUnitPrice,@SubAmt,@ShopAddPerc,@ShopPoint,@PromotionShopPoint,@BasePoint,@VendorPerc1,@VendorPerc2,@SubAddAmt,@SubPoint,@SubBasePoint,@SubVendor1Amt,@SubVendor2Amt,@IsAppend,@EditID,@IsStockOut,@PromotionID,@PromotionName,@Remark,@SerialNumber,@ModifyTime,@ModifyUserID,@ModifyUserName)
+      </SQL>
+      <SQL name="Edit">
+        UPDATE SaleOrderShopDetails SET OrderID=@OrderID,WID=@WID,ProductId=@ProductId,SKU=@SKU,ProductName=@ProductName,BarCode=@BarCode,ProductImageUrl200=@ProductImageUrl200,ProductImageUrl400=@ProductImageUrl400,WCProductID=@WCProductID,PreQty=@PreQty,SaleUnit=@SaleUnit,SalePackingQty=@SalePackingQty,SalePrice=@SalePrice,SaleQty=@SaleQty,Unit=@Unit,UnitQty=@UnitQty,UnitPrice=@UnitPrice,PromotionUnitPrice=@PromotionUnitPrice,SubAmt=@SubAmt,ShopAddPerc=@ShopAddPerc,ShopPoint=@ShopPoint,PromotionShopPoint=@PromotionShopPoint,BasePoint=@BasePoint,VendorPerc1=@VendorPerc1,VendorPerc2=@VendorPerc2,SubAddAmt=@SubAddAmt,SubPoint=@SubPoint,SubBasePoint=@SubBasePoint,SubVendor1Amt=@SubVendor1Amt,SubVendor2Amt=@SubVendor2Amt,IsAppend=@IsAppend,EditID=@EditID,IsStockOut=@IsStockOut,PromotionID=@PromotionID,PromotionName=@PromotionName,Remark=@Remark,SerialNumber=@SerialNumber,ModifyTime=@ModifyTime,ModifyUserID=@ModifyUserID,ModifyUserName=@ModifyUserName WHERE ID=@ID
+      </SQL>
+      <SQL name="Delete">
+        DELETE FROM SaleOrderShopDetails WHERE ID=@ID
+      </SQL>
+      <SQL name="LogicDelete">
+        UPDATE SaleOrderShopDetails SET IsDeleted=1 WHERE ID=@ID
+      </SQL>
+      <SQL name="Read">
+        SELECT ID,OrderID,WID,ProductId,SKU,ProductName,BarCode,ProductImageUrl200,ProductImageUrl400,WCProductID,PreQty,SaleUnit,SalePackingQty,SalePrice,SaleQty,Unit,UnitQty,UnitPrice,PromotionUnitPrice,SubAmt,ShopAddPerc,ShopPoint,PromotionShopPoint,BasePoint,VendorPerc1,VendorPerc2,SubAddAmt,SubPoint,SubBasePoint,SubVendor1Amt,SubVendor2Amt,IsAppend,EditID,IsStockOut,PromotionID,PromotionName,Remark,SerialNumber,ModifyTime,ModifyUserID,ModifyUserName FROM SaleOrderShopDetails
+      </SQL>
+      <SQL name="GetModelById">
+        SELECT ID,OrderID,WID,ProductId,SKU,ProductName,BarCode,ProductImageUrl200,ProductImageUrl400,WCProductID,PreQty,SaleUnit,SalePackingQty,SalePrice,SaleQty,Unit,UnitQty,UnitPrice,PromotionUnitPrice,SubAmt,ShopAddPerc,ShopPoint,PromotionShopPoint,BasePoint,VendorPerc1,VendorPerc2,SubAddAmt,SubPoint,SubBasePoint,SubVendor1Amt,SubVendor2Amt,IsAppend,EditID,IsStockOut,PromotionID,PromotionName,Remark,SerialNumber,ModifyTime,ModifyUserID,ModifyUserName FROM SaleOrderShopDetails WHERE ID=@ID
+      </SQL>
+      <SQL name="DeleteByOrderId">
+        DELETE FROM SaleOrderShopDetails WHERE OrderID=@OrderID
+      </SQL>
+    </TABLE>
+
+
+    <TABLE name="SaleOrderShopDetailsExt" desc="门店订单商品护展表">
+      <SQL name="Exists">
+        SELECT COUNT(1) FROM SaleOrderShopDetailsExt WHERE ID=@ID
+      </SQL>
+      <SQL name="Save">
+        INSERT INTO SaleOrderShopDetailsExt ( ID, OrderID, CategoryId1, CategoryId1Name, CategoryId2, CategoryId2Name, CategoryId3, CategoryId3Name, ShopCategoryId1, ShopCategoryId1Name, ShopCategoryId2, ShopCategoryId2Name, ShopCategoryId3, ShopCategoryId3Name, BrandId1, BrandId1Name, BrandId2, BrandId2Name, ModifyTime, ModifyUserID, ModifyUserName )VALUES( @ID,@OrderID,@CategoryId1,@CategoryId1Name,@CategoryId2,@CategoryId2Name,@CategoryId3,@CategoryId3Name,@ShopCategoryId1,@ShopCategoryId1Name,@ShopCategoryId2,@ShopCategoryId2Name,@ShopCategoryId3,@ShopCategoryId3Name,@BrandId1,@BrandId1Name,@BrandId2,@BrandId2Name,@ModifyTime,@ModifyUserID,@ModifyUserName)
+      </SQL>
+      <SQL name="Edit">
+        UPDATE SaleOrderShopDetailsExt SET OrderID=@OrderID,CategoryId1=@CategoryId1,CategoryId1Name=@CategoryId1Name,CategoryId2=@CategoryId2,CategoryId2Name=@CategoryId2Name,CategoryId3=@CategoryId3,CategoryId3Name=@CategoryId3Name,ShopCategoryId1=@ShopCategoryId1,ShopCategoryId1Name=@ShopCategoryId1Name,ShopCategoryId2=@ShopCategoryId2,ShopCategoryId2Name=@ShopCategoryId2Name,ShopCategoryId3=@ShopCategoryId3,ShopCategoryId3Name=@ShopCategoryId3Name,BrandId1=@BrandId1,BrandId1Name=@BrandId1Name,BrandId2=@BrandId2,BrandId2Name=@BrandId2Name,ModifyTime=@ModifyTime,ModifyUserID=@ModifyUserID,ModifyUserName=@ModifyUserName WHERE ID=@ID
+      </SQL>
+      <SQL name="Delete">
+        DELETE FROM SaleOrderShopDetailsExt WHERE ID=@ID
+      </SQL>
+      <SQL name="LogicDelete">
+        UPDATE SaleOrderShopDetailsExt SET IsDeleted=1 WHERE ID=@ID
+      </SQL>
+      <SQL name="Read">
+        SELECT ID,OrderID,CategoryId1,CategoryId1Name,CategoryId2,CategoryId2Name,CategoryId3,CategoryId3Name,ShopCategoryId1,ShopCategoryId1Name,ShopCategoryId2,ShopCategoryId2Name,ShopCategoryId3,ShopCategoryId3Name,BrandId1,BrandId1Name,BrandId2,BrandId2Name,ModifyTime,ModifyUserID,ModifyUserName FROM SaleOrderShopDetailsExt
+      </SQL>
+      <SQL name="GetModelById">
+        SELECT ID,OrderID,CategoryId1,CategoryId1Name,CategoryId2,CategoryId2Name,CategoryId3,CategoryId3Name,ShopCategoryId1,ShopCategoryId1Name,ShopCategoryId2,ShopCategoryId2Name,ShopCategoryId3,ShopCategoryId3Name,BrandId1,BrandId1Name,BrandId2,BrandId2Name,ModifyTime,ModifyUserID,ModifyUserName FROM SaleOrderShopDetailsExt WHERE ID=@ID
+      </SQL>
+      <SQL name="DeleteByOrderId">
+        DELETE FROM SaleOrderShopDetailsExt WHERE OrderID=@OrderID
+      </SQL>
+    </TABLE>
+
+    <TABLE name="WProductPromotion" desc="仓库商品促销主表">
+      <SQL name="Exists">
+        SELECT COUNT(1) FROM WProductPromotion WHERE PromotionID=@PromotionID
+      </SQL>
+      <SQL name="Save">
+        INSERT INTO WProductPromotion ( PromotionID, PromotionType, WID, WCode, WName, PromotionName, BeginTime, EndTime, Status, Remark, CreateTime, CreateUserID, CreateUserName, ModifyTime, ModifyUserID, ModifyUserName )VALUES( @PromotionID,@PromotionType,@WID,@WCode,@WName,@PromotionName,@BeginTime,@EndTime,@Status,@Remark,@CreateTime,@CreateUserID,@CreateUserName,@ModifyTime,@ModifyUserID,@ModifyUserName);
+      </SQL>
+      <SQL name="Edit">
+        UPDATE WProductPromotion SET PromotionType=@PromotionType,WID=@WID,WCode=@WCode,WName=@WName,PromotionName=@PromotionName,BeginTime=@BeginTime,EndTime=@EndTime,Status=@Status,Remark=@Remark,ModifyTime=@ModifyTime,ModifyUserID=@ModifyUserID,ModifyUserName=@ModifyUserName WHERE PromotionID=@PromotionID
+      </SQL>
+      <SQL name="Delete">
+        DELETE FROM WProductPromotion WHERE PromotionID=@PromotionID
+      </SQL>
+      <SQL name="LogicDelete">
+        UPDATE WProductPromotion SET IsDeleted=1 WHERE PromotionID=@PromotionID
+      </SQL>
+      <SQL name="Read">
+        SELECT PromotionID,PromotionType,WID,WCode,WName,PromotionName,BeginTime,EndTime,Status,ConfTime,ConfUserID,ConfUserName,PostingTime,PostingUserID,PostingUserName,Remark,CreateTime,CreateUserID,CreateUserName,ModifyTime,ModifyUserID,ModifyUserName FROM WProductPromotion
+      </SQL>
+      <SQL name="GetModelById">
+        SELECT PromotionID,PromotionType,WID,WCode,WName,PromotionName,BeginTime,EndTime,Status,ConfTime,ConfUserID,ConfUserName,PostingTime,PostingUserID,PostingUserName,Remark,CreateTime,CreateUserID,CreateUserName,ModifyTime,ModifyUserID,ModifyUserName FROM WProductPromotion WHERE PromotionID=@PromotionID
+      </SQL>
+      <SQL name="GetModelByPromotionIDSql1">
+        select prm.PromotionID,prm.PromotionType,prm.WID,prm.WCode,prm.WName,prm.PromotionName,prm.BeginTime,prm.EndTime,prm.Status,prm.ConfTime,prm.ConfUserID,prm.ConfUserName,prm.PostingTime,prm.PostingUserID,prm.PostingUserName,prm.Remark,prm.CreateTime,prm.CreateUserID,prm.CreateUserName,prm.ModifyTime,prm.ModifyUserID,prm.ModifyUserName FROM WProductPromotion as prm
+        WHERE  EXISTS({0})
+      </SQL>
+      <SQL name="GetModelByPromotionIDSql2">
+        SELECT 1 FROM WProductPromotionDetails as pmd 
+      </SQL>
+      <SQL name="GetRepeatRateInfo">
+        SELECT TOP 1 n.ShopID,n.ShopCode, n.productID,n.SKU,m.PromotionID FROM(SELECT s.ShopID,s.ShopCode,d.productID,d.SKU FROM WProductPromotion p INNER JOIN WProductPromotionShops s ON p.PromotionID=s.PromotionID INNER JOIN WProductPromotionDetails d ON p.PromotionID=d.PromotionID WHERE p.PromotionType=2 AND p.WID=@WID AND p.PromotionID=@PromotionID group by s.ShopID,s.ShopCode,d.productID,d.SKU) n INNER JOIN (SELECT ShopID,productID,p.PromotionID FROM WProductPromotion p INNER JOIN WProductPromotionShops s ON p.PromotionID=s.PromotionID INNER JOIN WProductPromotionDetails d ON p.PromotionID=d.PromotionID WHERE p.PromotionType=2 AND p.WID=@WID AND p.PromotionID!=@PromotionID AND (p.Status =1 OR p.Status=2) group by s.ShopID,d.ProductID,p.PromotionID) m ON n.ShopID=m.ShopID AND n.ProductID=m.ProductID
+      </SQL>
+      <SQL name="GetRepeatPromotionInfo">
+        <![CDATA[
+        DECLARE @BeginTime DATETIME; DECLARE @EndTime DATETIME; SET @BeginTime = (SELECT begintime FROM WProductPromotion WHERE PromotionID=@PromotionID); SET @EndTime =(SELECT endtime FROM WProductPromotion WHERE PromotionID=@PromotionID);
+SELECT TOP 1 n.ShopID,n.ShopCode, n.productID,n.SKU,m.PromotionID 
+FROM(SELECT ts.ShopID,ts.ShopCode,td.productID,td.SKU
+FROM WProductPromotion tp
+INNER JOIN WProductPromotionShops ts ON tp.PromotionID=ts.PromotionID
+INNER JOIN WProductPromotionDetails td ON tp.PromotionID=td.PromotionID
+WHERE tp.PromotionType=1 AND tp.WID=@WID AND tp.PromotionID=@PromotionID 
+group by ts.ShopID,ts.ShopCode,td.productID,td.SKU) n
+INNER JOIN 
+(SELECT ShopID,productID,p.PromotionID FROM WProductPromotion p INNER JOIN WProductPromotionShops s ON p.PromotionID=s.PromotionID INNER JOIN WProductPromotionDetails d ON p.PromotionID=d.PromotionID
+WHERE p.PromotionType=1 AND p.WID=@WID AND p.PromotionID!=@PromotionID AND (p.Status =1 OR p.Status=2)
+      AND ((p.BeginTime<=@BeginTime AND p.EndTime>=@BeginTime OR p.BeginTime<=@EndTime AND p.EndTime>=@EndTime) OR (p.BeginTime>=@BeginTime AND p.BeginTime<=@EndTime OR p.EndTime>=@BeginTime AND p.EndTime<=@EndTime))
+      group by s.ShopID,d.ProductID,p.PromotionID) m ON n.ShopID=m.ShopID AND n.ProductID=m.ProductID
+        ]]>        
+      </SQL>
+    </TABLE>
+
+    <TABLE name="WProductPromotionDetails" desc="仓库商品促销明细表">
+      <SQL name="Exists">
+        SELECT COUNT(1) FROM WProductPromotionDetails WHERE ID=@ID
+      </SQL>
+      <SQL name="Save">
+        INSERT INTO WProductPromotionDetails ( PromotionID, WID, WProductID, ProductID, SKU, ProductName, Unit, PackingQty, SaleUnit, SalePrice, OldPoint, Point, MaxOrderQty, CreateTime, CreateUserID, CreateUserName )VALUES( @PromotionID,@WID,@WProductID,@ProductID,@SKU,@ProductName,@Unit,@PackingQty,@SaleUnit,@SalePrice,@OldPoint,@Point,@MaxOrderQty,@CreateTime,@CreateUserID,@CreateUserName);SELECT SCOPE_IDENTITY();
+      </SQL>
+      <SQL name="Edit">
+        UPDATE WProductPromotionDetails SET PromotionID=@PromotionID,WID=@WID,WProductID=@WProductID,ProductID=@ProductID,SKU=@SKU,ProductName=@ProductName,Unit=@Unit,PackingQty=@PackingQty,SaleUnit=@SaleUnit,SalePrice=@SalePrice,OldPoint=@OldPoint,Point=@Point,MaxOrderQty=@MaxOrderQty WHERE ID=@ID
+      </SQL>
+      <SQL name="Delete">
+        DELETE FROM WProductPromotionDetails WHERE ID=@ID
+      </SQL>
+      <SQL name="LogicDelete">
+        UPDATE WProductPromotionDetails SET IsDeleted=1 WHERE ID=@ID
+      </SQL>
+      <SQL name="Read">
+        SELECT ID,PromotionID,WID,WProductID,ProductID,SKU,ProductName,Unit,PackingQty,SaleUnit,SalePrice,OldPoint,Point,MaxOrderQty,CreateTime,CreateUserID,CreateUserName FROM WProductPromotionDetails
+      </SQL>
+      <SQL name="GetModelById">
+        SELECT ID,PromotionID,WID,WProductID,ProductID,SKU,ProductName,Unit,PackingQty,SaleUnit,SalePrice,OldPoint,Point,MaxOrderQty,CreateTime,CreateUserID,CreateUserName FROM WProductPromotionDetails WHERE ID=@ID
+      </SQL>
+      <SQL name="GetListByPromotionID">
+        SELECT ID,PromotionID,WID,WProductID,ProductID,SKU,ProductName,Unit,PackingQty,SaleUnit,SalePrice,OldPoint,Point,MaxOrderQty,CreateTime,CreateUserID,CreateUserName FROM WProductPromotionDetails WHERE PromotionID=@PromotionID
+      </SQL>
+      <SQL name="DeleteByPromotionID">
+        DELETE FROM WProductPromotionDetails WHERE PromotionID=@PromotionID
+      </SQL>
+    </TABLE>
+
+    <TABLE name="WProductPromotionShops" desc="仓库商品促销门店群组表">
+      <SQL name="Exists">
+        SELECT COUNT(1) FROM WProductPromotionShops WHERE ID=@ID
+      </SQL>
+      <SQL name="Save">
+        INSERT INTO WProductPromotionShops ( PromotionID, WID, ShopID, ShopCode, ShopName, ShopType, FullAddress, CreateTime, CreateUserID, CreateUserName )VALUES( @PromotionID,@WID,@ShopID,@ShopCode,@ShopName,@ShopType,@FullAddress,@CreateTime,@CreateUserID,@CreateUserName);SELECT SCOPE_IDENTITY();
+      </SQL>
+      <SQL name="Edit">
+        UPDATE WProductPromotionShops SET PromotionID=@PromotionID,WID=@WID,ShopID=@ShopID,ShopCode=@ShopCode,ShopName=@ShopName,ShopType=@ShopType,FullAddress=@FullAddress WHERE ID=@ID
+      </SQL>
+      <SQL name="Delete">
+        DELETE FROM WProductPromotionShops WHERE ID=@ID
+      </SQL>
+      <SQL name="LogicDelete">
+        UPDATE WProductPromotionShops SET IsDeleted=1 WHERE ID=@ID
+      </SQL>
+      <SQL name="Read">
+        SELECT ID,PromotionID,WID,ShopID,ShopCode,ShopName,ShopType,FullAddress,CreateTime,CreateUserID,CreateUserName FROM WProductPromotionShops
+      </SQL>
+      <SQL name="GetModelById">
+        SELECT ID,PromotionID,WID,ShopID,ShopCode,ShopName,ShopType,FullAddress,CreateTime,CreateUserID,CreateUserName FROM WProductPromotionShops WHERE ID=@ID
+      </SQL>
+      <SQL name="GetListByPromotionID">
+        SELECT ID,PromotionID,WID,ShopID,ShopCode,ShopName,ShopType,FullAddress,CreateTime,CreateUserID,CreateUserName FROM WProductPromotionShops WHERE PromotionID=@PromotionID
+      </SQL>
+      <SQL name="DeleteByPromotionID">
+        DELETE FROM WProductPromotionShops WHERE PromotionID=@PromotionID
+      </SQL>
+    </TABLE>
+
+  </DATABASE>
+</DATABASES>

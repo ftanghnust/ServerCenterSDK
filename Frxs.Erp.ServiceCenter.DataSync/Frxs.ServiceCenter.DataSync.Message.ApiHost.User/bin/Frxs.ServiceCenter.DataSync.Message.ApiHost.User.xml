@@ -1,0 +1,330 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Frxs.ServiceCenter.DataSync.Message.ApiHost.User</name>
+    </assembly>
+    <members>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.ApiCodeGeneratorV10">
+            <summary>
+            接口层代码生成器(此接口为当前项目接口层代码生成器)
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.ApiCodeGeneratorV10._dbContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.ApiCodeGeneratorV10.#ctor(Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Api.Core.IActionSelector,Frxs.ServiceCenter.Api.Core.IMediaTypeFormatterFactory)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="actionSelector">接口搜索器</param>
+            <param name="mediaTypeFormatterFactory">格式化器创建器</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.ApiCodeGeneratorV10.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.ApiCodeGeneratorAction">
+            <summary>
+            接口层代码生成器(此接口为当前项目接口层代码生成器)
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.ApiCodeGeneratorAction._dbContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.ApiCodeGeneratorAction.#ctor(Frxs.ServiceCenter.Data.Core.IDbContext)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="dbContext">数据操作上下文</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.ApiCodeGeneratorAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.ApiCodeGeneratorAction.ActionApiCodeGeneratorActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.ApiCodeGeneratorAction.ActionApiCodeGeneratorActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.ApiCodeGeneratorAction.ActionApiCodeGeneratorActionRequestDto.ModelName">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.XSUserGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.XSUserGetAction._xSUserRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.XSUserGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Models.XSUser},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="xSUserRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.XSUserGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.XSUserGetAction.XSUserGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.XSUserGetAction.XSUserGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.XSUserGetAction.XSUserGetActionRequestDto.XSUserID">
+            <summary>
+            SqlServer.int
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.XSUserShopGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.XSUserShopGetAction._xSUserShopRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.XSUserShopGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Models.XSUserShop},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="xSUserShopRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.XSUserShopGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.XSUserShopGetAction.XSUserShopGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.XSUserShopGetAction.XSUserShopGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Actions.XSUserShopGetAction.XSUserShopGetActionRequestDto.ID">
+            <summary>
+            SqlServer.int
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.ApiPluginDescriptor">
+            <summary>
+            插件描述
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.ApiPluginDescriptor.#ctor(Frxs.ServiceCenter.Api.Core.IResourceFinderManager)">
+            <summary>
+            
+            </summary>
+            <param name="resourceFinderManager"></param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.ApiPluginDescriptor.DisplayName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.ApiPluginDescriptor.Author">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Data.UserContext">
+            <summary>
+            数据库访问上下文
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Data.UserContext.#ctor(System.Func{System.String})">
+            <summary>
+            初始化数据访问上下文对象
+            </summary>
+            <param name="getNameOrConnectionString">数据库连接名</param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Data.UserContext.Logger">
+            <summary>
+            初始化一个日志记录器
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Data.UserContext.EntityTypeConfigurationMapAssembly">
+            <summary>
+            映射程序集改成当前程序集
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.DependencyRegistar">
+            <summary>
+            注册系统默认实现的接口服务类
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.DependencyRegistar.Register(Autofac.ContainerBuilder,Frxs.ServiceCenter.Api.Core.ITypeFinder,Frxs.ServiceCenter.Api.Core.SystemOptions)">
+            <summary>
+            注册特定的类型到容器
+            </summary>
+            <param name="containerBuilder">注册容器</param>
+            <param name="typeFinder">类型查找器</param>
+            <param name="systemOptions">系统框架配置信息</param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.DependencyRegistar.Order">
+            <summary>
+            优先级最低，方便外部程序重写框架里的实现，覆盖掉系统默认的实现
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Tasks.TaskSchedulerRegistar">
+            <summary>
+            注册作业任务调度
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Tasks.TaskSchedulerRegistar.Register(Frxs.ServiceCenter.Api.Core.ITaskSchedulerCollection)">
+            <summary>
+            
+            </summary>
+            <param name="taskSchedulerCollection"></param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Tasks.TaskSchedulerRegistar.Order">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.TestEntity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Models.Mapping.XSUserMap">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Models.Mapping.XSUserShopMap">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Models.XSUser">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Models.XSUserShop">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.ApiHostApplication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.ApiHostApplication.Application_Start(System.Object,System.EventArgs)">
+            <summary>
+            应用程序启动时初始化系统框架
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.ApiHostApplication.Application_Error(System.Object,System.EventArgs)">
+            <summary>
+            记录错误信息
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Data.DependencyRegistar">
+            <summary>
+            框架会自动检测到这里的注册类,自动完成注册
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Data.DependencyRegistar.Register(Autofac.ContainerBuilder,Frxs.ServiceCenter.Api.Core.ITypeFinder,Frxs.ServiceCenter.Api.Core.SystemOptions)">
+            <summary>
+            系统框架默认的会被覆盖;
+            </summary>
+            <param name="containerBuilder"></param>
+            <param name="typeFinder">类型查找器</param>
+            <param name="systemOptions"></param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.Data.DependencyRegistar.Order">
+            <summary>
+            数字越大越后注册
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.StartUp.StartUp">
+            <summary>
+            系统初始化需要做的一些事件
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.StartUp.StartUp.Init">
+            <summary>
+            站点启动的时候会自动运行此方法
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.SysConfig">
+            <summary>
+            <![CDATA[
+            web.config节点配置对象；此配置节点会被IOC容器自动注册;
+            <configuration>
+            <configSections>
+             <section name="SysConfig" type="Frxs.ServiceCenter.Api.Host.Data.DataBaseAccessConfig,Frxs.ServiceCenter.Api.Host"/>
+            </configSections>
+             <SysConfig connectionStringName="connstring_sql"/>
+            <configuration>
+            ]]>
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.SysConfig.#ctor">
+            <summary>
+            配置文件对应的实体类
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.SysConfig.Create(System.Object,System.Object,System.Xml.XmlNode)">
+            <summary>
+            创建配置对象信息
+            </summary>
+            <param name="parent"></param>
+            <param name="configContext"></param>
+            <param name="section"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.User.SysConfig.ConnectionStringName">
+            <summary>
+            数据库连接字符串
+            </summary>
+        </member>
+    </members>
+</doc>

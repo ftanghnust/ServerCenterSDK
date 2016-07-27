@@ -1,0 +1,6 @@
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.SDK.V20\bin\Debug\Frxs.ServiceCenter.Api.Core.SDK.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.SDK.V20\bin\Debug\Frxs.ServiceCenter.Api.Core.SDK.pdb
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.SDK.V20\bin\Debug\Newtonsoft.Json.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.SDK.V20\bin\Debug\Newtonsoft.Json.xml
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.SDK.V20\obj\Debug\Frxs.ServiceCenter.Api.Core.SDK.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Core.SDK.V20\obj\Debug\Frxs.ServiceCenter.Api.Core.SDK.pdb

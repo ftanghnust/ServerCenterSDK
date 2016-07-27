@@ -1,0 +1,248 @@
+
+2016/6/23 11:10:37
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.ProductQueryDAO.GetCount
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]WITH LIST AS (SELECT ROW_NUMBER() OVER (ORDER BY P.ProductId DESC) AS RowNum,
+        p.ProductId,
+        p.SKU,
+        p.ProductName,
+        wbuy.BigUnit as BuyUnit,
+        wbuy.BigPackingQty  AS PackingQty,
+        wbuy.BigPackingQty*wbuy.BuyPrice AS BuyPrice,
+        wp.Unit, wbuy.BuyPrice AS UnitPrice,
+        c.BarCode,
+        wp.ShopAddPerc,
+        wp.ShopPoint,
+        wp.BasePoint,
+        wp.VendorPerc1,
+        wp.VendorPerc2,
+        wp.SalePrice AS SaleUnitPrice,
+        wp.SalePrice*wbuy.BigPackingQty AS SalePrice,
+        wp.WStatus
+        FROM  ProductsVendor pv
+        INNER JOIN WProducts  wp ON pv.WID=wp.WID and pv.ProductId=wp.ProductId
+        INNER JOIN WProductsBuy wbuy ON wp.WProductID=wbuy.WProductID
+        INNER JOIN Products p ON pv.ProductId=p.ProductId
+        LEFT JOIN ProductsBarCodes c on pv.ProductId=c.ProductId and c.SerialNumber=1
+        WHERE pv.WID=105 AND pv.VendorID=1932 AND wp.WState = 1) SELECT COUNT(*) FROM LIST 
+System.Data.SqlClient.SqlException (0x80131904): 列名 'WState' 无效。
+   在 Frxs.Platform.DBUtility.DBHelper.GetSingle(String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Platform\Frxs.Platform.DBUtility\DBHelper.cs:行号 572
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsQueryDAO.GetCount() 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsQueryDAO.cs:行号 135
+ClientConnectionId:6f45bf3a-fe4f-4ccd-ba00-2c1f4ae53794
+
+2016/6/23 11:10:38
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.ProductQueryDAO.GetCount
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]WITH LIST AS (SELECT ROW_NUMBER() OVER (ORDER BY P.ProductId DESC) AS RowNum,
+        p.ProductId,
+        p.SKU,
+        p.ProductName,
+        wbuy.BigUnit as BuyUnit,
+        wbuy.BigPackingQty  AS PackingQty,
+        wbuy.BigPackingQty*wbuy.BuyPrice AS BuyPrice,
+        wp.Unit, wbuy.BuyPrice AS UnitPrice,
+        c.BarCode,
+        wp.ShopAddPerc,
+        wp.ShopPoint,
+        wp.BasePoint,
+        wp.VendorPerc1,
+        wp.VendorPerc2,
+        wp.SalePrice AS SaleUnitPrice,
+        wp.SalePrice*wbuy.BigPackingQty AS SalePrice,
+        wp.WStatus
+        FROM  ProductsVendor pv
+        INNER JOIN WProducts  wp ON pv.WID=wp.WID and pv.ProductId=wp.ProductId
+        INNER JOIN WProductsBuy wbuy ON wp.WProductID=wbuy.WProductID
+        INNER JOIN Products p ON pv.ProductId=p.ProductId
+        LEFT JOIN ProductsBarCodes c on pv.ProductId=c.ProductId and c.SerialNumber=1
+        WHERE pv.WID=105 AND pv.VendorID=1932 AND wp.WState = 1) SELECT COUNT(*) FROM LIST 
+System.Data.SqlClient.SqlException (0x80131904): 列名 'WState' 无效。
+   在 Frxs.Platform.DBUtility.DBHelper.GetSingle(String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Platform\Frxs.Platform.DBUtility\DBHelper.cs:行号 572
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsQueryDAO.GetCount() 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsQueryDAO.cs:行号 135
+ClientConnectionId:6f45bf3a-fe4f-4ccd-ba00-2c1f4ae53794
+
+2016/6/23 11:10:50
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.ProductQueryDAO.GetCount
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]WITH LIST AS (SELECT ROW_NUMBER() OVER (ORDER BY P.ProductId DESC) AS RowNum,
+        p.ProductId,
+        p.SKU,
+        p.ProductName,
+        wbuy.BigUnit as BuyUnit,
+        wbuy.BigPackingQty  AS PackingQty,
+        wbuy.BigPackingQty*wbuy.BuyPrice AS BuyPrice,
+        wp.Unit, wbuy.BuyPrice AS UnitPrice,
+        c.BarCode,
+        wp.ShopAddPerc,
+        wp.ShopPoint,
+        wp.BasePoint,
+        wp.VendorPerc1,
+        wp.VendorPerc2,
+        wp.SalePrice AS SaleUnitPrice,
+        wp.SalePrice*wbuy.BigPackingQty AS SalePrice,
+        wp.WStatus
+        FROM  ProductsVendor pv
+        INNER JOIN WProducts  wp ON pv.WID=wp.WID and pv.ProductId=wp.ProductId
+        INNER JOIN WProductsBuy wbuy ON wp.WProductID=wbuy.WProductID
+        INNER JOIN Products p ON pv.ProductId=p.ProductId
+        LEFT JOIN ProductsBarCodes c on pv.ProductId=c.ProductId and c.SerialNumber=1
+        WHERE pv.WID=105 AND pv.VendorID=52 AND wp.WState = 1) SELECT COUNT(*) FROM LIST 
+System.Data.SqlClient.SqlException (0x80131904): 列名 'WState' 无效。
+   在 Frxs.Platform.DBUtility.DBHelper.GetSingle(String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Platform\Frxs.Platform.DBUtility\DBHelper.cs:行号 572
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsQueryDAO.GetCount() 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsQueryDAO.cs:行号 135
+ClientConnectionId:6f45bf3a-fe4f-4ccd-ba00-2c1f4ae53794
+
+2016/6/23 11:10:51
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.ProductQueryDAO.GetCount
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]WITH LIST AS (SELECT ROW_NUMBER() OVER (ORDER BY P.ProductId DESC) AS RowNum,
+        p.ProductId,
+        p.SKU,
+        p.ProductName,
+        wbuy.BigUnit as BuyUnit,
+        wbuy.BigPackingQty  AS PackingQty,
+        wbuy.BigPackingQty*wbuy.BuyPrice AS BuyPrice,
+        wp.Unit, wbuy.BuyPrice AS UnitPrice,
+        c.BarCode,
+        wp.ShopAddPerc,
+        wp.ShopPoint,
+        wp.BasePoint,
+        wp.VendorPerc1,
+        wp.VendorPerc2,
+        wp.SalePrice AS SaleUnitPrice,
+        wp.SalePrice*wbuy.BigPackingQty AS SalePrice,
+        wp.WStatus
+        FROM  ProductsVendor pv
+        INNER JOIN WProducts  wp ON pv.WID=wp.WID and pv.ProductId=wp.ProductId
+        INNER JOIN WProductsBuy wbuy ON wp.WProductID=wbuy.WProductID
+        INNER JOIN Products p ON pv.ProductId=p.ProductId
+        LEFT JOIN ProductsBarCodes c on pv.ProductId=c.ProductId and c.SerialNumber=1
+        WHERE pv.WID=105 AND pv.VendorID=52 AND wp.WState = 1) SELECT COUNT(*) FROM LIST 
+System.Data.SqlClient.SqlException (0x80131904): 列名 'WState' 无效。
+   在 Frxs.Platform.DBUtility.DBHelper.GetSingle(String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Platform\Frxs.Platform.DBUtility\DBHelper.cs:行号 572
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsQueryDAO.GetCount() 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsQueryDAO.cs:行号 135
+ClientConnectionId:6f45bf3a-fe4f-4ccd-ba00-2c1f4ae53794
+
+2016/6/23 11:16:08
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.ProductQueryDAO.GetCount
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]WITH LIST AS (SELECT ROW_NUMBER() OVER (ORDER BY P.ProductId DESC) AS RowNum,
+        p.ProductId,
+        p.SKU,
+        p.ProductName,
+        wbuy.BigUnit as BuyUnit,
+        wbuy.BigPackingQty  AS PackingQty,
+        wbuy.BigPackingQty*wbuy.BuyPrice AS BuyPrice,
+        wp.Unit, wbuy.BuyPrice AS UnitPrice,
+        c.BarCode,
+        wp.ShopAddPerc,
+        wp.ShopPoint,
+        wp.BasePoint,
+        wp.VendorPerc1,
+        wp.VendorPerc2,
+        wp.SalePrice AS SaleUnitPrice,
+        wp.SalePrice*wbuy.BigPackingQty AS SalePrice,
+        wp.WStatus
+        FROM  ProductsVendor pv
+        INNER JOIN WProducts  wp ON pv.WID=wp.WID and pv.ProductId=wp.ProductId
+        INNER JOIN WProductsBuy wbuy ON wp.WProductID=wbuy.WProductID
+        INNER JOIN Products p ON pv.ProductId=p.ProductId
+        LEFT JOIN ProductsBarCodes c on pv.ProductId=c.ProductId and c.SerialNumber=1
+        WHERE pv.WID=105 AND pv.VendorID=52 AND wp.WState = 1) SELECT COUNT(*) FROM LIST 
+System.Data.SqlClient.SqlException (0x80131904): 列名 'WState' 无效。
+   在 Frxs.Platform.DBUtility.DBHelper.GetSingle(String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Platform\Frxs.Platform.DBUtility\DBHelper.cs:行号 572
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsQueryDAO.GetCount() 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsQueryDAO.cs:行号 135
+ClientConnectionId:9f267dca-8324-461d-bd61-4e4e06cf5d71
+
+2016/6/23 11:16:21
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.ProductQueryDAO.GetCount
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]WITH LIST AS (SELECT ROW_NUMBER() OVER (ORDER BY P.ProductId DESC) AS RowNum,
+        p.ProductId,
+        p.SKU,
+        p.ProductName,
+        wbuy.BigUnit as BuyUnit,
+        wbuy.BigPackingQty  AS PackingQty,
+        wbuy.BigPackingQty*wbuy.BuyPrice AS BuyPrice,
+        wp.Unit, wbuy.BuyPrice AS UnitPrice,
+        c.BarCode,
+        wp.ShopAddPerc,
+        wp.ShopPoint,
+        wp.BasePoint,
+        wp.VendorPerc1,
+        wp.VendorPerc2,
+        wp.SalePrice AS SaleUnitPrice,
+        wp.SalePrice*wbuy.BigPackingQty AS SalePrice,
+        wp.WStatus
+        FROM  ProductsVendor pv
+        INNER JOIN WProducts  wp ON pv.WID=wp.WID and pv.ProductId=wp.ProductId
+        INNER JOIN WProductsBuy wbuy ON wp.WProductID=wbuy.WProductID
+        INNER JOIN Products p ON pv.ProductId=p.ProductId
+        LEFT JOIN ProductsBarCodes c on pv.ProductId=c.ProductId and c.SerialNumber=1
+        WHERE pv.WID=105 AND pv.VendorID=52 AND wp.WState = 1) SELECT COUNT(*) FROM LIST 
+System.Data.SqlClient.SqlException (0x80131904): 列名 'WState' 无效。
+   在 Frxs.Platform.DBUtility.DBHelper.GetSingle(String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Platform\Frxs.Platform.DBUtility\DBHelper.cs:行号 572
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsQueryDAO.GetCount() 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsQueryDAO.cs:行号 135
+ClientConnectionId:9f267dca-8324-461d-bd61-4e4e06cf5d71
+
+2016/6/23 11:16:50
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.ProductQueryDAO.GetCount
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]WITH LIST AS (SELECT ROW_NUMBER() OVER (ORDER BY P.ProductId DESC) AS RowNum,
+        p.ProductId,
+        p.SKU,
+        p.ProductName,
+        wbuy.BigUnit as BuyUnit,
+        wbuy.BigPackingQty  AS PackingQty,
+        wbuy.BigPackingQty*wbuy.BuyPrice AS BuyPrice,
+        wp.Unit, wbuy.BuyPrice AS UnitPrice,
+        c.BarCode,
+        wp.ShopAddPerc,
+        wp.ShopPoint,
+        wp.BasePoint,
+        wp.VendorPerc1,
+        wp.VendorPerc2,
+        wp.SalePrice AS SaleUnitPrice,
+        wp.SalePrice*wbuy.BigPackingQty AS SalePrice,
+        wp.WStatus
+        FROM  ProductsVendor pv
+        INNER JOIN WProducts  wp ON pv.WID=wp.WID and pv.ProductId=wp.ProductId
+        INNER JOIN WProductsBuy wbuy ON wp.WProductID=wbuy.WProductID
+        INNER JOIN Products p ON pv.ProductId=p.ProductId
+        LEFT JOIN ProductsBarCodes c on pv.ProductId=c.ProductId and c.SerialNumber=1
+        WHERE pv.WID=105 AND pv.VendorID=52 AND wp.WState = 1) SELECT COUNT(*) FROM LIST 
+System.Data.SqlClient.SqlException (0x80131904): 列名 'WState' 无效。
+   在 Frxs.Platform.DBUtility.DBHelper.GetSingle(String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Platform\Frxs.Platform.DBUtility\DBHelper.cs:行号 572
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsQueryDAO.GetCount() 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsQueryDAO.cs:行号 135
+ClientConnectionId:9f267dca-8324-461d-bd61-4e4e06cf5d71
+
+2016/6/23 11:18:17
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.ProductQueryDAO.GetCount
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]WITH LIST AS (SELECT ROW_NUMBER() OVER (ORDER BY P.ProductId DESC) AS RowNum,
+        p.ProductId,
+        p.SKU,
+        p.ProductName,
+        wbuy.BigUnit as BuyUnit,
+        wbuy.BigPackingQty  AS PackingQty,
+        wbuy.BigPackingQty*wbuy.BuyPrice AS BuyPrice,
+        wp.Unit, wbuy.BuyPrice AS UnitPrice,
+        c.BarCode,
+        wp.ShopAddPerc,
+        wp.ShopPoint,
+        wp.BasePoint,
+        wp.VendorPerc1,
+        wp.VendorPerc2,
+        wp.SalePrice AS SaleUnitPrice,
+        wp.SalePrice*wbuy.BigPackingQty AS SalePrice,
+        wp.WStatus
+        FROM  ProductsVendor pv
+        INNER JOIN WProducts  wp ON pv.WID=wp.WID and pv.ProductId=wp.ProductId
+        INNER JOIN WProductsBuy wbuy ON wp.WProductID=wbuy.WProductID
+        INNER JOIN Products p ON pv.ProductId=p.ProductId
+        LEFT JOIN ProductsBarCodes c on pv.ProductId=c.ProductId and c.SerialNumber=1
+        WHERE pv.WID=105 AND pv.VendorID=52 AND wp.WState = 1) SELECT COUNT(*) FROM LIST 
+System.Data.SqlClient.SqlException (0x80131904): 列名 'WState' 无效。
+   在 Frxs.Platform.DBUtility.DBHelper.GetSingle(String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Platform\Frxs.Platform.DBUtility\DBHelper.cs:行号 572
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsQueryDAO.GetCount() 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsQueryDAO.cs:行号 135
+ClientConnectionId:9f267dca-8324-461d-bd61-4e4e06cf5d71

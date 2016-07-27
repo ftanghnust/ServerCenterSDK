@@ -1,0 +1,23 @@
+﻿
+
+触发的事件命名规则：
+
+模块+触发的事件名称
+
+定义好后，系统框架会自动根据定义的事件，生成发布者调用类和消息者调用SDK
+
+
+注意：消息摘要类必须定义可序列化特性标签 [Serializable]
+
+
+创建完事件参数定义后，运行此项目；
+
+1.运行接口：PublisherCodeGenerator 接口输出：1.Frxs.ServiceCenter.DataSync.Message.PublisherClient 项目发布接口，
+
+		覆盖掉MessagePublisherClientExtension.cs内容即可
+
+2.运行接口：ConsumerCodeGenerator  接口输出：2.Frxs.ServiceCenter.DataSync.Message.ConsumerClient 消息消费客户端
+
+	修改文件：EventArgs.cs MessageConsumerClient.cs 对应的内容即可
+
+

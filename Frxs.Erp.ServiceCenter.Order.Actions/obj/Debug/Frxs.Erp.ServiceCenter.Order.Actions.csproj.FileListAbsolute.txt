@@ -1,0 +1,6 @@
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Host.V20\bin\Frxs.Erp.ServiceCenter.Order.Actions.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Host.V20\bin\Frxs.Erp.ServiceCenter.Order.Actions.pdb
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Api.Host.V20\bin\ActionsDocResource.config
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Order.Actions\obj\Debug\Frxs.Erp.ServiceCenter.Order.Actions.csprojResolveAssemblyReference.cache
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Order.Actions\obj\Debug\Frxs.Erp.ServiceCenter.Order.Actions.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Order.Actions\obj\Debug\Frxs.Erp.ServiceCenter.Order.Actions.pdb

@@ -1,0 +1,19 @@
+﻿
+API框架系统Redis缓存服务器实现，由于接口缓存实现类是竞态关系，即：多个引用只会使用最后注册的那一个具体实现；因此，在需要优先使用的情况下，请提高
+IDependencyRegistar注册实现类的Order属性值
+
+使用方式：
+1.接口HOST项目引用此项目
+2.接口HOST项目web.config文件配置如下节点信息
+
+缓存web.config节点配置类;无需手工配置，API系统框架会自动将此配置文件赋值给对应的换成类，系统框架IOC容器会自动注册此配置；XML配置文件格式如下：
+
+<configuration>
+
+  <configSections>
+     <section name="redisCacheManagerConfig" type="Frxs.ServiceCenter.Api.Core.Redis.RedisCacheManagerConfig,Frxs.ServiceCenter.Api.Core.Redis"/>
+  </configSections>
+
+  <redisCacheManagerConfig readWriteHosts="127.0.0.1:6379" readOnlyHosts="" MaxWritePoolSize="5" MaxReadPoolSize="5"/>
+
+<configuration>

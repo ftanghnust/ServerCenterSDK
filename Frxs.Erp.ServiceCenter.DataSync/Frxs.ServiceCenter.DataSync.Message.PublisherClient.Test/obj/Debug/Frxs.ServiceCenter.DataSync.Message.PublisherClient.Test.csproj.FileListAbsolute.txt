@@ -1,0 +1,1 @@
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.DataSync\Frxs.ServiceCenter.DataSync.Message.PublisherClient.Test\obj\Debug\Frxs.ServiceCenter.DataSync.Message.PublisherClient.Test.csprojResolveAssemblyReference.cache

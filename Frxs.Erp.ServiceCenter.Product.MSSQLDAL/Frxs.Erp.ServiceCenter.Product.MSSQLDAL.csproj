@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{032B80B3-DFFB-46DA-AF31-0C23ABD9073A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Frxs.Erp.ServiceCenter.Product.MSSQLDAL</RootNamespace>
+    <AssemblyName>Frxs.Erp.ServiceCenter.Product.MSSQLDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppVersionDAO.cs" />
+    <Compile Include="AttributesDAO.cs" />
+    <Compile Include="AttributesValuesDAO.cs" />
+    <Compile Include="BaseDAL.cs" />
+    <Compile Include="BaseProductsDAO.cs" />
+    <Compile Include="BrandCategoriesDAO.cs" />
+    <Compile Include="CategoriesDAO.cs" />
+    <Compile Include="ProductQueryDAO.cs" />
+    <Compile Include="ProductsBarCodesDAO.cs" />
+    <Compile Include="ProductsAttributesDAO.cs" />
+    <Compile Include="ProductsAttributesPictureDAO.cs" />
+    <Compile Include="ProductsDAO.cs" />
+    <Compile Include="ProductsDescriptionDAO.cs" />
+    <Compile Include="ProductsDescriptionPictureDAO.cs" />
+    <Compile Include="ProductsPictureDetailDAO.cs" />
+    <Compile Include="ProductsSKUNumberServiceDAO.cs" />
+    <Compile Include="ProductsUnitDAO.cs" />
+    <Compile Include="ProductsVendorDAO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reprot\ReportDAO.cs" />
+    <Compile Include="ShelfAreaDAO.cs" />
+    <Compile Include="ShelfDAO.cs" />
+    <Compile Include="ShopCategoriesDAO.cs" />
+    <Compile Include="ShopDAO.cs" />
+    <Compile Include="ShopGroupDAO.cs" />
+    <Compile Include="ShopGroupDetailsDAO.cs" />
+    <Compile Include="SqlParamrterBuilder.cs" />
+    <Compile Include="SqlParamrterBuilderExtensions.cs" />
+    <Compile Include="SysAppSettings\SysAppSettingsDAO.cs" />
+    <Compile Include="SysArea\SysAreaDAO.cs" />
+    <Compile Include="SysDict\SysDictDetailDAO.cs" />
+    <Compile Include="SysParamsDAO.cs" />
+    <Compile Include="SysParamsWHDAO.cs" />
+    <Compile Include="Vendor\VendorDAO.cs" />
+    <Compile Include="Vendor\VendorTypeDAO.cs" />
+    <Compile Include="WarehouseEmpDAO.cs" />
+    <Compile Include="WarehouseDAO.cs" />
+    <Compile Include="WarehouseEmpShelfDAO.cs" />
+    <Compile Include="WarehouseLineDAO.cs" />
+    <Compile Include="WarehouseLineShopDAO.cs" />
+    <Compile Include="WProductAdjPriceDAO.cs" />
+    <Compile Include="WProductAdjPriceDetailsDAO.cs" />
+    <Compile Include="WProductAdjShelfDAO.cs" />
+    <Compile Include="WProductAdjShelfDetailsDAO.cs" />
+    <Compile Include="WProductsBaseDAO.cs" />
+    <Compile Include="WProductNoSaleDAO.cs" />
+    <Compile Include="WProductNoSaleDetailsDAO.cs" />
+    <Compile Include="WProductNoSaleShopsDAO.cs" />
+    <Compile Include="WProductsAddedListDAO.cs" />
+    <Compile Include="WProductsBuyEmpDAO.cs" />
+    <Compile Include="WProductsBuyEmpListDAO.cs" />
+    <Compile Include="WProductsStockCheckListForStockDAO.cs" />
+    <Compile Include="WProductsAddedListForStockDAO.cs" />
+    <Compile Include="WProductsBuyDAO.cs" />
+    <Compile Include="WProductsDAO.cs" />
+    <Compile Include="WProductsQueryDAO.cs" />
+    <Compile Include="WProductsSaleQueryDAO.cs" />
+    <Compile Include="WProductsWaitAddListDAO.cs" />
+    <Compile Include="WStationNumberDAO.cs" />
+    <Compile Include="WProductAdjPriceQueryDAO.cs" />
+    <Compile Include="BrandCategorieQueryDAO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Frxs.Platform\Frxs.Platform.DBUtility\Frxs.Platform.DBUtility.csproj">
+      <Project>{b31819e0-044a-4458-ad15-bebf0dfdb7bd}</Project>
+      <Name>Frxs.Platform.DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frxs.Platform\Frxs.Platform.Utility\Frxs.Platform.Utility.csproj">
+      <Project>{0c08602c-3a43-48ba-ac95-d18c21217165}</Project>
+      <Name>Frxs.Platform.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.Erp.ServiceCenter.Product.IDAL\Frxs.Erp.ServiceCenter.Product.IDAL.csproj">
+      <Project>{f3a5e62f-9f82-47c9-bdfa-76328afb647e}</Project>
+      <Name>Frxs.Erp.ServiceCenter.Product.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.Erp.ServiceCenter.Product.Model\Frxs.Erp.ServiceCenter.Product.Model.csproj">
+      <Project>{bf83d465-6cc4-4b2b-be5d-f436f2ad6644}</Project>
+      <Name>Frxs.Erp.ServiceCenter.Product.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Config\SQLScripts.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

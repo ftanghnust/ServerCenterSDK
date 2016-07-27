@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BCE92EEF-57B9-46F9-B48E-9B8B1C51E476}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Frxs.Erp.ServiceCenter.Product.Actions</RootNamespace>
+    <AssemblyName>Frxs.Erp.ServiceCenter.Product.Actions</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Frxs.Erp.ServiceCenter.Product.Host\config\Frxs.Erp.ServiceCenter.Product.Actions.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Frxs.Erp.ServiceCenter.Member.SDK">
+      <HintPath>..\..\Frxs.Erp.ServiceCenter.SDK\Frxs.Erp.ServiceCenter.Member.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiPluginDescriptor.cs" />
+    <Compile Include="Common\AppVersionUpdateGetAction.cs" />
+    <Compile Include="RequestDto\ProductsVendorRequestDto.cs" />
+    <Compile Include="RequestDto\ReportGetRequestDto.cs" />
+    <Compile Include="Shelf\ShelfListAddAction.cs" />
+    <Compile Include="SysAppSettings\SysAppSettingsGetAction.cs" />
+    <Compile Include="SysArea\SysAreaGetByIDsAction.cs" />
+    <Compile Include="SysArea\SysAreaGetAction.cs" />
+    <Compile Include="Vendor\VendorTypeDelAction.cs" />
+    <Compile Include="RequestDto\Vendor\VendorTypeGetRequestDto..cs" />
+    <Compile Include="RequestDto\Vendor\VendorTypeSaveRequestDto.cs" />
+    <Compile Include="RequestDto\WProductAdjShelfRequestDto.cs" />
+    <Compile Include="RequestDto\WStationNumberRequestDto.cs" />
+    <Compile Include="Vendor\VendorTypeGetAction.cs" />
+    <Compile Include="Vendor\VendorTypeSaveAction.cs" />
+    <Compile Include="Vendor\VendorLastBuyGetAction.cs" />
+    <Compile Include="WarehouseEmp\WarehouseEmpResetAction.cs" />
+    <Compile Include="Vendor\VendorWarehouseAction.cs" />
+    <Compile Include="WarehouseLine\WarehouseLineShopGetAction.cs" />
+    <Compile Include="WorkContext.cs" />
+    <Compile Include="仓库\WarehouseExistsAction.cs" />
+    <Compile Include="仓库\WarehouseJudgeDel.cs" />
+    <Compile Include="品牌管理\BrandCategorieCacheKey.cs" />
+    <Compile Include="商品\BaseProductCreateAndBindAction.cs" />
+    <Compile Include="商品\BaseProductListGetRequest.cs" />
+    <Compile Include="商品\BaseProductNameEditRequest.cs" />
+    <Compile Include="商品\BaseProductSkuGetAction.cs" />
+    <Compile Include="商品\ProductGetV20Action.cs" />
+    <Compile Include="商品\ProductsEditStatusAction.cs" />
+    <Compile Include="商品\ProductsBindToBaseProductAction.cs" />
+    <Compile Include="商品\ProductListGetAction.cs" />
+    <Compile Include="商品\ProductAddAction.cs" />
+    <Compile Include="商品\ProductDeleteAction.cs" />
+    <Compile Include="商品\ProductEditAction.cs" />
+    <Compile Include="商品\ProductGetAction.cs" />
+    <Compile Include="商品\ProductsKeyWordGetAction.cs" />
+    <Compile Include="商品\ProductsPictureDetailGetAction.cs" />
+    <Compile Include="商品\ProductsDescriptionAndPictureAddOrEditAction.cs" />
+    <Compile Include="商品\ProductsDescriptionAndPictureGetAction.cs" />
+    <Compile Include="商品\ProductEditTXTKAction.cs" />
+    <Compile Include="商品\ProductsKeyWordUpdateAction.cs" />
+    <Compile Include="商品\ProductsAttributesGetAction.cs" />
+    <Compile Include="商品\ProductsAttributesUpdateAction.cs" />
+    <Compile Include="商品\ProductsBarCodeAddAction.cs" />
+    <Compile Include="商品\ProductsBarCodeGetAction.cs" />
+    <Compile Include="商品\ProductsUnBindAction.cs" />
+    <Compile Include="RequestDto\BaseProductAddRequestDto.cs" />
+    <Compile Include="RequestDto\BaseProductCreateAndBindRequestDto.cs" />
+    <Compile Include="RequestDto\BaseProductListGetRequestDto.cs" />
+    <Compile Include="RequestDto\BaseProductNameEditRequestDto.cs" />
+    <Compile Include="RequestDto\BaseProductSkuGetRequestAction.cs" />
+    <Compile Include="RequestDto\GetBossProductListRepquestDto.cs" />
+    <Compile Include="RequestDto\ProductAddRequestDto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RequestDto\ProductGetRequestDto.cs" />
+    <Compile Include="RequestDto\ProductsBarCodesAddRequestDto.cs" />
+    <Compile Include="RequestDto\ProductsBindToBaseProductRequestDto.cs" />
+    <Compile Include="RequestDto\ProductsDescriptionAndPictureAddOrEditRequestDto.cs" />
+    <Compile Include="RequestDto\ProductsDescriptionAndPictureGetRequestDto.cs" />
+    <Compile Include="RequestDto\ProductsEditStatusRequestDto.cs" />
+    <Compile Include="RequestDto\ProductsEditTXTKRequestDto.cs" />
+    <Compile Include="RequestDto\ProductsKeyWordGetRequestDto.cs" />
+    <Compile Include="RequestDto\ProductsKeyWordUpdateRequestDto.cs" />
+    <Compile Include="RequestDto\ProductsAttributesUpdateRequestDto.cs" />
+    <Compile Include="RequestDto\ProductDeleteRequestDto.cs" />
+    <Compile Include="RequestDto\ProductsAddPackageRequestDto.cs" />
+    <Compile Include="RequestDto\ProductsAttributesAddRequestDto.cs" />
+    <Compile Include="RequestDto\ProductsAttributesGetRequestDto.cs" />
+    <Compile Include="RequestDto\ProductsAttributesPictureAddRequestDto.cs" />
+    <Compile Include="RequestDto\ProductsBarCodesRequestDto.cs" />
+    <Compile Include="RequestDto\ProductsDescriptionPictureRequestDto.cs" />
+    <Compile Include="RequestDto\ProductsDescriptionRequestDto.cs" />
+    <Compile Include="RequestDto\ProductsPictureDetailAddRequestDto.cs" />
+    <Compile Include="RequestDto\ProductsPictureDetailGetRequestDto.cs" />
+    <Compile Include="RequestDto\ProductsUnitRequestDto.cs" />
+    <Compile Include="RequestDto\ProductVendorAddResquestDto.cs" />
+    <Compile Include="RequestDto\ShopWhRequest.cs" />
+    <Compile Include="RequestDto\Vendor\VendorRequestDTO.cs" />
+    <Compile Include="RequestDto\Vendor\VendorSaveActionRequestDto.cs" />
+    <Compile Include="RequestDto\Vendor\VendorTableListActionRequestDto.cs" />
+    <Compile Include="RequestDto\Vendor\VendorTypeTableListRequestDTO.cs" />
+    <Compile Include="RequestDto\Vendor\VerdorGetByIDActionRequestDto.cs" />
+    <Compile Include="RequestDto\WarehouseEmpShelResquestDto.cs" />
+    <Compile Include="RequestDto\WarehouseLineRequestDto.cs" />
+    <Compile Include="RequestDto\WarehouseLineShopRequestDto.cs" />
+    <Compile Include="Product\BaseProductResponseDto.cs" />
+    <Compile Include="Product\ProductGetResponseDto.cs" />
+    <Compile Include="Product\ProductResponseDto.cs" />
+    <Compile Include="Shelf\ShelfListAction.cs" />
+    <Compile Include="商品\ProductsVendorUpdateLastBuyPriceAction.cs" />
+    <Compile Include="商品\ProductWarehousePriceGetAction.cs" />
+    <Compile Include="商品\WProductAdjPriceAddOrUpdateAction.cs" />
+    <Compile Include="商品\WProductAdjPriceCacheKey.cs" />
+    <Compile Include="商品\WProductAdjPriceConfirmAction.cs" />
+    <Compile Include="商品\WProductAdjPriceDelAction.cs" />
+    <Compile Include="商品\WProductAdjPriceGetAction.cs" />
+    <Compile Include="商品\WProductAdjPriceListGetAction.cs" />
+    <Compile Include="商品\WProductAdjPricePostingAction.cs" />
+    <Compile Include="商品\WProductBaseListGetAction.cs" />
+    <Compile Include="商品\WProductNoSaleGetAction.cs" />
+    <Compile Include="商品\WProductNoSaleStopAction.cs" />
+    <Compile Include="商品\WProductsAddedListGetAction.cs" />
+    <Compile Include="商品\WProductsAddedListGetForStockImportAction.cs" />
+    <Compile Include="商品\WProductsAddedListGetForStockAction.cs" />
+    <Compile Include="商品\WProductsAddOrUpdateAction.cs" />
+    <Compile Include="商品\WProductNoSaleConfirmAction.cs" />
+    <Compile Include="商品\WProductNoSaleDelAction.cs" />
+    <Compile Include="商品\WProductNoSaleListGetAction.cs" />
+    <Compile Include="商品\WProductNoSalePostingAction.cs" />
+    <Compile Include="商品\WProductNoSaleSaveAction.cs" />
+    <Compile Include="商品\WProductsBuyEmpListSaveAction.cs" />
+    <Compile Include="商品\WProductsBuyGetAction.cs" />
+    <Compile Include="商品\WProductsBuyListGetAction.cs" />
+    <Compile Include="商品\WProductsB2BDetailsGetAction.cs" />
+    <Compile Include="商品\WProductsBuyListSreachAction.cs" />
+    <Compile Include="商品\WProductsCacheKey.cs" />
+    <Compile Include="商品\WProductsGetAction.cs" />
+    <Compile Include="商品\WProductsGetByShelfIDAction.cs" />
+    <Compile Include="商品\WProductsMasterVendorSet.cs" />
+    <Compile Include="商品\WProductsSaleListGetAction.cs" />
+    <Compile Include="商品\WProductsStatusUpdateAction.cs" />
+    <Compile Include="商品\WProductsVendorsGetAction.cs" />
+    <Compile Include="商品\WProductsWaitAddListGetAction.cs" />
+    <Compile Include="商品\ProductsVendorGetAction.cs" />
+    <Compile Include="商品\ProductsVendorAddOrEditAction.cs" />
+    <Compile Include="商品\WProductsGetToB2BAction.cs" />
+    <Compile Include="商品\WProductsGetByIDsAction.cs" />
+    <Compile Include="商品\WProductsGetByIDsExtAction.cs" />
+    <Compile Include="商品\WProductsGetToB2BExtAction.cs" />
+    <Compile Include="商品\ProductsVendorDelAction.cs" />
+    <Compile Include="商品\ProductsVendorSetMasterAction.cs" />
+    <Compile Include="商品\WProductsBuyEmpListGetAction.cs" />
+    <Compile Include="基本分类\CategoriesCacheKey.cs" />
+    <Compile Include="定时任务\JobWProductAdjPricePostingAction.cs" />
+    <Compile Include="定时任务\JobWProductNoSalePostingAction.cs" />
+    <Compile Include="待装区跟踪\WStationNumberDelAction.cs" />
+    <Compile Include="待装区跟踪\WStationNumberIsFrozenAction.cs" />
+    <Compile Include="待装区跟踪\WStationNumberResetAction.cs" />
+    <Compile Include="待装区跟踪\WStationNumberSaveAction.cs" />
+    <Compile Include="待装区跟踪\WStationNumberTableListAction.cs" />
+    <Compile Include="待装区跟踪\WStationNumberResetExtAction.cs" />
+    <Compile Include="报表\ReportGetAction.cs" />
+    <Compile Include="拣货\CheckShelfOfLoginAction.cs" />
+    <Compile Include="拣货\GetPickUsersByProductIdAction.cs" />
+    <Compile Include="拣货\GetShopLineAction.cs" />
+    <Compile Include="拣货\PickingGetFreeStationNumberAction.cs" />
+    <Compile Include="拣货\PickingLoginAction.cs" />
+    <Compile Include="拣货\PickingUpdatePwdAction.cs" />
+    <Compile Include="拣货\SetStationNumberAction.cs" />
+    <Compile Include="拣货\UpdateStationNumberIsNullAction.cs" />
+    <Compile Include="拣货\SetStationNumberLineInfoAction.cs" />
+    <Compile Include="货位调整\WProductAdjShelfAddOrEditAction.cs" />
+    <Compile Include="货位调整\WProductAdjShelfChangeStatusAction.cs" />
+    <Compile Include="货位调整\WProductAdjShelfDelAction.cs" />
+    <Compile Include="货位调整\WProductAdjShelfGetListAction.cs" />
+    <Compile Include="货位调整\WProductAdjShelfGetModelAction.cs" />
+    <Compile Include="运营分类\ShopCategoriesCacheKey.cs" />
+    <Compile Include="运营分类\ShopCategoriesHasWProductsGetAction.cs" />
+    <Compile Include="配送APP\DeliverLoginAction.cs" />
+    <Compile Include="配送APP\DeliverUpdatePwdAction.cs" />
+    <Compile Include="门店\ShopCacheKey.cs" />
+    <Compile Include="门店\ShopGroupDelAction.cs" />
+    <Compile Include="门店\ShopGroupDetailsSaveAction.cs" />
+    <Compile Include="门店\ShopGroupDetailsTableListAction.cs" />
+    <Compile Include="门店\ShopGroupGetAction.cs" />
+    <Compile Include="门店\ShopGroupSaveAction.cs" />
+    <Compile Include="门店\ShopGroupTableListAction.cs" />
+    <Compile Include="门店\ShopWhGetAction.cs" />
+    <Compile Include="门店\ShopWhSaveAction.cs" />
+    <Compile Include="门店\ShopWhTableListAction.cs" />
+    <Compile Include="门店\ShopWhFreezeAction.cs" />
+    <Compile Include="门店\ShopSaveAction.cs" />
+    <Compile Include="门店\ShopDelAction.cs" />
+    <Compile Include="门店\ShopFreezeAction.cs" />
+    <Compile Include="门店\ShopGetAction.cs" />
+    <Compile Include="门店\ShopTableListAction.cs" />
+    <Compile Include="WarehouseEmpShelf\WarehouseEmpShelfSaveAction.cs" />
+    <Compile Include="WarehouseEmpShelf\WarehouseEmpShelfListAction.cs" />
+    <Compile Include="WarehouseEmpShelf\WarehouseEmpShelfTableListAction.cs" />
+    <Compile Include="WarehouseLineShop\WarehouseLineShopSaveAction.cs" />
+    <Compile Include="WarehouseLineShop\WarehouseLineShopTableListAction.cs" />
+    <Compile Include="WarehouseLine\WarehouseLineDelAction.cs" />
+    <Compile Include="WarehouseLine\WarehouseLineGetAction.cs" />
+    <Compile Include="WarehouseLine\WarehouseLineSaveAction.cs" />
+    <Compile Include="WarehouseLine\WarehouseLineTableListAction.cs" />
+    <Compile Include="RequestDto\ShelfAreaRequest.cs" />
+    <Compile Include="RequestDto\ShelfRequest.cs" />
+    <Compile Include="RequestDto\WarehouseEmpRequest.cs" />
+    <Compile Include="RequestDto\ShopRequest.cs" />
+    <Compile Include="RequestDto\WarehouseRequest.cs" />
+    <Compile Include="WarehouseEmp\WarehouseEmpDelAction.cs" />
+    <Compile Include="WarehouseEmp\WarehouseEmpGetAction.cs" />
+    <Compile Include="WarehouseEmp\WarehouseEmpIsFrozenAction.cs" />
+    <Compile Include="WarehouseEmp\WarehouseEmpSaveAction.cs" />
+    <Compile Include="WarehouseEmp\WarehouseEmpTableListAction.cs" />
+    <Compile Include="仓库\WarehouseAddAction.cs" />
+    <Compile Include="仓库\WarehouseDelAction.cs" />
+    <Compile Include="仓库\WarehouseEditAction.cs" />
+    <Compile Include="仓库\WarehouseGetAction.cs" />
+    <Compile Include="仓库\WarehouseFreezeAction.cs" />
+    <Compile Include="仓库\WarehouseGetSubWNameAction.cs" />
+    <Compile Include="SysDict\SysDictDetailGetListAction.cs" />
+    <Compile Include="Vendor\VendorDelAction.cs" />
+    <Compile Include="Vendor\VendorSaveAction.cs" />
+    <Compile Include="Vendor\VendorTableListAction.cs" />
+    <Compile Include="Vendor\VendorTypeTableListAction.cs" />
+    <Compile Include="Vendor\VerdorGetByIDAction.cs" />
+    <Compile Include="仓库\WarehouseGetForSSOAction.cs" />
+    <Compile Include="公用方法\ActionCommon.cs" />
+    <Compile Include="仓库\WarehouseSysParamsGetAction.cs" />
+    <Compile Include="仓库\WarehouseSysParamsUpdateAction.cs" />
+    <Compile Include="品牌管理\BrandCategorieAddAction.cs" />
+    <Compile Include="品牌管理\BrandCategorieDeleteAction.cs" />
+    <Compile Include="品牌管理\BrandCategorieListAction.cs" />
+    <Compile Include="品牌管理\BrandCategorieUpdateAction.cs" />
+    <Compile Include="商品属性\AttributesAddAction.cs" />
+    <Compile Include="商品属性\AttributesDeleteAction.cs" />
+    <Compile Include="商品属性\AttributesGetAction.cs" />
+    <Compile Include="商品属性\AttributesGetAllAction.cs" />
+    <Compile Include="商品属性\AttributesGetListAction.cs" />
+    <Compile Include="商品属性\AttributesProductsGetListAction.cs" />
+    <Compile Include="商品属性\AttributesUpdateAction.cs" />
+    <Compile Include="商品属性\AttributesValuesAddAction.cs" />
+    <Compile Include="商品属性\AttributesValuesDeleteAction.cs" />
+    <Compile Include="商品属性\AttributesValuesDisplaySequenceAction.cs" />
+    <Compile Include="商品属性\AttributesValuesGetListAction.cs" />
+    <Compile Include="商品属性\AttributesValuesUpdateAction.cs" />
+    <Compile Include="ShelfArea\ShelfAreaDelAction.cs" />
+    <Compile Include="ShelfArea\ShelfAreaGetAction.cs" />
+    <Compile Include="ShelfArea\ShelfAreaSaveAction.cs" />
+    <Compile Include="ShelfArea\ShelfAreaTableListAction.cs" />
+    <Compile Include="Shelf\ShelfAddAction.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shelf\ShelfDelAction.cs" />
+    <Compile Include="Shelf\ShelfEditAction.cs" />
+    <Compile Include="Shelf\ShelfGetAction.cs" />
+    <Compile Include="Shelf\ShelfTableListAction.cs" />
+    <Compile Include="仓库\WarehouseTableListAction.cs" />
+    <Compile Include="基本分类\CategoriesAddAction.cs" />
+    <Compile Include="基本分类\CategoriesChildsGetAction.cs" />
+    <Compile Include="基本分类\CategoriesDeleteAction.cs" />
+    <Compile Include="基本分类\CategoriesDisplaySequenceMoveAction.cs" />
+    <Compile Include="基本分类\CategoriesGetAction.cs" />
+    <Compile Include="基本分类\CategoriesParentsGetAction.cs" />
+    <Compile Include="基本分类\CategoriesUpdateAction.cs" />
+    <Compile Include="运营分类\ShopCategoriesAddAction.cs" />
+    <Compile Include="运营分类\ShopCategoriesChildsGetAction.cs" />
+    <Compile Include="运营分类\ShopCategoriesDeleteAction.cs" />
+    <Compile Include="运营分类\ShopCategoriesDisplaySequenceMoveAction.cs" />
+    <Compile Include="运营分类\ShopCategoriesGetAction.cs" />
+    <Compile Include="运营分类\ShopCategoriesParentsGetAction.cs" />
+    <Compile Include="运营分类\ShopCategoriesUpdateAction.cs" />
+    <Compile Include="门店\ShopGetListAction.cs" />
+    <Compile Include="门店\ShopGetListAndOrderAction.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Frxs.Platform\Frxs.Platform.Cache.Provide\Frxs.Platform.Cache.Provide.csproj">
+      <Project>{934e227e-2a38-46ee-b09a-f4709e0e58bc}</Project>
+      <Name>Frxs.Platform.Cache.Provide</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frxs.Platform\Frxs.Platform.Cache\Frxs.Platform.Cache.csproj">
+      <Project>{2f916b02-e40d-4338-8bd4-87284060badc}</Project>
+      <Name>Frxs.Platform.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frxs.Platform\Frxs.Platform.IOCFactory\Frxs.Platform.IOCFactory.csproj">
+      <Project>{e30d3ed3-975c-4d4f-a69b-2cd2725614a1}</Project>
+      <Name>Frxs.Platform.IOCFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frxs.Platform\Frxs.Platform.Utility\Frxs.Platform.Utility.csproj">
+      <Project>{0c08602c-3a43-48ba-ac95-d18c21217165}</Project>
+      <Name>Frxs.Platform.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.Erp.ServiceCenter.Product.BLL\Frxs.Erp.ServiceCenter.Product.BLL.csproj">
+      <Project>{91e461ca-1052-43cc-9e32-9a1e5d907d07}</Project>
+      <Name>Frxs.Erp.ServiceCenter.Product.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.Erp.ServiceCenter.Product.IDAL\Frxs.Erp.ServiceCenter.Product.IDAL.csproj">
+      <Project>{f3a5e62f-9f82-47c9-bdfa-76328afb647e}</Project>
+      <Name>Frxs.Erp.ServiceCenter.Product.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.Erp.ServiceCenter.Product.Model\Frxs.Erp.ServiceCenter.Product.Model.csproj">
+      <Project>{bf83d465-6cc4-4b2b-be5d-f436f2ad6644}</Project>
+      <Name>Frxs.Erp.ServiceCenter.Product.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\Frxs.Erp.ServiceCenter.Product.MSSQLDAL.csproj">
+      <Project>{032b80b3-dffb-46da-af31-0c23abd9073a}</Project>
+      <Name>Frxs.Erp.ServiceCenter.Product.MSSQLDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.ServiceCenter.Api.Core.V20\0.1.Frxs.ServiceCenter.Api.Core.V20.csproj">
+      <Project>{43e01449-2168-43c9-accd-e2fa7234c14c}</Project>
+      <Name>0.1.Frxs.ServiceCenter.Api.Core.V20</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ResponseDto\" />
+    <Folder Include="商品多单位\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource\Logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

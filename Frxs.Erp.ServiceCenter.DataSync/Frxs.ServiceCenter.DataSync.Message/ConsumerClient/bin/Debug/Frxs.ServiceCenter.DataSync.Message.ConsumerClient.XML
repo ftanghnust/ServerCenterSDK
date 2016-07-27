@@ -1,0 +1,1968 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Frxs.ServiceCenter.DataSync.Message.ConsumerClient</name>
+    </assembly>
+    <members>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductUnitChangedEventAgrs">
+            <summary>
+             商品单位 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgsBase">
+            <summary>
+            触发消息参数基类
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgsBase.Message">
+            <summary>
+            消息编号
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductUnitChangedEventAgrs.ProductsUnitID">
+            <summary>
+            商品单位 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductUnitCreatedEventAgrs">
+            <summary>
+             商品单位 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductUnitCreatedEventAgrs.ProductsUnitID">
+            <summary>
+            商品单位 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductUnitRemovedEventAgrs">
+            <summary>
+             商品单位 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductUnitRemovedEventAgrs.ProductsUnitID">
+            <summary>
+            商品单位 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.XSUserChangedEventAgrs">
+            <summary>
+             用户更新(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.XSUserChangedEventAgrs.XSUserID">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.XSUserCreatedEventAgrs">
+            <summary>
+             用户创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.XSUserCreatedEventAgrs.XSUserID">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.XSUserRemovedEventAgrs">
+            <summary>
+             用户删除(Removed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.XSUserRemovedEventAgrs.XSUserID">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventDescriptor">
+            <summary>
+            事件处理类描述对象
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventDescriptor.EventName">
+            <summary>
+            事件名称
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventDescriptor.EventType">
+            <summary>
+            处理类型
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventDescriptor.EventArgsType">
+            <summary>
+            事件参数类型
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.AttributeChangedEventAgrs">
+            <summary>
+             商品规格变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.AttributeChangedEventAgrs.AttributeId">
+            <summary>
+            商品规格编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.AttributeCreatedEventAgrs">
+            <summary>
+             商品规格创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.AttributeCreatedEventAgrs.AttributeId">
+            <summary>
+            商品规格编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.AttributeRemovedEventAgrs">
+            <summary>
+             商品规格移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.AttributeRemovedEventAgrs.AttributeId">
+            <summary>
+            商品规格编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.AttributeValuesChangedEventAgrs">
+            <summary>
+             规格属性值 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.AttributeValuesChangedEventAgrs.ValuesId">
+            <summary>
+            规格属性值编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.AttributeValuesCreatedEventAgrs">
+            <summary>
+             规格属性值 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.AttributeValuesCreatedEventAgrs.ValuesId">
+            <summary>
+            规格属性值编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.AttributeValuesRemovedEventAgrs">
+            <summary>
+             规格属性值 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.AttributeValuesRemovedEventAgrs.ValuesId">
+            <summary>
+            规格属性值编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BaseProductChangedEventAgrs">
+            <summary>
+             母商品变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BaseProductChangedEventAgrs.BaseProductId">
+            <summary>
+            母商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BaseProductCreatedEventAgrs">
+            <summary>
+             母商品创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BaseProductCreatedEventAgrs.BaseProductId">
+            <summary>
+            母商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BaseProductRemovedEventAgrs">
+            <summary>
+             母商品移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BaseProductRemovedEventAgrs.BaseProductId">
+            <summary>
+            母商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BrandCategoryChangedEventAgrs">
+            <summary>
+             品牌变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BrandCategoryChangedEventAgrs.BrandId">
+            <summary>
+            品牌编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BrandCategoryCreatedEventAgrs">
+            <summary>
+             品牌创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BrandCategoryCreatedEventAgrs.BrandId">
+            <summary>
+            品牌编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BrandCategoryRemovedEventAgrs">
+            <summary>
+             品牌移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BrandCategoryRemovedEventAgrs.BrandId">
+            <summary>
+            品牌编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BuyOrderCreatedEventAgrs">
+            <summary>
+             采购订单被创建的时候触发事件需要传送的参数
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BuyOrderCreatedEventAgrs.OrderId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.CategoryChangedEventAgrs">
+            <summary>
+             基本分类变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.CategoryChangedEventAgrs.CategoryId">
+            <summary>
+            基本分类编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.CategoryCreatedEventAgrs">
+            <summary>
+             基本分类创建(Created)消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.CategoryCreatedEventAgrs.CategoryId">
+            <summary>
+            基本分类编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.CategoryRemovedEventAgrs">
+            <summary>
+             基本分类移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.CategoryRemovedEventAgrs.CategoryId">
+            <summary>
+            基本分类编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductAttributesChangedEventAgrs">
+            <summary>
+             商品规格属性关系 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductAttributesChangedEventAgrs.ID">
+            <summary>
+            商品规格属性关系 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductAttributesCreatedEventAgrs">
+            <summary>
+             商品规格属性关系 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductAttributesCreatedEventAgrs.ID">
+            <summary>
+            商品规格属性关系 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductAttributesPictureChangedEventAgrs">
+            <summary>
+             商品规格属性图片 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductAttributesPictureChangedEventAgrs.ProductId">
+            <summary>
+            商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductAttributesPictureCreatedEventAgrs">
+            <summary>
+             商品规格属性图片 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductAttributesPictureCreatedEventAgrs.ProductId">
+            <summary>
+            商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductAttributesPictureRemovedEventAgrs">
+            <summary>
+             商品规格属性图片 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductAttributesPictureRemovedEventAgrs.ProductId">
+            <summary>
+            商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductAttributesRemovedEventAgrs">
+            <summary>
+             商品规格属性关系 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductAttributesRemovedEventAgrs.ID">
+            <summary>
+            商品规格属性关系 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductBarCodesChangedEventAgrs">
+            <summary>
+             商品条码 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductBarCodesChangedEventAgrs.ID">
+            <summary>
+            商品条码编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductBarCodesCreatedEventAgrs">
+            <summary>
+             商品条码 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductBarCodesCreatedEventAgrs.ID">
+            <summary>
+            商品条码 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductBarCodesRemovedEventAgrs">
+            <summary>
+             商品条码 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductBarCodesRemovedEventAgrs.ID">
+            <summary>
+            商品条码 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductChangedEventAgrs">
+            <summary>
+             商品变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductChangedEventAgrs.ProductId">
+            <summary>
+            商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductCreatedEventAgrs">
+            <summary>
+             商品创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductCreatedEventAgrs.ProductId">
+            <summary>
+            商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductDescriptionChangedEventAgrs">
+            <summary>
+             母商品文字描述(图文详情之文字详情)  变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductDescriptionChangedEventAgrs.BaseProductId">
+            <summary>
+            母商品 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductDescriptionCreatedEventAgrs">
+            <summary>
+             母商品文字描述(图文详情之文字详情) 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductDescriptionCreatedEventAgrs.BaseProductId">
+            <summary>
+            母商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductDescriptionPictureChangedEventAgrs">
+            <summary>
+             母商品图片描述(图文详情之图片详情)  变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductDescriptionPictureChangedEventAgrs.ID">
+            <summary>
+            母商品图片描述编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductDescriptionPictureCreatedEventAgrs">
+            <summary>
+             母商品图片描述(图文详情之图片详情) 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductDescriptionPictureCreatedEventAgrs.ID">
+            <summary>
+            母商品图片描述编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductDescriptionPictureRemovedEventAgrs">
+            <summary>
+             母商品图片描述(图文详情之图片详情)  移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductDescriptionPictureRemovedEventAgrs.ID">
+            <summary>
+            母商品图片描述编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductDescriptionRemovedEventAgrs">
+            <summary>
+             母商品文字描述(图文详情之文字详情)  移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductDescriptionRemovedEventAgrs.BaseProductId">
+            <summary>
+            母商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductPictureDetailChangedEventAgrs">
+            <summary>
+             商品主图 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductPictureDetailChangedEventAgrs.ID">
+            <summary>
+            商品主图编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductPictureDetailCreatedEventAgrs">
+            <summary>
+             商品主图 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductPictureDetailCreatedEventAgrs.ID">
+            <summary>
+            商品主图编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductPictureDetailRemovedEventAgrs">
+            <summary>
+             商品主图 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductPictureDetailRemovedEventAgrs.ID">
+            <summary>
+            商品主图编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductRemovedEventAgrs">
+            <summary>
+             商品移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductRemovedEventAgrs.ProductId">
+            <summary>
+            商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductsVendorChangedEventAgrs">
+            <summary>
+             商品供应商关系变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductsVendorChangedEventAgrs.ID">
+            <summary>
+            商品供应商关系编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductsVendorCreatedEventAgrs">
+            <summary>
+             商品供应商关系创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductsVendorCreatedEventAgrs.ID">
+            <summary>
+            商品供应商关系编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductsVendorRemovedEventAgrs">
+            <summary>
+             商品供应商关系移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductsVendorRemovedEventAgrs.ID">
+            <summary>
+            商品供应商关系编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SaleOrderChangedEventAgrs">
+            <summary>
+             销售订单更改
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SaleOrderChangedEventAgrs.OrderId">
+            <summary>
+            订单编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SaleOrderCreatedEventAgrs">
+            <summary>
+             销售订单更改
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SaleOrderCreatedEventAgrs.OrderId">
+            <summary>
+            订单编号
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SaleOrderCreatedEventAgrs.Created">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ShopCategoryChangedEventAgrs">
+            <summary>
+             运营分类变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ShopCategoryChangedEventAgrs.CategoryId">
+            <summary>
+            运营分类编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ShopCategoryCreatedEventAgrs">
+            <summary>
+             运营分类创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ShopCategoryCreatedEventAgrs.CategoryId">
+            <summary>
+            运营分类编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ShopCategoryRemovedEventAgrs">
+            <summary>
+             运营分类移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ShopCategoryRemovedEventAgrs.CategoryId">
+            <summary>
+            运营分类编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ShopChangedEventAgrs">
+            <summary>
+             门店变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ShopChangedEventAgrs.ShopID">
+            <summary>
+            门店编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ShopCreatedEventAgrs">
+            <summary>
+             门店创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ShopCreatedEventAgrs.ShopID">
+            <summary>
+            门店编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ShopRemovedEventAgrs">
+            <summary>
+             门店移除(Remove)事件消息体（触发事件之移除事件需要传送的参数）
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ShopRemovedEventAgrs.ShopID">
+            <summary>
+            门店编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysAppSettingChangedEventAgrs">
+            <summary>
+             仓库报表参数 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysAppSettingChangedEventAgrs.ID">
+            <summary>
+            仓库报表参数 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysAppSettingCreatedEventAgrs">
+            <summary>
+             仓库报表参数 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysAppSettingCreatedEventAgrs.ID">
+            <summary>
+            仓库报表参数 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysAppSettingRemovedEventAgrs">
+            <summary>
+             仓库报表参数 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysAppSettingRemovedEventAgrs.ID">
+            <summary>
+            仓库报表参数 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysAreaChangedEventAgrs">
+            <summary>
+             系统区域变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysAreaChangedEventAgrs.AreaID">
+            <summary>
+            系统区域编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysAreaCreatedEventAgrs">
+            <summary>
+             系统区域创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysAreaCreatedEventAgrs.AreaID">
+            <summary>
+            系统区域编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysAreaRemovedEventAgrs">
+            <summary>
+             系统区域 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysAreaRemovedEventAgrs.AreaID">
+            <summary>
+            系统区域编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysDictChangedEventAgrs">
+            <summary>
+             数据字典 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysDictChangedEventAgrs.DictCode">
+            <summary>
+            数据字典编码
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysDictCreatedEventAgrs">
+            <summary>
+             数据字典创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysDictCreatedEventAgrs.DictCode">
+            <summary>
+            数据字典编码
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysDictDetailChangedEventAgrs">
+            <summary>
+             数据字典明细参数 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysDictDetailChangedEventAgrs.ID">
+            <summary>
+            数据字典明细参数 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysDictDetailCreatedEventAgrs">
+            <summary>
+             数据字典明细参数 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysDictDetailCreatedEventAgrs.ID">
+            <summary>
+            数据字典明细参数 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysDictDetailRemovedEventAgrs">
+            <summary>
+             数据字典明细参数 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysDictDetailRemovedEventAgrs.ID">
+            <summary>
+            数据字典明细参数 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysDictRemovedEventAgrs">
+            <summary>
+             数据字典移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysDictRemovedEventAgrs.DictCode">
+            <summary>
+            数据字典编码
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysParamsChangedEventAgrs">
+            <summary>
+             系统参数变更(Changed)消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysParamsChangedEventAgrs.ParamCode">
+            <summary>
+            系统参数编码
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysParamsCreatedEventAgrs">
+            <summary>
+             系统参数创建(Created)消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysParamsCreatedEventAgrs.ParamCode">
+            <summary>
+            系统参数编码
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysParamsRemovedEventAgrs">
+            <summary>
+             系统参数移除(Removed)消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysParamsRemovedEventAgrs.ParamCode">
+            <summary>
+            系统参数编码
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysParamsWhChangedEventAgrs">
+            <summary>
+             系统仓库参数变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysParamsWhChangedEventAgrs.ID">
+            <summary>
+            系统仓库参数编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysParamsWhCreatedEventAgrs">
+            <summary>
+             系统仓库参数 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysParamsWhCreatedEventAgrs.ID">
+            <summary>
+            系统仓库参数编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysParamsWhRemovedEventAgrs">
+            <summary>
+             系统仓库参数 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysParamsWhRemovedEventAgrs.ID">
+            <summary>
+            系统仓库参数编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.VendorChangedEventAgrs">
+            <summary>
+             供应商变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.VendorChangedEventAgrs.VendorID">
+            <summary>
+            供应商编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.VendorCreatedEventAgrs">
+            <summary>
+             供应商创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.VendorCreatedEventAgrs.VendorID">
+            <summary>
+            供应商编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.VendorRemovedEventAgrs">
+            <summary>
+             供应商移除(Remove)事件消息体（触发事件之移除事件需要传送的参数）
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.VendorRemovedEventAgrs.VendorID">
+            <summary>
+            供应商编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.VendorTypeChangedEventAgrs">
+            <summary>
+             供应商类型变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.VendorTypeChangedEventAgrs.VendorTypeID">
+            <summary>
+            供应商类型编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.VendorTypeCreatedEventAgrs">
+            <summary>
+             供应商类型创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.VendorTypeCreatedEventAgrs.VendorTypeID">
+            <summary>
+            供应商类型编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.VendorTypeRemovedEventAgrs">
+            <summary>
+             供应商类型移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.VendorTypeRemovedEventAgrs.VendorTypeID">
+            <summary>
+            供应商类型编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WarehouseChangedEventAgrs">
+            <summary>
+             仓库改变(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WarehouseChangedEventAgrs.WID">
+            <summary>
+            仓库编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WarehouseCreatedEventAgrs">
+            <summary>
+             仓库创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WarehouseCreatedEventAgrs.WID">
+            <summary>
+            仓库编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WarehouseEmpChangedEventAgrs">
+            <summary>
+             仓库员工变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WarehouseEmpChangedEventAgrs.EmpID">
+            <summary>
+            仓库员工编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WarehouseEmpCreatedEventAgrs">
+            <summary>
+             仓库员工 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WarehouseEmpCreatedEventAgrs.EmpID">
+            <summary>
+            仓库员工编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WarehouseEmpRemovedEventAgrs">
+            <summary>
+             仓库员工 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WarehouseEmpRemovedEventAgrs.EmpID">
+            <summary>
+            仓库员工编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WarehouseRemovedEventAgrs">
+            <summary>
+             仓库移除(Removed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WarehouseRemovedEventAgrs.WID">
+            <summary>
+            仓库编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductBuyChangedEventAgrs">
+            <summary>
+             仓库商品采购信息 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductBuyChangedEventAgrs.WProductID">
+            <summary>
+            仓库商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductBuyCreatedEventAgrs">
+            <summary>
+             仓库商品采购信息 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductBuyCreatedEventAgrs.WProductID">
+            <summary>
+            仓库商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductBuyEmpChangedEventAgrs">
+            <summary>
+             商品采购员 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductBuyEmpChangedEventAgrs.ID">
+            <summary>
+            商品采购员编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductBuyEmpCreatedEventAgrs">
+            <summary>
+             商品采购员 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductBuyEmpCreatedEventAgrs.ID">
+            <summary>
+            商品采购员编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductBuyEmpRemovedEventAgrs">
+            <summary>
+             商品采购员 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductBuyEmpRemovedEventAgrs.ID">
+            <summary>
+            商品采购员编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductBuyRemovedEventAgrs">
+            <summary>
+             仓库商品采购信息 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductBuyRemovedEventAgrs.WProductID">
+            <summary>
+            仓库商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductChangedEventAgrs">
+            <summary>
+             仓库商品变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductChangedEventAgrs.WProductID">
+            <summary>
+            仓库商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductCreatedEventAgrs">
+            <summary>
+             仓库商品创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductCreatedEventAgrs.WProductID">
+            <summary>
+            仓库商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductRemovedEventAgrs">
+            <summary>
+             仓库商品移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductRemovedEventAgrs.WProductID">
+            <summary>
+            仓库商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventHandlerBase`1">
+            <summary>
+            时间执行类基类，所有事件执行类需要继承此抽象基类
+            </summary>
+            <typeparam name="TEventArgs"></typeparam>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.IEventHandler">
+            <summary>
+            所有时间必须继承此基类
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.IEventHandler.Execute(System.Object)">
+            <summary>
+            执行事件的具体业务逻辑
+            </summary>
+            <param name="eventArgs">业务参数，继承自：EventArgsBase的事件参数类</param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventHandlerBase`1.Frxs#ServiceCenter#DataSync#Message#ConsumerClient#IEventHandler#Execute(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="eventArgs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventHandlerBase`1.Execute(`0)">
+            <summary>
+            具体的实现类需要实现此方法
+            </summary>
+            <param name="eventArgs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventHandlerBase`1.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageConsumeCompleteEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageConsumeCompleteEventArgs.MessageConsumeResult">
+            <summary>
+            消息体
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageRequestErrorEventArgs">
+            <summary>
+            请求消费消息接口错误参数
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageRequestErrorEventArgs.ErrorMessage">
+            <summary>
+            错误消息详情
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageRequestSuccessEventArgs">
+            <summary>
+            请求消费消息成功参数
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageRequestSuccessEventArgs.MessageConsumeResult">
+            <summary>
+            消息体
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageConsumeResult`1">
+            <summary>
+            消费消息结果
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageConsumeResult`1.LastConsumeMessageId">
+            <summary>
+            当前消息最大ID值
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageConsumeResult`1.Count">
+            <summary>
+            当前消息的实际数量
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageConsumeResult`1.Messages">
+            <summary>
+            消息列表
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler">
+            <summary>
+            消息消费客户端(共【93】个触发事件)
+            </summary>
+            <summary>
+            消息消费客户端
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnAttributeChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.AttributeChangedEventAgrs)">
+            <summary>
+            商品规格变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnAttributeCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.AttributeCreatedEventAgrs)">
+            <summary>
+            商品规格创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnAttributeRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.AttributeRemovedEventAgrs)">
+            <summary>
+            商品规格移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnAttributeValuesChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.AttributeValuesChangedEventAgrs)">
+            <summary>
+            规格属性值 变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnAttributeValuesCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.AttributeValuesCreatedEventAgrs)">
+            <summary>
+            规格属性值 创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnAttributeValuesRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.AttributeValuesRemovedEventAgrs)">
+            <summary>
+            规格属性值 移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnBaseProductChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BaseProductChangedEventAgrs)">
+            <summary>
+            母商品变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnBaseProductCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BaseProductCreatedEventAgrs)">
+            <summary>
+            母商品创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnBaseProductRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BaseProductRemovedEventAgrs)">
+            <summary>
+            母商品移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnBrandCategoryChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BrandCategoryChangedEventAgrs)">
+            <summary>
+            品牌变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnBrandCategoryCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BrandCategoryCreatedEventAgrs)">
+            <summary>
+            品牌创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnBrandCategoryRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BrandCategoryRemovedEventAgrs)">
+            <summary>
+            品牌移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnBuyOrderCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.BuyOrderCreatedEventAgrs)">
+            <summary>
+            采购订单被创建的时候触发事件需要传送的参数
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnCategoryChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.CategoryChangedEventAgrs)">
+            <summary>
+            基本分类变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnCategoryCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.CategoryCreatedEventAgrs)">
+            <summary>
+            基本分类创建(Created)消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnCategoryRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.CategoryRemovedEventAgrs)">
+            <summary>
+            基本分类移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductAttributesChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductAttributesChangedEventAgrs)">
+            <summary>
+            商品规格属性关系 变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductAttributesCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductAttributesCreatedEventAgrs)">
+            <summary>
+            商品规格属性关系 创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductAttributesPictureChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductAttributesPictureChangedEventAgrs)">
+            <summary>
+            商品规格属性图片 变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductAttributesPictureCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductAttributesPictureCreatedEventAgrs)">
+            <summary>
+            商品规格属性图片 创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductAttributesPictureRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductAttributesPictureRemovedEventAgrs)">
+            <summary>
+            商品规格属性图片 移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductAttributesRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductAttributesRemovedEventAgrs)">
+            <summary>
+            商品规格属性关系 移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductBarCodesChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductBarCodesChangedEventAgrs)">
+            <summary>
+            商品条码 变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductBarCodesCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductBarCodesCreatedEventAgrs)">
+            <summary>
+            商品条码 创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductBarCodesRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductBarCodesRemovedEventAgrs)">
+            <summary>
+            商品条码 移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductChangedEventAgrs)">
+            <summary>
+            商品变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductCreatedEventAgrs)">
+            <summary>
+            商品创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductDescriptionChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductDescriptionChangedEventAgrs)">
+            <summary>
+            母商品文字描述(图文详情之文字详情)  变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductDescriptionCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductDescriptionCreatedEventAgrs)">
+            <summary>
+            母商品文字描述(图文详情之文字详情) 创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductDescriptionPictureChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductDescriptionPictureChangedEventAgrs)">
+            <summary>
+            母商品图片描述(图文详情之图片详情)  变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductDescriptionPictureCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductDescriptionPictureCreatedEventAgrs)">
+            <summary>
+            母商品图片描述(图文详情之图片详情) 创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductDescriptionPictureRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductDescriptionPictureRemovedEventAgrs)">
+            <summary>
+            母商品图片描述(图文详情之图片详情)  移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductDescriptionRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductDescriptionRemovedEventAgrs)">
+            <summary>
+            母商品文字描述(图文详情之文字详情)  移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductPictureDetailChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductPictureDetailChangedEventAgrs)">
+            <summary>
+            商品主图 变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductPictureDetailCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductPictureDetailCreatedEventAgrs)">
+            <summary>
+            商品主图 创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductPictureDetailRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductPictureDetailRemovedEventAgrs)">
+            <summary>
+            商品主图 移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductRemovedEventAgrs)">
+            <summary>
+            商品移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductsVendorChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductsVendorChangedEventAgrs)">
+            <summary>
+            商品供应商关系变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductsVendorCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductsVendorCreatedEventAgrs)">
+            <summary>
+            商品供应商关系创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductsVendorRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductsVendorRemovedEventAgrs)">
+            <summary>
+            商品供应商关系移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductUnitChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductUnitChangedEventAgrs)">
+            <summary>
+            商品单位 变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductUnitCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductUnitCreatedEventAgrs)">
+            <summary>
+            商品单位 创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnProductUnitRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ProductUnitRemovedEventAgrs)">
+            <summary>
+            商品单位 移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnSaleOrderChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SaleOrderChangedEventAgrs)">
+            <summary>
+            销售订单更改
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnSaleOrderCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SaleOrderCreatedEventAgrs)">
+            <summary>
+            销售订单更改
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnShopCategoryChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ShopCategoryChangedEventAgrs)">
+            <summary>
+            运营分类变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnShopCategoryCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ShopCategoryCreatedEventAgrs)">
+            <summary>
+            运营分类创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnShopCategoryRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ShopCategoryRemovedEventAgrs)">
+            <summary>
+            运营分类移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnShopChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ShopChangedEventAgrs)">
+            <summary>
+            门店变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnShopCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ShopCreatedEventAgrs)">
+            <summary>
+            门店创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnShopRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.ShopRemovedEventAgrs)">
+            <summary>
+            门店移除(Remove)事件消息体（触发事件之移除事件需要传送的参数）
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnSysAppSettingChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysAppSettingChangedEventAgrs)">
+            <summary>
+            仓库报表参数 变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnSysAppSettingCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysAppSettingCreatedEventAgrs)">
+            <summary>
+            仓库报表参数 创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnSysAppSettingRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysAppSettingRemovedEventAgrs)">
+            <summary>
+            仓库报表参数 移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnSysAreaChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysAreaChangedEventAgrs)">
+            <summary>
+            系统区域变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnSysAreaCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysAreaCreatedEventAgrs)">
+            <summary>
+            系统区域创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnSysAreaRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysAreaRemovedEventAgrs)">
+            <summary>
+            系统区域 移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnSysDictChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysDictChangedEventAgrs)">
+            <summary>
+            数据字典 变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnSysDictCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysDictCreatedEventAgrs)">
+            <summary>
+            数据字典创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnSysDictDetailChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysDictDetailChangedEventAgrs)">
+            <summary>
+            数据字典明细参数 变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnSysDictDetailCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysDictDetailCreatedEventAgrs)">
+            <summary>
+            数据字典明细参数 创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnSysDictDetailRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysDictDetailRemovedEventAgrs)">
+            <summary>
+            数据字典明细参数 移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnSysDictRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysDictRemovedEventAgrs)">
+            <summary>
+            数据字典移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnSysParamsChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysParamsChangedEventAgrs)">
+            <summary>
+            系统参数变更(Changed)消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnSysParamsCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysParamsCreatedEventAgrs)">
+            <summary>
+            系统参数创建(Created)消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnSysParamsRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysParamsRemovedEventAgrs)">
+            <summary>
+            系统参数移除(Removed)消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnSysParamsWhChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysParamsWhChangedEventAgrs)">
+            <summary>
+            系统仓库参数变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnSysParamsWhCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysParamsWhCreatedEventAgrs)">
+            <summary>
+            系统仓库参数 创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnSysParamsWhRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.SysParamsWhRemovedEventAgrs)">
+            <summary>
+            系统仓库参数 移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnVendorChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.VendorChangedEventAgrs)">
+            <summary>
+            供应商变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnVendorCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.VendorCreatedEventAgrs)">
+            <summary>
+            供应商创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnVendorRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.VendorRemovedEventAgrs)">
+            <summary>
+            供应商移除(Remove)事件消息体（触发事件之移除事件需要传送的参数）
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnVendorTypeChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.VendorTypeChangedEventAgrs)">
+            <summary>
+            供应商类型变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnVendorTypeCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.VendorTypeCreatedEventAgrs)">
+            <summary>
+            供应商类型创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnVendorTypeRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.VendorTypeRemovedEventAgrs)">
+            <summary>
+            供应商类型移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnWarehouseChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WarehouseChangedEventAgrs)">
+            <summary>
+            仓库改变(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnWarehouseCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WarehouseCreatedEventAgrs)">
+            <summary>
+            仓库创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnWarehouseEmpChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WarehouseEmpChangedEventAgrs)">
+            <summary>
+            仓库员工变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnWarehouseEmpCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WarehouseEmpCreatedEventAgrs)">
+            <summary>
+            仓库员工 创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnWarehouseEmpRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WarehouseEmpRemovedEventAgrs)">
+            <summary>
+            仓库员工 移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnWarehouseRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WarehouseRemovedEventAgrs)">
+            <summary>
+            仓库移除(Removed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnWproductBuyChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductBuyChangedEventAgrs)">
+            <summary>
+            仓库商品采购信息 变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnWproductBuyCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductBuyCreatedEventAgrs)">
+            <summary>
+            仓库商品采购信息 创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnWproductBuyEmpChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductBuyEmpChangedEventAgrs)">
+            <summary>
+            商品采购员 变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnWproductBuyEmpCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductBuyEmpCreatedEventAgrs)">
+            <summary>
+            商品采购员 创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnWproductBuyEmpRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductBuyEmpRemovedEventAgrs)">
+            <summary>
+            商品采购员 移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnWproductBuyRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductBuyRemovedEventAgrs)">
+            <summary>
+            仓库商品采购信息 移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnWproductChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductChangedEventAgrs)">
+            <summary>
+            仓库商品变更(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnWproductCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductCreatedEventAgrs)">
+            <summary>
+            仓库商品创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnWproductRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.WproductRemovedEventAgrs)">
+            <summary>
+            仓库商品移除(Remove)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnXSUserChanged(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.XSUserChangedEventAgrs)">
+            <summary>
+            用户更新(Changed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnXSUserCreated(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.XSUserCreatedEventAgrs)">
+            <summary>
+            用户创建(Created)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnXSUserRemoved(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgs.XSUserRemovedEventAgrs)">
+            <summary>
+            用户删除(Removed)事件消息体
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.Start(System.Collections.Generic.IEnumerable{Frxs.ServiceCenter.DataSync.Message.ConsumerClient.Message{System.Object}})">
+            <summary>
+            消费消息
+            </summary>
+            <param name="messages">消息集合</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.#ctor(System.String,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.IJosnSerializer,System.Func{System.Int32})">
+            <summary>
+            初始化消息消费客户端
+            </summary>
+            <param name="messageServerUrl">消息中间件服务器地址</param>
+            <param name="josnSerializer">JOSN格式化器</param>
+            <param name="wid">如果为null，默认将仓库设置为0</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.Execute(System.String,System.Int32)">
+            <summary>
+            执行远程调用
+            </summary>
+            <param name="startMessageId"></param>
+            <param name="number"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.ConvertToEventArgs``1(Frxs.ServiceCenter.DataSync.Message.ConsumerClient.Message{System.Object})">
+            <summary>
+            动态数据转型成指定的类型
+            </summary>
+            <param name="message">消息摘要数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnMessageExecutedException(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgsBase,System.Exception)">
+            <summary>
+            消费消息出现错误的时候触发
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+            <param name="exc"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnMessageExecutedSuccess(System.Object,Frxs.ServiceCenter.DataSync.Message.ConsumerClient.EventArgsBase)">
+            <summary>
+            消磁消费成功
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.Start(System.String,System.Int32)">
+            <summary>
+            消费消息，并触发事件
+            </summary>
+            <param name="startMessageId">起始消息编号(不含)</param>
+            <param name="number">每次消费多少条消息</param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.MessageServerUrl">
+            <summary>
+            消息中间件服务器地址
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.WID">
+            <summary>
+            仓库编号
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.JosnSerializer">
+            <summary>
+            JSON序列化接口
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.RetryCount">
+            <summary>
+            消息处理的出现错误，重试次数，默认3次
+            </summary>
+        </member>
+        <member name="E:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnMessageRequestError">
+            <summary>
+            请求消息接口错误
+            </summary>
+        </member>
+        <member name="E:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnMessageRequestSuccess">
+            <summary>
+            请求消息接口成功
+            </summary>
+        </member>
+        <member name="E:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler.OnMessageConsumeComplete">
+            <summary>
+            消费一批消息完成
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.IJosnSerializer">
+            <summary>
+            JSON序列化接口，交给外部调用系统去实现（防止程序集冲突）
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.IJosnSerializer.Deserialize(System.String,System.Type)">
+            <summary>
+            消息摘要反序列化
+            </summary>
+            <param name="value"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.IJosnSerializer.Deserialize``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.IJosnSerializer.Serialize(System.Object)">
+            <summary>
+            消息摘要序列化，用于保存到其他存储介质
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.Message`1">
+            <summary>
+            消息传输对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.Message`1.Equals(Frxs.ServiceCenter.DataSync.Message.ConsumerClient.Message{`0})">
+            <summary>
+            Equals
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.Message`1.Id">
+            <summary>
+            消息唯一ID，有序
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.Message`1.Topic">
+            <summary>
+            消息主题，比如：OrderCreated,OrderChanged,OrderRemoved等
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.Message`1.WID">
+            <summary>
+            消息对应的仓库ID，如果是全局消息，此值为：0
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.Message`1.Body">
+            <summary>
+            消息摘要,此消息体保存的时候可能会序列化成JSON或者XML或者进行字节序列化
+            比如：{OrderId:"10001"}
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.Message`1.Created">
+            <summary>
+            消息发布时间
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandlerManager">
+            <summary>
+            消息消费客户端管理类
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandlerManager._timer">
+            <summary>
+            消息消息
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandlerManager.#ctor(Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandler,System.Func{System.String})">
+            <summary>
+            消息消费客户端管理类
+            </summary>
+            <param name="messageHandler">消息消费客户端</param>
+            <param name="startMessageId">获取起始编号委托</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandlerManager.TimerHandler(System.Object)">
+            <summary>
+            timer每次触发的时候执行的委托方法
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandlerManager.Run">
+            <summary>
+            真正执行作业线程里的所有作业任务
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandlerManager.Start">
+            <summary>
+            启动
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandlerManager.Dispose">
+            <summary>
+            释放作业线程
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandlerManager.Number">
+            <summary>
+            每次消费的消息条数
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandlerManager.Seconds">
+            <summary>
+            作业执行间隔，单位：秒
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandlerManager.Interval">
+            <summary>
+            执行作业任务间隔，单位：毫秒，内部使用
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandlerManager.Started">
+            <summary>
+            作业线程启动时间，一旦启动器时间不会变化
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandlerManager.LastRuned">
+            <summary>
+            最后一次执行作业任务时间
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.MessageHandlerManager.IsRunning">
+            <summary>
+            显示当前作业线程是否正在执行作业
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.ResponseResult`1">
+            <summary>
+            返回接受对象
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.ResponseResult`1.Flag">
+            <summary>
+            是否成功0成功，其他值为不成功
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.ResponseResult`1.FlagDescription">
+            <summary>
+            flag的描述
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.ResponseResult`1.CachedTime">
+            <summary>
+            缓存时间
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.ResponseResult`1.Data">
+            <summary>
+            返回的ID值
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ConsumerClient.ResponseResult`1.Info">
+            <summary>
+            接口返回的消息
+            </summary>
+        </member>
+    </members>
+</doc>

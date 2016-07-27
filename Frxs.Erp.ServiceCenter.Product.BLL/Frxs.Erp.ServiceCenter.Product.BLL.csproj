@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91E461CA-1052-43CC-9E32-9A1E5D907D07}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Frxs.Erp.ServiceCenter.Product.BLL</RootNamespace>
+    <AssemblyName>Frxs.Erp.ServiceCenter.Product.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppVersionBLO.cs" />
+    <Compile Include="AttributesBLO.cs" />
+    <Compile Include="AttributesValuesBLO.cs" />
+    <Compile Include="BackMessage.cs" />
+    <Compile Include="BaseProductsBLO.cs" />
+    <Compile Include="CategoriesBLO.cs" />
+    <Compile Include="ProductsBarCodesBLO.cs" />
+    <Compile Include="ProductsAttributesBLO.cs" />
+    <Compile Include="ProductsAttributesPictureBLO.cs" />
+    <Compile Include="ProductsBLO.cs" />
+    <Compile Include="ProductsDescriptionBLO.cs" />
+    <Compile Include="ProductsDescriptionPictureBLO.cs" />
+    <Compile Include="ProductsPictureDetailBLO.cs" />
+    <Compile Include="ProductsUnitBLO.cs" />
+    <Compile Include="ProductVendorBLO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportBLO.cs" />
+    <Compile Include="ShelfAreaBLO.cs" />
+    <Compile Include="ShelfBLO.cs" />
+    <Compile Include="ShopBLO.cs" />
+    <Compile Include="ShopGroupBLO.cs" />
+    <Compile Include="ShopGroupDetailsBLO.cs" />
+    <Compile Include="SysAppSettings\SysAppSettingsBLO.cs" />
+    <Compile Include="SysArea\SysAreaBLO.cs" />
+    <Compile Include="SysDict\SysDictDetailBLO.cs" />
+    <Compile Include="ShopCategoriesBLO.cs" />
+    <Compile Include="Vendor\VendorBLO.cs" />
+    <Compile Include="Vendor\VendorTypeBLO.cs" />
+    <Compile Include="WarehouseEmpBLO.cs" />
+    <Compile Include="WarehouseBLO.cs" />
+    <Compile Include="WarehouseEmpShelfBLO.cs" />
+    <Compile Include="WarehouseLineBLO.cs" />
+    <Compile Include="WarehouseLineShopBLO.cs" />
+    <Compile Include="WorkContext.cs" />
+    <Compile Include="WProductNoSaleBLO.cs" />
+    <Compile Include="WProductNoSaleDetailsBLO.cs" />
+    <Compile Include="WProductNoSaleShopsBLO.cs" />
+    <Compile Include="WProductsBuyEmpBLO.cs" />
+    <Compile Include="WStationNumberBLO.cs" />
+    <Compile Include="ProductsVendorBLO.cs" />
+    <Compile Include="WProductAdjShelfBLO.cs" />
+    <Compile Include="WProductAdjShelfDetailsBLO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Frxs.Platform\Frxs.Platform.Cache.Provide\Frxs.Platform.Cache.Provide.csproj">
+      <Project>{934e227e-2a38-46ee-b09a-f4709e0e58bc}</Project>
+      <Name>Frxs.Platform.Cache.Provide</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frxs.Platform\Frxs.Platform.Cache\Frxs.Platform.Cache.csproj">
+      <Project>{2f916b02-e40d-4338-8bd4-87284060badc}</Project>
+      <Name>Frxs.Platform.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frxs.Platform\Frxs.Platform.IOCFactory\Frxs.Platform.IOCFactory.csproj">
+      <Project>{e30d3ed3-975c-4d4f-a69b-2cd2725614a1}</Project>
+      <Name>Frxs.Platform.IOCFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frxs.Platform\Frxs.Platform.Utility\Frxs.Platform.Utility.csproj">
+      <Project>{0c08602c-3a43-48ba-ac95-d18c21217165}</Project>
+      <Name>Frxs.Platform.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.Erp.ServiceCenter.Product.IDAL\Frxs.Erp.ServiceCenter.Product.IDAL.csproj">
+      <Project>{f3a5e62f-9f82-47c9-bdfa-76328afb647e}</Project>
+      <Name>Frxs.Erp.ServiceCenter.Product.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.Erp.ServiceCenter.Product.Model\Frxs.Erp.ServiceCenter.Product.Model.csproj">
+      <Project>{bf83d465-6cc4-4b2b-be5d-f436f2ad6644}</Project>
+      <Name>Frxs.Erp.ServiceCenter.Product.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.ServiceCenter.Api.Core.V20\0.1.Frxs.ServiceCenter.Api.Core.V20.csproj">
+      <Project>{43E01449-2168-43C9-ACCD-E2FA7234C14C}</Project>
+      <Name>0.1.Frxs.ServiceCenter.Api.Core.V20</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

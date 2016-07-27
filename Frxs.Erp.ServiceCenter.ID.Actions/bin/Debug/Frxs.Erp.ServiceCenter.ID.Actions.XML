@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Frxs.Erp.ServiceCenter.ID.Actions</name>
+    </assembly>
+    <members>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.Actions.Class2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.Actions.Class2.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.Actions.Class2.Class2RequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.Actions.Class2.Class2RequestDto.Valid">
+            <summary>
+            校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.Actions.Class2.Class2ResponseDto">
+            <summary>
+            下送的数据
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.Actions.IdGetAction">
+            <summary>
+            获取ID值接口
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.Actions.IdGetAction.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.Actions.IdGetAction.IdGetRequestDto">
+            <summary>
+            获取ID编号请求DTO对象
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.Actions.IdGetAction.IdGetRequestDto.Valid">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.Actions.IdGetAction.IdGetRequestDto.N">
+            <summary>
+            获取数量
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.Actions.IdsGetAction">
+            <summary>
+            https
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.Actions.IdsGetAction.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.Actions.IdsGetAction.IdsGetRequestDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.Actions.IdsGetAction.IdsGetRequestDto.Valid">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.Actions.IdsGetAction.IdsGetRequestDto.N">
+            <summary>
+            请求的ID数量
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.Actions.IdsGetAction.IdsGetRequestDto.Type">
+            <summary>
+            请求的ID类型
+            </summary>
+        </member>
+    </members>
+</doc>

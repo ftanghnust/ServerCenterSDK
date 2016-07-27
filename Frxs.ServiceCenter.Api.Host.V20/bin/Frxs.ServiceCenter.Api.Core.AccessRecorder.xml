@@ -1,0 +1,519 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Frxs.ServiceCenter.Api.Core.AccessRecorder</name>
+    </assembly>
+    <members>
+        <member name="T:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiLogsAction">
+            <summary>
+            日志访问插件
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiLogsAction._accessRecorderRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiLogsAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.AccessRecorder})">
+            <summary>
+            
+            </summary>
+            <param name="accessRecorderRepository"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiLogsAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiLogsAction.ApiLogsActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiLogsAction.ApiLogsActionRequestDto.BeforeValid">
+            <summary>
+            修改下上送参数
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiLogsAction.ApiLogsActionRequestDto.ApiName">
+            <summary>
+            接口名称
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiLogsAction.ApiLogsActionRequestDto.Ip">
+            <summary>
+            IP地址，方便筛选客户端访问
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiLogsAction.ApiLogsActionRequestDto.UsedTime">
+            <summary>
+            使用时间（毫秒）
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiLogsAction.ApiLogsActionRequestDto.TotalCount">
+            <summary>
+            总记录数
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiLogGetAction">
+            <summary>
+            日志访问插件
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiLogGetAction._accessRecorderRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiLogGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.AccessRecorder},Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.Response})">
+            <summary>
+            
+            </summary>
+            <param name="accessRecorderRepository"></param>
+            <param name="responseRepository"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiLogGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiLogGetAction.ApiLogGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiLogGetAction.ApiLogGetActionRequestDto.Id">
+            <summary>
+            访问日志编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiLogGetAction.ApiLogGetActionResponseDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiLogGetAction.ApiLogGetActionResponseDto.AccessRecorder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiLogGetAction.ApiLogGetActionResponseDto.ResponseData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiPluginDescriptor">
+            <summary>
+            接口日志记录器扩展
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiPluginDescriptor.#ctor(Frxs.ServiceCenter.Api.Core.IResourceFinderManager)">
+            <summary>
+            
+            </summary>
+            <param name="resourceFinderManager"></param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiPluginDescriptor.DisplayName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiPluginDescriptor.IndexUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.ApiPluginDescriptor.Author">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.AccessRecorder.Controllers.HomeController">
+            <summary>
+            插件默认的路由控制器;所有的插件都使用下面方式来进行跳转
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.Api.Core.AccessRecorder.Controllers.HomeController._actionSelector">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.Controllers.HomeController.#ctor(Frxs.ServiceCenter.Api.Core.IActionSelector)">
+            <summary>
+            
+            </summary>
+            <param name="actionSelector">接口查找器</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.Controllers.HomeController.GetSignString(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            获取待查询字符串
+            </summary>
+            <param name="dict"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.Controllers.HomeController.RedirectTo(System.String,System.String,System.String,System.String)">
+            <summary>
+            跳转到哪里
+            </summary>
+            <param name="data">上送的data数据对象json字符串</param>
+            <param name="actionName"></param>
+            <param name="appSecret"></param>
+            <param name="format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.Controllers.HomeController.Logs">
+            <summary>
+            请使用： /Logs 来访问接口访问日志插件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.Controllers.HomeController.Search(System.String,System.String,System.Nullable{System.Int32})">
+            <summary>
+            <![CDATA[
+            搜索 /logs/Search?apiname=x&ip=x
+            ]]>
+            </summary>
+            <param name="apiname">接口名称</param>
+            <param name="ip">ip地址</param>
+            <param name="usedTime">接口执行花费的毫秒数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.Controllers.HomeController.ActionsGet(System.String)">
+            <summary>
+            搜索接口集合 /logs/ActionsGet?query=x
+            </summary>
+            <param name="query">接口关键词</param>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.Response">
+            <summary>
+            领域实体对象
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.AccessRecorder.BaseEntity">
+            <summary>
+            所有记录模型基类
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.BaseEntity.Id">
+            <summary>
+            主键ID;每个实体对象默认设置一个ID属性
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.Response.RequestData">
+            <summary>
+            上送的数据包
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.Response.ResponseData">
+            <summary>
+            下发的数据包
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.AccessRecorder.IDataBaseAccessRecorderConfig">
+            <summary>
+            连接字符串配置文件
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.IDataBaseAccessRecorderConfig.ConnectionStringName">
+            <summary>
+            数据库连接字符串
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.IDataBaseAccessRecorderConfig.EnableAccessRecorder">
+            <summary>
+            是否记录日志;默认true
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.AccessRecorder.Mapping.ResponseMap">
+            <summary>
+            访问日志映射
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.Mapping.ResponseMap.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.AccessRecorder.RouteProvider">
+            <summary>
+            插件路由是、配置
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.RouteProvider.RegisterRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            路由配置
+            </summary>
+            <param name="routes"></param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.RouteProvider.Priority">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.AccessRecorder.DataBaseAccessRecorderConfig">
+            <summary>
+            <![CDATA[
+            本API访问记录器web.config节点配置对象；此配置节点会被IOC容器自动注册;
+            <configuration>
+            <configSections>
+             <section name="apiAccessRecorderConfig" type="Frxs.ServiceCenter.Api.Core.AccessRecorder.DataBaseAccessRecorderConfig,Frxs.ServiceCenter.Api.Core.AccessRecorder"/>
+            </configSections>
+             <apiAccessRecorderConfig connectionStringName="connstring_sql"/>
+            <configuration>
+            ]]>
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.DataBaseAccessRecorderConfig.Create(System.Object,System.Object,System.Xml.XmlNode)">
+            <summary>
+            创建配置对象信息
+            </summary>
+            <param name="parent"></param>
+            <param name="configContext"></param>
+            <param name="section"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.DataBaseAccessRecorderConfig.ConnectionStringName">
+            <summary>
+            数据库连接字符串
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.DataBaseAccessRecorderConfig.EnableAccessRecorder">
+            <summary>
+            是否记录日志;默认true
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.AccessRecorder.DataBaseAccessRecorder">
+            <summary>
+            将访问记录记录到数据库;方便管理统计接口访问量
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.Api.Core.AccessRecorder.DataBaseAccessRecorder._accessRecorderRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.DataBaseAccessRecorder.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.AccessRecorder},Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.ActionDescriptor},Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.Response},Frxs.ServiceCenter.Api.Core.AccessRecorder.IDataBaseAccessRecorderConfig)">
+            <summary>
+            将访问记录记录到数据库;方便管理统计接口访问量
+            </summary>
+            <param name="accessRecorderRepository"></param>
+            <param name="actionDescriptorRepository"></param>
+            <param name="responseRepository"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.DataBaseAccessRecorder.Record(Frxs.ServiceCenter.Api.Core.ApiAccessRecorderArgs)">
+            <summary>
+            实现API记录器
+            方法里尽量做到快速的记录，不要进行大的操作，从而影响到API整体框架的性能
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.DataBaseAccessRecorder.Logger">
+            <summary>
+            日志记录器
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.DataBaseAccessRecorder.Priority">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.AccessRecorder.DependencyRegistar">
+            <summary>
+            API框架会自动检测到这里的注册类,自动完成注册
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.DependencyRegistar.Register(Autofac.ContainerBuilder,Frxs.ServiceCenter.Api.Core.ITypeFinder,Frxs.ServiceCenter.Api.Core.SystemOptions)">
+            <summary>
+            系统框架默认的会被覆盖;
+            </summary>
+            <param name="containerBuilder"></param>
+            <param name="typeFinder">类型查找器</param>
+            <param name="systemOptions">系统框架配置信息</param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.DependencyRegistar.Order">
+            <summary>
+            数字越大越后注册
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.AccessRecorder">
+            <summary>
+            领域实体对象
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.AccessRecorder.ApiName">
+            <summary>
+            接口名称
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.AccessRecorder.HttpMethod">
+            <summary>
+            访问方法
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.AccessRecorder.ResponseFormat">
+            <summary>
+            输出格式化
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.AccessRecorder.Sign">
+            <summary>
+            上送的数据签名
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.AccessRecorder.TimeStamp">
+            <summary>
+            上送的时间戳
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.AccessRecorder.Ip">
+            <summary>
+            客户端IP地址
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.AccessRecorder.Version">
+            <summary>
+            版本信息
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.AccessRecorder.Author">
+            <summary>
+            接口作者
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.AccessRecorder.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.AccessRecorder.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.AccessRecorder.UsedTime">
+            <summary>
+            执行花费的时间
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.AccessRecorder.Created">
+            <summary>
+            API访问时间
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.AccessRecorder.RequestData">
+            <summary>
+            上送的数据包
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.AccessRecorder.UserId">
+            <summary>
+            操作接口用户
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.AccessRecorder.UserName">
+            <summary>
+            操作用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.ActionDescriptor">
+            <summary>
+            API接口描述信息对象
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.ActionDescriptor.ActionName">
+            <summary>
+            接口名称
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.ActionDescriptor.HttpMethod">
+            <summary>
+            接口支持的http方式POST/GET；
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.ActionDescriptor.IsRequireHttps">
+            <summary>
+            是否需要https安全连接
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.ActionDescriptor.IsObsolete">
+            <summary>
+            接口是否已经取消
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.ActionDescriptor.Version">
+            <summary>
+            当前接口版本
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.ActionDescriptor.Description">
+            <summary>
+            接口描述信息
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.ActionDescriptor.AuthorName">
+            <summary>
+            接口作者是谁
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.ActionDescriptor.RequiredUserIdAndUserName">
+            <summary>
+            是否需要判断当前操作用户ID和用户名是否未空
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.ActionDescriptor.AccessCount">
+            <summary>
+            访问次数
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.Domain.ActionDescriptor.LastAccessTime">
+            <summary>
+            最后访问时间(默认时间未当前添加时间)
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.AccessRecorder.Mapping.AccessRecorderMap">
+            <summary>
+            访问日志映射
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.Mapping.AccessRecorderMap.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.AccessRecorder.Mapping.ActionDescriptorMap">
+            <summary>
+            接口信息映射
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.Mapping.ActionDescriptorMap.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.AccessRecorder.RecorderObjectContext">
+            <summary>
+            Object context
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.AccessRecorder.RecorderObjectContext.#ctor(System.String)">
+            <summary>
+            初始化数据库上下文
+            </summary>
+            <param name="nameOrConnectionString">数据库连接字符串</param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.RecorderObjectContext.Logger">
+            <summary>
+            日志记录器
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.AccessRecorder.RecorderObjectContext.EntityTypeConfigurationMapAssembly">
+            <summary>
+            实体映射程序集
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,2666 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Frxs.ServiceCenter.DataSync.Message.ApiHost.Order</name>
+    </assembly>
+    <members>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.ApiCodeGeneratorAction">
+            <summary>
+            接口层代码生成器(此接口为当前项目接口层代码生成器)
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.ApiCodeGeneratorAction._dbContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.ApiCodeGeneratorAction.#ctor(Frxs.ServiceCenter.Data.Core.IDbContext)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="dbContext">数据操作上下文</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.ApiCodeGeneratorAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.ApiCodeGeneratorAction.ActionApiCodeGeneratorActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.ApiCodeGeneratorAction.ActionApiCodeGeneratorActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.ApiCodeGeneratorAction.ActionApiCodeGeneratorActionRequestDto.ModelName">
+            <summary>
+            模型名称
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.ApiCodeGeneratorV10">
+            <summary>
+            接口层代码生成器(此接口为当前项目接口层代码生成器)
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.ApiCodeGeneratorV10._dbContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.ApiCodeGeneratorV10.#ctor(Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Api.Core.IActionSelector,Frxs.ServiceCenter.Api.Core.IMediaTypeFormatterFactory)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="actionSelector">接口搜索器</param>
+            <param name="mediaTypeFormatterFactory">格式化器创建器</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.ApiCodeGeneratorV10.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackDetailGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackDetailGetAction._buyBackDetailRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackDetailGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.BuyBackDetail},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="buyBackDetailRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackDetailGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackDetailGetAction.BuyBackDetailGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.SystemRequestDtoBase">
+            <summary>
+            订单中心的所有接口上送参数需要继承此类
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.SystemRequestDtoBase.BeforeValid">
+            <summary>
+            重写，供依赖注入使用
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.SystemRequestDtoBase.WID">
+            <summary>
+            仓库编号
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackDetailGetAction.BuyBackDetailGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackDetailGetAction.BuyBackDetailGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackDetailsExtGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackDetailsExtGetAction._buyBackDetailsExtRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackDetailsExtGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.BuyBackDetailsExt},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="buyBackDetailsExtRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackDetailsExtGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackDetailsExtGetAction.BuyBackDetailsExtGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackDetailsExtGetAction.BuyBackDetailsExtGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackDetailsExtGetAction.BuyBackDetailsExtGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackGetAction._buyBackRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.BuyBack},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="buyBackRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackGetAction.BuyBackGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackGetAction.BuyBackGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackGetAction.BuyBackGetActionRequestDto.BackID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreDetailGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreDetailGetAction._buyBackPreDetailRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreDetailGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.BuyBackPreDetail},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="buyBackPreDetailRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreDetailGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreDetailGetAction.BuyBackPreDetailGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreDetailGetAction.BuyBackPreDetailGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreDetailGetAction.BuyBackPreDetailGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreDetailsExtGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreDetailsExtGetAction._buyBackPreDetailsExtRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreDetailsExtGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.BuyBackPreDetailsExt},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="buyBackPreDetailsExtRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreDetailsExtGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreDetailsExtGetAction.BuyBackPreDetailsExtGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreDetailsExtGetAction.BuyBackPreDetailsExtGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreDetailsExtGetAction.BuyBackPreDetailsExtGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreGetAction._buyBackPreRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.BuyBackPre},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="buyBackPreRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreGetAction.BuyBackPreGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreGetAction.BuyBackPreGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyBackPreGetAction.BuyBackPreGetActionRequestDto.BackID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderDetailGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderDetailGetAction._buyOrderDetailRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderDetailGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.BuyOrderDetail},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="buyOrderDetailRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderDetailGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderDetailGetAction.BuyOrderDetailGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderDetailGetAction.BuyOrderDetailGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderDetailGetAction.BuyOrderDetailGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderDetailsExtGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderDetailsExtGetAction._buyOrderDetailsExtRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderDetailsExtGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.BuyOrderDetailsExt},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="buyOrderDetailsExtRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderDetailsExtGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderDetailsExtGetAction.BuyOrderDetailsExtGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderDetailsExtGetAction.BuyOrderDetailsExtGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderDetailsExtGetAction.BuyOrderDetailsExtGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderGetAction._buyOrderRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.BuyOrder},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="buyOrderRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderGetAction.BuyOrderGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderGetAction.BuyOrderGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderGetAction.BuyOrderGetActionRequestDto.BuyID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreDetailGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreDetailGetAction._buyOrderPreDetailRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreDetailGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.BuyOrderPreDetail},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="buyOrderPreDetailRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreDetailGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreDetailGetAction.BuyOrderPreDetailGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreDetailGetAction.BuyOrderPreDetailGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreDetailGetAction.BuyOrderPreDetailGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreDetailsExtGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreDetailsExtGetAction._buyOrderPreDetailsExtRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreDetailsExtGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.BuyOrderPreDetailsExt},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="buyOrderPreDetailsExtRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreDetailsExtGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreDetailsExtGetAction.BuyOrderPreDetailsExtGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreDetailsExtGetAction.BuyOrderPreDetailsExtGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreDetailsExtGetAction.BuyOrderPreDetailsExtGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreGetAction._buyOrderPreRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.BuyOrderPre},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="buyOrderPreRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreGetAction.BuyOrderPreGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreGetAction.BuyOrderPreGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyOrderPreGetAction.BuyOrderPreGetActionRequestDto.BuyID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppBillGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppBillGetAction._buyPreAppBillRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppBillGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.BuyPreAppBill},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="buyPreAppBillRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppBillGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppBillGetAction.BuyPreAppBillGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppBillGetAction.BuyPreAppBillGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppBillGetAction.BuyPreAppBillGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppDetailGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppDetailGetAction._buyPreAppDetailRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppDetailGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.BuyPreAppDetail},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="buyPreAppDetailRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppDetailGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppDetailGetAction.BuyPreAppDetailGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppDetailGetAction.BuyPreAppDetailGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppDetailGetAction.BuyPreAppDetailGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppDetailsExtGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppDetailsExtGetAction._buyPreAppDetailsExtRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppDetailsExtGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.BuyPreAppDetailsExt},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="buyPreAppDetailsExtRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppDetailsExtGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppDetailsExtGetAction.BuyPreAppDetailsExtGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppDetailsExtGetAction.BuyPreAppDetailsExtGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppDetailsExtGetAction.BuyPreAppDetailsExtGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppGetAction._buyPreAppRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.BuyPreApp},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="buyPreAppRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppGetAction.BuyPreAppGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppGetAction.BuyPreAppGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.BuyPreAppGetAction.BuyPreAppGetActionRequestDto.AppID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackDetailGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackDetailGetAction._saleBackDetailRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackDetailGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleBackDetail},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleBackDetailRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackDetailGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackDetailGetAction.SaleBackDetailGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackDetailGetAction.SaleBackDetailGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackDetailGetAction.SaleBackDetailGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackDetailsExtGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackDetailsExtGetAction._saleBackDetailsExtRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackDetailsExtGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleBackDetailsExt},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleBackDetailsExtRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackDetailsExtGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackDetailsExtGetAction.SaleBackDetailsExtGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackDetailsExtGetAction.SaleBackDetailsExtGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackDetailsExtGetAction.SaleBackDetailsExtGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackGetAction._saleBackRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleBack},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleBackRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackGetAction.SaleBackGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackGetAction.SaleBackGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackGetAction.SaleBackGetActionRequestDto.BackID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreDetailGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreDetailGetAction._saleBackPreDetailRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreDetailGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleBackPreDetail},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleBackPreDetailRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreDetailGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreDetailGetAction.SaleBackPreDetailGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreDetailGetAction.SaleBackPreDetailGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreDetailGetAction.SaleBackPreDetailGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreDetailsExtGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreDetailsExtGetAction._saleBackPreDetailsExtRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreDetailsExtGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleBackPreDetailsExt},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleBackPreDetailsExtRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreDetailsExtGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreDetailsExtGetAction.SaleBackPreDetailsExtGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreDetailsExtGetAction.SaleBackPreDetailsExtGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreDetailsExtGetAction.SaleBackPreDetailsExtGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreGetAction._saleBackPreRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleBackPre},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleBackPreRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreGetAction.SaleBackPreGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreGetAction.SaleBackPreGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleBackPreGetAction.SaleBackPreGetActionRequestDto.BackID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditDetailGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditDetailGetAction._saleEditDetailRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditDetailGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleEditDetail},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleEditDetailRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditDetailGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditDetailGetAction.SaleEditDetailGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditDetailGetAction.SaleEditDetailGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditDetailGetAction.SaleEditDetailGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditDetailsExtGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditDetailsExtGetAction._saleEditDetailsExtRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditDetailsExtGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleEditDetailsExt},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleEditDetailsExtRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditDetailsExtGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditDetailsExtGetAction.SaleEditDetailsExtGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditDetailsExtGetAction.SaleEditDetailsExtGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditDetailsExtGetAction.SaleEditDetailsExtGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditGetAction._saleEditRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleEdit},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleEditRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditGetAction.SaleEditGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditGetAction.SaleEditGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditGetAction.SaleEditGetActionRequestDto.EditID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditOrderGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditOrderGetAction._saleEditOrderRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditOrderGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleEditOrder},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleEditOrderRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditOrderGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditOrderGetAction.SaleEditOrderGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditOrderGetAction.SaleEditOrderGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleEditOrderGetAction.SaleEditOrderGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeeDetailGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeeDetailGetAction._saleFeeDetailRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeeDetailGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleFeeDetail},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleFeeDetailRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeeDetailGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeeDetailGetAction.SaleFeeDetailGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeeDetailGetAction.SaleFeeDetailGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeeDetailGetAction.SaleFeeDetailGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeeGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeeGetAction._saleFeeRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeeGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleFee},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleFeeRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeeGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeeGetAction.SaleFeeGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeeGetAction.SaleFeeGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeeGetAction.SaleFeeGetActionRequestDto.FeeID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeePreDetailGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeePreDetailGetAction._saleFeePreDetailRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeePreDetailGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleFeePreDetail},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleFeePreDetailRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeePreDetailGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeePreDetailGetAction.SaleFeePreDetailGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeePreDetailGetAction.SaleFeePreDetailGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeePreDetailGetAction.SaleFeePreDetailGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeePreGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeePreGetAction._saleFeePreRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeePreGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleFeePre},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleFeePreRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeePreGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeePreGetAction.SaleFeePreGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeePreGetAction.SaleFeePreGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleFeePreGetAction.SaleFeePreGetActionRequestDto.FeeID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailGetAction._saleOrderDetailRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleOrderDetail},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleOrderDetailRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailGetAction.SaleOrderDetailGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailGetAction.SaleOrderDetailGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailGetAction.SaleOrderDetailGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailsExtGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailsExtGetAction._saleOrderDetailsExtRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailsExtGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleOrderDetailsExt},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleOrderDetailsExtRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailsExtGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailsExtGetAction.SaleOrderDetailsExtGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailsExtGetAction.SaleOrderDetailsExtGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailsExtGetAction.SaleOrderDetailsExtGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailsPickGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailsPickGetAction._saleOrderDetailsPickRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailsPickGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleOrderDetailsPick},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleOrderDetailsPickRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailsPickGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailsPickGetAction.SaleOrderDetailsPickGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailsPickGetAction.SaleOrderDetailsPickGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderDetailsPickGetAction.SaleOrderDetailsPickGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderGetAction._saleOrderRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleOrder},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleOrderRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderGetAction.SaleOrderGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderGetAction.SaleOrderGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderGetAction.SaleOrderGetActionRequestDto.OrderId">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPackingGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPackingGetAction._saleOrderPackingRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPackingGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleOrderPacking},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleOrderPackingRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPackingGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPackingGetAction.SaleOrderPackingGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPackingGetAction.SaleOrderPackingGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPackingGetAction.SaleOrderPackingGetActionRequestDto.OrderID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailGetAction._saleOrderPreDetailRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleOrderPreDetail},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleOrderPreDetailRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailGetAction.SaleOrderPreDetailGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailGetAction.SaleOrderPreDetailGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailGetAction.SaleOrderPreDetailGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailsExtGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailsExtGetAction._saleOrderPreDetailsExtRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailsExtGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleOrderPreDetailsExt},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleOrderPreDetailsExtRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailsExtGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailsExtGetAction.SaleOrderPreDetailsExtGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailsExtGetAction.SaleOrderPreDetailsExtGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailsExtGetAction.SaleOrderPreDetailsExtGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailsPickGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailsPickGetAction._saleOrderPreDetailsPickRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailsPickGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleOrderPreDetailsPick},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleOrderPreDetailsPickRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailsPickGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailsPickGetAction.SaleOrderPreDetailsPickGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailsPickGetAction.SaleOrderPreDetailsPickGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreDetailsPickGetAction.SaleOrderPreDetailsPickGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreGetAction._saleOrderPreRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleOrderPre},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleOrderPreRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreGetAction.SaleOrderPreGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreGetAction.SaleOrderPreGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreGetAction.SaleOrderPreGetActionRequestDto.OrderId">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPrePackingGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPrePackingGetAction._saleOrderPrePackingRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPrePackingGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleOrderPrePacking},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleOrderPrePackingRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPrePackingGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPrePackingGetAction.SaleOrderPrePackingGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPrePackingGetAction.SaleOrderPrePackingGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPrePackingGetAction.SaleOrderPrePackingGetActionRequestDto.OrderID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreShelfAreaGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreShelfAreaGetAction._saleOrderPreShelfAreaRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreShelfAreaGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleOrderPreShelfArea},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleOrderPreShelfAreaRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreShelfAreaGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreShelfAreaGetAction.SaleOrderPreShelfAreaGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreShelfAreaGetAction.SaleOrderPreShelfAreaGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderPreShelfAreaGetAction.SaleOrderPreShelfAreaGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderSendNumberGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderSendNumberGetAction._saleOrderSendNumberRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderSendNumberGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleOrderSendNumber},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleOrderSendNumberRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderSendNumberGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderSendNumberGetAction.SaleOrderSendNumberGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderSendNumberGetAction.SaleOrderSendNumberGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderSendNumberGetAction.SaleOrderSendNumberGetActionRequestDto.OrderID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderShelfAreaGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderShelfAreaGetAction._saleOrderShelfAreaRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderShelfAreaGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleOrderShelfArea},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleOrderShelfAreaRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderShelfAreaGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderShelfAreaGetAction.SaleOrderShelfAreaGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderShelfAreaGetAction.SaleOrderShelfAreaGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderShelfAreaGetAction.SaleOrderShelfAreaGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderTrackGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderTrackGetAction._saleOrderTrackRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderTrackGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleOrderTrack},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleOrderTrackRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderTrackGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderTrackGetAction.SaleOrderTrackGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderTrackGetAction.SaleOrderTrackGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrderTrackGetAction.SaleOrderTrackGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrdeSendNumberGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrdeSendNumberGetAction._saleOrdeSendNumberRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrdeSendNumberGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleOrdeSendNumber},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleOrdeSendNumberRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrdeSendNumberGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrdeSendNumberGetAction.SaleOrdeSendNumberGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrdeSendNumberGetAction.SaleOrdeSendNumberGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleOrdeSendNumberGetAction.SaleOrdeSendNumberGetActionRequestDto.OrderID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleSettleDetailGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleSettleDetailGetAction._saleSettleDetailRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleSettleDetailGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleSettleDetail},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleSettleDetailRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleSettleDetailGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleSettleDetailGetAction.SaleSettleDetailGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleSettleDetailGetAction.SaleSettleDetailGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleSettleDetailGetAction.SaleSettleDetailGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleSettleGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleSettleGetAction._saleSettleRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleSettleGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SaleSettle},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="saleSettleRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleSettleGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleSettleGetAction.SaleSettleGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleSettleGetAction.SaleSettleGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SaleSettleGetAction.SaleSettleGetActionRequestDto.SettleID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SettlementDetailGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SettlementDetailGetAction._settlementDetailRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SettlementDetailGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.SettlementDetail},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="settlementDetailRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SettlementDetailGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SettlementDetailGetAction.SettlementDetailGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SettlementDetailGetAction.SettlementDetailGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SettlementDetailGetAction.SettlementDetailGetActionRequestDto.ID">
+            <summary>
+            SqlServer.int
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SettlementGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SettlementGetAction._settlementRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SettlementGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.Settlement},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="settlementRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SettlementGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SettlementGetAction.SettlementGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SettlementGetAction.SettlementGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.SettlementGetAction.SettlementGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjDetailGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjDetailGetAction._stockAdjDetailRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjDetailGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.StockAdjDetail},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="stockAdjDetailRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjDetailGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjDetailGetAction.StockAdjDetailGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjDetailGetAction.StockAdjDetailGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjDetailGetAction.StockAdjDetailGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjDetailsExtGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjDetailsExtGetAction._stockAdjDetailsExtRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjDetailsExtGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.StockAdjDetailsExt},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="stockAdjDetailsExtRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjDetailsExtGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjDetailsExtGetAction.StockAdjDetailsExtGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjDetailsExtGetAction.StockAdjDetailsExtGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjDetailsExtGetAction.StockAdjDetailsExtGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjGetAction._stockAdjRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.StockAdj},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="stockAdjRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjGetAction.StockAdjGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjGetAction.StockAdjGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockAdjGetAction.StockAdjGetActionRequestDto.AdjID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckDetailGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckDetailGetAction._stockCheckDetailRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckDetailGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.StockCheckDetail},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="stockCheckDetailRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckDetailGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckDetailGetAction.StockCheckDetailGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckDetailGetAction.StockCheckDetailGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckDetailGetAction.StockCheckDetailGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckGetAction._stockCheckRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.StockCheck},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="stockCheckRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckGetAction.StockCheckGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckGetAction.StockCheckGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckGetAction.StockCheckGetActionRequestDto.StockCheckID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckPlanDetailGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckPlanDetailGetAction._stockCheckPlanDetailRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckPlanDetailGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.StockCheckPlanDetail},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="stockCheckPlanDetailRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckPlanDetailGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckPlanDetailGetAction.StockCheckPlanDetailGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckPlanDetailGetAction.StockCheckPlanDetailGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckPlanDetailGetAction.StockCheckPlanDetailGetActionRequestDto.ID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckPlanGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckPlanGetAction._stockCheckPlanRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckPlanGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.StockCheckPlan},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="stockCheckPlanRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckPlanGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckPlanGetAction.StockCheckPlanGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckPlanGetAction.StockCheckPlanGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockCheckPlanGetAction.StockCheckPlanGetActionRequestDto.PlanID">
+            <summary>
+            SqlServer.nvarchar
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockFIFOInGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockFIFOInGetAction._stockFIFOInRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockFIFOInGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.StockFIFOIn},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="stockFIFOInRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockFIFOInGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockFIFOInGetAction.StockFIFOInGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockFIFOInGetAction.StockFIFOInGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockFIFOInGetAction.StockFIFOInGetActionRequestDto.InID">
+            <summary>
+            SqlServer.bigint
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockFIFOOutGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockFIFOOutGetAction._stockFIFOOutRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockFIFOOutGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.StockFIFOOut},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="stockFIFOOutRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockFIFOOutGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockFIFOOutGetAction.StockFIFOOutGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockFIFOOutGetAction.StockFIFOOutGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockFIFOOutGetAction.StockFIFOOutGetActionRequestDto.OutID">
+            <summary>
+            SqlServer.bigint
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockQtyGetAction">
+            <summary>
+            同步接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockQtyGetAction._stockQtyRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockQtyGetAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Models.StockQty},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            构造函数注入需要的参数
+            </summary>
+            <param name="stockQtyRepository">数据访问仓储</param>
+            <param name="dbContext">数据操作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockQtyGetAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockQtyGetAction.StockQtyGetActionRequestDto">
+            <summary>
+            上送的参数对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockQtyGetAction.StockQtyGetActionRequestDto.Valid">
+            <summary>
+            自定义校验上送参数是否正确
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Actions.StockQtyGetAction.StockQtyGetActionRequestDto.ID">
+            <summary>
+            SqlServer.int
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.ApiPluginDescriptor">
+            <summary>
+            插件描述
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.ApiPluginDescriptor.#ctor(Frxs.ServiceCenter.Api.Core.IResourceFinderManager)">
+            <summary>
+            
+            </summary>
+            <param name="resourceFinderManager"></param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.ApiPluginDescriptor.DisplayName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.ApiPluginDescriptor.Author">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Data.OrderContext">
+            <summary>
+            数据库访问上下文
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Data.OrderContext.#ctor(System.Func{System.String})">
+            <summary>
+            初始化数据访问上下文对象
+            </summary>
+            <param name="getNameOrConnectionString">数据库连接名</param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Data.OrderContext.Logger">
+            <summary>
+            初始化一个日志记录器
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Data.OrderContext.EntityTypeConfigurationMapAssembly">
+            <summary>
+            映射程序集改成当前程序集
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.DbConfig">
+            <summary>
+            多数据库连接配置
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.DbConfig.CON_KEY">
+            <summary>
+            数据库配置KEY,如：Order_104
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.DbConfig.DB_NAME">
+            <summary>
+            数据库名称
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.DbConfig.DB_USER">
+            <summary>
+            登录用户账户
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.DbConfig.DB_PWD">
+            <summary>
+            登录用户密码
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.DbConfig.DB_SERVER">
+            <summary>
+            数据库服务器地址
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.DbConfig.REMARK">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.DependencyRegistar">
+            <summary>
+            注册系统默认实现的接口服务类
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.DependencyRegistar.Register(Autofac.ContainerBuilder,Frxs.ServiceCenter.Api.Core.ITypeFinder,Frxs.ServiceCenter.Api.Core.SystemOptions)">
+            <summary>
+            注册特定的类型到容器
+            </summary>
+            <param name="containerBuilder">注册容器</param>
+            <param name="typeFinder">类型查找器</param>
+            <param name="systemOptions">系统框架配置信息</param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.DependencyRegistar.Order">
+            <summary>
+            优先级最低，方便外部程序重写框架里的实现，覆盖掉系统默认的实现
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Resource.Resource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Resource.Resource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Resource.Resource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Resource.Resource.DependencyRegistar_DB_NotExists">
+            <summary>
+              Looks up a localized string similar to 数据库未配置.
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Resource.Resource.DependencyRegistar_WID_NotExists">
+            <summary>
+              Looks up a localized string similar to 当前httpContext请求上下文不存在WID字典.
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Tasks.TaskSchedulerRegistar">
+            <summary>
+            注册作业任务调度
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Tasks.TaskSchedulerRegistar.Register(Frxs.ServiceCenter.Api.Core.ITaskSchedulerCollection)">
+            <summary>
+            
+            </summary>
+            <param name="taskSchedulerCollection"></param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Tasks.TaskSchedulerRegistar.Order">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.TestEntity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.ApiHostApplication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.ApiHostApplication.Application_Start(System.Object,System.EventArgs)">
+            <summary>
+            应用程序启动时初始化系统框架
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.ApiHostApplication.Application_Error(System.Object,System.EventArgs)">
+            <summary>
+            记录错误信息
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Data.DependencyRegistar">
+            <summary>
+            框架会自动检测到这里的注册类,自动完成注册
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Data.DependencyRegistar.Register(Autofac.ContainerBuilder,Frxs.ServiceCenter.Api.Core.ITypeFinder,Frxs.ServiceCenter.Api.Core.SystemOptions)">
+            <summary>
+            系统框架默认的会被覆盖;
+            </summary>
+            <param name="containerBuilder"></param>
+            <param name="typeFinder">类型查找器</param>
+            <param name="systemOptions"></param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.Data.DependencyRegistar.Order">
+            <summary>
+            数字越大越后注册
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.StartUp.StartUp">
+            <summary>
+            系统初始化需要做的一些事件
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.StartUp.StartUp.Init">
+            <summary>
+            站点启动的时候会自动运行此方法
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.SysConfig">
+            <summary>
+            <![CDATA[
+            web.config节点配置对象；此配置节点会被IOC容器自动注册;
+            <configuration>
+            <configSections>
+             <section name="SysConfig" type="Frxs.ServiceCenter.Api.Host.Data.OrderAccessConfig,Frxs.ServiceCenter.Api.Host"/>
+            </configSections>
+             <SysConfig connectionStringName="connstring_sql"/>
+            <configuration>
+            ]]>
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.SysConfig.#ctor">
+            <summary>
+            配置文件对应的实体类
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.SysConfig.Create(System.Object,System.Object,System.Xml.XmlNode)">
+            <summary>
+            创建配置对象信息
+            </summary>
+            <param name="parent"></param>
+            <param name="configContext"></param>
+            <param name="section"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.ApiHost.Order.SysConfig.ConnectionStringName">
+            <summary>
+            数据库连接字符串
+            </summary>
+        </member>
+    </members>
+</doc>

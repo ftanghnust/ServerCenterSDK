@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Frxs.ServiceCenter.Product.Api.Authentication</name>
+    </assembly>
+    <members>
+        <member name="T:Frxs.ServiceCenter.Product.Api.Authentication.ApiPluginDescriptor">
+            <summary>
+            插件描述
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Product.Api.Authentication.ApiPluginDescriptor.#ctor(Frxs.ServiceCenter.Api.Core.IResourceFinderManager)">
+            <summary>
+            
+            </summary>
+            <param name="resourceFinderManager"></param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Product.Api.Authentication.ApiPluginDescriptor.DisplayName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Product.Api.Authentication.ApiPluginDescriptor.Author">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Product.Api.Authentication.DataBaseAuthentication">
+            <summary>
+            将APPKEY保持在了数据库里进行校验；只要实现IsValid方法就可以了
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Product.Api.Authentication.DataBaseAuthentication.Sign(Frxs.ServiceCenter.Api.Core.SignParamsDictionary{System.String,System.String})">
+            <summary>
+            数据签名
+            </summary>
+            <param name="signParams">待签名的数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Product.Api.Authentication.DataBaseAuthentication.CheckSign(Frxs.ServiceCenter.Api.Core.RequestContext)">
+            <summary>
+            根据提交上来的请求上下文，校验上送数据包签名是否合法，防止传输途中数据包被篡改
+            </summary>
+            <param name="requestContext">当前请求上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Product.Api.Authentication.DataBaseAuthentication.Valid(Frxs.ServiceCenter.Api.Core.RequestContext)">
+            <summary>
+            校验APPKEY准确性
+            </summary>
+            <param name="requestContext">提交的上下文信息</param>
+            <returns>通过就返回true，失败返回false</returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Product.Api.Authentication.DependencyRegistar">
+            <summary>
+            API框架会自动检测到这里的注册类,自动完成注册
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Product.Api.Authentication.DependencyRegistar.Register(Autofac.ContainerBuilder,Frxs.ServiceCenter.Api.Core.ITypeFinder,Frxs.ServiceCenter.Api.Core.SystemOptions)">
+            <summary>
+            系统框架默认的会被覆盖;
+            </summary>
+            <param name="containerBuilder"></param>
+            <param name="typeFinder">类型查找器</param>
+            <param name="systemOptions">系统框架配置信息</param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Product.Api.Authentication.DependencyRegistar.Order">
+            <summary>
+            数字越大越后注册
+            </summary>
+        </member>
+    </members>
+</doc>

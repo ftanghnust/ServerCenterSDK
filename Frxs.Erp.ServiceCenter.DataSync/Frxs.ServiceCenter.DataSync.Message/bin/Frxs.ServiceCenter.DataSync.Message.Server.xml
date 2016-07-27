@@ -1,0 +1,2108 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Frxs.ServiceCenter.DataSync.Message.Server</name>
+    </assembly>
+    <members>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Actions.ConsumerEventArgsCodeGeneratorAction">
+            <summary>
+            消息消费客户端代码生成器接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.Server.Actions.ConsumerEventArgsCodeGeneratorAction._eventMessageBodyMapManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Actions.ConsumerEventArgsCodeGeneratorAction.#ctor(Frxs.ServiceCenter.DataSync.Message.Server.IEventMessageBodyMapManager,Frxs.ServiceCenter.Api.Core.IMediaTypeFormatterFactory,Frxs.ServiceCenter.Api.Core.IActionSelector)">
+            <summary>
+            
+            </summary>
+            <param name="eventMessageBodyMapManager">时间消息摘要映射管理类</param>
+            <param name="mediaTypeFormatterFactory">格式化器创建器</param>
+            <param name="actionSelector">接口搜索器</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Actions.ConsumerEventArgsCodeGeneratorAction.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Actions.ConsumerEventArgsItemCodeGeneratorAction">
+            <summary>
+            消息消费客户端代码生成器接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.Server.Actions.ConsumerEventArgsItemCodeGeneratorAction._eventMessageBodyMapManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Actions.ConsumerEventArgsItemCodeGeneratorAction.#ctor(Frxs.ServiceCenter.DataSync.Message.Server.IEventMessageBodyMapManager,Frxs.ServiceCenter.Api.Core.IMediaTypeFormatterFactory)">
+            <summary>
+            
+            </summary>
+            <param name="eventMessageBodyMapManager">时间消息摘要映射管理类</param>
+            <param name="mediaTypeFormatterFactory">格式化器创建器</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Actions.ConsumerEventArgsItemCodeGeneratorAction.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Actions.ConsumerEventArgsItemCodeGeneratorAction.ConsumerEventArgsItemCodeGeneratorActionRequestDto">
+            <summary>
+            上送参数
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Actions.ConsumerEventArgsItemCodeGeneratorAction.ConsumerEventArgsItemCodeGeneratorActionRequestDto.EventName">
+            <summary>
+            事件名称
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Actions.PublisherDocGeneratorAction">
+            <summary>
+            消息发布者客户端代码生成器接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.Server.Actions.PublisherDocGeneratorAction._eventMessageBodyMapManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Actions.PublisherDocGeneratorAction.#ctor(Frxs.ServiceCenter.DataSync.Message.Server.IEventMessageBodyMapManager,Frxs.ServiceCenter.Api.Core.IMediaTypeFormatterFactory)">
+            <summary>
+            
+            </summary>
+            <param name="eventMessageBodyMapManager">时间消息摘要映射管理类</param>
+            <param name="mediaTypeFormatterFactory">格式化器创建器</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Actions.PublisherDocGeneratorAction.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Actions.PublisherDocGeneratorAction.OnActionExecuted(Frxs.ServiceCenter.Api.Core.ActionExecutedContext)">
+            <summary>
+            直接将生产的文件保存到指定文件夹
+            </summary>
+            <param name="actionExecutedContext"></param>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Actions.MessageConsumerAction">
+            <summary>
+            消费消息接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.Server.Actions.MessageConsumerAction._messageConsume">
+            <summary>
+            消息消费器
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Actions.MessageConsumerAction.#ctor(Frxs.ServiceCenter.DataSync.Message.Server.IMessageConsumer{Frxs.ServiceCenter.DataSync.Message.Server.IMessageBody})">
+            <summary>
+            
+            </summary>
+            <param name="messageConsume">消息消息器</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Actions.MessageConsumerAction.Execute">
+            <summary>
+            获取消息接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Actions.MessageConsumerAction.MessageConsumerActionRequestDto">
+            <summary>
+            入参
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Actions.MessageConsumerAction.MessageConsumerActionRequestDto.BeforeValid">
+            <summary>
+            重写下消费数量，如果小于等于0，那么默认返回100条
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Actions.MessageConsumerAction.MessageConsumerActionRequestDto.WID">
+            <summary>
+            仓库编号
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Actions.MessageConsumerAction.MessageConsumerActionRequestDto.StartMessageId">
+            <summary>
+            此次消息消息的起始消息编号（不包含）
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Actions.MessageConsumerAction.MessageConsumerActionRequestDto.Number">
+            <summary>
+            需要消费的消息总数
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Actions.MessagePublisherAction">
+            <summary>
+            发布消息接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.Server.Actions.MessagePublisherAction._messagePublisher">
+            <summary>
+            消息发布器
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Actions.MessagePublisherAction.#ctor(Frxs.ServiceCenter.DataSync.Message.Server.IMessagePublisher{Frxs.ServiceCenter.DataSync.Message.Server.IMessageBody},Frxs.ServiceCenter.DataSync.Message.Server.IEventMessageBodyMapManager,Frxs.ServiceCenter.DataSync.Message.Server.IMessageBodyFormatter)">
+            <summary>
+            
+            </summary>
+            <param name="messagePublisher">消息发布器</param>
+            <param name="eventMessageBodyMapManager">事件与其接收对象映射</param>
+            <param name="messageBodyFormatter">事件消息摘要格式化器</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Actions.MessagePublisherAction.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Actions.MessagePublisherAction.MessagePublisherActionRequestDto">
+            <summary>
+            入参
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Actions.MessagePublisherAction.MessagePublisherActionRequestDto.WID">
+            <summary>
+            消息属于哪个仓库，注意：全局消息WID为0
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Actions.MessagePublisherAction.MessagePublisherActionRequestDto.Topic">
+            <summary>
+            触发的事件
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Actions.MessagePublisherAction.MessagePublisherActionRequestDto.Body">
+            <summary>
+            消息body,使用JSON来表示;每个事件的body体不一样
+            {OrderId:"0001"}
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Actions.MessagePublisherAction.MessagePublisherActionRequestDto.Created">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Actions.ConsumerCodeGeneratorAction">
+            <summary>
+            消息消费客户端代码生成器接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.Server.Actions.ConsumerCodeGeneratorAction._eventMessageBodyMapManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Actions.ConsumerCodeGeneratorAction.#ctor(Frxs.ServiceCenter.DataSync.Message.Server.IEventMessageBodyMapManager,Frxs.ServiceCenter.Api.Core.IMediaTypeFormatterFactory)">
+            <summary>
+            
+            </summary>
+            <param name="eventMessageBodyMapManager">时间消息摘要映射管理类</param>
+            <param name="mediaTypeFormatterFactory">格式化器创建器</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Actions.ConsumerCodeGeneratorAction.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Actions.ConsumerCodeGeneratorAction.OnActionExecuted(Frxs.ServiceCenter.Api.Core.ActionExecutedContext)">
+            <summary>
+            直接将生产的文件保存到指定文件夹
+            </summary>
+            <param name="actionExecutedContext"></param>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Actions.PublisherCodeGeneratorAction">
+            <summary>
+            消息发布者客户端代码生成器接口
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.Server.Actions.PublisherCodeGeneratorAction._eventMessageBodyMapManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Actions.PublisherCodeGeneratorAction.#ctor(Frxs.ServiceCenter.DataSync.Message.Server.IEventMessageBodyMapManager,Frxs.ServiceCenter.Api.Core.IMediaTypeFormatterFactory)">
+            <summary>
+            
+            </summary>
+            <param name="eventMessageBodyMapManager">时间消息摘要映射管理类</param>
+            <param name="mediaTypeFormatterFactory">格式化器创建器</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Actions.PublisherCodeGeneratorAction.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Actions.PublisherCodeGeneratorAction.OnActionExecuted(Frxs.ServiceCenter.Api.Core.ActionExecutedContext)">
+            <summary>
+            直接将生产的文件保存到指定文件夹
+            </summary>
+            <param name="actionExecutedContext"></param>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.Temp___RemovedMessageBody">
+            <summary>
+            Temp___ 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.MessageBodyBase">
+            <summary>
+            消息摘要基类
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.IMessageBody">
+            <summary>
+            所有的消息body部分必须继承此接口
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.Temp___RemovedMessageBody.TempId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.Temp___RemovedMessageBody.TempString">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.Temp___ChangedMessageBody">
+            <summary>
+             Temp___ 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.Temp___ChangedMessageBody.TempId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.Temp___ChangedMessageBody.TempString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductPictureDetailChangedMessageBody">
+            <summary>
+            商品主图 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductPictureDetailChangedMessageBody.ID">
+             <summary>
+            商品主图编号
+             </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductPictureDetailCreatedMessageBody">
+            <summary>
+            商品主图 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductPictureDetailCreatedMessageBody.ID">
+            <summary>
+            商品主图编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductPictureDetailRemovedMessageBody">
+            <summary>
+            商品主图 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductPictureDetailRemovedMessageBody.ID">
+            <summary>
+            商品主图编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductDescriptionPictureChangedMessageBody">
+            <summary>
+            母商品图片描述(图文详情之图片详情)  变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductDescriptionPictureChangedMessageBody.ID">
+            <summary>
+            母商品图片描述编号 
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductDescriptionPictureCreatedMessageBody">
+            <summary>
+            母商品图片描述(图文详情之图片详情) 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductDescriptionPictureCreatedMessageBody.ID">
+            <summary>
+            母商品图片描述编号 
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductDescriptionPictureRemovedMessageBody">
+            <summary>
+            母商品图片描述(图文详情之图片详情)  移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductDescriptionPictureRemovedMessageBody.ID">
+            <summary>
+            母商品图片描述编号 
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductDescriptionChangedMessageBody">
+            <summary>
+             母商品文字描述(图文详情之文字详情)  变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductDescriptionChangedMessageBody.BaseProductId">
+            <summary>
+            母商品 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductDescriptionCreatedMessageBody">
+            <summary>
+             母商品文字描述(图文详情之文字详情) 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductDescriptionCreatedMessageBody.BaseProductId">
+            <summary>
+            母商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductDescriptionRemovedMessageBody">
+            <summary>
+             母商品文字描述(图文详情之文字详情)  移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductDescriptionRemovedMessageBody.BaseProductId">
+            <summary>
+            母商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductBarCodesChangedMessageBody">
+            <summary>
+             商品条码 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductBarCodesChangedMessageBody.ID">
+            <summary>
+            商品条码编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductBarCodesCreatedMessageBody">
+            <summary>
+            商品条码 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductBarCodesCreatedMessageBody.ID">
+            <summary>
+            商品条码 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductBarCodesRemovedMessageBody">
+            <summary>
+            商品条码 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductBarCodesRemovedMessageBody.ID">
+            <summary>
+            商品条码 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductAttributesPictureChangedMessageBody">
+            <summary>
+            商品规格属性图片 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductAttributesPictureChangedMessageBody.ProductId">
+            <summary>
+            商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductAttributesPictureCreatedMessageBody">
+            <summary>
+            商品规格属性图片 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductAttributesPictureCreatedMessageBody.ProductId">
+            <summary>
+            商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductAttributesPictureRemovedMessageBody">
+            <summary>
+            商品规格属性图片 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductAttributesPictureRemovedMessageBody.ProductId">
+            <summary>
+            商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductAttributesChangedMessageBody">
+            <summary>
+             商品规格属性关系 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductAttributesChangedMessageBody.ID">
+            <summary>
+            商品规格属性关系 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductAttributesCreatedMessageBody">
+            <summary>
+            商品规格属性关系 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductAttributesCreatedMessageBody.ID">
+            <summary>
+            商品规格属性关系 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductAttributesRemovedMessageBody">
+            <summary>
+            商品规格属性关系 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductAttributesRemovedMessageBody.ID">
+            <summary>
+            商品规格属性关系 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductUnitChangedMessageBody">
+            <summary>
+            商品单位 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductUnitChangedMessageBody.ProductsUnitID">
+            <summary>
+            商品单位 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductUnitCreatedMessageBody">
+            <summary>
+            商品单位 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductUnitCreatedMessageBody.ProductsUnitID">
+            <summary>
+            商品单位 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductUnitRemovedMessageBody">
+            <summary>
+            商品单位 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductUnitRemovedMessageBody.ProductsUnitID">
+            <summary>
+            商品单位 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysDictDetailChangedMessageBody">
+            <summary>
+            数据字典明细参数 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysDictDetailChangedMessageBody.ID">
+            <summary>
+            数据字典明细参数 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysDictDetailCreatedMessageBody">
+            <summary>
+            数据字典明细参数 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysDictDetailCreatedMessageBody.ID">
+            <summary>
+            数据字典明细参数 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysDictDetailRemovedMessageBody">
+            <summary>
+            数据字典明细参数 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysDictDetailRemovedMessageBody.ID">
+            <summary>
+            数据字典明细参数 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.AttributeValuesChangedMessageBody">
+            <summary>
+            规格属性值 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.AttributeValuesChangedMessageBody.ValuesId">
+            <summary>
+            规格属性值编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.AttributeValuesCreatedMessageBody">
+            <summary>
+            规格属性值 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.AttributeValuesCreatedMessageBody.ValuesId">
+            <summary>
+            规格属性值编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.AttributeValuesRemovedMessageBody">
+            <summary>
+            规格属性值 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.AttributeValuesRemovedMessageBody.ValuesId">
+            <summary>
+            规格属性值编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysAppSettingChangedMessageBody">
+            <summary>
+            仓库报表参数 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysAppSettingChangedMessageBody.ID">
+            <summary>
+            仓库报表参数 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysAppSettingCreatedMessageBody">
+            <summary>
+            仓库报表参数 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysAppSettingCreatedMessageBody.ID">
+            <summary>
+            仓库报表参数 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysAppSettingRemovedMessageBody">
+            <summary>
+            仓库报表参数 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysAppSettingRemovedMessageBody.ID">
+            <summary>
+            仓库报表参数 编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysParamsWhChangedMessageBody">
+            <summary>
+             系统仓库参数变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysParamsWhChangedMessageBody.ID">
+            <summary>
+            系统仓库参数编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysParamsWhCreatedMessageBody">
+             <summary>
+            系统仓库参数 创建(Created)事件消息体
+             </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysParamsWhCreatedMessageBody.ID">
+            <summary>
+            系统仓库参数编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysParamsWhRemovedMessageBody">
+            <summary>
+            系统仓库参数 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysParamsWhRemovedMessageBody.ID">
+            <summary>
+            系统仓库参数编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.WproductBuyEmpChangedMessageBody">
+            <summary>
+             商品采购员 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.WproductBuyEmpChangedMessageBody.ID">
+            <summary>
+            商品采购员编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.WproductBuyEmpCreatedMessageBody">
+             <summary>
+            商品采购员 创建(Created)事件消息体
+             </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.WproductBuyEmpCreatedMessageBody.ID">
+            <summary>
+            商品采购员编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.WproductBuyEmpRemovedMessageBody">
+            <summary>
+            商品采购员 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.WproductBuyEmpRemovedMessageBody.ID">
+            <summary>
+            商品采购员编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.WarehouseEmpChangedMessageBody">
+            <summary>
+             仓库员工变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.WarehouseEmpChangedMessageBody.EmpID">
+            <summary>
+            仓库员工编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.WarehouseEmpCreatedMessageBody">
+            <summary>
+            仓库员工 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.WarehouseEmpCreatedMessageBody.EmpID">
+            <summary>
+            仓库员工编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.WarehouseEmpRemovedMessageBody">
+            <summary>
+            仓库员工 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.WarehouseEmpRemovedMessageBody.EmpID">
+            <summary>
+            仓库员工编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.WproductBuyChangedMessageBody">
+            <summary>
+             仓库商品采购信息 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.WproductBuyChangedMessageBody.WProductID">
+            <summary>
+            仓库商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.WproductBuyCreatedMessageBody">
+            <summary>
+            仓库商品采购信息 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.WproductBuyCreatedMessageBody.WProductID">
+            <summary>
+            仓库商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.WproductBuyRemovedMessageBody">
+            <summary>
+            仓库商品采购信息 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.WproductBuyRemovedMessageBody.WProductID">
+            <summary>
+            仓库商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.WproductChangedMessageBody">
+            <summary>
+            仓库商品变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.WproductChangedMessageBody.WProductID">
+            <summary>
+            仓库商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.WproductCreatedMessageBody">
+            <summary>
+            仓库商品创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.WproductCreatedMessageBody.WProductID">
+            <summary>
+            仓库商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.WproductRemovedMessageBody">
+            <summary>
+            仓库商品移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.WproductRemovedMessageBody.WProductID">
+            <summary>
+            仓库商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductsVendorChangedMessageBody">
+            <summary>
+            商品供应商关系变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductsVendorChangedMessageBody.ID">
+            <summary>
+            商品供应商关系编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductsVendorCreatedMessageBody">
+            <summary>
+            商品供应商关系创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductsVendorCreatedMessageBody.ID">
+            <summary>
+            商品供应商关系编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductsVendorRemovedMessageBody">
+            <summary>
+            商品供应商关系移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductsVendorRemovedMessageBody.ID">
+            <summary>
+            商品供应商关系编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysDictChangedMessageBody">
+            <summary>
+            数据字典 变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysDictChangedMessageBody.DictCode">
+            <summary>
+            数据字典编码
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysDictCreatedMessageBody">
+             <summary>
+            数据字典创建(Created)事件消息体
+             </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysDictCreatedMessageBody.DictCode">
+            <summary>
+            数据字典编码
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysDictRemovedMessageBody">
+            <summary>
+            数据字典移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysDictRemovedMessageBody.DictCode">
+            <summary>
+            数据字典编码
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysAreaChangedMessageBody">
+            <summary>
+            系统区域变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysAreaChangedMessageBody.AreaID">
+            <summary>
+            系统区域编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysAreaCreatedMessageBody">
+            <summary>
+            系统区域创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysAreaCreatedMessageBody.AreaID">
+            <summary>
+            系统区域编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysAreaRemovedMessageBody">
+            <summary>
+            系统区域 移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysAreaRemovedMessageBody.AreaID">
+            <summary>
+            系统区域编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.BaseProductChangedMessageBody">
+            <summary>
+             母商品变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.BaseProductChangedMessageBody.BaseProductId">
+            <summary>
+            母商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.BaseProductCreatedMessageBody">
+            <summary>
+            母商品创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.BaseProductCreatedMessageBody.BaseProductId">
+            <summary>
+            母商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.BaseProductRemovedMessageBody">
+            <summary>
+            母商品移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.BaseProductRemovedMessageBody.BaseProductId">
+            <summary>
+            母商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductChangedMessageBody">
+            <summary>
+             商品变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductChangedMessageBody.ProductId">
+            <summary>
+            商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductRemovedMessageBody">
+            <summary>
+            商品移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductRemovedMessageBody.ProductId">
+            <summary>
+            商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.VendorTypeChangedMessageBody">
+            <summary>
+             供应商类型变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.VendorTypeChangedMessageBody.VendorTypeID">
+            <summary>
+             供应商类型编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.VendorTypeCreatedMessageBody">
+            <summary>
+            供应商类型创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.VendorTypeCreatedMessageBody.VendorTypeID">
+            <summary>
+             供应商类型编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.VendorTypeRemovedMessageBody">
+            <summary>
+            供应商类型移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.VendorTypeRemovedMessageBody.VendorTypeID">
+            <summary>
+             供应商类型编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.AttributeChangedMessageBody">
+            <summary>
+             商品规格变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.AttributeChangedMessageBody.AttributeId">
+            <summary>
+            商品规格编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.AttributeCreatedMessageBody">
+            <summary>
+             商品规格创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.AttributeCreatedMessageBody.AttributeId">
+            <summary>
+            商品规格编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.AttributeRemovedMessageBody">
+            <summary>
+            商品规格移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.AttributeRemovedMessageBody.AttributeId">
+             <summary>
+            商品规格编号
+             </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.BrandCategoryChangedMessageBody">
+            <summary>
+             品牌变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.BrandCategoryChangedMessageBody.BrandId">
+            <summary>
+            品牌编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.BrandCategoryCreatedMessageBody">
+            <summary>
+            品牌创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.BrandCategoryCreatedMessageBody.BrandId">
+            <summary>
+            品牌编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.BrandCategoryRemovedMessageBody">
+            <summary>
+            品牌移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.BrandCategoryRemovedMessageBody.BrandId">
+            <summary>
+            品牌编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ShopCategoryRemovedMessageBody">
+            <summary>
+            运营分类移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ShopCategoryRemovedMessageBody.CategoryId">
+            <summary>
+             运营分类编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.CategoryRemovedMessageBody">
+            <summary>
+            基本分类移除(Remove)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.CategoryRemovedMessageBody.CategoryId">
+            <summary>
+            基本分类编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.VendorChangedMessageBody">
+            <summary>
+             供应商变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.VendorChangedMessageBody.VendorID">
+            <summary>
+            供应商编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.VendorCreatedMessageBody">
+            <summary>
+            供应商创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.VendorCreatedMessageBody.VendorID">
+            <summary>
+            供应商编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.VendorRemovedMessageBody">
+            <summary>
+            供应商移除(Remove)事件消息体（触发事件之移除事件需要传送的参数）
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.VendorRemovedMessageBody.VendorID">
+            <summary>
+            供应商编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ShopChangedMessageBody">
+            <summary>
+            门店变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ShopChangedMessageBody.ShopID">
+            <summary>
+            门店编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ShopRemovedMessageBody">
+            <summary>
+            门店移除(Remove)事件消息体（触发事件之移除事件需要传送的参数）
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ShopRemovedMessageBody.ShopID">
+            <summary>
+            门店编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.WarehouseChangedMessageBody">
+            <summary>
+            仓库改变(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.WarehouseChangedMessageBody.WID">
+            <summary>
+            仓库编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.WarehouseCreatedMessageBody">
+            <summary>
+             仓库创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.WarehouseCreatedMessageBody.WID">
+            <summary>
+            仓库编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.WarehouseRemovedMessageBody">
+             <summary>
+            仓库移除(Removed)事件消息体
+             </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.WarehouseRemovedMessageBody.WID">
+            <summary>
+            仓库编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysParamsChangedMessageBody">
+            <summary>
+            系统参数变更(Changed)消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysParamsChangedMessageBody.ParamCode">
+            <summary>
+            系统参数编码
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysParamsRemovedMessageBody">
+            <summary>
+            系统参数移除(Removed)消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysParamsRemovedMessageBody.ParamCode">
+            <summary>
+            系统参数编码
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysParamsCreatedMessageBody">
+            <summary>
+            系统参数创建(Created)消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SysParamsCreatedMessageBody.ParamCode">
+            <summary>
+            系统参数编码
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ShopCreatedMessageBody">
+            <summary>
+             门店创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ShopCreatedMessageBody.ShopID">
+            <summary>
+            门店编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ShopCategoryChangedMessageBody">
+            <summary>
+            运营分类变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ShopCategoryChangedMessageBody.CategoryId">
+            <summary>
+             运营分类编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ShopCategoryCreatedMessageBody">
+            <summary>
+            运营分类创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ShopCategoryCreatedMessageBody.CategoryId">
+            <summary>
+             运营分类编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.Temp__CreatedMessageBody">
+            <summary>
+            Temp___ 创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.Temp__CreatedMessageBody.TempId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.Temp__CreatedMessageBody.TempString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.XSUserRemovedMessageBody">
+            <summary>
+            用户删除(Removed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.XSUserRemovedMessageBody.XSUserID">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.XSUserChangedMessageBody">
+            <summary>
+            用户更新(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.XSUserChangedMessageBody.XSUserID">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.XSUserCreatedMessageBody">
+            <summary>
+            用户创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.XSUserCreatedMessageBody.XSUserID">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.ClearExpiredMessageTask">
+            <summary>
+            定期清理过期的消息数据
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.Server.Impl.ClearExpiredMessageTask._logger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.ClearExpiredMessageTask.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Entitys.StorageRelationship},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Api.Core.ILogger,Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultConfig)">
+            <summary>
+            
+            </summary>
+            <param name="storageRelationshipRepository">消息存储仓储</param>
+            <param name="dbContext">数据库操作上下文</param>
+            <param name="logger">日志记录器</param>
+            <param name="config">具体实现类配置信息</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.ClearExpiredMessageTask.Execute(Frxs.ServiceCenter.Api.Core.TaskExecuteContext)">
+            <summary>
+            作业任务开始
+            </summary>
+            <param name="taskExecuteContext">当前执行任务上下文对象</param>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Entitys.SequentialNumber">
+            <summary>
+            序列号生成器
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Entitys.SequentialNumber.MaxIdentity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Mapping.SequentialNumberMapping">
+            <summary>
+            数据实体与数据库映射
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Mapping.SequentialNumberMapping.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultMessageIdGenerator">
+            <summary>
+            消息ID编号生成器(默认直接使用数据库实现)
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.IMessageIdGenerator">
+            <summary>
+            消息ID获取接口
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.IMessageIdGenerator.GenerateSequentialNumber">
+            <summary>
+            获取消息ID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultMessageIdGenerator.locker">
+            <summary>
+            全局流水码
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultMessageIdGenerator._dbContext">
+            <summary>
+            数据操作上下文
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultMessageIdGenerator.#ctor(Frxs.ServiceCenter.Data.Core.IDbContext)">
+            <summary>
+            
+            </summary>
+            <param name="dbContext">数据操作上下文</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultMessageIdGenerator.GenerateSequentialNumber">
+            <summary>
+            获取待时间和顺序号的字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.MessageStoreRoute">
+            <summary>
+            存储路由
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.MessageStoreRoute.GetMessageStoreName(System.Nullable{System.Int32})">
+            <summary>
+            根据仓库编号获取存储介质
+            </summary>
+            <param name="wid">仓库编号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.MessageStoreRoute.GetGlobalMessageStoreName">
+            <summary>
+            获取全局存储介质
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.MessageConsumeResult`1">
+            <summary>
+            消费消息结果
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.MessageConsumeResult`1.#ctor(System.String,System.Collections.Generic.IEnumerable{Frxs.ServiceCenter.DataSync.Message.Server.Message{`0}})">
+            <summary>
+            
+            </summary>
+            <param name="lastConsumeMessageId">当前消息集合中最大MessageId值</param>
+            <param name="messages">消息列表</param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.MessageConsumeResult`1.LastConsumeMessageId">
+            <summary>
+            当前消息集合中最大MessageId值
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.MessageConsumeResult`1.Count">
+            <summary>
+            当前消息的实际数量
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.MessageConsumeResult`1.Messages">
+            <summary>
+            消息列表
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Resource.Resource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Resource.Resource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Resource.Resource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Resource.Resource.MessagePublisherAction_NotFindBodyType">
+            <summary>
+              Looks up a localized string similar to 未找到对应的消息体映射类型.
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Resource.Resource.MessagePublisherAction_PublishError">
+            <summary>
+              Looks up a localized string similar to 发布消息失败.
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.StartUp.StartUp">
+            <summary>
+            系统初始化需要做的一些事件
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.StartUp.StartUp.Init">
+            <summary>
+            站点启动的时候会自动运行此方法
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Tasks.TaskSchedulerRegistar">
+            <summary>
+            注册作业任务调度
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Tasks.TaskSchedulerRegistar.Register(Frxs.ServiceCenter.Api.Core.ITaskSchedulerCollection)">
+            <summary>
+            
+            </summary>
+            <param name="taskSchedulerCollection"></param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Tasks.TaskSchedulerRegistar.Order">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Validors.MessageConsumerActionRequestDtoValidator">
+            <summary>
+            参数校验
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Validors.MessageConsumerActionRequestDtoValidator.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Validors.MessagePublisherActionRequestDtoValidator">
+            <summary>
+            参数校验
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Validors.MessagePublisherActionRequestDtoValidator.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.ApiPluginDescriptor">
+            <summary>
+            插件描述
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.ApiPluginDescriptor.#ctor(Frxs.ServiceCenter.Api.Core.IResourceFinderManager)">
+            <summary>
+            
+            </summary>
+            <param name="resourceFinderManager"></param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.ApiPluginDescriptor.DisplayName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.ApiPluginDescriptor.Author">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.EventNameMessageBodyMapAttribute">
+            <summary>
+            事件接收参数和触发事件名称映射
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.EventNameMessageBodyMapAttribute.#ctor(System.String)">
+            <summary>
+            映射消息体和事件名称
+            </summary>
+            <param name="eventName">触发的事件名称</param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.EventNameMessageBodyMapAttribute.EventName">
+            <summary>
+            事件名称
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.GlobalEventMessageAttribute">
+            <summary>
+            标注事件是否是全局事件，如果定义了此特性就是全局事件，那么WID就不需要传
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.BuyOrderCreatedMessageBody">
+            <summary>
+            采购订单被创建的时候触发事件需要传送的参数
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.BuyOrderCreatedMessageBody.OrderId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.CategoryCreatedMessageBody">
+            <summary>
+            基本分类创建(Created)消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.CategoryCreatedMessageBody.CategoryId">
+            <summary>
+            基本分类编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductCreatedMessageBody">
+            <summary>
+            商品创建(Created)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.ProductCreatedMessageBody.ProductId">
+            <summary>
+            商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.SaleOrderCreatedMessageBody">
+            <summary>
+            销售订单更改
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SaleOrderCreatedMessageBody.OrderId">
+            <summary>
+            订单编号
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SaleOrderCreatedMessageBody.Created">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Entitys.Message">
+            <summary>
+            消息实体与数据库映射对象
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Entitys.Message.Id">
+            <summary>
+            消息ID编号
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Entitys.Message.Topic">
+            <summary>
+            事件主题
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Entitys.Message.WID">
+            <summary>
+            仓库编号
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Entitys.Message.Body">
+            <summary>
+            消息摘要
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Entitys.Message.Created">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Entitys.StorageRelationship">
+            <summary>
+            仓库消息存储关系映射表
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Entitys.StorageRelationship.WID">
+            <summary>
+            仓库编号
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Entitys.StorageRelationship.StorageName">
+            <summary>
+            存储消息的数据表
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Entitys.StorageRelationship.LastConsumeMessageId">
+            <summary>
+            仓库消费消息到了那个索引号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Mapping.StorageRelationshipMapping">
+            <summary>
+            数据实体与数据库映射
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Mapping.StorageRelationshipMapping.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Mapping.MessageMapping">
+            <summary>
+            数据实体与数据库映射
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Mapping.MessageMapping.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.CategoryChangedMessageBody">
+            <summary>
+            基本分类变更(Changed)事件消息体
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.CategoryChangedMessageBody.CategoryId">
+            <summary>
+            基本分类编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Events.SaleOrderChangedMessageBody">
+            <summary>
+            销售订单更改
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Events.SaleOrderChangedMessageBody.OrderId">
+            <summary>
+            订单编号
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultMessageConsumer`1">
+            <summary>
+            默认消息获取
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.IMessageConsumer`1">
+            <summary>
+            消费消息，也即从消息中间件里获取消息
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.IMessageConsumer`1.Consume(System.Nullable{System.Int32},System.String,System.Int32)">
+            <summary>
+            消息
+            </summary>
+            <param name="wid">对应的仓库ID，不指定的话，安装依次获取</param>
+            <param name="startMessageId">开始的消息ID，如果为空或者为null的话，将会从第一条消息开始</param>
+            <param name="number">每次消息多少条消息</param>
+            <returns></returns>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultMessageConsumer`1._storageRelationshipRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultMessageConsumer`1.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Entitys.StorageRelationship},Frxs.ServiceCenter.DataSync.Message.Server.IEventMessageBodyMapManager,Frxs.ServiceCenter.DataSync.Message.Server.IMessageBodyFormatter,Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork,Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultConfig)">
+            <summary>
+            
+            </summary>
+            <param name="storageRelationshipRepository">存储关系访问</param>
+            <param name="eventMessageBodyMapManager">消息体类型映射</param>
+            <param name="messageBodyFormatter">格式化器</param>
+            <param name="dbContext">数据工作上下文</param>
+            <param name="unitOfWork">工作单元</param>
+            <param name="config">系统实现配置文件</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultMessageConsumer`1.GetMessages(System.Nullable{System.Int32},System.String,System.Int32)">
+            <summary>
+            获取待消息的消息列表
+            </summary>
+            <param name="wid">仓库编号</param>
+            <param name="startMessageId">起始消息编号</param>
+            <param name="number">每次获取多少条</param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultMessageConsumer`1.Consume(System.Nullable{System.Int32},System.String,System.Int32)">
+            <summary>
+            获取待消费的消息
+            </summary>
+            <param name="wid">仓库编号</param>
+            <param name="startMessageId">起始消息</param>
+            <param name="number">每次获取多少条</param>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultMessagePublisher`1">
+            <summary>
+            系统框架默认实现的发布器
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.IMessagePublisher`1">
+            <summary>
+            消息发布接口定义
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.IMessagePublisher`1.Publish(Frxs.ServiceCenter.DataSync.Message.Server.Message{`0})">
+            <summary>
+            发布消息
+            </summary>
+            <typeparam name="T">消息主体：body</typeparam>
+            <returns></returns>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultMessagePublisher`1._config">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultMessagePublisher`1.#ctor(Frxs.ServiceCenter.DataSync.Message.Server.IMessageIdGenerator,Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultConfig,Frxs.ServiceCenter.Api.Core.ILogger)">
+            <summary>
+            
+            </summary>
+            <param name="messageIdGenerator">消息ID生成器</param>
+            <param name="config">具体实现类配置信息</param>
+            <param name="logger">日志记录器</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultMessagePublisher`1.Publish(Frxs.ServiceCenter.DataSync.Message.Server.Message{`0})">
+            <summary>
+            默认的发布器，默认实现存储到MSMQ里面
+            </summary>
+            <param name="message">领域消息对象</param>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultEventMessageBodyMapManager">
+            <summary>
+            事件名称和事件消息体映射关系管理器
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.IEventMessageBodyMapManager">
+            <summary>
+            事件名称和事件消息体映射关系管理器
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.IEventMessageBodyMapManager.GetMessageBodyDescriptor(System.String)">
+            <summary>
+            根据事件获取到消息类型
+            </summary>
+            <param name="eventName">事件名称</param>
+            <returns>未找到返回null</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.IEventMessageBodyMapManager.GetMessageBodyDescriptors">
+            <summary>
+            获取所有映射集合
+            </summary>
+            <returns>未找到则返回空集合</returns>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultEventMessageBodyMapManager.CachedMapping">
+            <summary>
+            缓存映射信息
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultEventMessageBodyMapManager._typeFinder">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultEventMessageBodyMapManager.#ctor(Frxs.ServiceCenter.Api.Core.ITypeFinder)">
+            <summary>
+            
+            </summary>
+            <param name="typeFinder">类型查找器</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultEventMessageBodyMapManager.GetMessageBodyDescriptors">
+            <summary>
+            获取所有的事件名称和body类型集合
+            </summary>
+            <returns>找不到返回空集合</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultEventMessageBodyMapManager.GetMessageBodyDescriptor(System.String)">
+            <summary>
+            根据事件名称获取事件的body类型
+            </summary>
+            <param name="eventName">事件名称</param>
+            <returns>找不到会返回null</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultEventMessageBodyMapManager.Init">
+            <summary>
+            初始化一下，系统启动的时候
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.JsonMessageBodyFormatter">
+            <summary>
+            基于Newtonsoft.Json实现
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.IMessageBodyFormatter">
+            <summary>
+            时间消息摘要格式化器
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.IMessageBodyFormatter.Deserialize(System.String,System.Type)">
+            <summary>
+            消息摘要反序列化
+            </summary>
+            <param name="value"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.IMessageBodyFormatter.Serialize(Frxs.ServiceCenter.DataSync.Message.Server.IMessageBody)">
+            <summary>
+            消息摘要序列化，用于保存到其他存储介质
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.JsonMessageBodyFormatter.Deserialize(System.String,System.Type)">
+            <summary>
+            将字符串反序列化成IMessageBody对象
+            </summary>
+            <param name="value"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.JsonMessageBodyFormatter.Serialize(Frxs.ServiceCenter.DataSync.Message.Server.IMessageBody)">
+            <summary>
+            将实现了IMessageBody接口的对象序列化成json，保存
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Message`1">
+            <summary>
+            消息传输对象
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Message`1.Equals(Frxs.ServiceCenter.DataSync.Message.Server.Message{`0})">
+            <summary>
+            Equals
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Message`1.Id">
+            <summary>
+            消息唯一ID，有序
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Message`1.Topic">
+            <summary>
+            消息主题，比如：Order_Created,Order_Changed,Order_Delete等
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Message`1.WID">
+            <summary>
+            消息对应的仓库ID，如果是全局消息，此值为：0
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Message`1.Body">
+            <summary>
+            消息摘要,此消息体保存的时候可能会序列化成JSON或者XML或者进行字节序列化
+            比如：{OrderId:"10001"}
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Message`1.Created">
+            <summary>
+            消息发布时间
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.MessageBodyDescriptor">
+            <summary>
+            消息体描述信息
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.MessageBodyDescriptor.EventName">
+            <summary>
+            事件名称
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.MessageBodyDescriptor.MessageBodyType">
+            <summary>
+            事件消息体类型
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.MessageBodyDescriptor.IsGloablEventMessage">
+            <summary>
+            是否是全局事件消息
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.MSMQ">
+            <summary>
+            默认使用微软的消息队列来作为缓冲器
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.Server.Impl.MSMQ.myQueue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.MSMQ.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.MSMQ.Send``1(``0,System.String)">
+            <summary>
+            同步发送消息
+            </summary>
+            <param name="entity"></param>
+            <param name="messaglabel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.MSMQ.Receive``1(System.Action{``0})">
+            <summary>
+            同步接收消息
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.MSMQ.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.MessageDbContext">
+            <summary>
+            数据库访问上下文
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.MessageDbContext.#ctor(System.Func{System.String})">
+            <summary>
+            初始化数据访问上下文对象
+            </summary>
+            <param name="getNameOrConnectionString">数据库连接名</param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.MessageDbContext.Logger">
+            <summary>
+            初始化一个日志记录器
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.MessageDbContext.EntityTypeConfigurationMapAssembly">
+            <summary>
+            映射程序集改成当前程序集
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.EFIntercepterLogging">
+            <summary>
+            用于调试
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.EFIntercepterLogging._stopwatch">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.EFIntercepterLogging.ScalarExecuting(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="command"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.EFIntercepterLogging.ScalarExecuted(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="command"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.EFIntercepterLogging.NonQueryExecuting(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="command"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.EFIntercepterLogging.NonQueryExecuted(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="command"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.EFIntercepterLogging.ReaderExecuting(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Data.Common.DbDataReader})">
+            <summary>
+            
+            </summary>
+            <param name="command"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.EFIntercepterLogging.ReaderExecuted(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Data.Common.DbDataReader})">
+            <summary>
+            
+            </summary>
+            <param name="command"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DependencyRegistar">
+            <summary>
+            注册系统默认实现的接口服务类
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DependencyRegistar.Register(Autofac.ContainerBuilder,Frxs.ServiceCenter.Api.Core.ITypeFinder,Frxs.ServiceCenter.Api.Core.SystemOptions)">
+            <summary>
+            注册特定的类型到容器
+            </summary>
+            <param name="containerBuilder">注册容器</param>
+            <param name="typeFinder">类型查找器</param>
+            <param name="systemOptions">系统框架配置信息</param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DependencyRegistar.Order">
+            <summary>
+            优先级最低，方便外部程序重写框架里的实现，覆盖掉系统默认的实现
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.StartUp">
+            <summary>
+            系统启动的时候做的事情
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.Server.Impl.StartUp._config">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.StartUp.#ctor(Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultConfig,Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Entitys.StorageRelationship},Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Entitys.SequentialNumber},Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            
+            </summary>
+            <param name="config">默认实现配置文件</param>
+            <param name="storageRelationshipRepository">存储映射仓储</param>
+            <param name="sequentialNumberRepository">序列号生成器仓储</param>
+            <param name="unitOfWork">工作单元</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.StartUp.Init">
+            <summary>
+            初始化数据库表等
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.SaveMessage2DBTask">
+            <summary>
+            作业任务，将消息队列里的数据移到数据库;
+            注意此专业任务在注册到调度器的时候，不能和其他任意的作业任务归组。因为此专业任务属于线程阻塞
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.Server.Impl.SaveMessage2DBTask._logger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.SaveMessage2DBTask.#ctor(Frxs.ServiceCenter.Api.Core.ILogger,Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultConfig,Frxs.ServiceCenter.DataSync.Message.Server.IMessageBodyFormatter)">
+            <summary>
+            
+            </summary>
+            <param name="messageBodyFormatter">消息摘要格式化器</param>
+            <param name="logger">日志记录器</param>
+            <param name="config">具体实现类配置信息</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.SaveMessage2DBTask.SaveMessage2Store(Frxs.ServiceCenter.Data.Core.IDbContext,System.String,Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.Entitys.Message)">
+            <summary>
+            消息分发存储
+            </summary>
+            <param name="dbContext"></param>
+            <param name="storageName"></param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.SaveMessage2DBTask.CreateMessageStore(Frxs.ServiceCenter.Data.Core.IDbContext,System.String)">
+            <summary>
+            创建消息存储介质
+            </summary>
+            <param name="dbContext"></param>
+            <param name="storageName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.SaveMessage2DBTask.Execute(Frxs.ServiceCenter.Api.Core.TaskExecuteContext)">
+            <summary>
+            将消息队列里的消息分发到存储介质
+            </summary>
+            <param name="taskExecuteContext"></param>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.ApiHostApplication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.ApiHostApplication.Application_Start(System.Object,System.EventArgs)">
+            <summary>
+            应用程序启动时初始化系统框架
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.ApiHostApplication.Application_Error(System.Object,System.EventArgs)">
+            <summary>
+            记录错误信息
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.TaskSchedulerRegistar">
+            <summary>
+            注册作业任务调度
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.TaskSchedulerRegistar.Register(Frxs.ServiceCenter.Api.Core.ITaskSchedulerCollection)">
+            <summary>
+            
+            </summary>
+            <param name="taskSchedulerCollection"></param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Impl.TaskSchedulerRegistar.Order">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.DependencyRegistar">
+            <summary>
+            框架会自动检测到这里的注册类,自动完成注册
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.DependencyRegistar.Register(Autofac.ContainerBuilder,Frxs.ServiceCenter.Api.Core.ITypeFinder,Frxs.ServiceCenter.Api.Core.SystemOptions)">
+            <summary>
+            系统框架默认的会被覆盖;
+            </summary>
+            <param name="containerBuilder"></param>
+            <param name="typeFinder">类型查找器</param>
+            <param name="systemOptions"></param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Impl.Data.DependencyRegistar.Order">
+            <summary>
+            数字越大越后注册
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultConfig">
+            <summary>
+            <![CDATA[
+            web.config节点配置对象；此配置节点会被IOC容器自动注册;
+            <configuration>
+            <configSections>
+             <section name="DataSyncConfig" type="Frxs.ServiceCenter.Api.Host.Data.DataSyncConfig,Frxs.ServiceCenter.Api.Host"/>
+            </configSections>
+             <DataSyncConfig connectionStringName="connstring_sql"/>
+            <configuration>
+            ]]>
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultConfig._defaultConsumeSpeed">
+            <summary>
+            默认消费速度
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultConfig._defaultMSMQPath">
+            <summary>
+            默认的消息队列保存路径
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultConfig.#ctor">
+            <summary>
+            配置文件对应的实体类
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultConfig.Create(System.Object,System.Object,System.Xml.XmlNode)">
+            <summary>
+            创建配置对象信息
+            </summary>
+            <param name="parent"></param>
+            <param name="configContext"></param>
+            <param name="section"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultConfig.ConnectionStringName">
+            <summary>
+            数据库连接字符串
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultConfig.SplitSave">
+            <summary>
+            是否拆分存储各个仓库数据
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultConfig.MSMQPath">
+            <summary>
+            对应的MSMQ消息队列路径
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultConfig.SendErrorMSMQPath">
+            <summary>
+            发送消息错误日志记录消息队列路径
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultConfig.ConsumeSpeed">
+            <summary>
+            从消息队列里将消息分发到数据库的消费速度，单位为：毫秒
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.Server.Impl.DefaultConfig.MessageExpriedDays">
+            <summary>
+            消息过期时间，到期后，系系统将会自动将过期消息删除
+            </summary>
+        </member>
+    </members>
+</doc>

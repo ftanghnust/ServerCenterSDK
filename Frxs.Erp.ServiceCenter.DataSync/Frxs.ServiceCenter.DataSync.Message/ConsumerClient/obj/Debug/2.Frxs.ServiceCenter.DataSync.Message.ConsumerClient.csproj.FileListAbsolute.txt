@@ -1,0 +1,10 @@
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.DataSync\Frxs.ServiceCenter.DataSync.Message\ConsumerClient\bin\Debug\Frxs.ServiceCenter.DataSync.Message.ConsumerClient.XML
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.DataSync\Frxs.ServiceCenter.DataSync.Message\ConsumerClient\bin\Debug\Frxs.ServiceCenter.DataSync.Message.ConsumerClient.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.DataSync\Frxs.ServiceCenter.DataSync.Message\ConsumerClient\bin\Debug\Frxs.ServiceCenter.DataSync.Message.ConsumerClient.pdb
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.DataSync\Frxs.ServiceCenter.DataSync.Message\ConsumerClient\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.DataSync\Frxs.ServiceCenter.DataSync.Message\ConsumerClient\bin\Debug\RestSharp.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.DataSync\Frxs.ServiceCenter.DataSync.Message\ConsumerClient\bin\Debug\RestSharp.xml
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.DataSync\Frxs.ServiceCenter.DataSync.Message\ConsumerClient\bin\Debug\zh-Hans\Microsoft.QualityTools.Testing.Fakes.resources.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.DataSync\Frxs.ServiceCenter.DataSync.Message\ConsumerClient\obj\Debug\2.Frxs.ServiceCenter.DataSync.Message.ConsumerClient.csprojResolveAssemblyReference.cache
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.DataSync\Frxs.ServiceCenter.DataSync.Message\ConsumerClient\obj\Debug\Frxs.ServiceCenter.DataSync.Message.ConsumerClient.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.DataSync\Frxs.ServiceCenter.DataSync.Message\ConsumerClient\obj\Debug\Frxs.ServiceCenter.DataSync.Message.ConsumerClient.pdb

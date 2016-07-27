@@ -1,0 +1,9 @@
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Core.Data\bin\Debug\Frxs.ServiceCenter.Core.Data.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Core.Data\bin\Debug\Frxs.ServiceCenter.Core.Data.pdb
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Core.Data\bin\Debug\EntityFramework.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Core.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Core.Data\bin\Debug\EntityFramework.xml
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Core.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Core.Data\obj\Debug\Frxs.ServiceCenter.Core.Data.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Core.Data\obj\Debug\Frxs.ServiceCenter.Core.Data.pdb
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.ServiceCenter.Core.Data\obj\Debug\4.Frxs.ServiceCenter.Core.Data.csprojResolveAssemblyReference.cache

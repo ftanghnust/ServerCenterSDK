@@ -1,0 +1,484 @@
+﻿时  间：2016-03-08 11:06:02,175 [11] 
+级  别：DEBUG 
+关联类：Frxs.ServiceCenter.Api.Core.TextAccessRecorder.TextAccessRecorder [(null)] 
+
+==============API.BuildSDK=================
+ActionType:Frxs.ServiceCenter.Api.Core.Actions.BuildSDKAction
+RequestDtoType:Frxs.ServiceCenter.Api.Core.Actions.BuildSDKAction+BuildSDKActionRequestDto
+ResponseDtoType:Frxs.ServiceCenter.Api.Core.Actions.BuildSDKAction+BuildSDKActionResponseDto
+ActionFilters:System.Collections.Generic.List`1[Frxs.ServiceCenter.Api.Core.ActionFilterBaseAttribute]
+HttpMethod:POST, GET
+RequireHttps:False
+IsObsolete:False
+Version:
+Description:API.BuildSDK
+AuthorName:
+ActionResultCacheAttribute:
+ActionAuthenticationAttributes:System.Collections.Generic.List`1[Frxs.ServiceCenter.Api.Core.ActionAuthenticationBaseAttribute]
+RequiredUserIdAndUserName:False
+EnableAjaxRequest:False
+ActionName:API.BuildSDK
+==============Request/Response=================
+RequestStartTime:2016/3/8 11:06:01
+RequestEndTime:2016/3/8 11:06:02
+RequestUsedTotalMilliseconds:506.029
+HttpMethod:GET
+IP:::1
+RequestData:{ActionNames:["API.BuildSDK"]}
+ResponseData:<!--
+ *************************************************************
+ * FRXS(ISC) zhangliang4629@163.com 2016/03/02 9:20:12
+ * ***********************************************************
+ * 后续目标，自动生成接口文档到PDF，敬请期待（一件小事做到极致）
+ * ***********************************************************
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>API接口文档生成器-基于接口框架：7.3.60307.0</title>
+    <style type="text/css">
+        html { height: 100%; margin: 0px; }
+        body { height: 100%; width: 100%; background: #f4f4f4; color: #333; font: normal 12px/1.5 'Arial', 'SimSun', 'Tahoma', 'Helvetica', 'sans-serif','Consolas'; text-align: left; overflow-x: hidden; }
+        .header { padding: 0px; background: #C00; width: 100%; margin: 0px; border-bottom: 0px solid #E3E6EB; height: 40px; font-size: 18px; font-weight: bold; border-bottom: 1px solid #ccc; line-height: 40px; color: #ffffff; position: fixed; left: 0px; top: 0px; }
+        .header .lft { margin-left: 330px; }
+        .header .rgt { position: fixed; right: 0px; top: 0px; padding-right: 10px; font-size: 12px; }
+        .left { background: #305c9a; position: absolute; left: 0px; top: 0px; z-index: 2; width: 320px; height: auto; }
+        .left .top { height: 40px; line-height: 40px; background: #205081; position: fixed; left: 0; top: 0px; z-index: 3; width: 320px; text-align: left; font-weight: bold; color: #ffffff; }
+        .left ul { margin-top: 50px; }
+        .left ul li span { font: normal 9px/1.0 'Consolas', 'Arial', 'SimSun', 'Tahoma', 'Helvetica', 'sans-serif'; color: red; }
+        .right { width: 99%; overflow: hidden; padding-top: 40px; }
+        .right-content { margin-left: 330px; }
+        .right-content b { font-size: 26px; }
+        a { text-decoration: none; color: #ffffff; outline: 0; cursor: pointer; }
+        a:hover { color: #C00; text-decoration: underline; }
+        .header .rgt a:hover { color: #305c9a; text-decoration: underline; }
+    </style>
+</head>
+<body style="font-family: Consolas;">
+    <div class="header">
+        <div class="lft">API接口文档/SDK代码&nbsp;&nbsp;<span style="font-size: 9px">Powered by：V7.3.60307.0</span> </div>
+        <div class="rgt">
+            <a target="_blank" href="/Api?ActionName=API.BuildSDK&Format=view&data=%7bActionNames%3a%5b%5d%2csavetype%3a%22dll%22%7d">下载SDK开发包</a>&nbsp;|&nbsp;
+            下载SDK源码(<a target="_blank" href="/Api?ActionName=API.BuildSDK&Format=view&data=%7bActionNames%3a%5b%5d%2csavetype%3a%22source%22%7d">C#</a>，PHP,JAVA,Python)&nbsp;|&nbsp;
+            接口描述(<a target="_blank" href="/Api?ActionName=API.Help&Format=xml">Xml</a>,<a target="_blank" href="/Api?ActionName=API.Help&Format=json">Json</a>,<a target="_blank" href="/Api?ActionName=API.Help&Format=view">View</a>)
+        </div>
+    </div>
+    <div class="left">
+        <div class="top"><span style="margin-left: 28px; font-size: 13px;">API Numbers：8</span></div>
+        <ul>
+            <li style="color: #ffffff;">
+                <a href="/Api?ActionName=API.BuildSDK&Format=view&data=%7bactionnames%3a%5b%22API.BuildSDK%22%5d%7d">API.BuildSDK<!--（Frxs.ServiceCenter.Api.Core）--></a>
+            </li>
+            <li style="color: #ffffff;">
+                <a href="/Api?ActionName=API.BuildSDK&Format=view&data=%7bactionnames%3a%5b%22API.ERROR%22%5d%7d">API.ERROR<!--（Frxs.ServiceCenter.Api.Core）--></a>
+            </li>
+            <li style="color: #ffffff;">
+                <a href="/Api?ActionName=API.BuildSDK&Format=view&data=%7bactionnames%3a%5b%22API.Help%22%5d%7d">API.Help<!--（Frxs.ServiceCenter.Api.Core）--></a>
+            </li>
+            <li style="color: #ffffff;">
+                <a href="/Api?ActionName=API.BuildSDK&Format=view&data=%7bactionnames%3a%5b%22Frxs.Erp.Member.Test%22%5d%7d">Frxs.Erp.Member.Test<!--（Frxs.Erp.ServiceCenter.Member.Actions）--></a>
+            </li>
+            <li style="color: #ffffff;">
+                <a href="/Api?ActionName=API.BuildSDK&Format=view&data=%7bactionnames%3a%5b%22Frxs.Erp.Order.Test%22%5d%7d">Frxs.Erp.Order.Test<!--（Frxs.Erp.ServiceCenter.Order.Actions）--></a>
+            </li>
+            <li style="color: #ffffff;">
+                <a href="/Api?ActionName=API.BuildSDK&Format=view&data=%7bactionnames%3a%5b%22Frxs.Erp.Promotion.Test%22%5d%7d">Frxs.Erp.Promotion.Test<!--（Frxs.Erp.ServiceCenter.Promotion.Actions）--></a>
+            </li>
+            <li style="color: #ffffff;">
+                <a href="/Api?ActionName=API.BuildSDK&Format=view&data=%7bactionnames%3a%5b%22Frxs.Test.V20.API2%22%5d%7d">Frxs.Test.V20.API2<!--（Frxs.ServiceCenter.Api.Host）--></a>
+            </li>
+            <li style="color: #ffffff;">
+                <a href="/Api?ActionName=API.BuildSDK&Format=view&data=%7bactionnames%3a%5b%22Frxs.Test.V20.Order.Get%22%5d%7d">Frxs.Test.V20.Order.Get<!--（Frxs.ServiceCenter.Api.Host）--></a>
+            </li>
+        </ul>
+    </div>
+    <div class="right">
+        <div class="right-content">
+            <div style="width: 100%">
+                <b>Request:</b>
+                <hr />
+                <pre style="font-family: Consolas; line-height: 18px; font-size: 11px;">
+/*********************************************************
+* FRXS(ISC) System Auto-Generation At 2016-03-08 11:06:02
+* *********************************************************
+* Assembly:Frxs.ServiceCenter.Api.Core
+* *********************************************************
+* ActionAuthenticationAttributes:System.Collections.Generic.List`1[Frxs.ServiceCenter.Api.Core.ActionAuthenticationBaseAttribute]
+* ActionFilters:System.Collections.Generic.List`1[Frxs.ServiceCenter.Api.Core.ActionFilterBaseAttribute]
+* ActionName:API.BuildSDK
+* ActionResultCacheAttribute:
+* ActionType:Frxs.ServiceCenter.Api.Core.Actions.BuildSDKAction
+* AuthorName:
+* Description:API.BuildSDK
+* EnableAjaxRequest:False
+* HttpMethod:POST, GET
+* IsObsolete:False
+* RequestDtoType:Frxs.ServiceCenter.Api.Core.Actions.BuildSDKAction+BuildSDKActionRequestDto
+* RequiredUserIdAndUserName:False
+* RequireHttps:False
+* ResponseDtoType:Frxs.ServiceCenter.Api.Core.Actions.BuildSDKAction+BuildSDKActionResponseDto
+* Version:
+* *******************************************************/
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace Frxs.ServiceCenter.Api.SDK.V20.Request
+{
+	/// &lt;summary&gt;
+	/// 
+	/// &lt;/summary&gt;
+	public class APIBuildSDKRequest : RequestBase&lt;Resp.APIBuildSDKResp&gt; 
+	{
+		/// &lt;summary&gt;
+		/// 
+		/// System.ComponentModel.DataAnnotations.DisplayAttribute
+		/// &lt;/summary&gt;
+		public IList&lt;string&gt; ActionNames { get; set; }
+		/// &lt;summary&gt;
+		/// 
+		/// System.ComponentModel.DataAnnotations.DisplayAttribute
+		/// &lt;/summary&gt;
+		public string SaveType { get; set; }
+		/// &lt;summary&gt;
+		/// 调用接口名称，API.BuildSDK
+		/// &lt;/summary&gt;
+		/// &lt;returns&gt;&lt;/returns&gt;
+		public override string GetApiName()
+		{
+			return &quot;API.BuildSDK&quot;;
+		}
+		/// &lt;summary&gt;
+		/// 请求参数json化
+		/// &lt;returns&gt;&lt;/returns&gt;
+		public override string GetRequestJsonData()
+		{
+			return new { this.ActionNames,this.SaveType,this.UserId,this.UserName }.ToJson();
+		}
+	}
+} </pre>
+            </div>
+            <hr style="border: 2px solid; color: red;" />
+            <div style="width: 100%">
+                <b>Response:</b>
+                <hr />
+                <pre style="font-family: Consolas; line-height: 18px; font-size: 11px;">
+/*********************************************************
+* FRXS(ISC) System Auto-Generation At 2016-03-08 11:06:02
+* *********************************************************
+* Assembly:Frxs.ServiceCenter.Api.Core
+* *********************************************************
+* ActionAuthenticationAttributes:System.Collections.Generic.List`1[Frxs.ServiceCenter.Api.Core.ActionAuthenticationBaseAttribute]
+* ActionFilters:System.Collections.Generic.List`1[Frxs.ServiceCenter.Api.Core.ActionFilterBaseAttribute]
+* ActionName:API.BuildSDK
+* ActionResultCacheAttribute:
+* ActionType:Frxs.ServiceCenter.Api.Core.Actions.BuildSDKAction
+* AuthorName:
+* Description:API.BuildSDK
+* EnableAjaxRequest:False
+* HttpMethod:POST, GET
+* IsObsolete:False
+* RequestDtoType:Frxs.ServiceCenter.Api.Core.Actions.BuildSDKAction+BuildSDKActionRequestDto
+* RequiredUserIdAndUserName:False
+* RequireHttps:False
+* ResponseDtoType:Frxs.ServiceCenter.Api.Core.Actions.BuildSDKAction+BuildSDKActionResponseDto
+* Version:
+* *******************************************************/
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace Frxs.ServiceCenter.Api.SDK.V20.Resp
+{
+	/// &lt;summary&gt;
+	/// 
+	/// &lt;/summary&gt;
+	public class APIBuildSDKResp : ResponseBase 
+	{
+		/// &lt;summary&gt;
+		///   
+		/// &lt;summary&gt;
+		public APIBuildSDKRespData Data { get; set; }
+		/// &lt;summary&gt;
+		/// 
+		/// &lt;/summary&gt;
+		public class APIBuildSDKRespData
+		{
+			/// &lt;summary&gt;
+			/// 
+			/// &lt;/summary&gt;
+			public IActionSelector ActionSelector { get; set; }
+			/// &lt;summary&gt;
+			/// 
+			/// &lt;/summary&gt;
+			public string SDKSource { get; set; }
+			/// &lt;summary&gt;
+			/// 
+			/// &lt;/summary&gt;
+			public string RequestSource { get; set; }
+			/// &lt;summary&gt;
+			/// 
+			/// &lt;/summary&gt;
+			public string ResponseSource { get; set; }
+			/// &lt;summary&gt;
+			/// 
+			/// &lt;/summary&gt;
+			public string SdkNamespace { get; set; }
+			/// &lt;summary&gt;
+			/// 
+			/// &lt;/summary&gt;
+			public string Version { get; set; }
+		}
+		/// &lt;summary&gt;
+		/// 
+		/// &lt;/summary&gt;
+		public class IActionSelector
+		{
+		}
+	}
+} </pre>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+ResponseFormat:VIEW
+UserId:0
+UserName:
+ 
+时  间：2016-03-08 11:06:09,444 [8] 
+级  别：DEBUG 
+关联类：Frxs.ServiceCenter.Api.Core.TextAccessRecorder.TextAccessRecorder [(null)] 
+
+==============API.BuildSDK=================
+ActionType:Frxs.ServiceCenter.Api.Core.Actions.BuildSDKAction
+RequestDtoType:Frxs.ServiceCenter.Api.Core.Actions.BuildSDKAction+BuildSDKActionRequestDto
+ResponseDtoType:Frxs.ServiceCenter.Api.Core.Actions.BuildSDKAction+BuildSDKActionResponseDto
+ActionFilters:System.Collections.Generic.List`1[Frxs.ServiceCenter.Api.Core.ActionFilterBaseAttribute]
+HttpMethod:POST, GET
+RequireHttps:False
+IsObsolete:False
+Version:
+Description:API.BuildSDK
+AuthorName:
+ActionResultCacheAttribute:
+ActionAuthenticationAttributes:System.Collections.Generic.List`1[Frxs.ServiceCenter.Api.Core.ActionAuthenticationBaseAttribute]
+RequiredUserIdAndUserName:False
+EnableAjaxRequest:False
+ActionName:API.BuildSDK
+==============Request/Response=================
+RequestStartTime:2016/3/8 11:06:09
+RequestEndTime:2016/3/8 11:06:09
+RequestUsedTotalMilliseconds:24.0014
+HttpMethod:GET
+IP:::1
+RequestData:{actionnames:["Frxs.Erp.Order.Test"]}
+ResponseData:<!--
+ *************************************************************
+ * FRXS(ISC) zhangliang4629@163.com 2016/03/02 9:20:12
+ * ***********************************************************
+ * 后续目标，自动生成接口文档到PDF，敬请期待（一件小事做到极致）
+ * ***********************************************************
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>API接口文档生成器-基于接口框架：7.3.60307.0</title>
+    <style type="text/css">
+        html { height: 100%; margin: 0px; }
+        body { height: 100%; width: 100%; background: #f4f4f4; color: #333; font: normal 12px/1.5 'Arial', 'SimSun', 'Tahoma', 'Helvetica', 'sans-serif','Consolas'; text-align: left; overflow-x: hidden; }
+        .header { padding: 0px; background: #C00; width: 100%; margin: 0px; border-bottom: 0px solid #E3E6EB; height: 40px; font-size: 18px; font-weight: bold; border-bottom: 1px solid #ccc; line-height: 40px; color: #ffffff; position: fixed; left: 0px; top: 0px; }
+        .header .lft { margin-left: 330px; }
+        .header .rgt { position: fixed; right: 0px; top: 0px; padding-right: 10px; font-size: 12px; }
+        .left { background: #305c9a; position: absolute; left: 0px; top: 0px; z-index: 2; width: 320px; height: auto; }
+        .left .top { height: 40px; line-height: 40px; background: #205081; position: fixed; left: 0; top: 0px; z-index: 3; width: 320px; text-align: left; font-weight: bold; color: #ffffff; }
+        .left ul { margin-top: 50px; }
+        .left ul li span { font: normal 9px/1.0 'Consolas', 'Arial', 'SimSun', 'Tahoma', 'Helvetica', 'sans-serif'; color: red; }
+        .right { width: 99%; overflow: hidden; padding-top: 40px; }
+        .right-content { margin-left: 330px; }
+        .right-content b { font-size: 26px; }
+        a { text-decoration: none; color: #ffffff; outline: 0; cursor: pointer; }
+        a:hover { color: #C00; text-decoration: underline; }
+        .header .rgt a:hover { color: #305c9a; text-decoration: underline; }
+    </style>
+</head>
+<body style="font-family: Consolas;">
+    <div class="header">
+        <div class="lft">API接口文档/SDK代码&nbsp;&nbsp;<span style="font-size: 9px">Powered by：V7.3.60307.0</span> </div>
+        <div class="rgt">
+            <a target="_blank" href="/Api?ActionName=API.BuildSDK&Format=view&data=%7bActionNames%3a%5b%5d%2csavetype%3a%22dll%22%7d">下载SDK开发包</a>&nbsp;|&nbsp;
+            下载SDK源码(<a target="_blank" href="/Api?ActionName=API.BuildSDK&Format=view&data=%7bActionNames%3a%5b%5d%2csavetype%3a%22source%22%7d">C#</a>，PHP,JAVA,Python)&nbsp;|&nbsp;
+            接口描述(<a target="_blank" href="/Api?ActionName=API.Help&Format=xml">Xml</a>,<a target="_blank" href="/Api?ActionName=API.Help&Format=json">Json</a>,<a target="_blank" href="/Api?ActionName=API.Help&Format=view">View</a>)
+        </div>
+    </div>
+    <div class="left">
+        <div class="top"><span style="margin-left: 28px; font-size: 13px;">API Numbers：8</span></div>
+        <ul>
+            <li style="color: #ffffff;">
+                <a href="/Api?ActionName=API.BuildSDK&Format=view&data=%7bactionnames%3a%5b%22API.BuildSDK%22%5d%7d">API.BuildSDK<!--（Frxs.ServiceCenter.Api.Core）--></a>
+            </li>
+            <li style="color: #ffffff;">
+                <a href="/Api?ActionName=API.BuildSDK&Format=view&data=%7bactionnames%3a%5b%22API.ERROR%22%5d%7d">API.ERROR<!--（Frxs.ServiceCenter.Api.Core）--></a>
+            </li>
+            <li style="color: #ffffff;">
+                <a href="/Api?ActionName=API.BuildSDK&Format=view&data=%7bactionnames%3a%5b%22API.Help%22%5d%7d">API.Help<!--（Frxs.ServiceCenter.Api.Core）--></a>
+            </li>
+            <li style="color: #ffffff;">
+                <a href="/Api?ActionName=API.BuildSDK&Format=view&data=%7bactionnames%3a%5b%22Frxs.Erp.Member.Test%22%5d%7d">Frxs.Erp.Member.Test<!--（Frxs.Erp.ServiceCenter.Member.Actions）--></a>
+            </li>
+            <li style="color: #ffffff;">
+                <a href="/Api?ActionName=API.BuildSDK&Format=view&data=%7bactionnames%3a%5b%22Frxs.Erp.Order.Test%22%5d%7d">Frxs.Erp.Order.Test<!--（Frxs.Erp.ServiceCenter.Order.Actions）--></a>
+            </li>
+            <li style="color: #ffffff;">
+                <a href="/Api?ActionName=API.BuildSDK&Format=view&data=%7bactionnames%3a%5b%22Frxs.Erp.Promotion.Test%22%5d%7d">Frxs.Erp.Promotion.Test<!--（Frxs.Erp.ServiceCenter.Promotion.Actions）--></a>
+            </li>
+            <li style="color: #ffffff;">
+                <a href="/Api?ActionName=API.BuildSDK&Format=view&data=%7bactionnames%3a%5b%22Frxs.Test.V20.API2%22%5d%7d">Frxs.Test.V20.API2<!--（Frxs.ServiceCenter.Api.Host）--></a>
+            </li>
+            <li style="color: #ffffff;">
+                <a href="/Api?ActionName=API.BuildSDK&Format=view&data=%7bactionnames%3a%5b%22Frxs.Test.V20.Order.Get%22%5d%7d">Frxs.Test.V20.Order.Get<!--（Frxs.ServiceCenter.Api.Host）--></a>
+            </li>
+        </ul>
+    </div>
+    <div class="right">
+        <div class="right-content">
+            <div style="width: 100%">
+                <b>Request:</b>
+                <hr />
+                <pre style="font-family: Consolas; line-height: 18px; font-size: 11px;">
+/*********************************************************
+* FRXS(ISC) System Auto-Generation At 2016-03-08 11:06:09
+* *********************************************************
+* Assembly:Frxs.Erp.ServiceCenter.Order.Actions
+* *********************************************************
+* ActionAuthenticationAttributes:System.Collections.Generic.List`1[Frxs.ServiceCenter.Api.Core.ActionAuthenticationBaseAttribute]
+* ActionFilters:System.Collections.Generic.List`1[Frxs.ServiceCenter.Api.Core.ActionFilterBaseAttribute]
+* ActionName:Frxs.Erp.Order.Test
+* ActionResultCacheAttribute:
+* ActionType:Frxs.Erp.ServiceCenter.Order.Actions.TestActio3n
+* AuthorName:
+* Description:Frxs.Erp.Order.Test
+* EnableAjaxRequest:False
+* HttpMethod:POST, GET
+* IsObsolete:False
+* RequestDtoType:Frxs.Erp.ServiceCenter.Order.Actions.TestRequestDto
+* RequiredUserIdAndUserName:False
+* RequireHttps:False
+* ResponseDtoType:System.Collections.Generic.IList`1[Frxs.Erp.ServiceCenter.Order.Actions.A]
+* Version:
+* *******************************************************/
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace Frxs.ServiceCenter.Api.SDK.V20.Request
+{
+	/// &lt;summary&gt;
+	/// 
+	/// &lt;/summary&gt;
+	public class FrxsErpOrderTestRequest : RequestBase&lt;Resp.FrxsErpOrderTestResp&gt; 
+	{
+		/// &lt;summary&gt;
+		/// 
+		/// &lt;/summary&gt;
+		public string Key { get; set; }
+		/// &lt;summary&gt;
+		/// 调用接口名称，Frxs.Erp.Order.Test
+		/// &lt;/summary&gt;
+		/// &lt;returns&gt;&lt;/returns&gt;
+		public override string GetApiName()
+		{
+			return &quot;Frxs.Erp.Order.Test&quot;;
+		}
+		/// &lt;summary&gt;
+		/// 请求参数json化
+		/// &lt;returns&gt;&lt;/returns&gt;
+		public override string GetRequestJsonData()
+		{
+			return new { this.Key,this.UserId,this.UserName }.ToJson();
+		}
+	}
+} </pre>
+            </div>
+            <hr style="border: 2px solid; color: red;" />
+            <div style="width: 100%">
+                <b>Response:</b>
+                <hr />
+                <pre style="font-family: Consolas; line-height: 18px; font-size: 11px;">
+/*********************************************************
+* FRXS(ISC) System Auto-Generation At 2016-03-08 11:06:09
+* *********************************************************
+* Assembly:Frxs.Erp.ServiceCenter.Order.Actions
+* *********************************************************
+* ActionAuthenticationAttributes:System.Collections.Generic.List`1[Frxs.ServiceCenter.Api.Core.ActionAuthenticationBaseAttribute]
+* ActionFilters:System.Collections.Generic.List`1[Frxs.ServiceCenter.Api.Core.ActionFilterBaseAttribute]
+* ActionName:Frxs.Erp.Order.Test
+* ActionResultCacheAttribute:
+* ActionType:Frxs.Erp.ServiceCenter.Order.Actions.TestActio3n
+* AuthorName:
+* Description:Frxs.Erp.Order.Test
+* EnableAjaxRequest:False
+* HttpMethod:POST, GET
+* IsObsolete:False
+* RequestDtoType:Frxs.Erp.ServiceCenter.Order.Actions.TestRequestDto
+* RequiredUserIdAndUserName:False
+* RequireHttps:False
+* ResponseDtoType:System.Collections.Generic.IList`1[Frxs.Erp.ServiceCenter.Order.Actions.A]
+* Version:
+* *******************************************************/
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace Frxs.ServiceCenter.Api.SDK.V20.Resp
+{
+	/// &lt;summary&gt;
+	/// 
+	/// &lt;/summary&gt;
+	public class FrxsErpOrderTestResp : ResponseBase 
+	{
+		/// &lt;summary&gt;
+		///   
+		/// &lt;summary&gt;
+		public IList&lt;FrxsErpOrderTestRespData&gt; Data { get; set; }
+		/// &lt;summary&gt;
+		/// 
+		/// &lt;/summary&gt;
+		public class FrxsErpOrderTestRespData
+		{
+			/// &lt;summary&gt;
+			/// 
+			/// &lt;/summary&gt;
+			public string Name { get; set; }
+			/// &lt;summary&gt;
+			/// 
+			/// &lt;/summary&gt;
+			public B B { get; set; }
+		}
+		/// &lt;summary&gt;
+		/// 
+		/// &lt;/summary&gt;
+		public class B
+		{
+			/// &lt;summary&gt;
+			/// 
+			/// &lt;/summary&gt;
+			public int Age { get; set; }
+		}
+	}
+} </pre>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+ResponseFormat:VIEW
+UserId:0
+UserName:
+ 

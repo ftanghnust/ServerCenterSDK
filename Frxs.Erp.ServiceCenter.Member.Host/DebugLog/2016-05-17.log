@@ -1,0 +1,12 @@
+
+2016/5/17 9:44:47
+[内容]计时开始
+[源]Frxs.Erp.ServiceCenter.Member.Host.ApiHostApplication.Application_Start
+[操作]应用程序启动事件执行开始
+[IP]localhost
+
+2016/5/17 9:44:49
+[内容]计时结束，耗时2178毫秒
+[源]Frxs.Erp.ServiceCenter.Member.Host.ApiHostApplication.Application_Start
+[操作]应用程序启动事件执行结束
+[IP]localhost

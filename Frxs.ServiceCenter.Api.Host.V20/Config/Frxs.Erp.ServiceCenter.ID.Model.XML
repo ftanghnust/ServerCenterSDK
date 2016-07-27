@@ -1,0 +1,488 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Frxs.Erp.ServiceCenter.ID.Model</name>
+    </assembly>
+    <members>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog">
+            <summary>
+            XSOperatorLog实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.IPAddress">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.WID">
+            <summary>
+            仓库ID(为0时，代表为总部)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuID">
+            <summary>
+            模块编号(找不到时; 填0:参见SysMenu.MenuID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuName">
+            <summary>
+            模块名称(找不到时:填其他;参见SysMenu.MenuName
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.Action">
+            <summary>
+            动作:即按下单据表头按钮的名称或基本资料的按钮名称(登录;退出;添加;编辑;删除;确认;反确认;过帐;结算;打印;停用;立即生效;....)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.Remark">
+            <summary>
+            对[1050001,10006]完成了过帐;对[00891]商品进行了删除;
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.OperatorID">
+            <summary>
+            操作用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.OperatorName">
+            <summary>
+            操作用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum">
+            <summary>
+            菜单ID
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_1">
+            <summary>
+            基本资料
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_2">
+            <summary>
+            商品管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_3">
+            <summary>
+            订单管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_4">
+            <summary>
+            促销管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_5">
+            <summary>
+            采购管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_6">
+            <summary>
+            财务管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_7">
+            <summary>
+            库存盘点
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_18">
+            <summary>
+            统计报表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_1A">
+            <summary>
+            仓库基本资料
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_1B">
+            <summary>
+            门店管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_1C">
+            <summary>
+            送货线路管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_1D">
+            <summary>
+            门店分组管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_1E">
+            <summary>
+            货区管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_1F">
+            <summary>
+            货位管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_1G">
+            <summary>
+            帐户管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_1H">
+            <summary>
+            拣货员管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_1Z">
+            <summary>
+            业务参数设定
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_2A">
+            <summary>
+            商品加入
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_2B">
+            <summary>
+            供应商管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_2C">
+            <summary>
+            商品管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_2D">
+            <summary>
+            配送价格调整单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_2E">
+            <summary>
+            进货价格调整单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_2F">
+            <summary>
+            费率积分调整单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_2G">
+            <summary>
+            门店平台费率调整单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_2H">
+            <summary>
+            门店商品限购单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_2I">
+            <summary>
+            商品货位调整单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_3A">
+            <summary>
+            订货平台预订单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_3B">
+            <summary>
+            销售订单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_3C">
+            <summary>
+            商品批量推荐
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_3D">
+            <summary>
+            待装区管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_3E">
+            <summary>
+            门店排单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_3F">
+            <summary>
+            发货顺序调整
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_3G">
+            <summary>
+            销售退货单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_4A">
+            <summary>
+            商品加入
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_4B">
+            <summary>
+            信息管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_4C">
+            <summary>
+            门店积分促销单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_5B">
+            <summary>
+            采购收货单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_5C">
+            <summary>
+            采购退货单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_5D">
+            <summary>
+            返配申请单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_5E">
+            <summary>
+            补货申请单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_6A">
+            <summary>
+            门店结算单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_6B">
+            <summary>
+            门店费用单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_7A">
+            <summary>
+            盘点计划
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_7B">
+            <summary>
+            盘点单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_7C">
+            <summary>
+            漏盘商品检查
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_7H">
+            <summary>
+            盘盈盘亏报表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_7D">
+            <summary>
+            盘点单确认
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_7E">
+            <summary>
+            盘盈单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_7F">
+            <summary>
+            盘亏单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_18A">
+            <summary>
+            采购商品汇总
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_18B">
+            <summary>
+            采购入库采购退货汇总
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_18C">
+            <summary>
+            采购入库采购退货明细
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_18D">
+            <summary>
+            业务分析报表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_18E">
+            <summary>
+            客户销售情况汇总表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_18F">
+            <summary>
+            库存状态查询
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_18G">
+            <summary>
+            商品明细帐
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_18H">
+            <summary>
+            批发价调整金额差异
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_18I">
+            <summary>
+            门店费用单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.WMS_18J">
+            <summary>
+            收款单汇总
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.MS_1">
+            <summary>
+            基本设定
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.MS_2">
+            <summary>
+            商品资料
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.MS_1A">
+            <summary>
+            仓库管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.MS_1B">
+            <summary>
+            门店管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.MS_1C">
+            <summary>
+            供应商管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.MS_2A">
+            <summary>
+            基本分类
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.MS_2B">
+            <summary>
+            运营分类
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.MS_2C">
+            <summary>
+            商品添加
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.MS_2E">
+            <summary>
+            品牌管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.MS_2D">
+            <summary>
+            商品管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.MS_2F">
+            <summary>
+            商品规格
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.XSOperatorLog.MenuIDEnum.MS_2H">
+            <summary>
+            供应商类型
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.Model.IDTypes">
+            <summary>
+            获取ID类型
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.IDTypes.BuyBack">
+            <summary>
+            采购退货单据服务ID表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.IDTypes.BuyOrder">
+            <summary>
+            采购单据服务ID表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.IDTypes.CheckStock">
+            <summary>
+            库存盘点库单据服务ID表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.IDTypes.CheckStockPlan">
+            <summary>
+            库存盘点库计划单据服务ID表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.IDTypes.FeeID">
+            <summary>
+            销售库费用单据服务ID表2
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.IDTypes.SaleBack">
+            <summary>
+            销售库退货单据服务ID表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.IDTypes.SaleEdit">
+            <summary>
+            销售库销售订单修改服务ID表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.IDTypes.SaleOrder">
+            <summary>
+            销售库单据服务ID表(预订，订单，共用)
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.IDTypes.SaleSettle">
+            <summary>
+            销售库结算单据服务ID表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.IDTypes.StockAdj">
+            <summary>
+            库存盘点库调整服务ID表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.IDTypes.BaseInfoID">
+            <summary>
+            基础通用单据编号
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.Model.IDTypes.ShelfAdjust">
+            <summary>
+            货位调整单
+            </summary>
+        </member>
+    </members>
+</doc>

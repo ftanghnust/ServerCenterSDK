@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DATABASES>
+  <DATABASE name="IDSERVICE">
+    <TABLE name="表名" desc="表描述">
+      <SQL name="脚本名"></SQL>
+    </TABLE>
+    <TABLE name="XSOperatorLog" desc="">
+      <SQL name="Save">
+        INSERT INTO XSOperatorLog ( IPAddress, WID, MenuID, MenuName, Action, Remark, OperatorID, OperatorName, CreateTime )VALUES( @IPAddress,@WID,@MenuID,@MenuName,@Action,@Remark,@OperatorID,@OperatorName,@CreateTime);
+      </SQL>
+      <SQL name="GetXSOperatorLogMenu">
+        SELECT DISTINCT MenuID,MenuName FROM XSOperatorLog ORDER BY MenuID
+      </SQL>
+    </TABLE>
+  </DATABASE>
+</DATABASES>

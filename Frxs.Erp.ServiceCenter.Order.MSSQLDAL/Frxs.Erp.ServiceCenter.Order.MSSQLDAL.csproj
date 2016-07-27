@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0926C1F2-1991-4706-8DF2-75A70B05BBA7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Frxs.Erp.ServiceCenter.Order.MSSQLDAL</RootNamespace>
+    <AssemblyName>Frxs.Erp.ServiceCenter.Order.MSSQLDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDAL.cs" />
+    <Compile Include="BuyPreApp\BuyPreAppDAO.cs" />
+    <Compile Include="BuyPreApp\BuyPreAppBillsDAO.cs" />
+    <Compile Include="BuyPreApp\BuyPreAppDetailsDAO.cs" />
+    <Compile Include="BuyPreApp\BuyPreAppDetailsExtDAO.cs" />
+    <Compile Include="Order\Stock\StockMangerDAO.cs" />
+    <Compile Include="Order\Stock\StockQueryDAO.cs" />
+    <Compile Include="Order\仓库订单\SaleEditDetailsExtDAO.cs" />
+    <Compile Include="Order\仓库订单\SaleEditDetailsDAO.cs" />
+    <Compile Include="Order\仓库订单\SaleEditOrdersDAO.cs" />
+    <Compile Include="Order\仓库订单\SaleEditDAO.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderSendNumberOrderDAO.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderShelfAreaDAO.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderPackingDAO.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderDetailsPickDAO.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderPreDetailsPickDAO.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderPreShelfAreaDAO.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderTrackDAO.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderSendNumberDAO.cs" />
+    <Compile Include="Order\仓库订单\vSaleOrderDAO.cs" />
+    <Compile Include="Report\ReportBuyOrderDetailsDAO.cs" />
+    <Compile Include="Report\ReportDAO.cs" />
+    <Compile Include="Report\SyncReportDAO.cs" />
+    <Compile Include="SaleOrderPrePacking\SaleOrderPrePackingDAO.cs" />
+    <Compile Include="SaleSettleDetail\SaleSettleDetailDAO.cs" />
+    <Compile Include="SaleSettle\SaleSettleDAO.cs" />
+    <Compile Include="SettlementDetail\SettlementDetailDAO.cs" />
+    <Compile Include="Settlement\SettlementDAO.cs" />
+    <Compile Include="Shop\ShopBillExtDAO.cs" />
+    <Compile Include="SqlParamrterBuilder.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderPreDetailsExtDAO.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderPreDetailsDAO.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderPreDAO.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderDetailsExtDAO.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderDetailsDAO.cs" />
+    <Compile Include="Order\仓库订单\SaleOrderDAO.cs" />
+    <Compile Include="Order\销售退货\SaleBackDAO.cs" />
+    <Compile Include="Order\销售退货\SaleBackDetailsDAO.cs" />
+    <Compile Include="Order\销售退货\SaleBackDetailsExtDAO.cs" />
+    <Compile Include="Order\销售退货\SaleBackPreDAO.cs" />
+    <Compile Include="Order\销售退货\SaleBackPreDetailsDAO.cs" />
+    <Compile Include="Order\销售退货\SaleBackPreDetailsExtDAO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchase\采购订单\BuyOrderDAO.cs" />
+    <Compile Include="Purchase\采购订单\BuyOrderDetailsDAO.cs" />
+    <Compile Include="Purchase\采购订单\BuyOrderDetailsExtDAO.cs" />
+    <Compile Include="Purchase\采购订单\BuyOrderPreDetailsExtDAO.cs" />
+    <Compile Include="Purchase\采购退货\BuyBackDetailsExtDAO.cs" />
+    <Compile Include="Purchase\采购退货\BuyBackDAO.cs" />
+    <Compile Include="Purchase\采购退货\BuyBackDetailsDAO.cs" />
+    <Compile Include="Purchase\采购订单\BuyOrderPreDAO.cs" />
+    <Compile Include="Purchase\采购订单\BuyOrderPreDetailsDAO.cs" />
+    <Compile Include="Purchase\采购退货\BuyBackPreDAO.cs" />
+    <Compile Include="Purchase\采购退货\BuyBackPreDetailsDAO.cs" />
+    <Compile Include="Purchase\采购退货\BuyBackPreDetailsExtDAO.cs" />
+    <Compile Include="SaleFee\门店费用\SaleFeeDAO.cs" />
+    <Compile Include="SaleFee\门店费用\SaleFeeDetailsDAO.cs" />
+    <Compile Include="SaleFee\门店费用\SaleFeePreDAO.cs" />
+    <Compile Include="SaleFee\门店费用\SaleFeePreDetailsDAO.cs" />
+    <Compile Include="Stock\StockAdjDAO.cs" />
+    <Compile Include="Stock\StockAdjDetailDAO.cs" />
+    <Compile Include="Stock\StockAdjDetailsExtDAO.cs" />
+    <Compile Include="Warehouse\WarehouseBillExtDAO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Frxs.Platform\Frxs.Platform.Cache.Model\Frxs.Platform.Cache.Model.csproj">
+      <Project>{3159095c-7e84-4ee9-b98b-d4949d30d2b8}</Project>
+      <Name>Frxs.Platform.Cache.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frxs.Platform\Frxs.Platform.Cache.Provide\Frxs.Platform.Cache.Provide.csproj">
+      <Project>{934e227e-2a38-46ee-b09a-f4709e0e58bc}</Project>
+      <Name>Frxs.Platform.Cache.Provide</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frxs.Platform\Frxs.Platform.DBUtility\Frxs.Platform.DBUtility.csproj">
+      <Project>{b31819e0-044a-4458-ad15-bebf0dfdb7bd}</Project>
+      <Name>Frxs.Platform.DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Frxs.Platform\Frxs.Platform.Utility\Frxs.Platform.Utility.csproj">
+      <Project>{0c08602c-3a43-48ba-ac95-d18c21217165}</Project>
+      <Name>Frxs.Platform.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.Erp.ServiceCenter.Order.IDAL\Frxs.Erp.ServiceCenter.Order.IDAL.csproj">
+      <Project>{bccaeab9-3e63-4c39-aec7-35be8315c243}</Project>
+      <Name>Frxs.Erp.ServiceCenter.Order.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Frxs.Erp.ServiceCenter.Order.Model\Frxs.Erp.ServiceCenter.Order.Model.csproj">
+      <Project>{460f8bf2-e6bb-4da7-980f-ae2bfb748c46}</Project>
+      <Name>Frxs.Erp.ServiceCenter.Order.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Config\SQLScripts.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

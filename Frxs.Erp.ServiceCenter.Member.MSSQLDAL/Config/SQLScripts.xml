@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DATABASES>
+  <DATABASE name="FRXS_ERP_USER">    
+    <TABLE name="XSUser" desc="兴盛用户表(B2B,O2O,线下会员)">
+      <SQL name="Exists">
+        SELECT COUNT(1) FROM XSUser WHERE XSUserID=@XSUserID
+      </SQL>
+      <SQL name="Save">
+        INSERT INTO XSUser ( XSUserName, UserAccount, UserType, UserMobile, Password, PasswordSalt, IsFrozen, IsLocked, IsDeleted, LastLoginTime, LastPasswordChangeTime, FailedPasswordCount, FailedPasswordLockTime, CreateTime, CreateUserID, CreateUserName, ModifyTime, ModifyUserID, ModifyUserName )VALUES( @XSUserName,@UserAccount,@UserType,@UserMobile,@Password,@PasswordSalt,@IsFrozen,@IsLocked,@IsDeleted,@LastLoginTime,@LastPasswordChangeTime,@FailedPasswordCount,@FailedPasswordLockTime,@CreateTime,@CreateUserID,@CreateUserName,@ModifyTime,@ModifyUserID,@ModifyUserName);SELECT SCOPE_IDENTITY();
+      </SQL>
+      <SQL name="Edit">
+        UPDATE XSUser SET XSUserName=@XSUserName,UserAccount=@UserAccount,UserType=@UserType,UserMobile=@UserMobile,Password=@Password,PasswordSalt=@PasswordSalt,IsFrozen=@IsFrozen,IsLocked=@IsLocked,IsDeleted=@IsDeleted,LastLoginTime=@LastLoginTime,LastPasswordChangeTime=@LastPasswordChangeTime,FailedPasswordCount=@FailedPasswordCount,FailedPasswordLockTime=@FailedPasswordLockTime,ModifyTime=@ModifyTime,ModifyUserID=@ModifyUserID,ModifyUserName=@ModifyUserName WHERE XSUserID=@XSUserID
+      </SQL>
+      <SQL name="Delete">
+        DELETE FROM XSUser WHERE XSUserID=@XSUserID
+      </SQL>
+      <SQL name="LogicDelete">
+        UPDATE XSUser SET IsDeleted=1 WHERE XSUserID=@XSUserID
+      </SQL>
+      <SQL name="Read">
+        SELECT XSUserID,XSUserName,UserAccount,UserType,UserMobile,Password,PasswordSalt,IsFrozen,IsLocked,IsDeleted,LastLoginTime,LastPasswordChangeTime,FailedPasswordCount,FailedPasswordLockTime,CreateTime,CreateUserID,CreateUserName,ModifyTime,ModifyUserID,ModifyUserName FROM XSUser
+      </SQL>
+      <SQL name="GetModelById">
+        SELECT XSUserID,XSUserName,UserAccount,UserType,UserMobile,Password,PasswordSalt,IsFrozen,IsLocked,IsDeleted,LastLoginTime,LastPasswordChangeTime,FailedPasswordCount,FailedPasswordLockTime,CreateTime,CreateUserID,CreateUserName,ModifyTime,ModifyUserID,ModifyUserName FROM XSUser WHERE XSUserID=@XSUserID
+      </SQL>
+      <SQL name="GetModelByAccount">
+        <![CDATA[
+          SELECT XSUserID,XSUserName,UserAccount,UserType,UserMobile,Password,PasswordSalt,IsFrozen,IsLocked,IsDeleted,LastLoginTime,LastPasswordChangeTime,FailedPasswordCount,FailedPasswordLockTime,CreateTime,CreateUserID,CreateUserName,ModifyTime,ModifyUserID,ModifyUserName FROM XSUser WHERE UserAccount=@UserAccount and IsDeleted = 0
+        ]]>        
+      </SQL>
+      <SQL name="ExistsAccount">
+        <![CDATA[
+          SELECT COUNT(1) FROM XSUser WHERE UserAccount=@UserAccount and IsDeleted = 0
+        ]]>
+      </SQL>
+    </TABLE>
+
+
+    <TABLE name="XSUserShop" desc="兴盛用户门店表">
+      <SQL name="Exists">
+        SELECT COUNT(1) FROM XSUserShop WHERE ID=@ID
+      </SQL>
+      <SQL name="ExistsShopID">
+        SELECT COUNT(1) FROM XSUserShop WHERE ShopID=@ShopID
+      </SQL>
+      <SQL name="Save">
+        INSERT INTO XSUserShop ( XSUserID, ShopID, CreateTime, CreateUserID, CreateUserName )VALUES( @XSUserID,@ShopID,@CreateTime,@CreateUserID,@CreateUserName);SELECT SCOPE_IDENTITY();
+      </SQL>
+      <SQL name="Edit">
+        UPDATE XSUserShop SET XSUserID=@XSUserID,ShopID=@ShopID WHERE ID=@ID
+      </SQL>
+      <SQL name="Delete">
+        DELETE FROM XSUserShop WHERE ID=@ID
+      </SQL>
+      <SQL name="DeleteByShopID">
+        DELETE FROM XSUserShop WHERE ShopID=@ShopID
+      </SQL>
+      <SQL name="LogicDelete">
+        UPDATE XSUserShop SET IsDeleted=1 WHERE ID=@ID
+      </SQL>
+      <SQL name="Read">
+        SELECT ID,XSUserID,ShopID,CreateTime,CreateUserID,CreateUserName FROM XSUserShop
+      </SQL>
+      <SQL name="GetModelById">
+        SELECT ID,XSUserID,ShopID,CreateTime,CreateUserID,CreateUserName FROM XSUserShop WHERE ID=@ID
+      </SQL>
+    </TABLE>
+    
+  </DATABASE>
+</DATABASES>

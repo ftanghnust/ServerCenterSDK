@@ -1,0 +1,18 @@
+
+2016/5/18 8:19:25
+[操作]Frxs.Erp.ServiceCenter.Product.MSSQLDAL.ShopGroup.GetPageList
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]SELECT groupid,groupcode,wid,groupname,remark,createuserid,createusername,shopnum,createtime FROM (SELECT  TOP 20 groupid,groupcode,wid,groupname,remark,createuserid,createusername,shopnum,createtime FROM (SELECT ROW_NUMBER() OVER (ORDER BY CreateTime desc ) AS row_no,GroupID,GroupCode,WID,GroupName,Remark,CreateUserID,CreateUserName,ShopNum,CreateTime FROM (select *,(select COUNT(0) from ShopGroupDetails as d where s.GroupID=d.GroupID) as ShopNum from shopgroup as s where IsDeleted=0) a WHERE  1=1  AND WID = 105) AS tempTable WHERE row_no>0 ORDER BY row_no ) AS tmp
+System.IndexOutOfRangeException: IsDeleted
+   在 System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   在 System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.ShopGroupDAO.GetPageList(PageListBySql`1 page, IDictionary`2 conditionDict) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\ShopGroupDAO.cs:行号 507
+
+2016/5/18 14:06:56
+[操作]Frxs.Erp.ServiceCenter.Product.MSSQLDAL.ShopGroup.GetPageList
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]SELECT groupid,groupcode,wid,groupname,remark,createuserid,createusername,shopnum,createtime FROM (SELECT  TOP 20 groupid,groupcode,wid,groupname,remark,createuserid,createusername,shopnum,createtime FROM (SELECT ROW_NUMBER() OVER (ORDER BY CreateTime desc ) AS row_no,GroupID,GroupCode,WID,GroupName,Remark,CreateUserID,CreateUserName,ShopNum,CreateTime FROM (select *,(select COUNT(0) from ShopGroupDetails as d where s.GroupID=d.GroupID) as ShopNum from shopgroup as s where IsDeleted=0) a WHERE  1=1  AND WID = 105) AS tempTable WHERE row_no>0 ORDER BY row_no ) AS tmp
+System.IndexOutOfRangeException: IsDeleted
+   在 System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   在 System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.ShopGroupDAO.GetPageList(PageListBySql`1 page, IDictionary`2 conditionDict) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\ShopGroupDAO.cs:行号 507

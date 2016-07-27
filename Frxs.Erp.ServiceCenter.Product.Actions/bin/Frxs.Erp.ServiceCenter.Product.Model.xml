@@ -1,0 +1,5159 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Frxs.Erp.ServiceCenter.Product.Model</name>
+    </assembly>
+    <members>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.Attributes">
+            <summary>
+            多规格属性表Attributes实体类
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.BaseModel">
+            <summary>
+            继承自Frxs.Platform.Utility.Pager.ModelBase
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Attributes.AttributeId">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Attributes.AttributeName">
+            <summary>
+            属性名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Attributes.IsDeleted">
+            <summary>
+            是否删除(0:未删除;1:已删除)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Attributes.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Attributes.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Attributes.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Attributes.ModifyTime">
+            <summary>
+            最新修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Attributes.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Attributes.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.AttributesProducts">
+            <summary>
+            规格包含商品
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.AttributesProducts.ProductId">
+            <summary>
+            商品ID(主键)SKUNumberService.ID取得
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.AttributesProducts.SKU">
+            <summary>
+            商品编码(0000001,0000002),最长7个长度;唯一（SKUNumberService.ID取得补0)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.AttributesProducts.ProductName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.AttributesProducts.ErpCode">
+            <summary>
+            Erp编码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.AttributesProducts.ValueStr">
+            <summary>
+            规格值
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.AttributesValues">
+            <summary>
+            多规格属性值表AttributesValues实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.AttributesValues.ValuesId">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.AttributesValues.AttributeId">
+            <summary>
+            属性表ID(Attribute.AttributeID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.AttributesValues.ValueStr">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.AttributesValues.DisplaySequence">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.AttributesValues.IsDeleted">
+            <summary>
+            是否删除(0:未删除;1:已删除)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.AttributesValues.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.AttributesValues.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.AttributesValues.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.AttributesValues.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.AttributesValues.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.AttributesValues.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts">
+            <summary>
+            BaseProducts实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts.BaseProductId">
+            <summary>
+            商品母表ID（初始值和Product.productID一样)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts.CategoryId1">
+            <summary>
+            基本分类一级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts.CategoryId2">
+            <summary>
+            基本分类二级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts.CategoryId3">
+            <summary>
+            基本分类三级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts.ShopCategoryId1">
+            <summary>
+            运营一级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts.ShopCategoryId2">
+            <summary>
+            运营二级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts.ShopCategoryId3">
+            <summary>
+            运营三级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts.BrandId1">
+            <summary>
+            品牌ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts.BrandId2">
+            <summary>
+            子品牌ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts.IsMutiAttribute">
+            <summary>
+            是否为多规格属性商品(0:不是;1:是)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts.IsBaseProductId">
+            <summary>
+            是否为母商品(0:不是;1:是)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts.ProductBaseName">
+            <summary>
+            母表商品名称（只有为母商品时才会有值)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts.IsVendor">
+            <summary>
+            是否为第三方商品(0:不是;1:是 B2B固定为0)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts.IsDeleted">
+            <summary>
+            删除状态(0:未删除;1:已删除;2:子商品另外挂到其它商品)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts.ModifyTime">
+            <summary>
+            最新修改删除时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts.ModifyUserID">
+            <summary>
+            最后修改删除用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BaseProducts.ModifyUserName">
+            <summary>
+            最后修改删除用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.BrandCategories">
+            <summary>
+            从原表Buymoo_BrandCategories 复制结构及名称BrandCategories实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BrandCategories.BrandId">
+            <summary>
+            品牌ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BrandCategories.BrandName">
+            <summary>
+            品牌名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BrandCategories.BrandEnName">
+            <summary>
+            品牌英文名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BrandCategories.Logo">
+            <summary>
+            品牌URL
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BrandCategories.DisplaySequence">
+            <summary>
+            显示顺序
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BrandCategories.IsDeleted">
+            <summary>
+            是否删除(0:未删除;1:已删除)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BrandCategories.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BrandCategories.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BrandCategories.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BrandCategories.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BrandCategories.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.BrandCategories.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.Categories">
+            <summary>
+            Categories实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Categories.CategoryId">
+            <summary>
+            分类ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Categories.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Categories.DisplaySequence">
+            <summary>
+            显示顺序
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Categories.ParentCategoryId">
+            <summary>
+            你级分类ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Categories.Depth">
+            <summary>
+            级别(0:顶级;1:一级;2:二级;3:三级)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Categories.IsDeleted">
+            <summary>
+            是否删除(0:未删除;1:已删除)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Categories.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Categories.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Categories.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Categories.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Categories.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Categories.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum">
+            <summary>
+            商品中心枚举类
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.ReturnResultInfo">
+            <summary>
+            返回结果信息
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.ReturnResultInfo.NoExist">
+            <summary>
+            数据库不存在记录 -1
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.ReturnResultInfo.ExistReference">
+            <summary>
+            存在其他数据引用 -2
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.ReturnResultInfo.ExistSameName">
+            <summary>
+            数据库中存在相同名称的记录 -100
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.BaseProductIsBaseProductId">
+            <summary>
+            母商品表是否为母商品(0:不是;1:是)，IsBaseProductId必填
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.BaseProductIsBaseProductId.不是">
+            <summary>
+            是否为母商品。(0:不是;1:是)
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.BaseProductIsBaseProductId.是">
+            <summary>
+            是否为母商品。(0:不是;1:是)
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.BaseProductIsMutiAttribute">
+            <summary>
+            母商品表 是否为多规格属性商品(0:不是;1:是)
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.BaseProductIsMutiAttribute.不是">
+            <summary>
+            是否为多规格属性商品(0:不是;1:是)
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.BaseProductIsMutiAttribute.是">
+            <summary>
+            是否为多规格属性商品(0:不是;1:是)
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.BaseProductIsVendor">
+            <summary>
+            母商品表是否为第三方商品(0:不是;1:是 B2B固定为0)
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.BaseProductIsVendor.不是">
+            <summary>
+            是否为母商品。(0:不是;1:是)
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.BaseProductIsVendor.是">
+            <summary>
+            是否为母商品。(0:不是;1:是)
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.BaseProductIsDeleted">
+            <summary>
+            母商品表是否删除 删除状态(0:未删除;1:已删除;2:子商品另外挂到其它商品)
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.BaseProductIsDeleted.未删除">
+            <summary>
+            0:未删除
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.BaseProductIsDeleted.已删除">
+            <summary>
+            1:已删除
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.BaseProductIsDeleted.子商品另外挂到其它商品">
+            <summary>
+            子商品另外挂到其它商品
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.ProductIsDeleted">
+            <summary>
+            删除状态(0:未删除;1:已删除)
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.ProductIsDeleted.未删除">
+            <summary>
+            0:未删除
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.ProductIsDeleted.已删除">
+            <summary>
+            1:已删除
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.ProductStatus">
+            <summary>
+            总部商品状态(0:正常;1:冻结[冻结的商品不再采购,不能再销售]);2:淘汰[淘汰的商品不再采购,不能再销售])
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.ProductStatus.正常">
+            <summary>
+            0:正常
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.ProductStatus.冻结">
+            <summary>
+            1:冻结[冻结的商品不再采购,不能再销售])
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.ProductStatus.淘汰">
+            <summary>
+            淘汰[淘汰的商品不再采购,不能再销售]
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.ProductsUnitIsUnit">
+            <summary>
+            商品单位 是否为库存单位(0:不是;1:是;只有一条)
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.ProductsUnitIsUnit.不是">
+            <summary>
+            是否为库存单位(0:不是;1:是;只有一条)
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.ProductsUnitIsUnit.是">
+            <summary>
+            是否为库存单位(0:不是;1:是;只有一条)
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.ProductsUnitIsSaleUnit">
+            <summary>
+            商品单位 是否为配送单位(0:不是;1:是)
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.ProductsUnitIsSaleUnit.不是">
+            <summary>
+            是否为配送单位(0:不是;1:是)
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.Product.Model.ProductCenterEnum.ProductsUnitIsSaleUnit.是">
+            <summary>
+            是否为配送单位(0:不是;1:是)
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel">
+            <summary>
+            商品查询需要返回的字段值
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.BaseProductId">
+            <summary>
+            母商品ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.CategoryId1">
+            <summary>
+            商品分类1
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.CategoryId2">
+            <summary>
+            商品分类2
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.CategoryId3">
+            <summary>
+            商品分类2
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.ShopCategoryId1">
+            <summary>
+            运营分类1
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.ShopCategoryId2">
+            <summary>
+            运营分类2
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.ShopCategoryId3">
+            <summary>
+            运营分类2
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.BrandId1">
+            <summary>
+            品牌分类1
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.BrandId2">
+            <summary>
+            品牌分类2
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.IsMutiAttribute">
+            <summary>
+            是否多属性商品
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.IsBaseProductId">
+            <summary>
+            是否母商品
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.ProductId">
+            <summary>
+            商品ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.SKU">
+            <summary>
+            ERP编码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.Status">
+            <summary>
+            商品状态
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.ProductName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.Mnemonic">
+            <summary>
+            商品助记码（多加）
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.AttributeName">
+            <summary>
+            商品规格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.ProductBaseName">
+            <summary>
+            母商品名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.IsVendor">
+            <summary>
+            第三方商品
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.ImageProductId">
+            <summary>
+            商品图片集合编码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.TXTKID">
+            <summary>
+            天下图片ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQueryModel.MutAttributes">
+            <summary>
+            规格属性ID串
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams">
+            <summary>
+            查询商品参数
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.ProductIds">
+            <summary>
+            商品ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.BaseProductId">
+            <summary>
+            母商品编码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.ProductName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.ProductBaseName">
+            <summary>
+            母商品名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.BarCode">
+            <summary>
+            条形码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.CategoriesID1">
+            <summary>
+            一级基本分类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.CategoriesID2">
+             <summary>
+            二级基本分类
+             </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.CategoriesID3">
+             <summary>
+            三级基本分类
+             </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.ShopCategoriesID1">
+            <summary>
+            一级运营分类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.ShopCategoriesID2">
+            <summary>
+            二级运营分类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.ShopCategoriesID3">
+            <summary>
+            三级运营分类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.BrandId1">
+            <summary>
+            品牌ID1
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.BrandId2">
+            <summary>
+            品牌ID2
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.BrandName">
+            <summary>
+            品牌名称关键词
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.IsMutiAttribute">
+            <summary>
+            是否多规格属性 0/1
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.IsBaseProductId">
+            <summary>
+            是否是母商品 0/1
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.Sku">
+            <summary>
+            商品编码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.Status">
+            <summary>
+            商品状态
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.IsOnlyBaseProduct">
+            <summary>
+            仅查询母商品true
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.MutAttributes">
+            <summary>
+            规格属性ID串
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductQuerySearchParams.ImageProductId">
+            <summary>
+            图片库里的商品ID
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.Products">
+            <summary>
+            Products实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.ProductId">
+            <summary>
+            商品ID(主键)SKUNumberService.ID取得
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.SKU">
+            <summary>
+            Erp编码/商品编码(手工输入)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.ProductName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.ProductName2">
+            <summary>
+            商品副标题
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.BaseProductId">
+            <summary>
+            母商品ID(BaseProduct.BaseProductId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.ImageProductId">
+            <summary>
+            l对应产品的图片,对应商品的Product.ProductId
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.Mnemonic">
+            <summary>
+            助记码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.Keywords">
+            <summary>
+            搜索关键字
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.IsDeleted">
+            <summary>
+            删除状态(0:未删除;1:已删除)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.Status">
+            <summary>
+            总部商品状态(0:正常;1:冻结[冻结的商品不再采购,不能再销售]);2:淘汰[淘汰的商品不再采购,不能再销售])
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.TXTKID">
+            <summary>
+            天下图库的商品ID(从天下图库创建时，带有该ID）
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.MutAttributes">
+            <summary>
+            多规格属性id:,多个时按分号分开
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.MutValues">
+            <summary>
+            多规格属性值id,多个时按分号分开
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.SaleBackFlag">
+            <summary>
+            销售退货标识(数据字典：SaleBackFlag)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.Volume">
+            <summary>
+            最小单位体积(cm)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.Weight">
+            <summary>
+            最小单位重量(kg)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.ModifyTime">
+            <summary>
+            最新修改删除时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.ModifyUserID">
+            <summary>
+            最后修改删除用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.ModifyUserName">
+            <summary>
+            最后修改删除用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Products.BackDays">
+            <summary>
+            多少天可退只有saleBackFlag=3时，才有值
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductsAttributes">
+            <summary>
+            商品多规格属性值表ProductsAttributes实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsAttributes.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsAttributes.ProductId">
+            <summary>
+            商品ID(Product.ProductId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsAttributes.AttributeId">
+            <summary>
+            属性表ID(Attribute.AttributeId）
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsAttributes.AttributeName">
+            <summary>
+            属性名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsAttributes.ValuesId">
+            <summary>
+            属性值表ID(AttributeValues.ValueId）
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsAttributes.ValueStr">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsAttributes.ModifyTime">
+            <summary>
+            最新修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsAttributes.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsAttributes.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductsAttributesPicture">
+            <summary>
+            ProductsAttributesPicture实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsAttributesPicture.ProductId">
+            <summary>
+            商品ID(Product.ProductId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsAttributesPicture.ImageUrlOrg">
+            <summary>
+            原图800*800路径
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsAttributesPicture.ImageUrl400x400">
+            <summary>
+            zip为400*400的图路径
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsAttributesPicture.ImageUrl200x200">
+            <summary>
+            zip为200*200的图路径
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsAttributesPicture.ImageUrl120x120">
+            <summary>
+            zip为120*120的图路径
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsAttributesPicture.ImageUrl60x60">
+            <summary>
+            zip为60*60的图路径
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsAttributesPicture.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsAttributesPicture.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsAttributesPicture.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductsBarCodes">
+            <summary>
+            商品国际条码ProductsBarCodes实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsBarCodes.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsBarCodes.ProductId">
+            <summary>
+            商品ID(product.ProductId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsBarCodes.BarCode">
+            <summary>
+            商品条码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsBarCodes.SerialNumber">
+            <summary>
+            排序(固定从1开始;1就是主条码)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsBarCodes.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsBarCodes.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsBarCodes.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductsDescription">
+            <summary>
+            ProductsDescription实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsDescription.BaseProductId">
+            <summary>
+            商品母表ID（初始值和BaseProduct.BaseProductID一样)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsDescription.Description">
+            <summary>
+            商品描述
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsDescription.ModifyTime">
+            <summary>
+            最新修改删除时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsDescription.ModifyUserID">
+            <summary>
+            最后修改删除用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsDescription.ModifyUserName">
+            <summary>
+            最后修改删除用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductsDescriptionPicture">
+            <summary>
+            电商商品图文表ProductsDescriptionPicture实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsDescriptionPicture.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsDescriptionPicture.BaseProductId">
+            <summary>
+            商品母表ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsDescriptionPicture.ImageUrlOrg">
+            <summary>
+            原图路径
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsDescriptionPicture.ImageUrl400x400">
+            <summary>
+            zip为400*400的图路径
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsDescriptionPicture.ImageUrl200x200">
+            <summary>
+            zip为200*200的图路径
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsDescriptionPicture.ImageUrl120x120">
+            <summary>
+            zip为120*120的图路径
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsDescriptionPicture.ImageUrl60x60">
+            <summary>
+            zip为60*60的图路径
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsDescriptionPicture.OrderNumber">
+            <summary>
+            排序(1,2,3..)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsDescriptionPicture.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsDescriptionPicture.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsDescriptionPicture.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductsPictureDetail">
+            <summary>
+            商品图片明细表ProductsPictureDetail实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsPictureDetail.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsPictureDetail.ImageProductId">
+            <summary>
+            即为：Product.ProductID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsPictureDetail.ImageUrlOrg">
+            <summary>
+            原图800*800路径(商品主图放大,商品详情图点击)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsPictureDetail.ImageUrl400x400">
+            <summary>
+            zip为400*400的图路径(商品详情图)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsPictureDetail.ImageUrl200x200">
+            <summary>
+            zip为200*200的图路径(商品列表图)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsPictureDetail.ImageUrl120x120">
+            <summary>
+            zip为120*120的图路径
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsPictureDetail.ImageUrl60x60">
+            <summary>
+            zip为60*60的图路径(订单提交页列表小图)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsPictureDetail.OrderNumber">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsPictureDetail.IsMaster">
+            <summary>
+            是否为主图(只有一张;0:不是;1:是)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsPictureDetail.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsPictureDetail.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsPictureDetail.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductsSKUNumberService">
+            <summary>
+            SKU编号服务表ProductsSKUNumberService实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsSKUNumberService.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsSKUNumberService.States">
+            <summary>
+            取值状态固定0;
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductsUnit">
+            <summary>
+            商品多单位表ProductsUnit实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsUnit.ProductsUnitID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsUnit.ProductID">
+            <summary>
+            即为：Product.ProductID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsUnit.Unit">
+            <summary>
+            单位(同一个商品单位不能重复)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsUnit.PackingQty">
+            <summary>
+            包装数
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsUnit.Spec">
+            <summary>
+            规格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsUnit.IsUnit">
+            <summary>
+            是否为库存单位(0:不是;1:是;只有一条)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsUnit.IsSaleUnit">
+            <summary>
+            是否为配送单位(0:不是;1:是)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsUnit.ModifyTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsUnit.ModifyUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsUnit.ModifyUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor">
+            <summary>
+            供应商商品表ProductsVendor实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.WID">
+            <summary>
+            仓库ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.ProductId">
+            <summary>
+            商品ID(product.ProductID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.VendorID">
+            <summary>
+            商品主供应商
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.Unit">
+            <summary>
+            库存单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.BuyPrice">
+            <summary>
+            库存单位采购价格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.IsMaster">
+            <summary>
+            是否为主供应商(0:不是;1:是)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.LastBuyPrice">
+            <summary>
+            库存单位最新进价
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.LastBuyTime">
+            <summary>
+            最新采购入库时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.ModifyTime">
+            <summary>
+            最新修改删除时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.ModifyUserID">
+            <summary>
+            最后修改删除用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.ModifyUserName">
+            <summary>
+            最后修改删除用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.ProductName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.SKU">
+            <summary>
+            商品编码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.CategoryName1">
+            <summary>
+            基本分类1
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.CategoryName2">
+            <summary>
+            基本分类2
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.CategoryName3">
+            <summary>
+            基本分类3
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.BarCode">
+            <summary>
+            国际条码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductsVendor.BigPackingQty">
+            <summary>
+            包装数
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ProductVendorModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductVendorModel.ID">
+            <summary>
+            仓库供应商ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductVendorModel.VendorID">
+            <summary>
+            供应商ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductVendorModel.VendorCode">
+            <summary>
+            供应商编码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductVendorModel.VendorName">
+            <summary>
+            供应商名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductVendorModel.LinkMan">
+            <summary>
+            供应商联系人
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductVendorModel.Telephone">
+            <summary>
+            供应商联系电话
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductVendorModel.Status">
+            <summary>
+            供应商状态; 状态(1:正常;0:冻结)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductVendorModel.VendorTypeName">
+            <summary>
+            供应商类型名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ProductVendorModel.IsMaster">
+            <summary>
+            是否主供应商;1是，0不是
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.Shelf">
+            <summary>
+            仓库货架表Shelf实体类
+            </summary>
+            <summary>
+            查询显示实体
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shelf.ShelfID">
+            <summary>
+            ID(主键)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shelf.ShelfCode">
+            <summary>
+            货位编号(同一个仓库不能重复)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shelf.ShelfAreaID">
+            <summary>
+            所属货区ID(ShelfArea.ShelfAreaID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shelf.ShelfType">
+            <summary>
+            货位类型(0:存储;1:)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shelf.WID">
+            <summary>
+            仓库ID(Warehouse.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shelf.Status">
+            <summary>
+            状态(0:正常;1:冻结)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shelf.Remark">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shelf.ModifyTime">
+            <summary>
+            最新修改删除时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shelf.ModifyUserID">
+            <summary>
+            最后修改删除用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shelf.ModifyUserName">
+            <summary>
+            最后修改删除用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shelf.WName">
+            <summary>
+            仓库名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shelf.ShelfAreaName">
+            <summary>
+            货区
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shelf.StatusStr">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ShelfArea">
+            <summary>
+            仓库货区ShelfArea实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShelfArea.ShelfAreaID">
+            <summary>
+            ID(主键)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShelfArea.WID">
+            <summary>
+            仓库ID(Warehouse.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShelfArea.ShelfAreaCode">
+            <summary>
+            仓库货区编号(数据字典：ShelfAreaCode)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShelfArea.ShelfAreaName">
+            <summary>
+            货区名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShelfArea.PickingMaxRecord">
+            <summary>
+            拣货APP最大显示数
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShelfArea.SerialNumber">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShelfArea.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShelfArea.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShelfArea.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShelfArea.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShelfArea.ModifyTime">
+            <summary>
+            最新修改删除时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShelfArea.ModifyUserID">
+            <summary>
+            最后修改删除用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShelfArea.ModifyUserName">
+            <summary>
+            最后修改删除用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.Shop">
+            <summary>
+            门店资料表Shop实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.ShopID">
+            <summary>
+            门店ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.ShopCode">
+            <summary>
+            门店编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.ShopType">
+            <summary>
+            门店类型(0:加盟店;1:签约店;)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.ShopName">
+            <summary>
+            门店名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.ShopAccount">
+            <summary>
+            门店帐号(XSUser.Account)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.SettleType">
+            <summary>
+            结帐方式(0:现金 + 数据字典: ShopSettleType)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.WID">
+            <summary>
+            配送仓库ID(WarehouseInfo.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.LinkMan">
+            <summary>
+            门店联系人姓名
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.Telephone">
+            <summary>
+            门店联系电话
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.Status">
+            <summary>
+            状态(1:正常;0:冻结)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.LegalPerson">
+            <summary>
+            法人
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.SettleTimeType">
+            <summary>
+            结算方式( 数据字典: ShopSettleTimeType)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.CreditLevel">
+            <summary>
+            门店级别(数据字典: ShopLevel; A:A级;B:B级;C:C级)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.CreditAmt">
+            <summary>
+            信用额度
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.AreaPrincipal">
+            <summary>
+            区域负责人
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.ProvinceID">
+            <summary>
+            省
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.CityID">
+            <summary>
+            市
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.RegionID">
+            <summary>
+            区
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.FullAddress">
+            <summary>
+            地址全称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.ShopArea">
+            <summary>
+            门店面积(平方米)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.IsDeleted">
+            <summary>
+            是否删除(0:未删除;1:已删除)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.Latitude">
+            <summary>
+            纬度（百度座标)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.Longitude">
+            <summary>
+            经度（百度座标)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.TotalPoint">
+            <summary>
+            门店累计积分
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.BankAccount">
+            <summary>
+            银行帐号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.BankAccountName">
+            <summary>
+            银行开户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.BankType">
+            <summary>
+            银行类型
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.CardID">
+            <summary>
+            身份证号码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.RegionMaster">
+            <summary>
+            区域负责人
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.CreateUserID">
+            <summary>
+            创建用户 ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.StatusStr">
+            <summary>
+            状态(1:正常;0:冻结)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.LineID">
+            <summary>
+            线路ID WarehouseLine.LineID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.LineName">
+            <summary>
+            线路名称 WarehouseLine.LineName
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.SerialNumber">
+            <summary>
+            发货排序 WarehouseLine.SerialNumber 
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Shop.SerialNumberStr">
+            <summary>
+            发货排序 WarehouseLine.SerialNumber 
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ShopExt">
+            <summary>
+            用于门店排单
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.CreditLevel">
+            <summary>
+            门店级别(数据字典: ShopLevel; A:A级;B:B级;C:C级)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.ShopID">
+            <summary>
+            门店ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.ShopCode">
+            <summary>
+            门店编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.ShopType">
+            <summary>
+            门店类型(0:加盟店;1:签约店;)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.ShopTypeStr">
+            <summary>
+            门店类型(0:加盟店;1:签约店;)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.ShopName">
+            <summary>
+            门店名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.ShopAccount">
+            <summary>
+            门店帐号(XSUser.Account)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.WID">
+            <summary>
+            配送仓库ID(WarehouseInfo.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.LinkMan">
+            <summary>
+            门店联系人姓名
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.Telephone">
+            <summary>
+            门店联系电话
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.Status">
+            <summary>
+            状态(1:正常;0:冻结)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.FullAddress">
+            <summary>
+            地址全称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.StatusStr">
+            <summary>
+            状态(1:正常;0:冻结)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.OrderId">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.LineID">
+            <summary>
+            线路ID WarehouseLine.LineID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.LineName">
+            <summary>
+            线路名称 WarehouseLine.LineName
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.LineCode">
+            <summary>
+            线路编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.DeliverWeek">
+            <summary>
+            线路编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.SendW1">
+            <summary>
+             配送周期1
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.SendW2">
+            <summary>
+             配送周期2
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.SendW3">
+            <summary>
+             配送周期3
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.SendW4">
+            <summary>
+             配送周期4
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.SendW5">
+            <summary>
+             配送周期5
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.SendW6">
+            <summary>
+             配送周期6
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopExt.SendW7">
+            <summary>
+             配送周期7
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ShopCategories">
+            <summary>
+            产品运营分类(直接用)ShopCategories实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopCategories.CategoryId">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopCategories.CategoryName">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopCategories.CategoryImage">
+            <summary>
+            图片地址(分类图标)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopCategories.PageHomeImage">
+            <summary>
+            图片地址(首页图标)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopCategories.ParentCategoryId">
+            <summary>
+            父级分类ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopCategories.Depth">
+            <summary>
+            层级(0:顶级;1:一级;2:一级;3:三级)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopCategories.DisplaySequence">
+            <summary>
+            显示顺序
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopCategories.IsDeleted">
+            <summary>
+            是否删除(0:未删除;1:已删除)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopCategories.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopCategories.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopCategories.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopCategories.ModifyTime">
+            <summary>
+            最新修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopCategories.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopCategories.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ShopGroup">
+            <summary>
+            促销门店群组表ShopGroup实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroup.GroupID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroup.GroupCode">
+            <summary>
+            群组编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroup.WID">
+            <summary>
+            仓库ID(Warehouse.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroup.GroupName">
+            <summary>
+            群组名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroup.IsDeleted">
+            <summary>
+            是否删除(0:未删除;1: 已删除)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroup.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroup.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroup.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroup.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroup.ShopNum">
+            <summary>
+            门店数量
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroup.List">
+            <summary>
+            门店集合
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.ShopGroupDetails">
+            <summary>
+            门店群组明细表ShopGroupDetails实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroupDetails.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroupDetails.GroupID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroupDetails.WID">
+            <summary>
+            仓库ID(Warehouse.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroupDetails.ShopID">
+            <summary>
+            门店ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroupDetails.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroupDetails.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroupDetails.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroupDetails.ShopCode">
+            <summary>
+            门店编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroupDetails.ShopName">
+            <summary>
+            门店名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.ShopGroupDetails.FullAddress">
+            <summary>
+            门店地址
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SimpleProduct.ProductId">
+            <summary>
+            商品编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SimpleProduct.ProductName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.SysDict">
+            <summary>
+            数据字典表
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysDict.DictCode">
+            <summary>
+            数据字典编号(手工输入，用表名加字段名标识)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysDict.DictName">
+            <summary>
+            数据字段名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysDict.DictType">
+            <summary>
+            字段类型(0:用户不能修改;1:用户可以修改)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysDict.IsDeleted">
+            <summary>
+            删除标识(0:未删除;1:已删除)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysDict.Remark">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysDict.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysDict.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysDict.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysDict.ModifyTime">
+            <summary>
+            最新修改删除时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysDict.ModifyUserID">
+            <summary>
+            最后修改删除用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysDict.ModifyUserName">
+            <summary>
+            最后修改删除用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.SysDictDetail">
+            <summary>
+            数据字典明细表
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysDictDetail.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysDictDetail.DictValue">
+            <summary>
+            对应各个表的值(字典值)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysDictDetail.DictLabel">
+            <summary>
+            显示用 标签名称(同一个字典不能重复)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysDictDetail.Remark">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.SysParams">
+            <summary>
+            SysParams实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysParams.ParamCode">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysParams.ParamName">
+            <summary>
+            参数名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysParams.ParamValue">
+            <summary>
+            参数值(全系统预设值)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysParams.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysParams.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysParams.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysParams.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.SysParamsWH">
+            <summary>
+            仓库系统参数表SysParamsWH实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysParamsWH.ID">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysParamsWH.WID">
+            <summary>
+            仓库ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysParamsWH.ParamCode">
+            <summary>
+            参数编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysParamsWH.ParamValue">
+            <summary>
+            参数值(全系统预设值)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysParamsWH.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysParamsWH.ModifyUserID">
+            <summary>
+            修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SysParamsWH.ModifyUserName">
+            <summary>
+            修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.Vendor">
+            <summary>
+            供应商表Vendor实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.VendorTypeName">
+            <summary>
+            供应商类型(VendorType.VendorTypeID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.SettleTimeTypeName">
+            <summary>
+            结算方式( 数据字典: VendorSettleTimeType)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.StatusName">
+            <summary>
+            状态(1:正常;0:冻结)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.VendorWarehouseDatas">
+            <summary>
+            与仓库关联关系数据
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.VendorID">
+            <summary>
+            供应商分类ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.VendorCode">
+            <summary>
+            供应商编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.VendorName">
+            <summary>
+            供应商名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.VendorShortName">
+            <summary>
+            供应商简称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.VendorTypeID">
+            <summary>
+            供应商类型(VendorType.VendorTypeID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.LinkMan">
+            <summary>
+            联系人姓名
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.Telephone">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.Fax">
+            <summary>
+            传真
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.Status">
+            <summary>
+            状态(1:正常;0:冻结)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.LegalPerson">
+            <summary>
+            企业法人
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.Email">
+            <summary>
+            电子邮箱
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.WebUrl">
+            <summary>
+            公司网址
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.Region">
+            <summary>
+            行政区域
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.SettleTimeType">
+            <summary>
+            结算方式( 数据字典: VendorSettleTimeType)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.CreditLevel">
+            <summary>
+            供应商级别(数据字典: VendorLevel; A:A级;B:B级;C:C级)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.AreaPrincipal">
+            <summary>
+            区域负责人
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.ProvinceID">
+            <summary>
+            省
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.CityID">
+            <summary>
+            市
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.RegionID">
+            <summary>
+            区
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.Address">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.FullAddress">
+            <summary>
+            地址全称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.IsDeleted">
+            <summary>
+            是否删除(0:未删除;1:已删除);
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Vendor.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.VendorType">
+            <summary>
+            供应商类型VendorType实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.VendorType.VendorTypeID">
+            <summary>
+            供应商分类ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.VendorType.VendorTypeName">
+            <summary>
+            供应商分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.VendorType.IsDeleted">
+            <summary>
+            是否删除(0:未删除;1:已删除);
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.VendorType.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.VendorType.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.VendorType.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.VendorType.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.VendorType.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.VendorType.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp">
+            <summary>
+            仓库用户员工表WarehouseEmp实体类
+            </summary>
+            <summary>
+            查询显示实体
+            </summary>
+            <summary>
+            库用户拣货区表WarehouseEmpShelf类使用的新增实体
+            </summary>
+            <summary>
+            根据商品编号获取拣货人员信息新增实体
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.EmpID">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.EmpName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.UserAccount">
+            <summary>
+            用户登录帐户(手机号码;员工编号;唯一[不包括删除的])
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.UserType">
+            <summary>
+            用户类型(1:拣货员;2:配送员;3:装箱员)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.IsMaster">
+            <summary>
+            是否为组长(0:不是;1:是)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.WID">
+            <summary>
+            所属仓库(Warehouse.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.UserMobile">
+            <summary>
+            用户联络手机号码(手机号码注册同登录帐号)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.Password">
+            <summary>
+            密码(MD5[pwd]+密码盐值)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.PasswordSalt">
+            <summary>
+            密码盐值
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.IsFrozen">
+            <summary>
+            是否冻结(0:未冻结;1:已冻结)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.IsLocked">
+            <summary>
+            是否锁定(0:未锁定;1:已锁定)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.IsDeleted">
+            <summary>
+            是否删除(0:未删除;1:已删除)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.LastLoginTime">
+            <summary>
+            最后登录时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.LastPasswordChangeTime">
+            <summary>
+            最后修改密码时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.FailedPasswordCount">
+            <summary>
+            密码错误次数(连续6次后锁定;登录后归0)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.FailedPasswordLockTime">
+            <summary>
+            密码错误锁定时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.CreateTime">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.WName">
+            <summary>
+            仓库名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.StatusStr">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.UserTypeStr">
+            <summary>
+            职位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.ShelfAreaName">
+            <summary>
+            货区名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.ShelfNum">
+            <summary>
+            货位数量
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.ShelfAreaID">
+            <summary>
+            货区ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmp.ProductID">
+            <summary>
+            商品编号
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.Warehouse">
+            <summary>
+            仓库主表Warehouse实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.WID">
+            <summary>
+            仓库ID(从1000开始编号)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.WCode">
+            <summary>
+            仓库编号(唯一)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.WName">
+            <summary>
+            仓库名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.WLevel">
+            <summary>
+            仓库级别(0:总部[预留];1:仓库;2:仓库子机构物流/退货])
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.WSubType">
+            <summary>
+            子机构类型(0:退货;1:物流库;)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.ParentWID">
+            <summary>
+            父级ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.WTel">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.WContact">
+            <summary>
+            联系人姓名
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.ProvinceID">
+            <summary>
+            省
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.CityID">
+            <summary>
+            市
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.RegionID">
+            <summary>
+            区
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.WAddress">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.WFullAddress">
+            <summary>
+            全称地址
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.WCustomerServiceTel">
+            <summary>
+            400客服电话
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.THBTel">
+            <summary>
+            退货部电话
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.CWTel">
+            <summary>
+            财务室电话
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.YW1Tel">
+            <summary>
+            业务咨询电话1
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.YW2Tel">
+            <summary>
+            业务咨询电话2
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.IsFreeze">
+            <summary>
+            是否已被冻结(0:未冻结;1、已冻结)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.IsDeleted">
+            <summary>
+            是否已被删除(0:未删除;1、已删除)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.CreateUserID">
+            <summary>
+            创建用户 ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.ModityTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.ModityUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.ModityUserName">
+            <summary>
+            最后修改用记名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.FreezeStatus">
+            <summary>
+            冻结状态(0:未冻结;1、已冻结)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.Warehouse.SubNum">
+            <summary>
+            管辖的仓库子机构的数量
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.SubWName">
+            <summary>
+            仓库子机构相关信息 供其他板块(如订单)使用 
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SubWName.WID">
+            <summary>
+            仓库ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SubWName.WName">
+            <summary>
+            仓库名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SubWName.WCode">
+            <summary>
+            仓库编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SubWName.SubWID">
+            <summary>
+            子机构ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SubWName.SubWCode">
+            <summary>
+            子机构编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.SubWName.SUBWName">
+            <summary>
+            子机构名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpInfo">
+            <summary>
+            仓库用户员工相关信息
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpInfo.EmpID">
+            <summary>
+            员工编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpInfo.EmpName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpInfo.UserType">
+            <summary>
+            用户类型(1:拣货员;2:配送员;3:装箱员;4:采购员)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpInfo.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpInfo.PasswordSalt">
+            <summary>
+            密码盐值
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpInfo.ShelfID">
+            <summary>
+            货位编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpInfo.ShelfAreaID">
+            <summary>
+            货区编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpInfo.WID">
+            <summary>
+            网仓编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpInfo.ShelfAreaCode">
+            <summary>
+            仓库货区编码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpInfo.ShelfAreaName">
+            <summary>
+            货区名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpInfo.PickingMaxRecord">
+            <summary>
+            拣货APP最大显示数
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpInfo.IsMaster">
+            <summary>
+            是否是组长
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpInfo.UserMobile">
+            <summary>
+            用户联络手机号码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpInfo.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpInfo.IsFrozen">
+            <summary>
+            是否冻结
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpInfo.IsLocked">
+            <summary>
+            是否锁定
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpInfo.IsDeleted">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpShelf">
+            <summary>
+            仓库用户拣货区表WarehouseEmpShelf实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpShelf.ID">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpShelf.EmpID">
+            <summary>
+            用户编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpShelf.ShelfAreaID">
+            <summary>
+            货区编号(ShelfArea.ShelfAreaID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpShelf.ShelfID">
+            <summary>
+            货位编号(Shelf.ShelfID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpShelf.CreateTime">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpShelf.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpShelf.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseEmpShelf.ShelfCode">
+            <summary>
+            货位编号(同一个仓库不能重复)
+            </summary>        
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine">
+            <summary>
+            仓库配送线路表WarehouseLine实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.LineID">
+            <summary>
+            主键(ID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.LineCode">
+            <summary>
+            配送线路编号(不能重复,不包括已删除的)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.WID">
+            <summary>
+            所属仓库(Warehouse.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.LineName">
+            <summary>
+            配送线路名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.EmpID">
+            <summary>
+            用户编号(WarehouseEmp.EmpID and EmpType=2)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.SendW1">
+            <summary>
+            配送周期周1(0:不送;1:送)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.SendW2">
+            <summary>
+            配送周期周2(0:不送;1:送)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.SendW6">
+            <summary>
+            配送周期周3(0:不送;1:送)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.SendW5">
+            <summary>
+            配送周期周4(0:不送;1:送)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.SendW4">
+            <summary>
+            配送周期周5(0:不送;1:送)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.SendW3">
+            <summary>
+            配送周期周6(0:不送;1:送)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.SendW7">
+            <summary>
+            配送周期周7(0:不送;1:送)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.OrderEndTime">
+            <summary>
+            门店下单截止时间(hh:mm:ss)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.Distance">
+            <summary>
+            配送距离KM
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.SendNeedTime">
+            <summary>
+            发货所要的时间(小时）
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.SerialNumber">
+            <summary>
+            发货排序
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.IsLocked">
+            <summary>
+            是否暂停发货(0:未暂停发货;1暂停发货:;暂停的路线暂停发货)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.IsDeleted">
+            <summary>
+            是否删除(0:未删除;1:已删除)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.CreateTime">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.EmpName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.SendW">
+            <summary>
+            配送周期
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.UserMobile">
+            <summary>
+            负责人电话
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLine.ShopNum">
+            <summary>
+            配送门店数
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLineShop">
+            <summary>
+            仓库配送线路门店关系表WarehouseLineShop实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLineShop.ID">
+            <summary>
+            主键(ID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLineShop.LineID">
+            <summary>
+            线路ID(WarehouseLine.LineID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLineShop.ShopID">
+            <summary>
+            门店ID(Shop.Shop)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLineShop.SerialNumber">
+            <summary>
+            发货排序
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLineShop.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLineShop.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLineShop.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WarehouseLineShop.ShopName">
+            <summary>
+            门店名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPrice">
+            <summary>
+            仓库商品价格调整表WProductAdjPrice实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPrice.AdjID">
+            <summary>
+            调整ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPrice.WID">
+            <summary>
+            仓库ID(WarehouseID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPrice.Status">
+            <summary>
+            状态(0:未提交;1:已确认;2:已过帐;)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPrice.AdjType">
+            <summary>
+            调整类型(0:采购(进货)价;1:配送(批发)价;2:费率及积分)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPrice.BeginTime">
+            <summary>
+            调整生效时间(由系统自动确认生效 格式:yyyy-MM-dd HH:mm:ss)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPrice.ConfTime">
+            <summary>
+            确认时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPrice.ConfUserID">
+            <summary>
+            确认用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPrice.ConfUserName">
+            <summary>
+            确认用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPrice.PostingTime">
+            <summary>
+            过帐时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPrice.PostingUserID">
+            <summary>
+            过帐用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPrice.PostingUserName">
+            <summary>
+            过帐用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPrice.Remark">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPrice.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPrice.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPrice.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPrice.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPrice.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPrice.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails">
+            <summary>
+            仓库商品价格调整明细表WProductAdjPriceDetails实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.AdjID">
+            <summary>
+            调整ID(WProductAdjPrice.AdjID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.WProductID">
+            <summary>
+            仓库商品ID(WProducts.WProductID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.WID">
+            <summary>
+            仓库ID(Warehouse.WID 二级)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.ProductID">
+            <summary>
+            商品ID(product.ProductID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.Unit">
+            <summary>
+            库存单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.OldPrice">
+            <summary>
+            库存单位原配送价格/原进货(采购)价
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.Price">
+            <summary>
+            库存单位新配送价格/新进货(采购)价
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.OldMarketPrice">
+            <summary>
+            原库存单位门店建议零售价
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.MarketPrice">
+            <summary>
+            库存单位建议门店零售价
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.OldShopPoint">
+            <summary>
+            原门店库存单位积分
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.OldShopAddPerc">
+            <summary>
+            原门店库存单位提点率(%)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.ShopPoint">
+            <summary>
+            门店库存单位积分
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.ShopPerc">
+            <summary>
+            门店库存单位提点率(%)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.OldBasePoint">
+            <summary>
+            原库存单位绩效积分(司机及门店共用)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.BasePoint">
+            <summary>
+            库存单位绩效积分(司机及门店共用)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.OldVendorPerc1">
+            <summary>
+            原库存单位物流费率(供应商) (%)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.OldVendorPerc2">
+            <summary>
+            原库存单位仓储费率(供应商)(%)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.VendorPerc1">
+            <summary>
+            库存单位物流费率(供应商) (%)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.VendorPerc2">
+            <summary>
+            库存单位仓储费率(供应商)(%)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetails.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf">
+            <summary>
+            仓库商品货架调整表WProductAdjShelf实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf.AdjID">
+            <summary>
+            调整ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf.WID">
+            <summary>
+            仓库ID(WarehouseID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf.Status">
+            <summary>
+            状态(0:未提交;1:已确认;2:已过帐;)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf.ConfTime">
+            <summary>
+            确认时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf.ConfUserID">
+            <summary>
+            确认用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf.ConfUserName">
+            <summary>
+            确认用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf.PostingTime">
+            <summary>
+            过帐时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf.PostingUserID">
+            <summary>
+            过帐用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf.PostingUserName">
+            <summary>
+            过帐用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf.ModifyTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf.ModifyUserID">
+            <summary>
+            最后修改用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf.ModifyUserName">
+            <summary>
+            最后修改用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf.AdjType">
+            <summary>
+            调整类型(0:货架[固定])
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf.Remark">
+            <summary>
+            Remark
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf.TotalShelfCount">
+            <summary>
+            总货位调整数
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf.StatusToStr">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelf.wProductAdjShelfDetailsList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelfDetails">
+            <summary>
+            仓库商品货架调整明细表WProductAdjShelfDetails实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelfDetails.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelfDetails.AdjID">
+            <summary>
+            调整ID(WProductAdjPrice.AdjID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelfDetails.WID">
+            <summary>
+            仓库ID(Warehouse.WID 二级)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelfDetails.WProductID">
+            <summary>
+            仓库商品ID(WProducts.WProductID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelfDetails.ProductId">
+            <summary>
+            商品ID(product.ProductID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelfDetails.Unit">
+            <summary>
+            库存单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelfDetails.OldShelfID">
+            <summary>
+            原货架ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelfDetails.OldShelfCode">
+            <summary>
+            原货架编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelfDetails.ShelfID">
+            <summary>
+            新货架ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelfDetails.ShelfCode">
+            <summary>
+            新货架编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelfDetails.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelfDetails.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelfDetails.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelfDetails.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelfDetails.BigPackingQty">
+            <summary>
+            包装数
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelfDetails.SKU">
+            <summary>
+            商品编码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelfDetails.ProductName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjShelfDetails.BarCode">
+            <summary>
+            商品条码
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale">
+            <summary>
+            商品限购活动主表 WProductNoSale实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.NoSaleID">
+            <summary>
+            主键ID(WID + GUID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.WID">
+            <summary>
+            仓库ID(WarehouseID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.WCode">
+            <summary>
+            仓库编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.WName">
+            <summary>
+            仓库名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.PromotionName">
+            <summary>
+            活动主题
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.BeginTime">
+            <summary>
+            生效开始时间(yyyy-MM-dd HH:mm:ss)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.EndTime">
+            <summary>
+            生效结束时间(yyyy-MM-dd HH:mm:ss)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.Status">
+            <summary>
+            状态(0:未提交;1:已提交;2:(立即生效)已过帐/已开始;3:已停用)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.ConfTime">
+            <summary>
+            提交时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.ConfUserID">
+            <summary>
+            提交用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.ConfUserName">
+            <summary>
+            提交用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.PostingTime">
+            <summary>
+            过帐时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.PostingUserID">
+            <summary>
+            过帐用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.PostingUserName">
+            <summary>
+            过帐用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.ModifyTime">
+            <summary>
+            最后修改时间(停用时也更新该字段)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.ModifyUserID">
+            <summary>
+            最后修改用户ID(停用时也更新该字段)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSale.ModifyUserName">
+            <summary>
+            最后修改用户名称(停用时也更新该字段)
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleInfo">
+            <summary>
+            商品限购信息 包含主表信息和商品信息列表、门店群组信息列表
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleInfo.wProductNoSale">
+            <summary>
+            商品限购的主表记录
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleInfo.productdetails">
+            <summary>
+            商品限购详情表 集合
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleInfo.shopGroups">
+            <summary>
+            仓库商品限购门店明细表 集合
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleDetails">
+            <summary>
+            仓库商品限购明细表WProductNoSaleDetails实体类
+            </summary>
+            <summary>
+            扩展属性，提供给前台显示
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleDetails.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleDetails.NoSaleID">
+            <summary>
+            限购ID(WProductNoSale.NoSaleID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleDetails.WID">
+            <summary>
+            仓库ID(Warehouse.WID 二级)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleDetails.WProductID">
+            <summary>
+            仓库商品ID(WProducts.WProductID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleDetails.ProductID">
+            <summary>
+            商品ID(product.ProductID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleDetails.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleDetails.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleDetails.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleDetails.Unit">
+            <summary>
+            库存单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleDetails.ProductName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleDetails.BigPackingQty">
+            <summary>
+            配送单位包装数
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleDetails.BigUnit">
+            <summary>
+            配送单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleDetails.SalePrice">
+            <summary>
+            配送价格 SalePrice*包装数
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleDetails.BarCode">
+            <summary>
+            商品条码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleDetails.SKU">
+            <summary>
+            ERP编码
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleShops">
+            <summary>
+            仓库商品限购门店明细表WProductNoSaleShops实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleShops.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleShops.NoSaleID">
+            <summary>
+            限购ID(WProductNoSale.NoSaleID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleShops.WID">
+            <summary>
+            仓库ID(Warehouse.WID 二级)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleShops.GroupID">
+            <summary>
+            门店群组ID(ShopGroup.GroupID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleShops.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleShops.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleShops.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleShops.GroupName">
+            <summary>
+            分组名称 取自门店分组表 仅用于前台显示关联的数据
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleShops.GroupCode">
+            <summary>
+            分组编号 取自门店分组表 仅用于前台显示关联的数据
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleShops.Remark">
+            <summary>
+            分组备注 取自门店分组表 仅用于前台显示关联的数据
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductNoSaleShops.ShopNum">
+            <summary>
+            门店分组下的门店个数 取自门店分组详情表 仅用于前台显示关联的数据
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProducts">
+            <summary>
+            仓库商品表WProducts实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.WProductID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.WID">
+            <summary>
+            仓库ID(一级)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.ProductId">
+            <summary>
+            商品ID(product.ProductID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.ProductName2">
+            <summary>
+            仓库商品副标题(加入时，为空，由仓库自行定行, 商品详情如果仓库有时，显示自己的，没有时显示总部的)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.WStatus">
+            <summary>
+            仓库商品状态(0:已移除1:正常;2:淘汰;3:冻结;) ;淘汰商品和冻结商品不能销售;加入或重新加入时为正常；移除后再加入时为正常
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.Unit">
+            <summary>
+            库存单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.SalePrice">
+            <summary>
+            库存单位销售价格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.MarketPrice">
+            <summary>
+            建议门店零售价
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.MarketUnit">
+            <summary>
+            建议门店零售单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.BigProductsUnitID">
+            <summary>
+            大(配送)单位总部的商品多单位ID(ProductsUnit.ID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.BigPackingQty">
+            <summary>
+            大(配送)单位包装数(冗余设计 选中配送单位时,同步该表,没有时该值为库存单位)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.BigUnit">
+            <summary>
+            大(配送)单位(冗余设计 选中配送单位时,同步该表,没有时该值为1)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.ShelfID">
+            <summary>
+            货架ID(Shelf.ShelfID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.ShopAddPerc">
+            <summary>
+            门店库存单位提点率(%)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.ShopPoint">
+            <summary>
+            门店库存单位积分
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.BasePoint">
+            <summary>
+            库存单位绩效积分（司机及门店绩效分)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.VendorPerc1">
+            <summary>
+            库存单位物流费率(供应商) (%)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.VendorPerc2">
+            <summary>
+            库存单位仓储费率(供应商)(%)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.SaleBackFlag">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.BackDays">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.ModifyTime">
+            <summary>
+            最新修改删除时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.ModifyUserID">
+            <summary>
+            最后修改删除用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProducts.ModifyUserName">
+            <summary>
+            最后修改删除用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductExt">
+            <summary>
+            扩展 
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductExt.BigSalePrice">
+            <summary>
+            配送销售总价（销售配送价 * 包装数）
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductExt.BigShopPoint">
+            <summary>
+            配送积分兑物总价（销售配送价 * 包装数）
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductExt.ImageUrl400x400">
+            <summary>
+            商口明细图片400x400
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductExt.ImageUrl200x200">
+            <summary>
+            商口明细图片200x200
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductExt.ProductName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductExt.MaxOrderQty">
+            <summary>
+            MaxOrderQty
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductExt.SKU">
+            <summary>
+            SKU
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductExt.BarCode">
+            <summary>
+            BarCode
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductExt.CategoryName1">
+            <summary>
+            CategoryName1
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductExt.CategoryName2">
+            <summary>
+            CategoryName2
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductExt.CategoryName3">
+            <summary>
+            CategoryName3
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductExt.CategoryId1">
+            <summary>
+            CategoryId1
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductExt.CategoryId2">
+            <summary>
+            CategoryId2
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductExt.CategoryId3">
+            <summary>
+            CategoryId3
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductExt.ShelfAreaID">
+            <summary>
+            货位区域ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductExt.ShelfAreaCode">
+            <summary>
+            货位区域编码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductExt.ShelfCode">
+            <summary>
+            货位编码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductExt.ShelfAreaName">
+            <summary>
+            货位区域名称
+            </summary>
+        </member>
+        <!-- 对于成员“P:Frxs.Erp.ServiceCenter.Product.Model.WProductExt.PromotionShopPoint”忽略有格式错误的 XML 注释 -->
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckListParams">
+            <summary>
+            查询待盘点商品参数
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckListParams.WID">
+            <summary>
+            对应的仓库ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckListParams.SKUs">
+            <summary>
+            erp编码 集合
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel">
+            <summary>
+            盘点商品详情对象
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.ProductId">
+            <summary>
+            商品ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.WProductId">
+            <summary>
+            仓库商品ID(WProducts.WProductID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.SKU">
+            <summary>
+            ERP编码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.ProductName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.ProductName2">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.Attributes">
+            <summary>
+            规格属性 由3个规格属性拼接而成
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.ProductImageUrl200">
+            <summary>
+            商品图片用于移动端(Products.ImageUrl200*200)
+            </summary>    
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.ProductImageUrl400">
+            <summary>
+            商品图片用于PC端(Products.ImageUrl400*400)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.BarCode">
+            <summary>
+            条码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.Unit">
+            <summary>
+            库存单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.ShopAddPerc">
+            <summary>
+            平台费率
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.ShopPoint">
+            <summary>
+            门店库存单位原积分
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.ShelfID">
+            <summary>
+            货架ID(WProducts.ShelfID、Shelf.ShelfID)
+            </summary>       
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.BigUnit">
+            <summary>
+            大(配送)单位(冗余设计 选中配送单位时,同步该表,没有时该值为1)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.ShelfCode">
+            <summary>
+            货位编号(同一个仓库不能重复)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.Price">
+            <summary>
+            价格 (最小单位配送价*包装数)
+            </summary>      
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.SalePrice">
+            <summary>
+            配送价格
+            </summary>      
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.BuyPrice">
+            <summary>
+            采购价格
+            </summary>      
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.VendorID">
+            <summary>
+            主供应商ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.VendorCode">
+            <summary>
+            主供应商编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.VendorName">
+            <summary>
+            主供应商名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.StockQty">
+            <summary>
+            库存数量 这个值需要掉专门的接口查出来，暂时取不到
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.BigPackingQty">
+            <summary>
+            包装数
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.WStatus">
+            <summary>
+            仓库商品状态(0:已移除1:正常;2:淘汰;3:冻结;) ;淘汰商品和冻结商品不能销售;加入或重新加入时为正常；移除后再加入时为正常
+            </summary>       
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.CategoryId1">
+            <summary>
+            基本分类一级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.CategoryId1Name">
+            <summary>
+            基本分类一级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.CategoryId2">
+            <summary>
+            基本分类二级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.CategoryId2Name">
+            <summary>
+            基本分类二级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.CategoryId3">
+            <summary>
+            基本分类三级分类ID(Category.CategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.CategoryId3Name">
+            <summary>
+            基本分类三级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.ShopCategoryId1">
+            <summary>
+            运营一级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.ShopCategoryId1Name">
+            <summary>
+            运营一级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.ShopCategoryId2">
+            <summary>
+            运营二级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.ShopCategoryId2Name">
+            <summary>
+            运营二级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.ShopCategoryId3">
+            <summary>
+            运营三级分类ID(ShopCategory.ShopCategoryId)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.ShopCategoryId3Name">
+            <summary>
+            运营三级分类名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.BrandId1">
+            <summary>
+            品牌ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.BrandId1Name">
+            <summary>
+            品牌ID名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.BrandId2">
+            <summary>
+            子品牌ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.BrandId2Name">
+            <summary>
+            子品牌名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsStockCheckModel.WStatusStr">
+            <summary>
+            仓库商品状态的文本描述
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel">
+            <summary>
+            已加入商品查询结果对象
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.ProductId">
+            <summary>
+            商品ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.WProductId">
+            <summary>
+            仓库商品ID(WProducts.WProductID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.SKU">
+            <summary>
+            ERP编码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.CategoryId1">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.CategoryName1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.CategoryId2">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.CategoryName2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.CategoryId3">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.CategoryName3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.ProductName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.ProductName2">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.Attributes">
+            <summary>
+            规格属性 由3个规格属性拼接而成
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.BarCode">
+            <summary>
+            条码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.Unit">
+            <summary>
+            库存单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.ShopAddPerc">
+            <summary>
+            平台费率
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.ShopPoint">
+            <summary>
+            门店库存单位原积分
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.ShelfID">
+            <summary>
+            货架ID(WProducts.ShelfID、Shelf.ShelfID)
+            </summary>       
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.BigUnit">
+            <summary>
+            大(配送)单位(冗余设计 选中配送单位时,同步该表,没有时该值为1)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.ShelfCode">
+            <summary>
+            货位编号(同一个仓库不能重复)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.Price">
+            <summary>
+            价格 (最小单位配送价*包装数)
+            </summary>      
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.SalePrice">
+            <summary>
+            配送价格
+            </summary>      
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.BuyPrice">
+            <summary>
+            采购价格
+            </summary>      
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.VendorID">
+            <summary>
+            主供应商ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.VendorCode">
+            <summary>
+            主供应商编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.VendorName">
+            <summary>
+            主供应商名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.StockQty">
+            <summary>
+            库存数量 这个值需要掉专门的接口查出来，暂时取不到
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.BigPackingQty">
+            <summary>
+            包装数
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.WStatus">
+            <summary>
+            仓库商品状态(0:已移除1:正常;2:淘汰;3:冻结;) ;淘汰商品和冻结商品不能销售;加入或重新加入时为正常；移除后再加入时为正常
+            </summary>       
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListModel.WStatusStr">
+            <summary>
+            仓库商品状态的文本描述
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuy">
+            <summary>
+            WProductsBuy实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuy.WProductID">
+            <summary>
+            主键ID(WProduct.WProductID 1对1的关系)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuy.WID">
+            <summary>
+            仓库ID(一级)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuy.ProductId">
+            <summary>
+            商品ID(product.ProductID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuy.BuyPrice">
+            <summary>
+            库存单位采购价格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuy.BigProductsUnitID">
+            <summary>
+            大(采购)单位总部的商品多单位ID(ProductsUnit.ID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuy.BigPackingQty">
+            <summary>
+            大(采购)单位包装数(冗余设计 选中配送单位时,同步该表,没有时该值为库存单位)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuy.BigUnit">
+            <summary>
+            大(采购)单位(冗余设计 选中配送单位时,同步该表,没有时该值为1)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuy.VendorID">
+            <summary>
+            商品主供应商ID(Vendor.VendorID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuy.ModifyTime">
+            <summary>
+            最新修改删除时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuy.ModifyUserID">
+            <summary>
+            最后修改删除用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuy.ModifyUserName">
+            <summary>
+            最后修改删除用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuyQModel">
+            <summary>
+            WProductsBuy实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuyQModel.WProductID">
+            <summary>
+            主键ID(WProduct.WProductID 1对1的关系)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuyQModel.WID">
+            <summary>
+            仓库ID(一级)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuyQModel.ProductId">
+            <summary>
+            商品ID(product.ProductID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuyQModel.BuyPrice">
+            <summary>
+            库存单位采购价格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuyQModel.BigProductsUnitID">
+            <summary>
+            大(采购)单位总部的商品多单位ID(ProductsUnit.ID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuyQModel.BigPackingQty">
+            <summary>
+            大(采购)单位包装数(冗余设计 选中配送单位时,同步该表,没有时该值为库存单位)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuyQModel.BigUnit">
+            <summary>
+            大(采购)单位(冗余设计 选中配送单位时,同步该表,没有时该值为1)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsBuyQModel.VendorID">
+            <summary>
+            商品主供应商ID(Vendor.VendorID)
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductsQueryModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQueryModel.ProductId">
+            <summary>
+            商品编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQueryModel.SKU">
+            <summary>
+            商品SKU
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQueryModel.ProductName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQueryModel.BuyUnit">
+            <summary>
+            购买单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQueryModel.PackingQty">
+            <summary>
+            包装数量
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQueryModel.BuyPrice">
+            <summary>
+            购买价格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQueryModel.Unit">
+            <summary>
+            最小单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQueryModel.UnitPrice">
+            <summary>
+            最小单位价格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQueryModel.BarCode">
+            <summary>
+            条码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQueryModel.ShopAddPerc">
+            <summary>
+            门店库存单位提点率(%)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQueryModel.ShopPoint">
+            <summary>
+            门店库存单位积分
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQueryModel.BasePoint">
+            <summary>
+            库存单位绩效积分（司机及门店绩效分)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQueryModel.VendorPerc1">
+            <summary>
+            库存单位物流费率(供应商) (%)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQueryModel.VendorPerc2">
+            <summary>
+            库存单位仓储费率(供应商)(%)
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductsQuerySearchParams">
+            <summary>
+            查询商品参数
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQuerySearchParams.WID">
+            <summary>
+            对应的仓库ID编号；此参数必须传入
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQuerySearchParams.VendorID">
+            <summary>
+            供应商编号，必须填写
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQuerySearchParams.SKU">
+            <summary>
+            SKU信息
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQuerySearchParams.SKULikeSearch">
+            <summary>
+            是否进行模糊搜索
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQuerySearchParams.ProductName">
+            <summary>
+            商品关键词
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQuerySearchParams.BarCode">
+            <summary>
+            国际条码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsQuerySearchParams.ProductId">
+            <summary>
+            商品ID，可以是部分ID，但是必须以开头(必须全部是数字)
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQueryModel">
+            <summary>
+            配送价格查询
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQueryModel.ProductId">
+            <summary>
+            商品编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQueryModel.SKU">
+            <summary>
+            商品SKU
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQueryModel.ProductName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQueryModel.SaleUnit">
+            <summary>
+            配送单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQueryModel.PackingQty">
+            <summary>
+            包装数量
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQueryModel.SalePrice">
+            <summary>
+            配送价格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQueryModel.Unit">
+            <summary>
+            最小单位
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQueryModel.UnitPrice">
+            <summary>
+            最小单位价格
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQueryModel.BarCode">
+            <summary>
+            条码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQueryModel.ShopAddPerc">
+            <summary>
+            门店库存单位提点率(%)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQueryModel.ShopPoint">
+            <summary>
+            门店库存单位积分
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQueryModel.BasePoint">
+            <summary>
+            库存单位绩效积分（司机及门店绩效分)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQueryModel.VendorPerc1">
+            <summary>
+            库存单位物流费率(供应商) (%)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQueryModel.VendorPerc2">
+            <summary>
+            库存单位仓储费率(供应商)(%)
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQuerySearchParams">
+            <summary>
+            查询商品参数
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQuerySearchParams.WID">
+            <summary>
+            对应的仓库ID编号；此参数必须传入
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQuerySearchParams.SKU">
+            <summary>
+            SKU信息
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQuerySearchParams.SKULikeSearch">
+            <summary>
+            是否进行模糊搜索
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQuerySearchParams.ProductName">
+            <summary>
+            商品关键词
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQuerySearchParams.BarCode">
+            <summary>
+            国际条码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQuerySearchParams.ProductId">
+            <summary>
+            商品ID，可以是部分ID，但是必须以开头(必须全部是数字)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsSaleQuerySearchParams.SaleBackFlag">
+            <summary>
+            是否可退
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListParams">
+            <summary>
+            查询已添加商品参数
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListParams.WID">
+            <summary>
+            对应的仓库ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListParams.ProductName">
+            <summary>
+            商品名称关键词
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListParams.SKU">
+            <summary>
+            ERP条码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListParams.BarCode">
+            <summary>
+            条码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListParams.CategoryId1">
+            <summary>
+            分类1
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListParams.CategoryId2">
+            <summary>
+            分类2
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListParams.CategoryId3">
+            <summary>
+            分类3
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListParams.VendorName">
+            <summary>
+            商品主供应商
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListParams.AddedVendor">
+            <summary>
+            是否添加供应商 1为是 0为否 空表示全部
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsAddedListParams.WStatus">
+            <summary>
+            仓库商品状态(0:已移除1:正常;2:淘汰;3:冻结;) ;淘汰商品和冻结商品不能销售;加入或重新加入时为正常；移除后再加入时为正常
+            </summary>      
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListModel">
+            <summary>
+            等待加入商品查询对象
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListModel.ProductId">
+            <summary>
+            商品ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListModel.SKU">
+            <summary>
+            ERP编码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListModel.CategoryId1">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListModel.CategoryName1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListModel.CategoryId2">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListModel.CategoryName2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListModel.CategoryId3">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListModel.CategoryName3">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListModel.ProductName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListModel.ProductName2">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListModel.Attributes">
+            <summary>
+            规格属性
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListModel.BarCode">
+            <summary>
+            条码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListModel.Unit">
+            <summary>
+            库存单位
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListParams">
+            <summary>
+            查询商品参数
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListParams.WID">
+            <summary>
+            对应的仓库ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListParams.ProductName">
+            <summary>
+            商品名称关键词
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListParams.SKU">
+            <summary>
+            ERP条码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListParams.BarCode">
+            <summary>
+            条码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListParams.CategoryId1">
+            <summary>
+            分类1
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListParams.CategoryId2">
+            <summary>
+            分类2
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductsWaitAddListParams.CategoryId3">
+            <summary>
+            分类3
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WStationNumber">
+            <summary>
+            仓库待装区表WStationNumber实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WStationNumber.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WStationNumber.WID">
+            <summary>
+            仓库ID(Warehouse.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WStationNumber.StationNumber">
+            <summary>
+            待装区编号(同一个仓库不能重复)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WStationNumber.Status">
+            <summary>
+            状态(0:空闲;1:正在使用;2:冻结; 可以物理删除)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WStationNumber.ShopID">
+            <summary>
+            门店ID(status=1时才有值)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WStationNumber.OrderID">
+            <summary>
+            订单编号(status=1时才有值)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WStationNumber.OrderConfDate">
+            <summary>
+            配送日期(status=1时才有值 填入值为 SaleOrder.ConfDate)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WStationNumber.LineID">
+            <summary>
+            所属路线(status=1时才有值)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WStationNumber.OrderStatus">
+            <summary>
+            订单状态(status=1时才有值; 值：3:正在拣货;4:拣货完成;5:打印完成;6:正在配送中)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WStationNumber.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WStationNumber.CreateUserID">
+            <summary>
+            创建用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WStationNumber.CreateUserName">
+            <summary>
+            创建用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WStationNumber.ModifyTime">
+            <summary>
+            最新修改删除时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WStationNumber.ModifyUserID">
+            <summary>
+            最后修改删除用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WStationNumber.ModifyUserName">
+            <summary>
+            最后修改删除用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WStationNumber.ShopCode">
+            <summary>
+            门店编号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WStationNumber.ShopName">
+            <summary>
+            门店名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WStationNumber.LineName">
+            <summary>
+            配送线路
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WStationNumber.EmpName">
+            <summary>
+            配送员
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceQuerySearchParams">
+            <summary>
+            查询商品参数
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceQuerySearchParams.WID">
+            <summary>
+            仓库编号（必填）
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceQuerySearchParams.AdjType">
+            <summary>
+            调价单类型（必填）,调整类型( 0:采购(进货)价; 1:配送(批发)价; 3:费率及积分)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceQuerySearchParams.AdjID">
+            <summary>
+            调整单单号
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceQuerySearchParams.ProductName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceQuerySearchParams.SKU">
+            <summary>
+            商品（以前叫ERP编码）
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceQuerySearchParams.BarCode">
+            <summary>
+            商品条形码
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceQuerySearchParams.Status">
+            <summary>
+            状态(0:未提交;1:已确认;2:已过帐;)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceQuerySearchParams.CreateTime1">
+            <summary>
+            创建时间检索区间开始
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceQuerySearchParams.CreateTime2">
+            <summary>
+            创建时间检索区间结束
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceQuerySearchParams.ConfTime1">
+            <summary>
+            确认时间检索区间开始
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceQuerySearchParams.ConfTime2">
+            <summary>
+            确认时间检索区间结束
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceQuerySearchParams.PostingTime1">
+            <summary>
+            生效时间检索区间开始
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceQuerySearchParams.PostingTime2">
+            <summary>
+            生效时间检索区间结束
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceQuerySearchParams.BeginTime1">
+            <summary>
+            生效时间检索区间开始
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceQuerySearchParams.BeginTime2">
+            <summary>
+            生效时间检索区间结束
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetailsExt">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetailsExt.ProductName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetailsExt.PackingQty">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetailsExt.BarCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Model.WProductAdjPriceDetailsExt.SKU">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

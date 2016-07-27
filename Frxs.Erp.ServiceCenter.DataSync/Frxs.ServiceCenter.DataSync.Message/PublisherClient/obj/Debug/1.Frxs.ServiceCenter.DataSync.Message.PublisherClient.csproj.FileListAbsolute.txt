@@ -1,0 +1,7 @@
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.DataSync\Frxs.ServiceCenter.DataSync.Message\PublisherClient\bin\Debug\Frxs.ServiceCenter.DataSync.Message.PublisherClient.XML
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.DataSync\Frxs.ServiceCenter.DataSync.Message\PublisherClient\bin\Debug\Frxs.ServiceCenter.DataSync.Message.PublisherClient.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.DataSync\Frxs.ServiceCenter.DataSync.Message\PublisherClient\bin\Debug\Frxs.ServiceCenter.DataSync.Message.PublisherClient.pdb
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.DataSync\Frxs.ServiceCenter.DataSync.Message\PublisherClient\bin\Debug\RestSharp.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.DataSync\Frxs.ServiceCenter.DataSync.Message\PublisherClient\bin\Debug\RestSharp.xml
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.DataSync\Frxs.ServiceCenter.DataSync.Message\PublisherClient\obj\Debug\Frxs.ServiceCenter.DataSync.Message.PublisherClient.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.DataSync\Frxs.ServiceCenter.DataSync.Message\PublisherClient\obj\Debug\Frxs.ServiceCenter.DataSync.Message.PublisherClient.pdb

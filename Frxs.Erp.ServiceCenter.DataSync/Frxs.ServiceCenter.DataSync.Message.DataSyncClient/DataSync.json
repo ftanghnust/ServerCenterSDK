@@ -1,0 +1,148 @@
+﻿{
+    "DataSyncs": [
+        {
+            "Name": "商品资料",
+            "Steps": [
+                {
+                    "Name": "Attribute",
+                    "Description": "属性表",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.AttributeDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                },
+                {
+                    "Name": "AttributesValue",
+                    "Description": "属性值",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.AttributesValueDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                },
+                {
+                    "Name": "BaseProduct",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.BaseProductDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                },
+                {
+                    "Name": "Products",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.ProductDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                },
+                {
+                    "Name": "ProductsAttribute",
+                    "Description": "商品属性",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.ProductsAttributeDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                },
+                {
+                    "Name": "ProductsAttributesPicture",
+                    "Description": "商品属性图",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.ProductsAttributesPictureDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                },
+                {
+                    "Name": "ProductsBarCode",
+                    "Description": "商品条形码",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.ProductsBarCodeDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                },
+                {
+                    "Name": "ProductsDescription",
+                    "Description": "商品描述",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.ProductsDescriptionDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                },
+                {
+                    "Name": "ProductsDescriptionPicture",
+                    "Description": "商品描述图片",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.ProductsDescriptionPictureDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                },
+                {
+                    "Name": "ProductsPictureDetail",
+                    "Description": "商品图片",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.ProductsPictureDetailDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                },
+                {
+                    "Name": "ProductsSKUNumberService",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.ProductsSKUNumberServiceDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                },
+                {
+                    "Name": "ProductsUnit",
+                    "Description": "商品单位",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.ProductsUnitDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                },
+                {
+                    "Name": "ProductsVendor",
+                    "Description": "商品供应商",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.ProductsVendorDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                }
+            ]
+        },
+        {
+            "Type": "Line"
+        },
+        {
+            "Name": "基本分类",
+            "Steps": [
+                {
+                    "Name": "Category",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.CategoryDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                }
+            ]
+        },
+        {
+            "Name": "运营分类",
+            "Steps": [
+                {
+                    "Name": "ShopCategory",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.ShopCategoryDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                }
+            ]
+        },
+        {
+            "Type": "Line"
+        },
+        {
+            "Name": "品牌管理",
+            "Steps": [
+                {
+                    "Name": "BrandCategory",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.BrandCategoryDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                }
+            ]
+        },
+        {
+            "Name": "仓库资料",
+            "Steps": [
+                {
+                    "Name": "Warehouse",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.WarehouseDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                }
+            ]
+        },
+        {
+            "Name": "门店资料",
+            "Steps": [
+                {
+                    "Name": "Shop",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.ShopDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                }
+            ]
+        },
+        {
+            "Name": "供应商资料",
+            "Steps": [
+                {
+                    "Name": "Vendor",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.VendorDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                },
+                {
+                    "Name": "VendorType",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.VendorTypeDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                }
+            ]
+        },
+        {
+            "Name": "系统字典",
+            "Steps": [
+                {
+                    "Name": "SysDict",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.SysDictDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                },
+                {
+                    "Name": "SysDictDetail",
+                    "Type": "Frxs.ServiceCenter.DataSync.Message.DataSyncClient.Handler.Sync.SysDictDetailDataSyncHandler,Frxs.ServiceCenter.DataSync.Message.DataSyncClient"
+                }
+            ]
+        }
+    ]
+}

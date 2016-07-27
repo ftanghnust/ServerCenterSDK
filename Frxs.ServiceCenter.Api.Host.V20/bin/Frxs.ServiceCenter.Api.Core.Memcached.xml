@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Frxs.ServiceCenter.Api.Core.Memcached</name>
+    </assembly>
+    <members>
+        <member name="T:Frxs.ServiceCenter.Api.Core.Memcached.ApiPluginDescriptor">
+            <summary>
+            接口日志记录器扩展
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.Memcached.ApiPluginDescriptor.#ctor(Frxs.ServiceCenter.Api.Core.IResourceFinderManager)">
+            <summary>
+            
+            </summary>
+            <param name="resourceFinderManager"></param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.Memcached.ApiPluginDescriptor.DisplayName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.Memcached.ApiPluginDescriptor.IndexUrl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.Memcached.ApiPluginDescriptor.Author">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.Memcached.DependencyRegistar">
+            <summary>
+            API框架会自动检测到这里的注册类,自动完成注册
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.Memcached.DependencyRegistar.Register(Autofac.ContainerBuilder,Frxs.ServiceCenter.Api.Core.ITypeFinder,Frxs.ServiceCenter.Api.Core.SystemOptions)">
+            <summary>
+            系统框架默认的会被覆盖
+            </summary>
+            <param name="containerBuilder"></param>
+            <param name="typeFinder">类型查找器</param>
+            <param name="systemOptions">系统框架配置信息</param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.Memcached.DependencyRegistar.Order">
+            <summary>
+            数字越大越后注册
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.Memcached.IMemcachedManagerConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.Memcached.IMemcachedManagerConfig.Servers">
+            <summary>
+            服务器地址列表，多服务器使用,分开
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.Memcached.MemcachedManagerConfig">
+            <summary>
+            <![CDATA[
+            缓存web.config节点配置类;无需手工配置，API系统框架会自动将此配置文件赋值给对应的换成类；XML配置文件格式如下：系统框架IOC容器会自动注册此配置
+            <configuration>
+            <configSections>
+             <section name="memcachedManagerConfig" type="Frxs.ServiceCenter.Api.Core.Memcached.MemcachedManagerConfig,Frxs.ServiceCenter.Api.Core.Memcached"/>
+            </configSections>
+            <memcachedManagerConfig servers="127.0.0.1:11211,192.168.0.2:11211"/>
+            <configuration>
+            ]]>
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.Memcached.MemcachedManagerConfig.Create(System.Object,System.Object,System.Xml.XmlNode)">
+            <summary>
+            
+            </summary>
+            <param name="parent"></param>
+            <param name="configContext"></param>
+            <param name="section"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Core.Memcached.MemcachedManagerConfig.Servers">
+            <summary>
+            服务器地址列表，多服务器使用,分开
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Core.Memcached.MemcachedManager">
+            <summary>
+            API框架接口缓存实现类Mamcached
+            服务器运行文件：platformV3.0\Frxs.Platform\packages\memcached-win32x64\x64
+            客户端SDK文件：platformV3.0\Frxs.Platform\packages\Memcached.ClientLibrary.1.0\lib\net20
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.Api.Core.Memcached.MemcachedManager._time">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.Api.Core.Memcached.MemcachedManager._memcachedClient">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.Memcached.MemcachedManager.#ctor(Frxs.ServiceCenter.Api.Core.Memcached.IMemcachedManagerConfig)">
+            <summary>
+            API框架接口缓存实现类Mamcached
+            </summary>
+            <param name="config">配置文件</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.Memcached.MemcachedManager.Get``1(System.String)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.Memcached.MemcachedManager.Set(System.String,System.Object,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="data"></param>
+            <param name="cacheTime"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.Memcached.MemcachedManager.IsSet(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.Memcached.MemcachedManager.Remove(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.Memcached.MemcachedManager.RemoveByPattern(System.String)">
+            <summary>
+            不支持
+            </summary>
+            <param name="pattern"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Core.Memcached.MemcachedManager.Clear">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

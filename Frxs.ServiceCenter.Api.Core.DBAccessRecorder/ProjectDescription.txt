@@ -1,0 +1,44 @@
+﻿
+此项目文件为API访问记录器实现项目，使用数据库记录访问日志，默认使用MSSQL数据库；可以迁移至:MySql,Oracle，只要连接文件改一下就可以了；如果需要实现其他介质的存储，请新增一个接口实现项目
+
+以后扩展方式：
+为了提高记录的速度(在高并发情况下此记录方式会给框架系统带来麻烦)，可以在接口实现层先实现向专用缓存服务器写记录或者直接使用NOSQL来进行记录，然后使用定时任务取出数据，记录到存储介质
+
+拿Redis做作为实例：记录日志，写入Redis缓存，然后采取队列的方式取数据，定期批量写数据到数据库
+
+项目使用方式：
+1.接口HOST项目引用此项目
+2.接口HOST项目web.config文件配置如下节点
+
+web.config配置
+
+<configuration>
+
+  <configSections>
+    <!--记录器配置节点-->
+    <section name="apiAccessRecorderConfig" type="Frxs.ServiceCenter.Api.Core.AccessRecorder.DataBaseAccessRecorderConfig,Frxs.ServiceCenter.Api.Core.AccessRecorder" />
+	<!--下面如果有的话，无需配置-->
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false"/>
+  </configSections>
+
+  <!--API接口访问记录器数据库连接名称-->
+  <apiAccessRecorderConfig connectionStringName="apiAccessRecorderConn" />
+
+  <!--数据库连接字符串-->
+  <connectionStrings>
+    <add name="apiAccessRecorderConn" connectionString="Data Source=localhost;Initial Catalog=ApiAccessRecorder;User ID=sa;pwd=123456;" providerName="System.Data.SqlClient" />
+  </connectionStrings>
+
+  <!--如果存在下面节点可以不配置-->
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.LocalDbConnectionFactory, EntityFramework">
+      <parameters>
+        <parameter value="mssqllocaldb"/>
+      </parameters>
+    </defaultConnectionFactory>
+    <providers>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer"/>
+    </providers>
+  </entityFramework>
+
+</configuration>

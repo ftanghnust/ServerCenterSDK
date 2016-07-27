@@ -1,0 +1,42 @@
+
+2016/5/6 19:26:25
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.Categories.GetList
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]SELECT vendortypename,settletimetypename,creditlevelname,vendorid,vendorcode,vendorname,vendorshortname,vendortypeid,linkman,telephone,fax,status,legalperson,email,weburl,region,settletimetype,creditlevel,areaprincipal,provinceid,cityid,regionid,address,fulladdress,isdeleted,createtime,createuserid,createusername,modifytime,modifyuserid,modifyusername FROM (SELECT  TOP 200 vendortypename,settletimetypename,creditlevelname,vendorid,vendorcode,vendorname,vendorshortname,vendortypeid,linkman,telephone,fax,status,legalperson,email,weburl,region,settletimetype,creditlevel,areaprincipal,provinceid,cityid,regionid,address,fulladdress,isdeleted,createtime,createuserid,createusername,modifytime,modifyuserid,modifyusername FROM (SELECT ROW_NUMBER() OVER (ORDER BY VendorID ) AS row_no,VendorTypeName,SettleTimeTypeName,CreditLevelName,VendorID,VendorCode,VendorName,VendorShortName,VendorTypeID,LinkMan,Telephone,Fax,Status,LegalPerson,Email,WebUrl,Region,SettleTimeType,CreditLevel,AreaPrincipal,ProvinceID,CityID,RegionID,Address,FullAddress,IsDeleted,CreateTime,CreateUserID,CreateUserName,ModifyTime,ModifyUserID,ModifyUserName FROM (select w.WID, v.*,t.VendorTypeName,s.DictLabel as SettleTimeTypeName,k.DictLabel as CreditLevelName 
+from dbo.Vendor v left join  dbo.VendorType t on v.VendorTypeID=t.VendorTypeID
+left join (select * from SysDictDetail where DictCode='VendorSettleTimeType') s on v.SettleTimeType=s.DictValue
+left join (select * from SysDictDetail where DictCode='ShopLevel') k on v.CreditLevel=k.DictValue
+join VendorWarehouse w on v.VendorID=w.VendorID and w.WID=105) tmp WHERE  1=1  and IsDeleted=0) AS tempTable WHERE row_no>0 ORDER BY row_no ) AS tmp
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "FRXS_ERP_BASEDATA"。登录失败。
+用户 'sa' 登录失败。
+   在 Frxs.Platform.DBUtility.DBHelper.GetIDataReader(String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Platform\Frxs.Platform.DBUtility\DBHelper.cs:行号 488
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.CategoriesDAO.GetList(String where, SqlParameter[] sp) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\CategoriesDAO.cs:行号 625
+ClientConnectionId:afd366d6-85a3-47ed-bdc4-8b2d039660a6
+
+2016/5/6 19:26:25
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.ProductQueryDAO.GetCount
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]SELECT vendortypename,settletimetypename,creditlevelname,vendorid,vendorcode,vendorname,vendorshortname,vendortypeid,linkman,telephone,fax,status,legalperson,email,weburl,region,settletimetype,creditlevel,areaprincipal,provinceid,cityid,regionid,address,fulladdress,isdeleted,createtime,createuserid,createusername,modifytime,modifyuserid,modifyusername FROM (SELECT  TOP 200 vendortypename,settletimetypename,creditlevelname,vendorid,vendorcode,vendorname,vendorshortname,vendortypeid,linkman,telephone,fax,status,legalperson,email,weburl,region,settletimetype,creditlevel,areaprincipal,provinceid,cityid,regionid,address,fulladdress,isdeleted,createtime,createuserid,createusername,modifytime,modifyuserid,modifyusername FROM (SELECT ROW_NUMBER() OVER (ORDER BY VendorID ) AS row_no,VendorTypeName,SettleTimeTypeName,CreditLevelName,VendorID,VendorCode,VendorName,VendorShortName,VendorTypeID,LinkMan,Telephone,Fax,Status,LegalPerson,Email,WebUrl,Region,SettleTimeType,CreditLevel,AreaPrincipal,ProvinceID,CityID,RegionID,Address,FullAddress,IsDeleted,CreateTime,CreateUserID,CreateUserName,ModifyTime,ModifyUserID,ModifyUserName FROM (select w.WID, v.*,t.VendorTypeName,s.DictLabel as SettleTimeTypeName,k.DictLabel as CreditLevelName 
+from dbo.Vendor v left join  dbo.VendorType t on v.VendorTypeID=t.VendorTypeID
+left join (select * from SysDictDetail where DictCode='VendorSettleTimeType') s on v.SettleTimeType=s.DictValue
+left join (select * from SysDictDetail where DictCode='ShopLevel') k on v.CreditLevel=k.DictValue
+join VendorWarehouse w on v.VendorID=w.VendorID and w.WID=105) tmp WHERE  1=1  and IsDeleted=0) AS tempTable WHERE row_no>0 ORDER BY row_no ) AS tmp
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "FRXS_ERP_BASEDATA"。登录失败。
+用户 'sa' 登录失败。
+   在 Frxs.Platform.DBUtility.DBHelper.GetSingle(String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Platform\Frxs.Platform.DBUtility\DBHelper.cs:行号 565
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsWaitAddListDAO.GetCount() 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsWaitAddListDAO.cs:行号 122
+ClientConnectionId:afd366d6-85a3-47ed-bdc4-8b2d039660a6
+
+2016/5/6 19:26:47
+[操作]Frxs.Erp.ServiceCenter.Product.MSSQLDAL.Products.GetModel
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]SELECT vendortypename,settletimetypename,creditlevelname,vendorid,vendorcode,vendorname,vendorshortname,vendortypeid,linkman,telephone,fax,status,legalperson,email,weburl,region,settletimetype,creditlevel,areaprincipal,provinceid,cityid,regionid,address,fulladdress,isdeleted,createtime,createuserid,createusername,modifytime,modifyuserid,modifyusername FROM (SELECT  TOP 200 vendortypename,settletimetypename,creditlevelname,vendorid,vendorcode,vendorname,vendorshortname,vendortypeid,linkman,telephone,fax,status,legalperson,email,weburl,region,settletimetype,creditlevel,areaprincipal,provinceid,cityid,regionid,address,fulladdress,isdeleted,createtime,createuserid,createusername,modifytime,modifyuserid,modifyusername FROM (SELECT ROW_NUMBER() OVER (ORDER BY VendorID ) AS row_no,VendorTypeName,SettleTimeTypeName,CreditLevelName,VendorID,VendorCode,VendorName,VendorShortName,VendorTypeID,LinkMan,Telephone,Fax,Status,LegalPerson,Email,WebUrl,Region,SettleTimeType,CreditLevel,AreaPrincipal,ProvinceID,CityID,RegionID,Address,FullAddress,IsDeleted,CreateTime,CreateUserID,CreateUserName,ModifyTime,ModifyUserID,ModifyUserName FROM (select w.WID, v.*,t.VendorTypeName,s.DictLabel as SettleTimeTypeName,k.DictLabel as CreditLevelName 
+from dbo.Vendor v left join  dbo.VendorType t on v.VendorTypeID=t.VendorTypeID
+left join (select * from SysDictDetail where DictCode='VendorSettleTimeType') s on v.SettleTimeType=s.DictValue
+left join (select * from SysDictDetail where DictCode='ShopLevel') k on v.CreditLevel=k.DictValue
+join VendorWarehouse w on v.VendorID=w.VendorID and w.WID=105) tmp WHERE  1=1  and IsDeleted=0) AS tempTable WHERE row_no>0 ORDER BY row_no ) AS tmp
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "FRXS_ERP_BASEDATA"。登录失败。
+用户 'sa' 登录失败。
+   在 Frxs.Platform.DBUtility.DBHelper.GetIDataReader(String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Platform\Frxs.Platform.DBUtility\DBHelper.cs:行号 488
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.ProductsDAO.GetModel(Int32 productId) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\ProductsDAO.cs:行号 382
+ClientConnectionId:ac3a13ee-5d5f-4dd0-a240-9bc052caaff0

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Frxs.ServiceCenter.Product.Api.GlobalRequestHanderInterceptors</name>
+    </assembly>
+    <members>
+        <member name="T:Frxs.ServiceCenter.Product.Api.GlobalRequestHanderInterceptors.DefaultGlobalRequestHanderInterceptor">
+            <summary>
+            默认的全局连接器实现;为实现任何的拦截操作
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Product.Api.GlobalRequestHanderInterceptors.DefaultGlobalRequestHanderInterceptor.OnActionExecuting(Frxs.ServiceCenter.Api.Core.ActionExecutingContext)">
+            <summary>
+            
+            </summary>
+            <param name="actionExecutingContext"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Product.Api.GlobalRequestHanderInterceptors.DefaultGlobalRequestHanderInterceptor.OnActionExecuted(Frxs.ServiceCenter.Api.Core.ActionExecutedContext)">
+            <summary>
+            
+            </summary>
+            <param name="actionExecutedContext"></param>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Product.Api.GlobalRequestHanderInterceptors.DependencyRegistar">
+            <summary>
+            API框架会自动检测到这里的注册类,自动完成注册
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Product.Api.GlobalRequestHanderInterceptors.DependencyRegistar.Register(Autofac.ContainerBuilder,Frxs.ServiceCenter.Api.Core.ITypeFinder,Frxs.ServiceCenter.Api.Core.SystemOptions)">
+            <summary>
+            系统框架默认的会被覆盖;
+            </summary>
+            <param name="containerBuilder"></param>
+            <param name="typeFinder">类型查找器</param>
+            <param name="systemOptions">系统框架配置信息</param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Product.Api.GlobalRequestHanderInterceptors.DependencyRegistar.Order">
+            <summary>
+            数字越大越后注册
+            </summary>
+        </member>
+    </members>
+</doc>

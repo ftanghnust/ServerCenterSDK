@@ -1,0 +1,776 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Frxs.ServiceCenter.Api.Host</name>
+    </assembly>
+    <members>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Actions.CacheTestAction">
+            <summary>
+            缓存演示
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.Api.Host.Actions.CacheTestAction._cacheManager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Actions.CacheTestAction.#ctor(Frxs.ServiceCenter.Api.Core.ICacheManager,Frxs.ServiceCenter.Api.Core.IMachineNameProvider)">
+            <summary>
+            接口单独使用指定的缓存器，比如：全局使用Redis但是，
+            这个接口需要单独使用Memcached缓存，可以这样配置，然后注册此接口既可
+            </summary>
+            <param name="cacheManager">缓存器</param>
+            <param name="machineNameProvider"></param>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Actions.CacheTestAction.AttributeValue">
+            <summary>
+            属性值对象
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.CacheTestAction.AttributeValue.ValuesId">
+            <summary>
+            属性值编号
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.CacheTestAction.AttributeValue.ValueStr">
+            <summary>
+            属性值
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Actions.CacheTestAction.AttributeValue.Equals(Frxs.ServiceCenter.Api.Host.Actions.CacheTestAction.AttributeValue)">
+            <summary>
+            
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Actions.CacheTestAction.AttributeValue.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Actions.CacheTestAction.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Actions.HttpClientAction">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Actions.HttpClientAction.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Actions.OrmTestAction">
+            <summary>
+            演示接口框架(ORM+分库操作（数据表完全一致）+依赖注入方式访问接口)以及代码风格
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.Api.Host.Actions.OrmTestAction.n">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.Api.Host.Actions.OrmTestAction._shelfRepository">
+            <summary>
+            数据访问仓储
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Actions.OrmTestAction.#ctor(Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.Api.Host.Data.Domain.Shelf},Frxs.ServiceCenter.Data.Core.IRepository{Frxs.ServiceCenter.Api.Host.Data.Domain.Warehouse},Frxs.ServiceCenter.Data.Core.IDbContext,Frxs.ServiceCenter.Data.Core.IUnitOfWork)">
+            <summary>
+            直接使用注入的方式来进行数据访问对象初始化(用于写操作)
+            </summary>
+            <param name="shelfRepository"></param>
+            <param name="warehouseRepository"></param>
+            <param name="dbContext"></param>
+            <param name="unitOfWork">工作单元</param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Actions.OrmTestAction.CreateDBRoute(System.Int32)">
+            <summary>
+            根据仓库ID获取每个仓库对应的物理数据库上下文；隔离下具体实现
+            </summary>
+            <param name="wcId">对应的网仓ID编号;根据网仓ID路由数据库</param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Actions.OrmTestAction.CreateRepository``1(Frxs.ServiceCenter.Data.Core.IDbContext)">
+            <summary>
+            封装下仓储层，隔离下具体实现
+            </summary>
+            <typeparam name="T">数据实体映射对象</typeparam>
+            <param name="dbContext">数据库访问上下文</param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Actions.OrmTestAction.CreateRepository``1(System.Int32)">
+            <summary>
+            直接返回一个映射对象仓储
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="wcId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Actions.OrmTestAction.Execute">
+            <summary>
+            执行业务逻辑
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Actions.IdsGetAction">
+            <summary>
+            获取ID流水码；设计思想，数据库只记录每次批量生成1万个ID号持久化最后的一个流水索引号；
+            等1万个ID号从缓冲池里取完后，在触发批量生成一万个流水码的方法，数据库只要更新一下流水码+1万
+            这样大大降低数据库并发；将数据库压力推给应用程序处理。为了防止缓冲池号段取完，可以做个预警机制
+            即：在取完一半号段的时候，触发重新输出下一批号段到缓冲池，这样就可以防止取完号段瞬间并发到数据库
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.Api.Host.Actions.IdsGetAction._currentIndex">
+            <summary>
+            当前索引号
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.Api.Host.Actions.IdsGetAction._locker">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Actions.IdsGetAction.IdType">
+            <summary>
+            获取主键类型枚举
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.Api.Host.Actions.IdsGetAction.IdType.ProductId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.Api.Host.Actions.IdsGetAction.IdType.WarehouseId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Actions.IdsGetAction.IdsGetActionRequest">
+            <summary>
+            上送参数
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.IdsGetAction.IdsGetActionRequest.N">
+            <summary>
+            获取ID的数量
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.IdsGetAction.IdsGetActionRequest.X">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.IdsGetAction.IdsGetActionRequest.Y">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.IdsGetAction.IdsGetActionRequest.Type">
+            <summary>
+            生成主键类型
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.IdsGetAction.IdsGetActionRequest.Date">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.IdsGetAction.IdsGetActionRequest.Z">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.IdsGetAction.IdsGetActionRequest.B">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Actions.IdsGetAction.IdsGetActionRequest.Valid">
+            <summary>
+            校验参数准确性
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Actions.IdsGetAction.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Actions.IdsGetAction.OnActionExecuting(Frxs.ServiceCenter.Api.Core.ActionExecutingContext)">
+            <summary>
+            
+            </summary>
+            <param name="actionExecutingContext"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Actions.IdsGetAction.OnActionExecuted(Frxs.ServiceCenter.Api.Core.ActionExecutedContext)">
+            <summary>
+            
+            </summary>
+            <param name="actionExecutedContext"></param>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Actions.A">
+            <summary>
+            演示接口拦截器
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Actions.A.OnActionExecuting(Frxs.ServiceCenter.Api.Core.ActionExecutingContext)">
+            <summary>
+            
+            </summary>
+            <param name="actionExecutingContext"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Actions.A.OnActionExecuted(Frxs.ServiceCenter.Api.Core.ActionExecutedContext)">
+            <summary>
+            
+            </summary>
+            <param name="actionExecutedContext"></param>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction">
+            <summary>
+            复杂类型参数测试请求接口，仅仅是测试
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.Order">
+            <summary>
+            类说明与属性说明还是需要详细点滴，接口框架需要这些信息输出SDK开发文档
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.Order.OrderId">
+            <summary>
+            订单编号
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.Order.Address">
+            <summary>
+            收货地址
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.Order.Payment">
+            <summary>
+            实际支付金额
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.Order.Discount">
+            <summary>
+            优惠总金额
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.Order.PostFee">
+            <summary>
+            运费
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.Order.TotalItems">
+            <summary>
+            总商品数
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.Order.Created">
+            <summary>
+            下单时间
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.Order.Items">
+            <summary>
+            订单商品明细
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.Order.ConfirmUserId">
+            <summary>
+            最后操作用户ID
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.Address">
+            <summary>
+            收货地址
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.Address.Provice">
+            <summary>
+            省
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.Address.City">
+            <summary>
+            市
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.Address.Dist">
+            <summary>
+            区县
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.Item">
+            <summary>
+            商品明细对象
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.Item.ProductId">
+            <summary>
+            商品编号
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.Item.Price">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.Item.N">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.TestRequestDto">
+            <summary>
+            测试请求接口
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.TestRequestDto.OrderId">
+            <summary>
+            订单编号
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.TestRequestDto.Created1">
+            <summary>
+            下单时间1
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.TestRequestDto.Created2">
+            <summary>
+            下单时间2
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.TestRequestDto.BeforeValid">
+            <summary>
+            演示让在验证前还有一次机会修改上送参数值
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.TestRequestDto.Valid">
+            <summary>
+            演示自定义的业务逻辑参数判断
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction._actionSelector">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.#ctor(Frxs.ServiceCenter.Api.Core.IActionSelector)">
+            <summary>
+            
+            </summary>
+            <param name="actionSelector"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Actions.ComplexTestAction.Execute">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.ApiPluginDescriptor">
+            <summary>
+            插件描述
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.ApiPluginDescriptor.#ctor(Frxs.ServiceCenter.Api.Core.IResourceFinderManager)">
+            <summary>
+            
+            </summary>
+            <param name="resourceFinderManager"></param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.ApiPluginDescriptor.DisplayName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.ApiPluginDescriptor.Author">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.MessagePost.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.MessagePost.Post``1(``0,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="entity"></param>
+            <param name="messaglog"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.MessagePost.Receive``1(System.Action{``0})">
+            <summary>
+            
+            </summary>
+            <param name="fun"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.MessagePost.Dispose">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Data.Domain.Shelf">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Data.Domain.Shelf.ShelfID">
+            <summary>
+            ID(主键)
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Data.Domain.Shelf.ShelfCode">
+            <summary>
+            货位编号(同一个仓库不能重复)
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Data.Domain.Shelf.ShelfAreaID">
+            <summary>
+            所属货区ID(ShelfArea.ShelfAreaID)
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Data.Domain.Shelf.ShelfType">
+            <summary>
+            货位类型(0:存储;1:)
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Data.Domain.Shelf.WID">
+            <summary>
+            仓库ID(Warehouse.WID)
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Data.Domain.Shelf.Status">
+            <summary>
+            状态(0:正常;1:冻结)
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Data.Domain.Shelf.ModifyTime">
+            <summary>
+            最新修改删除时间
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Data.Domain.Shelf.ModifyUserID">
+            <summary>
+            最后修改删除用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Data.Domain.Shelf.ModifyUserName">
+            <summary>
+            最后修改删除用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Data.Domain.Shelf.WName">
+            <summary>
+            仓库名称
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Data.Domain.Shelf.ShelfAreaName">
+            <summary>
+            货区
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Data.Domain.Shelf.StatusStr">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Data.Domain.Warehouse">
+            <summary>
+             仓库信息
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Data.Domain.Warehouse.WHID">
+            <summary>
+            仓库ID
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Data.Domain.Warehouse.WHName">
+            <summary>
+            仓库名称
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Data.Domain.Warehouse.Parent">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Data.Mapping.ShelfMap">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Data.Mapping.ShelfMap.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Data.Mapping.WarehouseMap">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Data.Mapping.WarehouseMap.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Data.V20DbContext">
+            <summary>
+            数据库访问上下文
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Data.V20DbContext.Logger">
+            <summary>
+            初始化一个日志记录器
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Data.V20DbContext.#ctor(System.Func{System.String})">
+            <summary>
+            初始化数据访问上下文对象
+            </summary>
+            <param name="getNameOrConnectionString">数据库连接名</param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Data.V20DbContext.EntityTypeConfigurationMapAssembly">
+            <summary>
+            映射程序集改成当前程序集
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Data.EFIntercepterLogging">
+            <summary>
+            用于调试
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.Api.Host.Data.EFIntercepterLogging._stopwatch">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Data.EFIntercepterLogging.ScalarExecuting(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="command"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Data.EFIntercepterLogging.ScalarExecuted(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Object})">
+            <summary>
+            
+            </summary>
+            <param name="command"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Data.EFIntercepterLogging.NonQueryExecuting(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="command"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Data.EFIntercepterLogging.NonQueryExecuted(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Int32})">
+            <summary>
+            
+            </summary>
+            <param name="command"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Data.EFIntercepterLogging.ReaderExecuting(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Data.Common.DbDataReader})">
+            <summary>
+            
+            </summary>
+            <param name="command"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Data.EFIntercepterLogging.ReaderExecuted(System.Data.Common.DbCommand,System.Data.Entity.Infrastructure.Interception.DbCommandInterceptionContext{System.Data.Common.DbDataReader})">
+            <summary>
+            
+            </summary>
+            <param name="command"></param>
+            <param name="interceptionContext"></param>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Data.DependencyRegistar">
+            <summary>
+            框架会自动检测到这里的注册类,自动完成注册
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Data.DependencyRegistar.Register(Autofac.ContainerBuilder,Frxs.ServiceCenter.Api.Core.ITypeFinder,Frxs.ServiceCenter.Api.Core.SystemOptions)">
+            <summary>
+            系统框架默认的会被覆盖;
+            </summary>
+            <param name="containerBuilder"></param>
+            <param name="typeFinder">类型查找器</param>
+            <param name="systemOptions"></param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Data.DependencyRegistar.Order">
+            <summary>
+            数字越大越后注册
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Data.DataBaseAccessConfig">
+            <summary>
+            <![CDATA[
+            web.config节点配置对象；此配置节点会被IOC容器自动注册;
+            <configuration>
+            <configSections>
+             <section name="V20ConnectionName" type="Frxs.ServiceCenter.Api.Host.Data.DataBaseAccessConfig,Frxs.ServiceCenter.Api.Host"/>
+            </configSections>
+             <V20ConnectionName connectionStringName="connstring_sql"/>
+            <configuration>
+            ]]>
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Data.DataBaseAccessConfig.#ctor">
+            <summary>
+            配置文件对应的实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.Data.DataBaseAccessConfig.ConnectionStringName">
+            <summary>
+            数据库连接字符串
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Data.DataBaseAccessConfig.Create(System.Object,System.Object,System.Xml.XmlNode)">
+            <summary>
+            创建配置对象信息
+            </summary>
+            <param name="parent"></param>
+            <param name="configContext"></param>
+            <param name="section"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.DependencyRegistar">
+            <summary>
+            注册系统默认实现的接口服务类
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.DependencyRegistar.Order">
+            <summary>
+            优先级最低，方便外部程序重写框架里的实现，覆盖掉系统默认的实现
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.DependencyRegistar.Register(Autofac.ContainerBuilder,Frxs.ServiceCenter.Api.Core.ITypeFinder,Frxs.ServiceCenter.Api.Core.SystemOptions)">
+            <summary>
+            注册特定的类型到容器
+            </summary>
+            <param name="containerBuilder">注册容器</param>
+            <param name="typeFinder">类型查找器</param>
+            <param name="systemOptions">系统框架配置信息</param>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.DES3ApiSecurity">
+            <summary>
+            系统框架默认的安全接口，此接口什么都没有做，直接原路返回，即上送参数解密，下送参数解密
+            如果约定了加密上送参数，下送数据，可以直接修改下面2个方法里的加密解密方式即可
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.Api.Host.DES3ApiSecurity._cacheManager">
+            <summary>
+            缓存器
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.DES3ApiSecurity.#ctor(Frxs.ServiceCenter.Api.Core.ICacheManager)">
+            <summary>
+            将缓存器注入到当前安全接口
+            </summary>
+            <param name="cacheManager">缓存器</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.DES3ApiSecurity.RequestParamsDecrypt(Frxs.ServiceCenter.Api.Core.RequestParams)">
+            <summary>
+            直接返回上送数据
+            </summary>
+            <param name="rawRequestParams">上送参数对象解密</param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.DES3ApiSecurity.ResponseEncrypt(Frxs.ServiceCenter.Api.Core.RequestParams,System.String)">
+            <summary>
+            直接返回下送数据
+            </summary>
+            <param name="actionResultString">actionResult对象格式化字符串</param>
+            <param name="decryptedRequestParams">解密后的上送参数对象</param>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Tasks.TestTask">
+            <summary>
+            演示作业任务，可以使用特性方式来注册作业任务调度
+            </summary>
+        </member>
+        <member name="F:Frxs.ServiceCenter.Api.Host.Tasks.TestTask._logger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Tasks.TestTask.#ctor(Frxs.ServiceCenter.Api.Core.IActionSelector,Frxs.ServiceCenter.Api.Core.IMachineNameProvider,Frxs.ServiceCenter.Api.Core.ILogger)">
+            <summary>
+            
+            </summary>
+            <param name="actionSelector"></param>
+            <param name="machineNameProvider"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Tasks.TestTask.Execute(Frxs.ServiceCenter.Api.Core.TaskExecuteContext)">
+            <summary>
+            
+            </summary>
+            <param name="taskExecuteContext"></param>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.Validors.IdsGetActionRequestValidator">
+            <summary>
+            上送参数校验 基于：FluentValidation 方式，更多的演示配置可以查看
+            https://github.com/JeremySkinner/FluentValidation/wiki
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.Validors.IdsGetActionRequestValidator.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.ApiHostApplication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.ApiHostApplication.Application_Start(System.Object,System.EventArgs)">
+            <summary>
+            应用程序启动时初始化系统框架
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.ApiHostApplication.Application_Error(System.Object,System.EventArgs)">
+            <summary>
+            记录错误信息
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Frxs.ServiceCenter.Api.Host.TaskSchedulerRegistar">
+            <summary>
+            注册作业任务调度
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.Api.Host.TaskSchedulerRegistar.Order">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.Api.Host.TaskSchedulerRegistar.Register(Frxs.ServiceCenter.Api.Core.ITaskSchedulerCollection)">
+            <summary>
+            
+            </summary>
+            <param name="taskSchedulerCollection"></param>
+        </member>
+    </members>
+</doc>

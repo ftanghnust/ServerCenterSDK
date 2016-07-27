@@ -1,0 +1,870 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Frxs.ServiceCenter.DataSync.Message.PublisherClient</name>
+    </assembly>
+    <members>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension">
+            <summary>
+            消息发布扩展 (共【93】个发布事件)
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.AttributeChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品规格变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="attributeId">商品规格编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.AttributeCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品规格创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="attributeId">商品规格编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.AttributeRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品规格移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="attributeId">商品规格编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.AttributeValuesChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            规格属性值 变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="valuesId">规格属性值编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.AttributeValuesCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            规格属性值 创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="valuesId">规格属性值编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.AttributeValuesRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            规格属性值 移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="valuesId">规格属性值编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.BaseProductChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            母商品变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="baseProductId">母商品编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.BaseProductCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            母商品创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="baseProductId">母商品编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.BaseProductRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            母商品移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="baseProductId">母商品编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.BrandCategoryChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            品牌变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="brandId">品牌编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.BrandCategoryCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            品牌创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="brandId">品牌编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.BrandCategoryRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            品牌移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="brandId">品牌编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.BuyOrderCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.String)">
+            <summary>
+            采购订单被创建的时候触发事件需要传送的参数
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="orderId"></param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.CategoryChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            基本分类变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="categoryId">基本分类编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.CategoryCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            基本分类创建(Created)消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="categoryId">基本分类编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.CategoryRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            基本分类移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="categoryId">基本分类编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductAttributesChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品规格属性关系 变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">商品规格属性关系 编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductAttributesCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品规格属性关系 创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">商品规格属性关系 编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductAttributesPictureChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品规格属性图片 变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="productId">商品编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductAttributesPictureCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品规格属性图片 创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="productId">商品编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductAttributesPictureRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品规格属性图片 移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="productId">商品编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductAttributesRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品规格属性关系 移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">商品规格属性关系 编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductBarCodesChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品条码 变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">商品条码编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductBarCodesCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品条码 创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">商品条码 编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductBarCodesRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品条码 移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">商品条码 编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int64)">
+            <summary>
+            商品变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="productId">商品编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int64)">
+            <summary>
+            商品创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="productId">商品编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductDescriptionChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            母商品文字描述(图文详情之文字详情)  变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="baseProductId">母商品 编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductDescriptionCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            母商品文字描述(图文详情之文字详情) 创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="baseProductId">母商品编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductDescriptionPictureChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            母商品图片描述(图文详情之图片详情)  变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">母商品图片描述编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductDescriptionPictureCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            母商品图片描述(图文详情之图片详情) 创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">母商品图片描述编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductDescriptionPictureRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            母商品图片描述(图文详情之图片详情)  移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">母商品图片描述编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductDescriptionRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            母商品文字描述(图文详情之文字详情)  移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="baseProductId">母商品编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductPictureDetailChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品主图 变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">商品主图编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductPictureDetailCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品主图 创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">商品主图编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductPictureDetailRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品主图 移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">商品主图编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int64)">
+            <summary>
+            商品移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="productId">商品编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductsVendorChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品供应商关系变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">商品供应商关系编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductsVendorCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品供应商关系创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">商品供应商关系编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductsVendorRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品供应商关系移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">商品供应商关系编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductUnitChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品单位 变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="productsUnitID">商品单位 编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductUnitCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品单位 创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="productsUnitID">商品单位 编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ProductUnitRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品单位 移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="productsUnitID">商品单位 编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.SaleOrderChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.String)">
+            <summary>
+            销售订单更改
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="orderId">订单编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.SaleOrderCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.String,System.DateTime)">
+            <summary>
+            销售订单更改
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="orderId">订单编号</param>
+            <param name="created"></param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ShopCategoryChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            运营分类变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="categoryId">运营分类编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ShopCategoryCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            运营分类创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="categoryId">运营分类编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ShopCategoryRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            运营分类移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="categoryId">运营分类编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ShopChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            门店变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="shopID">门店编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ShopCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            门店创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="shopID">门店编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.ShopRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            门店移除(Remove)事件消息体（触发事件之移除事件需要传送的参数）
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="shopID">门店编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.SysAppSettingChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            仓库报表参数 变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">仓库报表参数 编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.SysAppSettingCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            仓库报表参数 创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">仓库报表参数 编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.SysAppSettingRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            仓库报表参数 移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">仓库报表参数 编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.SysAreaChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            系统区域变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="areaID">系统区域编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.SysAreaCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            系统区域创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="areaID">系统区域编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.SysAreaRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            系统区域 移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="areaID">系统区域编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.SysDictChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.String)">
+            <summary>
+            数据字典 变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="dictCode">数据字典编码</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.SysDictCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.String)">
+            <summary>
+            数据字典创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="dictCode">数据字典编码</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.SysDictDetailChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            数据字典明细参数 变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">数据字典明细参数 编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.SysDictDetailCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            数据字典明细参数 创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">数据字典明细参数 编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.SysDictDetailRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            数据字典明细参数 移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">数据字典明细参数 编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.SysDictRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.String)">
+            <summary>
+            数据字典移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="dictCode">数据字典编码</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.SysParamsChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.String)">
+            <summary>
+            系统参数变更(Changed)消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="paramCode">系统参数编码</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.SysParamsCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.String)">
+            <summary>
+            系统参数创建(Created)消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="paramCode">系统参数编码</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.SysParamsRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.String)">
+            <summary>
+            系统参数移除(Removed)消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="paramCode">系统参数编码</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.SysParamsWhChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            系统仓库参数变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">系统仓库参数编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.SysParamsWhCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            系统仓库参数 创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">系统仓库参数编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.SysParamsWhRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            系统仓库参数 移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">系统仓库参数编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.VendorChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            供应商变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="vendorID">供应商编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.VendorCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            供应商创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="vendorID">供应商编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.VendorRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            供应商移除(Remove)事件消息体（触发事件之移除事件需要传送的参数）
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="vendorID">供应商编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.VendorTypeChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            供应商类型变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="vendorTypeID">供应商类型编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.VendorTypeCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            供应商类型创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="vendorTypeID">供应商类型编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.VendorTypeRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            供应商类型移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="vendorTypeID">供应商类型编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.WarehouseChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            仓库改变(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="wid">仓库编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.WarehouseCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            仓库创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="wid">仓库编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.WarehouseEmpChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            仓库员工变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="empID">仓库员工编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.WarehouseEmpCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            仓库员工 创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="empID">仓库员工编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.WarehouseEmpRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            仓库员工 移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="empID">仓库员工编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.WarehouseRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            仓库移除(Removed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="wid">仓库编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.WproductBuyChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int64)">
+            <summary>
+            仓库商品采购信息 变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="wProductID">仓库商品编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.WproductBuyCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int64)">
+            <summary>
+            仓库商品采购信息 创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="wProductID">仓库商品编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.WproductBuyEmpChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品采购员 变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">商品采购员编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.WproductBuyEmpCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品采购员 创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">商品采购员编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.WproductBuyEmpRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            商品采购员 移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="id">商品采购员编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.WproductBuyRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int64)">
+            <summary>
+            仓库商品采购信息 移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="wProductID">仓库商品编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.WproductChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int64)">
+            <summary>
+            仓库商品变更(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="wProductID">仓库商品编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.WproductCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int64)">
+            <summary>
+            仓库商品创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="wProductID">仓库商品编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.WproductRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int64)">
+            <summary>
+            仓库商品移除(Remove)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="wProductID">仓库商品编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.XSUserChanged(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            用户更新(Changed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="xSUserID">用户编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.XSUserCreated(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            用户创建(Created)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="xSUserID">用户编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClientExtension.XSUserRemoved(Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient,System.Int32)">
+            <summary>
+            用户删除(Removed)事件消息体
+            </summary>
+            <param name="client">MessagePublisherClient</param>
+            <param name="xSUserID">用户编号</param>
+            <returns>PublishResult</returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.PublisherClient.ResponseResult">
+            <summary>
+            返回接受对象
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.PublisherClient.ResponseResult.Flag">
+            <summary>
+            是否成功0成功，其他值为不成功
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.PublisherClient.ResponseResult.FlagDescription">
+            <summary>
+            flag的描述
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.PublisherClient.ResponseResult.CachedTime">
+            <summary>
+            缓存时间
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.PublisherClient.ResponseResult.Data">
+            <summary>
+            返回的ID值
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.PublisherClient.ResponseResult.Info">
+            <summary>
+            接口返回的消息
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.PublisherClient.IJosnSerializer">
+            <summary>
+            JSON序列化接口，交给外部调用系统去实现（防止程序集冲突）
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.IJosnSerializer.Deserialize``1(System.String)">
+            <summary>
+            消息摘要反序列化
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.IJosnSerializer.Serialize(System.Object)">
+            <summary>
+            消息摘要序列化，用于保存到其他存储介质
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient">
+            <summary>
+            消息发布客户端
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient.#ctor(System.String,Frxs.ServiceCenter.DataSync.Message.PublisherClient.IJosnSerializer,System.Func{System.Int32})">
+            <summary>
+            初始化消息发布客户端
+            </summary>
+            <param name="messageServerUrl">消息中间件服务器地址</param>
+            <param name="josnSerializer">JOSN格式化器</param>
+            <param name="wid">如果为null，默认将仓库设置为0</param>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient.Execute(System.Object)">
+            <summary>
+            执行远程调用
+            </summary>
+            <param name="message">消息体</param>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient.ServerUrl">
+            <summary>
+            消息中间件服务器地址
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient.WID">
+            <summary>
+            仓库编号
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.PublisherClient.MessagePublisherClient.JosnSerializer">
+            <summary>
+            JSON序列化接口
+            </summary>
+        </member>
+        <member name="T:Frxs.ServiceCenter.DataSync.Message.PublisherClient.PublishResult">
+            <summary>
+            发布结果
+            </summary>
+        </member>
+        <member name="M:Frxs.ServiceCenter.DataSync.Message.PublisherClient.PublishResult.#ctor(System.Boolean,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="isSuccess">是否发布成功</param>
+            <param name="messageId">此次发布的消息ID</param>
+            <param name="message">返回的消息</param>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.PublisherClient.PublishResult.IsSuccess">
+            <summary>
+            是否发布成功
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.PublisherClient.PublishResult.Message">
+            <summary>
+            返回的消息
+            </summary>
+        </member>
+        <member name="P:Frxs.ServiceCenter.DataSync.Message.PublisherClient.PublishResult.MessageId">
+            <summary>
+            此次发布的消息ID
+            </summary>
+        </member>
+    </members>
+</doc>

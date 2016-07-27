@@ -1,0 +1,379 @@
+
+2016/5/27 17:43:27
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.WProducts.GetListToB2B
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]select 
+                    wp.WProductID,wp.WID,wp.ProductId,wp.ProductName2,wp.WStatus,wp.Unit,wp.SalePrice,wp.MarketPrice
+                    ,wp.MarketUnit,wp.BigProductsUnitID,wp.BigPackingQty,wp.BigUnit,wp.ShelfID,wp.ShopAddPerc
+                    ,wp.ShopPoint,wp.BasePoint,wp.VendorPerc1,wp.VendorPerc2,wp.SaleBackFlag,wp.BackDays,wp.CreateTime
+                    ,wp.CreateUserID,wp.CreateUserName,wp.ModifyTime,wp.ModifyUserID,wp.ModifyUserName
+                    ,Isnull(wp.SalePrice,0.00)*isnull(wp.BigPackingQty,0.00) as BigSalePrice
+                    ,isnull(wp.ShopPoint,0.00)*isnull(wp.BigPackingQty,0.00) as BigShopPoint
+                    ,p.ProductName,pbc.BarCode,p.SKU
+                    ,d.ImageUrl400x400,d.ImageUrl200x200 ,0 as MaxOrderQty,
+                    c1.Name as CategoryName1,c2.Name as CategoryName2, c3.Name as CategoryName3,
+                    sh.ShelfCode,sa.ShelfAreaID,sa.ShelfAreaCode,sa.ShelfAreaName 
+                     from WProducts wp
+                     inner join Products p on wp.ProductId=p.ProductId 
+					INNER JOIN BaseProducts bp ON p.BaseProductId=bp.BaseProductId
+					LEFT JOIN ProductsBarCodes pbc on p.ProductId=pbc.ProductId and pbc.SerialNumber=1
+					Left join Categories c1 on  c1.CategoryId=bp.CategoryId1
+					Left join Categories c2 on  c2.CategoryId=bp.CategoryId2
+					Left join Categories c3 on  c3.CategoryId=bp.CategoryId3
+                     left join  ProductsPictureDetail d on p.ImageProductId=d.ImageProductId and d.IsMaster=1 
+                     left join Shelf sh on wp.ShelfID=sh.ShelfID  
+                     left join ShelfArea sa on sh.ShelfAreaID =sa.ShelfAreaID  
+                     WHERE wp.WStatus=1 and not exists
+                     ( select 1 from Shop s inner join 
+                    ShopGroupDetails sd on s.ShopID=sd.ShopID inner join 
+                    WProductNoSaleShops nss on sd.GroupID=nss.GroupID inner join 
+                    WProductNoSale ns on ns.NoSaleID=nss.NoSaleID and ns.Status=2 inner join 
+                    WProductNoSaleDetails nsd on ns.NoSaleID=nsd.NoSaleID 
+                    where p.ProductId=nsd.ProductID and s.ShopID=5659 
+                     ) and wp.WID='105' and p.ProductId in(40111) ;
+System.IndexOutOfRangeException: CategoryId1
+   在 System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   在 System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsDAO.GetListToB2B(String sql, SqlParameter[] sp) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsDAO.cs:行号 1252
+
+2016/5/27 17:43:29
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.WProducts.GetListToB2B
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]select 
+                    wp.WProductID,wp.WID,wp.ProductId,wp.ProductName2,wp.WStatus,wp.Unit,wp.SalePrice,wp.MarketPrice
+                    ,wp.MarketUnit,wp.BigProductsUnitID,wp.BigPackingQty,wp.BigUnit,wp.ShelfID,wp.ShopAddPerc
+                    ,wp.ShopPoint,wp.BasePoint,wp.VendorPerc1,wp.VendorPerc2,wp.SaleBackFlag,wp.BackDays,wp.CreateTime
+                    ,wp.CreateUserID,wp.CreateUserName,wp.ModifyTime,wp.ModifyUserID,wp.ModifyUserName
+                    ,Isnull(wp.SalePrice,0.00)*isnull(wp.BigPackingQty,0.00) as BigSalePrice
+                    ,isnull(wp.ShopPoint,0.00)*isnull(wp.BigPackingQty,0.00) as BigShopPoint
+                    ,p.ProductName,pbc.BarCode,p.SKU
+                    ,d.ImageUrl400x400,d.ImageUrl200x200 ,0 as MaxOrderQty,
+                    c1.Name as CategoryName1,c2.Name as CategoryName2, c3.Name as CategoryName3,
+                    sh.ShelfCode,sa.ShelfAreaID,sa.ShelfAreaCode,sa.ShelfAreaName 
+                     from WProducts wp
+                     inner join Products p on wp.ProductId=p.ProductId 
+					INNER JOIN BaseProducts bp ON p.BaseProductId=bp.BaseProductId
+					LEFT JOIN ProductsBarCodes pbc on p.ProductId=pbc.ProductId and pbc.SerialNumber=1
+					Left join Categories c1 on  c1.CategoryId=bp.CategoryId1
+					Left join Categories c2 on  c2.CategoryId=bp.CategoryId2
+					Left join Categories c3 on  c3.CategoryId=bp.CategoryId3
+                     left join  ProductsPictureDetail d on p.ImageProductId=d.ImageProductId and d.IsMaster=1 
+                     left join Shelf sh on wp.ShelfID=sh.ShelfID  
+                     left join ShelfArea sa on sh.ShelfAreaID =sa.ShelfAreaID  
+                     WHERE wp.WStatus=1 and not exists
+                     ( select 1 from Shop s inner join 
+                    ShopGroupDetails sd on s.ShopID=sd.ShopID inner join 
+                    WProductNoSaleShops nss on sd.GroupID=nss.GroupID inner join 
+                    WProductNoSale ns on ns.NoSaleID=nss.NoSaleID and ns.Status=2 inner join 
+                    WProductNoSaleDetails nsd on ns.NoSaleID=nsd.NoSaleID 
+                    where p.ProductId=nsd.ProductID and s.ShopID=5659 
+                     ) and wp.WID='105' and p.ProductId in(40111) ;
+System.IndexOutOfRangeException: CategoryId1
+   在 System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   在 System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsDAO.GetListToB2B(String sql, SqlParameter[] sp) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsDAO.cs:行号 1252
+
+2016/5/27 17:43:31
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.WProducts.GetListToB2B
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]select 
+                    wp.WProductID,wp.WID,wp.ProductId,wp.ProductName2,wp.WStatus,wp.Unit,wp.SalePrice,wp.MarketPrice
+                    ,wp.MarketUnit,wp.BigProductsUnitID,wp.BigPackingQty,wp.BigUnit,wp.ShelfID,wp.ShopAddPerc
+                    ,wp.ShopPoint,wp.BasePoint,wp.VendorPerc1,wp.VendorPerc2,wp.SaleBackFlag,wp.BackDays,wp.CreateTime
+                    ,wp.CreateUserID,wp.CreateUserName,wp.ModifyTime,wp.ModifyUserID,wp.ModifyUserName
+                    ,Isnull(wp.SalePrice,0.00)*isnull(wp.BigPackingQty,0.00) as BigSalePrice
+                    ,isnull(wp.ShopPoint,0.00)*isnull(wp.BigPackingQty,0.00) as BigShopPoint
+                    ,p.ProductName,pbc.BarCode,p.SKU
+                    ,d.ImageUrl400x400,d.ImageUrl200x200 ,0 as MaxOrderQty,
+                    c1.Name as CategoryName1,c2.Name as CategoryName2, c3.Name as CategoryName3,
+                    sh.ShelfCode,sa.ShelfAreaID,sa.ShelfAreaCode,sa.ShelfAreaName 
+                     from WProducts wp
+                     inner join Products p on wp.ProductId=p.ProductId 
+					INNER JOIN BaseProducts bp ON p.BaseProductId=bp.BaseProductId
+					LEFT JOIN ProductsBarCodes pbc on p.ProductId=pbc.ProductId and pbc.SerialNumber=1
+					Left join Categories c1 on  c1.CategoryId=bp.CategoryId1
+					Left join Categories c2 on  c2.CategoryId=bp.CategoryId2
+					Left join Categories c3 on  c3.CategoryId=bp.CategoryId3
+                     left join  ProductsPictureDetail d on p.ImageProductId=d.ImageProductId and d.IsMaster=1 
+                     left join Shelf sh on wp.ShelfID=sh.ShelfID  
+                     left join ShelfArea sa on sh.ShelfAreaID =sa.ShelfAreaID  
+                     WHERE wp.WStatus=1 and not exists
+                     ( select 1 from Shop s inner join 
+                    ShopGroupDetails sd on s.ShopID=sd.ShopID inner join 
+                    WProductNoSaleShops nss on sd.GroupID=nss.GroupID inner join 
+                    WProductNoSale ns on ns.NoSaleID=nss.NoSaleID and ns.Status=2 inner join 
+                    WProductNoSaleDetails nsd on ns.NoSaleID=nsd.NoSaleID 
+                    where p.ProductId=nsd.ProductID and s.ShopID=5659 
+                     ) and wp.WID='105' and p.ProductId in(40111) ;
+System.IndexOutOfRangeException: CategoryId1
+   在 System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   在 System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsDAO.GetListToB2B(String sql, SqlParameter[] sp) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsDAO.cs:行号 1252
+
+2016/5/27 17:44:51
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.WProducts.GetListToB2B
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]select 
+                    wp.WProductID,wp.WID,wp.ProductId,wp.ProductName2,wp.WStatus,wp.Unit,wp.SalePrice,wp.MarketPrice
+                    ,wp.MarketUnit,wp.BigProductsUnitID,wp.BigPackingQty,wp.BigUnit,wp.ShelfID,wp.ShopAddPerc
+                    ,wp.ShopPoint,wp.BasePoint,wp.VendorPerc1,wp.VendorPerc2,wp.SaleBackFlag,wp.BackDays,wp.CreateTime
+                    ,wp.CreateUserID,wp.CreateUserName,wp.ModifyTime,wp.ModifyUserID,wp.ModifyUserName
+                    ,Isnull(wp.SalePrice,0.00)*isnull(wp.BigPackingQty,0.00) as BigSalePrice
+                    ,isnull(wp.ShopPoint,0.00)*isnull(wp.BigPackingQty,0.00) as BigShopPoint
+                    ,p.ProductName,pbc.BarCode,p.SKU
+                    ,d.ImageUrl400x400,d.ImageUrl200x200 ,0 as MaxOrderQty,
+                    c1.Name as CategoryName1,c2.Name as CategoryName2, c3.Name as CategoryName3,
+                    sh.ShelfCode,sa.ShelfAreaID,sa.ShelfAreaCode,sa.ShelfAreaName 
+                     from WProducts wp
+                     inner join Products p on wp.ProductId=p.ProductId 
+					INNER JOIN BaseProducts bp ON p.BaseProductId=bp.BaseProductId
+					LEFT JOIN ProductsBarCodes pbc on p.ProductId=pbc.ProductId and pbc.SerialNumber=1
+					Left join Categories c1 on  c1.CategoryId=bp.CategoryId1
+					Left join Categories c2 on  c2.CategoryId=bp.CategoryId2
+					Left join Categories c3 on  c3.CategoryId=bp.CategoryId3
+                     left join  ProductsPictureDetail d on p.ImageProductId=d.ImageProductId and d.IsMaster=1 
+                     left join Shelf sh on wp.ShelfID=sh.ShelfID  
+                     left join ShelfArea sa on sh.ShelfAreaID =sa.ShelfAreaID  
+                     WHERE wp.WStatus=1 and not exists
+                     ( select 1 from Shop s inner join 
+                    ShopGroupDetails sd on s.ShopID=sd.ShopID inner join 
+                    WProductNoSaleShops nss on sd.GroupID=nss.GroupID inner join 
+                    WProductNoSale ns on ns.NoSaleID=nss.NoSaleID and ns.Status=2 inner join 
+                    WProductNoSaleDetails nsd on ns.NoSaleID=nsd.NoSaleID 
+                    where p.ProductId=nsd.ProductID and s.ShopID=5659 
+                     ) and wp.WID='105' and p.ProductId in(40111) ;
+System.IndexOutOfRangeException: CategoryId1
+   在 System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   在 System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsDAO.GetListToB2B(String sql, SqlParameter[] sp) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsDAO.cs:行号 1252
+
+2016/5/27 17:44:58
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.WProducts.GetListToB2B
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]select 
+                    wp.WProductID,wp.WID,wp.ProductId,wp.ProductName2,wp.WStatus,wp.Unit,wp.SalePrice,wp.MarketPrice
+                    ,wp.MarketUnit,wp.BigProductsUnitID,wp.BigPackingQty,wp.BigUnit,wp.ShelfID,wp.ShopAddPerc
+                    ,wp.ShopPoint,wp.BasePoint,wp.VendorPerc1,wp.VendorPerc2,wp.SaleBackFlag,wp.BackDays,wp.CreateTime
+                    ,wp.CreateUserID,wp.CreateUserName,wp.ModifyTime,wp.ModifyUserID,wp.ModifyUserName
+                    ,Isnull(wp.SalePrice,0.00)*isnull(wp.BigPackingQty,0.00) as BigSalePrice
+                    ,isnull(wp.ShopPoint,0.00)*isnull(wp.BigPackingQty,0.00) as BigShopPoint
+                    ,p.ProductName,pbc.BarCode,p.SKU
+                    ,d.ImageUrl400x400,d.ImageUrl200x200 ,0 as MaxOrderQty,
+                    c1.Name as CategoryName1,c2.Name as CategoryName2, c3.Name as CategoryName3,
+                    sh.ShelfCode,sa.ShelfAreaID,sa.ShelfAreaCode,sa.ShelfAreaName 
+                     from WProducts wp
+                     inner join Products p on wp.ProductId=p.ProductId 
+					INNER JOIN BaseProducts bp ON p.BaseProductId=bp.BaseProductId
+					LEFT JOIN ProductsBarCodes pbc on p.ProductId=pbc.ProductId and pbc.SerialNumber=1
+					Left join Categories c1 on  c1.CategoryId=bp.CategoryId1
+					Left join Categories c2 on  c2.CategoryId=bp.CategoryId2
+					Left join Categories c3 on  c3.CategoryId=bp.CategoryId3
+                     left join  ProductsPictureDetail d on p.ImageProductId=d.ImageProductId and d.IsMaster=1 
+                     left join Shelf sh on wp.ShelfID=sh.ShelfID  
+                     left join ShelfArea sa on sh.ShelfAreaID =sa.ShelfAreaID  
+                     WHERE wp.WStatus=1 and not exists
+                     ( select 1 from Shop s inner join 
+                    ShopGroupDetails sd on s.ShopID=sd.ShopID inner join 
+                    WProductNoSaleShops nss on sd.GroupID=nss.GroupID inner join 
+                    WProductNoSale ns on ns.NoSaleID=nss.NoSaleID and ns.Status=2 inner join 
+                    WProductNoSaleDetails nsd on ns.NoSaleID=nsd.NoSaleID 
+                    where p.ProductId=nsd.ProductID and s.ShopID=5659 
+                     ) and wp.WID='105' and p.ProductId in(40111) ;
+System.IndexOutOfRangeException: CategoryId1
+   在 System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   在 System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsDAO.GetListToB2B(String sql, SqlParameter[] sp) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsDAO.cs:行号 1252
+
+2016/5/27 17:46:00
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.WProducts.GetListToB2B
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]select 
+                    wp.WProductID,wp.WID,wp.ProductId,wp.ProductName2,wp.WStatus,wp.Unit,wp.SalePrice,wp.MarketPrice
+                    ,wp.MarketUnit,wp.BigProductsUnitID,wp.BigPackingQty,wp.BigUnit,wp.ShelfID,wp.ShopAddPerc
+                    ,wp.ShopPoint,wp.BasePoint,wp.VendorPerc1,wp.VendorPerc2,wp.SaleBackFlag,wp.BackDays,wp.CreateTime
+                    ,wp.CreateUserID,wp.CreateUserName,wp.ModifyTime,wp.ModifyUserID,wp.ModifyUserName
+                    ,Isnull(wp.SalePrice,0.00)*isnull(wp.BigPackingQty,0.00) as BigSalePrice
+                    ,isnull(wp.ShopPoint,0.00)*isnull(wp.BigPackingQty,0.00) as BigShopPoint
+                    ,p.ProductName,pbc.BarCode,p.SKU
+                    ,d.ImageUrl400x400,d.ImageUrl200x200 ,0 as MaxOrderQty,
+                    c1.Name as CategoryName1,c2.Name as CategoryName2, c3.Name as CategoryName3,
+                    sh.ShelfCode,sa.ShelfAreaID,sa.ShelfAreaCode,sa.ShelfAreaName 
+                     from WProducts wp
+                     inner join Products p on wp.ProductId=p.ProductId 
+					INNER JOIN BaseProducts bp ON p.BaseProductId=bp.BaseProductId
+					LEFT JOIN ProductsBarCodes pbc on p.ProductId=pbc.ProductId and pbc.SerialNumber=1
+					Left join Categories c1 on  c1.CategoryId=bp.CategoryId1
+					Left join Categories c2 on  c2.CategoryId=bp.CategoryId2
+					Left join Categories c3 on  c3.CategoryId=bp.CategoryId3
+                     left join  ProductsPictureDetail d on p.ImageProductId=d.ImageProductId and d.IsMaster=1 
+                     left join Shelf sh on wp.ShelfID=sh.ShelfID  
+                     left join ShelfArea sa on sh.ShelfAreaID =sa.ShelfAreaID  
+                     WHERE wp.WStatus=1 and not exists
+                     ( select 1 from Shop s inner join 
+                    ShopGroupDetails sd on s.ShopID=sd.ShopID inner join 
+                    WProductNoSaleShops nss on sd.GroupID=nss.GroupID inner join 
+                    WProductNoSale ns on ns.NoSaleID=nss.NoSaleID and ns.Status=2 inner join 
+                    WProductNoSaleDetails nsd on ns.NoSaleID=nsd.NoSaleID 
+                    where p.ProductId=nsd.ProductID and s.ShopID=5659 
+                     ) and wp.WID='105' and p.ProductId in(40111) ;
+System.IndexOutOfRangeException: CategoryId1
+   在 System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   在 System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsDAO.GetListToB2B(String sql, SqlParameter[] sp) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsDAO.cs:行号 1252
+
+2016/5/27 17:46:22
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.WProducts.GetListToB2B
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]select 
+                    wp.WProductID,wp.WID,wp.ProductId,wp.ProductName2,wp.WStatus,wp.Unit,wp.SalePrice,wp.MarketPrice
+                    ,wp.MarketUnit,wp.BigProductsUnitID,wp.BigPackingQty,wp.BigUnit,wp.ShelfID,wp.ShopAddPerc
+                    ,wp.ShopPoint,wp.BasePoint,wp.VendorPerc1,wp.VendorPerc2,wp.SaleBackFlag,wp.BackDays,wp.CreateTime
+                    ,wp.CreateUserID,wp.CreateUserName,wp.ModifyTime,wp.ModifyUserID,wp.ModifyUserName
+                    ,Isnull(wp.SalePrice,0.00)*isnull(wp.BigPackingQty,0.00) as BigSalePrice
+                    ,isnull(wp.ShopPoint,0.00)*isnull(wp.BigPackingQty,0.00) as BigShopPoint
+                    ,p.ProductName,pbc.BarCode,p.SKU
+                    ,d.ImageUrl400x400,d.ImageUrl200x200 ,0 as MaxOrderQty,
+                    c1.Name as CategoryName1,c2.Name as CategoryName2, c3.Name as CategoryName3,
+                    sh.ShelfCode,sa.ShelfAreaID,sa.ShelfAreaCode,sa.ShelfAreaName 
+                     from WProducts wp
+                     inner join Products p on wp.ProductId=p.ProductId 
+					INNER JOIN BaseProducts bp ON p.BaseProductId=bp.BaseProductId
+					LEFT JOIN ProductsBarCodes pbc on p.ProductId=pbc.ProductId and pbc.SerialNumber=1
+					Left join Categories c1 on  c1.CategoryId=bp.CategoryId1
+					Left join Categories c2 on  c2.CategoryId=bp.CategoryId2
+					Left join Categories c3 on  c3.CategoryId=bp.CategoryId3
+                     left join  ProductsPictureDetail d on p.ImageProductId=d.ImageProductId and d.IsMaster=1 
+                     left join Shelf sh on wp.ShelfID=sh.ShelfID  
+                     left join ShelfArea sa on sh.ShelfAreaID =sa.ShelfAreaID  
+                     WHERE wp.WStatus=1 and not exists
+                     ( select 1 from Shop s inner join 
+                    ShopGroupDetails sd on s.ShopID=sd.ShopID inner join 
+                    WProductNoSaleShops nss on sd.GroupID=nss.GroupID inner join 
+                    WProductNoSale ns on ns.NoSaleID=nss.NoSaleID and ns.Status=2 inner join 
+                    WProductNoSaleDetails nsd on ns.NoSaleID=nsd.NoSaleID 
+                    where p.ProductId=nsd.ProductID and s.ShopID=5659 
+                     ) and wp.WID='105' and p.ProductId in(40111) ;
+System.IndexOutOfRangeException: CategoryId1
+   在 System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   在 System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsDAO.GetListToB2B(String sql, SqlParameter[] sp) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsDAO.cs:行号 1252
+
+2016/5/27 17:48:00
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.WProducts.GetListToB2B
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]select 
+                    wp.WProductID,wp.WID,wp.ProductId,wp.ProductName2,wp.WStatus,wp.Unit,wp.SalePrice,wp.MarketPrice
+                    ,wp.MarketUnit,wp.BigProductsUnitID,wp.BigPackingQty,wp.BigUnit,wp.ShelfID,wp.ShopAddPerc
+                    ,wp.ShopPoint,wp.BasePoint,wp.VendorPerc1,wp.VendorPerc2,wp.SaleBackFlag,wp.BackDays,wp.CreateTime
+                    ,wp.CreateUserID,wp.CreateUserName,wp.ModifyTime,wp.ModifyUserID,wp.ModifyUserName
+                    ,Isnull(wp.SalePrice,0.00)*isnull(wp.BigPackingQty,0.00) as BigSalePrice
+                    ,isnull(wp.ShopPoint,0.00)*isnull(wp.BigPackingQty,0.00) as BigShopPoint
+                    ,p.ProductName,pbc.BarCode,p.SKU
+                    ,d.ImageUrl400x400,d.ImageUrl200x200 ,0 as MaxOrderQty,
+                    c1.Name as CategoryName1,c2.Name as CategoryName2, c3.Name as CategoryName3,
+                    sh.ShelfCode,sa.ShelfAreaID,sa.ShelfAreaCode,sa.ShelfAreaName 
+                     from WProducts wp
+                     inner join Products p on wp.ProductId=p.ProductId 
+					INNER JOIN BaseProducts bp ON p.BaseProductId=bp.BaseProductId
+					LEFT JOIN ProductsBarCodes pbc on p.ProductId=pbc.ProductId and pbc.SerialNumber=1
+					Left join Categories c1 on  c1.CategoryId=bp.CategoryId1
+					Left join Categories c2 on  c2.CategoryId=bp.CategoryId2
+					Left join Categories c3 on  c3.CategoryId=bp.CategoryId3
+                     left join  ProductsPictureDetail d on p.ImageProductId=d.ImageProductId and d.IsMaster=1 
+                     left join Shelf sh on wp.ShelfID=sh.ShelfID  
+                     left join ShelfArea sa on sh.ShelfAreaID =sa.ShelfAreaID  
+                     WHERE wp.WStatus=1 and not exists
+                     ( select 1 from Shop s inner join 
+                    ShopGroupDetails sd on s.ShopID=sd.ShopID inner join 
+                    WProductNoSaleShops nss on sd.GroupID=nss.GroupID inner join 
+                    WProductNoSale ns on ns.NoSaleID=nss.NoSaleID and ns.Status=2 inner join 
+                    WProductNoSaleDetails nsd on ns.NoSaleID=nsd.NoSaleID 
+                    where p.ProductId=nsd.ProductID and s.ShopID=5659 
+                     ) and wp.WID='105' and p.ProductId in(40111) ;
+System.IndexOutOfRangeException: CategoryId1
+   在 System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   在 System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsDAO.GetListToB2B(String sql, SqlParameter[] sp) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsDAO.cs:行号 1252
+
+2016/5/27 17:48:18
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.WProducts.GetListToB2B
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]select 
+                    wp.WProductID,wp.WID,wp.ProductId,wp.ProductName2,wp.WStatus,wp.Unit,wp.SalePrice,wp.MarketPrice
+                    ,wp.MarketUnit,wp.BigProductsUnitID,wp.BigPackingQty,wp.BigUnit,wp.ShelfID,wp.ShopAddPerc
+                    ,wp.ShopPoint,wp.BasePoint,wp.VendorPerc1,wp.VendorPerc2,wp.SaleBackFlag,wp.BackDays,wp.CreateTime
+                    ,wp.CreateUserID,wp.CreateUserName,wp.ModifyTime,wp.ModifyUserID,wp.ModifyUserName
+                    ,Isnull(wp.SalePrice,0.00)*isnull(wp.BigPackingQty,0.00) as BigSalePrice
+                    ,isnull(wp.ShopPoint,0.00)*isnull(wp.BigPackingQty,0.00) as BigShopPoint
+                    ,p.ProductName,pbc.BarCode,p.SKU
+                    ,d.ImageUrl400x400,d.ImageUrl200x200 ,0 as MaxOrderQty,
+                    c1.Name as CategoryName1,c2.Name as CategoryName2, c3.Name as CategoryName3,
+                    sh.ShelfCode,sa.ShelfAreaID,sa.ShelfAreaCode,sa.ShelfAreaName 
+                     from WProducts wp
+                     inner join Products p on wp.ProductId=p.ProductId 
+					INNER JOIN BaseProducts bp ON p.BaseProductId=bp.BaseProductId
+					LEFT JOIN ProductsBarCodes pbc on p.ProductId=pbc.ProductId and pbc.SerialNumber=1
+					Left join Categories c1 on  c1.CategoryId=bp.CategoryId1
+					Left join Categories c2 on  c2.CategoryId=bp.CategoryId2
+					Left join Categories c3 on  c3.CategoryId=bp.CategoryId3
+                     left join  ProductsPictureDetail d on p.ImageProductId=d.ImageProductId and d.IsMaster=1 
+                     left join Shelf sh on wp.ShelfID=sh.ShelfID  
+                     left join ShelfArea sa on sh.ShelfAreaID =sa.ShelfAreaID  
+                     WHERE wp.WStatus=1 and not exists
+                     ( select 1 from Shop s inner join 
+                    ShopGroupDetails sd on s.ShopID=sd.ShopID inner join 
+                    WProductNoSaleShops nss on sd.GroupID=nss.GroupID inner join 
+                    WProductNoSale ns on ns.NoSaleID=nss.NoSaleID and ns.Status=2 inner join 
+                    WProductNoSaleDetails nsd on ns.NoSaleID=nsd.NoSaleID 
+                    where p.ProductId=nsd.ProductID and s.ShopID=5659 
+                     ) and wp.WID='105' and p.ProductId in(40111) ;
+System.IndexOutOfRangeException: CategoryId1
+   在 System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   在 System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsDAO.GetListToB2B(String sql, SqlParameter[] sp) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsDAO.cs:行号 1252
+
+2016/5/27 17:50:43
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.WProducts.GetListToB2B
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]select 
+                    wp.WProductID,wp.WID,wp.ProductId,wp.ProductName2,wp.WStatus,wp.Unit,wp.SalePrice,wp.MarketPrice
+                    ,wp.MarketUnit,wp.BigProductsUnitID,wp.BigPackingQty,wp.BigUnit,wp.ShelfID,wp.ShopAddPerc
+                    ,wp.ShopPoint,wp.BasePoint,wp.VendorPerc1,wp.VendorPerc2,wp.SaleBackFlag,wp.BackDays,wp.CreateTime
+                    ,wp.CreateUserID,wp.CreateUserName,wp.ModifyTime,wp.ModifyUserID,wp.ModifyUserName
+                    ,Isnull(wp.SalePrice,0.00)*isnull(wp.BigPackingQty,0.00) as BigSalePrice
+                    ,isnull(wp.ShopPoint,0.00)*isnull(wp.BigPackingQty,0.00) as BigShopPoint
+                    ,p.ProductName,pbc.BarCode,p.SKU
+                    ,d.ImageUrl400x400,d.ImageUrl200x200 ,0 as MaxOrderQty,
+                    c1.Name as CategoryName1,c2.Name as CategoryName2, c3.Name as CategoryName3,
+                    sh.ShelfCode,sa.ShelfAreaID,sa.ShelfAreaCode,sa.ShelfAreaName 
+                     from WProducts wp
+                     inner join Products p on wp.ProductId=p.ProductId 
+					INNER JOIN BaseProducts bp ON p.BaseProductId=bp.BaseProductId
+					LEFT JOIN ProductsBarCodes pbc on p.ProductId=pbc.ProductId and pbc.SerialNumber=1
+					Left join Categories c1 on  c1.CategoryId=bp.CategoryId1
+					Left join Categories c2 on  c2.CategoryId=bp.CategoryId2
+					Left join Categories c3 on  c3.CategoryId=bp.CategoryId3
+                     left join  ProductsPictureDetail d on p.ImageProductId=d.ImageProductId and d.IsMaster=1 
+                     left join Shelf sh on wp.ShelfID=sh.ShelfID  
+                     left join ShelfArea sa on sh.ShelfAreaID =sa.ShelfAreaID  
+                     WHERE wp.WStatus=1 and not exists
+                     ( select 1 from Shop s inner join 
+                    ShopGroupDetails sd on s.ShopID=sd.ShopID inner join 
+                    WProductNoSaleShops nss on sd.GroupID=nss.GroupID inner join 
+                    WProductNoSale ns on ns.NoSaleID=nss.NoSaleID and ns.Status=2 inner join 
+                    WProductNoSaleDetails nsd on ns.NoSaleID=nsd.NoSaleID 
+                    where p.ProductId=nsd.ProductID and s.ShopID=5659 
+                     ) and wp.WID='105' and p.ProductId in(40111) ;
+System.IndexOutOfRangeException: CategoryId1
+   在 System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   在 System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsDAO.GetListToB2B(String sql, SqlParameter[] sp) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsDAO.cs:行号 1252
+
+2016/5/27 17:51:54
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.WProducts.GetListToB2B
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]
+System.IndexOutOfRangeException: CategoryId1
+   在 System.Data.SqlClient.SqlDataReader.GetOrdinal(String name)
+   在 System.Data.SqlClient.SqlDataReader.get_Item(String name)
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsDAO.GetListToB2B(String sql, SqlParameter[] sp) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsDAO.cs:行号 1253

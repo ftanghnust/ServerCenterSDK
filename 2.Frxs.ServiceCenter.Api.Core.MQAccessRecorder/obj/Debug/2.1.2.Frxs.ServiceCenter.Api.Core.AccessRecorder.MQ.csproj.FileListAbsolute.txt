@@ -1,0 +1,7 @@
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\2.Frxs.ServiceCenter.Api.Core.MQAccessRecorder\bin\Debug\2.Frxs.ServiceCenter.Api.Core.MQAccessRecorder.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\2.Frxs.ServiceCenter.Api.Core.MQAccessRecorder\bin\Debug\2.Frxs.ServiceCenter.Api.Core.MQAccessRecorder.pdb
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\2.Frxs.ServiceCenter.Api.Core.MQAccessRecorder\bin\Debug\Autofac.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\2.Frxs.ServiceCenter.Api.Core.MQAccessRecorder\bin\Debug\Autofac.xml
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\2.Frxs.ServiceCenter.Api.Core.MQAccessRecorder\obj\Debug\2.1.2.Frxs.ServiceCenter.Api.Core.AccessRecorder.MQ.csprojResolveAssemblyReference.cache
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\2.Frxs.ServiceCenter.Api.Core.MQAccessRecorder\obj\Debug\2.Frxs.ServiceCenter.Api.Core.MQAccessRecorder.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\2.Frxs.ServiceCenter.Api.Core.MQAccessRecorder\obj\Debug\2.Frxs.ServiceCenter.Api.Core.MQAccessRecorder.pdb

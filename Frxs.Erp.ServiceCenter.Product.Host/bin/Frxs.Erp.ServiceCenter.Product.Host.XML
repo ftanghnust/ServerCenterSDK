@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Frxs.Erp.ServiceCenter.Product.Host</name>
+    </assembly>
+    <members>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Host.DES3ApiSecurity">
+            <summary>
+            系统框架默认的安全接口，此接口什么都没有做，直接原路返回，即上送参数解密，下送参数解密
+            如果约定了加密上送参数，下送数据，可以直接修改下面2个方法里的加密解密方式即可
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.Product.Host.DES3ApiSecurity.RequestParamsDecrypt(Frxs.ServiceCenter.Api.Core.RequestParams)">
+            <summary>
+            直接返回上送数据
+            </summary>
+            <param name="rawRequestParams">上送参数对象解密</param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.Product.Host.DES3ApiSecurity.ResponseEncrypt(Frxs.ServiceCenter.Api.Core.RequestParams,System.String)">
+            <summary>
+            直接返回下送数据
+            </summary>
+            <param name="actionResultString">actionResult对象格式化字符串</param>
+            <param name="decryptedRequestParams">解密后的上送参数对象</param>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Host.DependencyRegistar">
+            <summary>
+            注册系统默认实现的接口服务类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.Product.Host.DependencyRegistar.Order">
+            <summary>
+            优先级最低，方便外部程序重写框架里的实现，覆盖掉系统默认的实现
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.Product.Host.DependencyRegistar.Register(Autofac.ContainerBuilder,Frxs.ServiceCenter.Api.Core.ITypeFinder,Frxs.ServiceCenter.Api.Core.SystemOptions)">
+            <summary>
+            注册特定的类型到容器
+            </summary>
+            <param name="containerBuilder">注册容器</param>
+            <param name="typeFinder">类型查找器</param>
+            <param name="systemOptions">系统框架配置信息</param>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.Product.Host.ApiHostApplication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.Product.Host.ApiHostApplication.Application_Start(System.Object,System.EventArgs)">
+            <summary>
+            应用程序启动时，需要进行下面注册; 初始化顺序请不要更改
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.Product.Host.ApiHostApplication.Application_Error(System.Object,System.EventArgs)">
+            <summary>
+            记录错误信息
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+    </members>
+</doc>

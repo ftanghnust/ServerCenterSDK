@@ -1,0 +1,36 @@
+
+2016/5/3 9:18:37
+[操作]Frxs.Erp.ServiceCenter.Promotion.MSSQLDAL.WProductPromotionDetails.GetList
+[数据源]server=192.168.3.32;database=FRXS_ERP_PROMOTION_105;
+[SQL语句]SELECT ID,PromotionID,105,WProductID,ProductID,SKU,ProductName,Unit,PackingQty,SaleUnit,SalePrice,OldPoint,Point,MaxOrderQty,CreateTime,CreateUserID,Create星沙物流-张丽 FROM WProductPromotionDetails where 1=1  AND 105 = @105 and  PromotionID in (select PromotionID from WProductPromotionShops where 5659 ='5659' ) and  ProductID in () and  PromotionID in (select PromotionID from dbo.WProductPromotion where 1=1 and Status=2 and 105=105 and 2016/5/3 9:18:37 <= '2016/5/3 9:18:37' and endTime >= '2016/5/3 9:18:37')
+System.Data.SqlClient.SqlException (0x80131904): ')' 附近有语法错误。
+   在 Frxs.Platform.DBUtility.DBHelper.GetIDataReader(String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut)
+   在 Frxs.Erp.ServiceCenter.Promotion.MSSQLDAL.WProductPromotionDetailsDAO.GetList(String where, SqlParameter[] sp) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Promotion.MSSQLDAL\WProductPromotion\WProductPromotionDetailsDAO.cs:行号 870
+ClientConnectionId:30b401b9-7af1-496f-8207-468346706184
+
+2016/5/3 9:18:37
+[操作]Frxs.Erp.ServiceCenter.Promotion.MSSQLDAL.WProductPromotionDetails.GetList
+[数据源]server=192.168.3.32;database=FRXS_ERP_PROMOTION_105;
+[SQL语句]SELECT ID,PromotionID,105,WProductID,ProductID,SKU,ProductName,Unit,PackingQty,SaleUnit,SalePrice,OldPoint,Point,MaxOrderQty,CreateTime,CreateUserID,Create星沙物流-张丽 FROM WProductPromotionDetails where 1=1  AND 105 = @105 and  PromotionID in (select PromotionID from WProductPromotionShops where 5659 ='5659' ) and  ProductID in () and  PromotionID in (select PromotionID from dbo.WProductPromotion where Status=2 and  2=2)
+System.Data.SqlClient.SqlException (0x80131904): ')' 附近有语法错误。
+   在 Frxs.Platform.DBUtility.DBHelper.GetIDataReader(String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut)
+   在 Frxs.Erp.ServiceCenter.Promotion.MSSQLDAL.WProductPromotionDetailsDAO.GetList(String where, SqlParameter[] sp) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Promotion.MSSQLDAL\WProductPromotion\WProductPromotionDetailsDAO.cs:行号 870
+ClientConnectionId:30b401b9-7af1-496f-8207-468346706184
+
+2016/5/3 9:18:38
+[操作]Frxs.Erp.ServiceCenter.Promotion.MSSQLDAL.WProductPromotionDetails.GetList
+[数据源]server=192.168.3.32;database=FRXS_ERP_PROMOTION_105;
+[SQL语句]SELECT ID,PromotionID,105,WProductID,ProductID,SKU,ProductName,Unit,PackingQty,SaleUnit,SalePrice,OldPoint,Point,MaxOrderQty,CreateTime,CreateUserID,Create星沙物流-张丽 FROM WProductPromotionDetails where 1=1  AND 105 = @105 and  PromotionID in (select PromotionID from WProductPromotionShops where 5659 ='5659' ) and  ProductID in () and  PromotionID in (select PromotionID from dbo.WProductPromotion where 1=1 and Status=2 and 105=105 and 2016/5/3 9:18:38 <= '2016/5/3 9:18:38' and endTime >= '2016/5/3 9:18:38')
+System.Data.SqlClient.SqlException (0x80131904): ')' 附近有语法错误。
+   在 Frxs.Platform.DBUtility.DBHelper.GetIDataReader(String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut)
+   在 Frxs.Erp.ServiceCenter.Promotion.MSSQLDAL.WProductPromotionDetailsDAO.GetList(String where, SqlParameter[] sp) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Promotion.MSSQLDAL\WProductPromotion\WProductPromotionDetailsDAO.cs:行号 870
+ClientConnectionId:30b401b9-7af1-496f-8207-468346706184
+
+2016/5/3 9:18:38
+[操作]Frxs.Erp.ServiceCenter.Promotion.MSSQLDAL.WProductPromotionDetails.GetList
+[数据源]server=192.168.3.32;database=FRXS_ERP_PROMOTION_105;
+[SQL语句]SELECT ID,PromotionID,105,WProductID,ProductID,SKU,ProductName,Unit,PackingQty,SaleUnit,SalePrice,OldPoint,Point,MaxOrderQty,CreateTime,CreateUserID,Create星沙物流-张丽 FROM WProductPromotionDetails where 1=1  AND 105 = @105 and  PromotionID in (select PromotionID from WProductPromotionShops where 5659 ='5659' ) and  ProductID in () and  PromotionID in (select PromotionID from dbo.WProductPromotion where Status=2 and  2=2)
+System.Data.SqlClient.SqlException (0x80131904): ')' 附近有语法错误。
+   在 Frxs.Platform.DBUtility.DBHelper.GetIDataReader(String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut)
+   在 Frxs.Erp.ServiceCenter.Promotion.MSSQLDAL.WProductPromotionDetailsDAO.GetList(String where, SqlParameter[] sp) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Promotion.MSSQLDAL\WProductPromotion\WProductPromotionDetailsDAO.cs:行号 870
+ClientConnectionId:30b401b9-7af1-496f-8207-468346706184

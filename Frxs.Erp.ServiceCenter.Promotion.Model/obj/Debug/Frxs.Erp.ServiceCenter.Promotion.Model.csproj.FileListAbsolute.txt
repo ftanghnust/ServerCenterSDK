@@ -1,0 +1,4 @@
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Promotion.Model\bin\Debug\Frxs.Erp.ServiceCenter.Promotion.Model.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Promotion.Model\bin\Debug\Frxs.Erp.ServiceCenter.Promotion.Model.pdb
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Promotion.Model\obj\Debug\Frxs.Erp.ServiceCenter.Promotion.Model.dll
+E:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Promotion.Model\obj\Debug\Frxs.Erp.ServiceCenter.Promotion.Model.pdb

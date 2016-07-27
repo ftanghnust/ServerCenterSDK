@@ -1,0 +1,1562 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Frxs.Erp.ServiceCenter.ID.SDK</name>
+    </assembly>
+    <members>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.ApiException">
+            <summary>
+            客户端异常。
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.ApiException.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.ApiException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.ApiException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.ApiException.#ctor(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.ApiException.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="errorCode"></param>
+            <param name="errorMsg"></param>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.ApiException.ErrorCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.ApiException.ErrorMsg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.ApiJsonParser`1">
+            <summary>
+            JSON反序列化
+            </summary>
+            <typeparam name="T">与JSON对应的实体对象</typeparam>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.IApiParser`1">
+            <summary>
+            TOP API响应解释器接口。响应格式可以是XML, JSON等等。
+            </summary>
+            <typeparam name="T">领域对象</typeparam>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.IApiParser`1.Parse(System.String,System.Text.Encoding)">
+            <summary>
+            把响应字符串解释成相应的领域对象。
+            </summary>
+            <param name="body">响应字符串</param>
+            <returns>领域对象</returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.ApiJsonParser`1.Parse(System.String,System.Text.Encoding)">
+            <summary>
+            反序列化，反序列化失败有可能会出现null情况，请注意
+            </summary>
+            <param name="body">待反序列化的JSON数据</param>
+            <param name="encoding">JSON数据编码格式如：UTF-8</param>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.ApiRespBaseExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.ApiRespBaseExtensions.ToDynamicObject(Frxs.Erp.ServiceCenter.ID.SDK.ResponseBase)">
+            <summary>
+            <![CDATA[
+            JSON直接转化成动态类型
+            调用方式：resp.ToDynamicObject()["Info"]
+            
+            JSON:字符串
+            var obj = new
+               {
+                   a = 1,
+                   b = "Hello, World!",
+                   c = new[] { 1, 2, 3 },
+                   d = new Dictionary<string, int> { { "x", 1 }, { "y", 2 } }
+                };
+                
+             调用后使用方式：
+                Console.WriteLine((int)o["a"]);
+                Console.WriteLine((string)o["b"]);
+                Console.WriteLine(o["c"].Values().Count());
+                Console.WriteLine((int)o["d"]["y"]);
+            ]]>
+            </summary>
+            <returns>返回动态对象；无需定义实体，直接使用索引访问方式，尽量少用，因为一旦这样定义获取数据，其他人在使用SDK的时候，将无法理解</returns>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.ApiUser">
+            <summary>
+            当前操作用户
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.ApiUser.UserId">
+            <summary>
+            当前请求接口用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.ApiUser.UserName">
+            <summary>
+            当前请求接口用户名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.ApiXmlParser`1">
+            <summary>
+            TOP XML响应通用解释器。
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.ApiXmlParser`1.Parse(System.String,System.Text.Encoding)">
+            <summary>
+            
+            </summary>
+            <param name="body"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.ApiXmlParser`1.GetRootElement(System.String)">
+            <summary>
+            获取XML响应的根节点名称
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.CacheItem">
+            <summary>
+            SDK缓存对象
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.CacheItem.ExpiredTime">
+            <summary>
+            缓存过期时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.CacheItem.Data">
+            <summary>
+            缓存对象;尽量在定义data的时候，将对象增加以下可序列化特性（Serializable），防止以后需要序列化对象需要
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.CacheOptions">
+            <summary>
+            本地SDK缓存设置参数
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.CacheOptions.#ctor">
+            <summary>
+            本地SDK缓存设置参数
+            是否启用本地缓存，默认为false，默认缓存时间60分钟
+            如果需要启用本地缓存，请设置属性FromLocalCache=true
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.CacheOptions.FromLocalCache">
+            <summary>
+            是否启用本地缓存，默认false
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.CacheOptions.CacheTime">
+            <summary>
+            缓存时间，缓存时间单位为分钟(系统默认60分钟)
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.ConsoleApiLogger">
+            <summary>
+            控制台显示(方便调试)
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.IApiLogger">
+            <summary>
+            日志打点接口。
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.IApiLogger.Error(System.String)">
+            <summary>
+            记录错误类型日志
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.IApiLogger.Warn(System.String)">
+            <summary>
+            记录警告类型日志
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.IApiLogger.Info(System.String)">
+            <summary>
+            记录消息类型日志
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.ConsoleApiLogger.Error(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.ConsoleApiLogger.Warn(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.ConsoleApiLogger.Info(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.DefaultApiClient">
+            <summary>
+            默认的SDK访问实现;注意：请不要讲此实现类设置成单例全局类
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.IApiClient">
+            <summary>
+            SDK接口访问入口接口
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.IApiClient.Execute``1(Frxs.Erp.ServiceCenter.ID.SDK.RequestBase{``0},Frxs.Erp.ServiceCenter.ID.SDK.CacheOptions)">
+            <summary>
+            请注意返回有可能未null，需要判断
+            </summary>
+            <typeparam name="T">返回格式化字符串（JSON/XML）对应的输出实体类型，需要继承TopRespBase抽象基类</typeparam>
+            <param name="request"><![CDATA[请求参数类，需继承：RequestBase<>抽象基类]]></param>
+            <returns>返回一个继承自：TopRespBase的数据对象</returns>
+            <param name="cacheOptions">
+            <![CDATA[
+            如果不启用SDK本地缓存，设置null即可
+            是否进行SDK本地缓存，如果设置为true(默认false)，返回对象将直接从本地SDK缓存里获取，
+            第一次访问不存在的时候，会自动将获取到的输出值压入本地缓存，下次调用同样接口参数相同的情况下
+            不会请求接口API，而是会直接获取本地缓存返回，建议将变化很不频繁的字典，配置对象数据可以缓存下，提高访问效率(默认过期时间60分钟)
+            ]]>
+            </param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.IApiClient.SetDisableTrace(System.Boolean)">
+            <summary>
+            是否开启日志记录
+            </summary>
+            <param name="disableTrace"></param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.IApiClient.SetTimeout(System.Int32)">
+            <summary>
+            远程连接的超时时间
+            </summary>
+            <param name="timeout"></param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.IApiClient.SetTopLogger(Frxs.Erp.ServiceCenter.ID.SDK.IApiLogger)">
+            <summary>
+            设置日志记录器
+            </summary>
+            <param name="topLogger"></param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.IApiClient.SetCacheManager(Frxs.Erp.ServiceCenter.ID.SDK.ICacheManager)">
+            <summary>
+            设置新的缓存器
+            </summary>
+            <param name="cacheManager"></param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.IApiClient.GetAllCacheKeys">
+            <summary>
+            获取SDK本地缓存的所有缓存键
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.IApiClient.SetResponseFormat(Frxs.Erp.ServiceCenter.ID.SDK.ResponseFormat)">
+            <summary>
+            设置反序列化方式
+            </summary>
+            <param name="responseFormat"></param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.DefaultApiClient.#ctor(System.String,System.String,System.String,System.String,System.Func{Frxs.Erp.ServiceCenter.ID.SDK.ApiUser})">
+            <summary>
+            默认的SDK访问实现类;
+            </summary>
+            <param name="svrUrl">API接口服务器地址，如果servUrl参数未指定；优先级比配置文件高</param>
+            <param name="appKey">客户端APPKEY(预留)；优先级比配置文件高</param>
+            <param name="appSecret">客户端APPKEY加密密钥(预留)；优先级比配置文件高</param>
+            <param name="sdkConfigSectionName">配置节点</param>
+            <param name="defaultUser">获取用户委托</param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.DefaultApiClient.SetTimeout(System.Int32)">
+            <summary>
+            默认60000（60秒）
+            </summary>
+            <param name="timeout">超时时间</param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.DefaultApiClient.SetDisableTrace(System.Boolean)">
+            <summary>
+            默认False(启用日志记录器)
+            </summary>
+            <param name="disableTrace">是否禁用日志记录器true/false</param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.DefaultApiClient.SetTopLogger(Frxs.Erp.ServiceCenter.ID.SDK.IApiLogger)">
+            <summary>
+            设置日志记录器
+            </summary>
+            <param name="topLogger">新的logger实现</param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.DefaultApiClient.SetCacheManager(Frxs.Erp.ServiceCenter.ID.SDK.ICacheManager)">
+            <summary>
+            重新设置新的SDK本地缓存器
+            </summary>
+            <param name="cacheManager">新的缓存器</param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.DefaultApiClient.GetAllCacheKeys">
+            <summary>
+            获取SDK本地缓存系统，缓存器里的所有缓存键集合
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.DefaultApiClient.SetResponseFormat(Frxs.Erp.ServiceCenter.ID.SDK.ResponseFormat)">
+            <summary>
+            设置返回值序列化类型(暂时未实现XML格式化，系统默认JSON格式化)
+            </summary>
+            <param name="responseFormat">需要服务器返回的格式化类型</param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.DefaultApiClient.GetSdkDefaultConfig(System.String)">
+            <summary>
+            获取默认的配置信息
+            </summary>
+            <param name="sectionName">WEB.config配置节点名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.DefaultApiClient.MD5(System.String)">
+            <summary>
+            对数据进行摘要签名
+            </summary>
+            <param name="str">待进行MD5签名的原始数据</param>
+            <returns>返回大写的32位摘要数据</returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.DefaultApiClient.Sign(Frxs.Erp.ServiceCenter.ID.SDK.ApiDictionary)">
+            <summary>
+            数据签名;只进行值的签名
+            </summary>
+            <param name="signParams">待签名的数据字典</param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.DefaultApiClient.BuildPostData``1(Frxs.Erp.ServiceCenter.ID.SDK.RequestBase{``0})">
+            <summary>
+            构造提交参数
+            </summary>
+            <typeparam name="T">请求返回的对象类型</typeparam>
+            <param name="request">请求参数包</param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.DefaultApiClient.GetRequestCacheKey``1(Frxs.Erp.ServiceCenter.ID.SDK.RequestBase{``0})">
+            <summary>
+            根据请求获取缓存键，计算方式：MD5(输出类型+请求类型+请求API+请求方式+请求数据包);确保缓存键的唯一性
+            </summary>
+            <typeparam name="T">返回类型</typeparam>
+            <param name="request">请求参数包对象</param>
+            <returns>根据请求参数包计算出缓存键，防止缓存冲突</returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.DefaultApiClient.Execute``1(Frxs.Erp.ServiceCenter.ID.SDK.RequestBase{``0},Frxs.Erp.ServiceCenter.ID.SDK.CacheOptions)">
+            <summary>
+            请注意返回有可能未null，需要判断
+            </summary>
+            <typeparam name="T"><![CDATA[返回格式化字符串（JSON/XML）对应的输出实体类型，需要继承TopRespBase抽象基类]]></typeparam>
+            <param name="request"><![CDATA[请求参数类，需继承：RequestBase<>抽象基类]]></param>
+            <param name="cacheOptions">
+            <![CDATA[
+            如果不启用SDK本地缓存，设置null即可，系统将会自动设置成默认设置
+            是否进行SDK本地缓存，如果设置为true(默认false)，返回对象将直接从本地SDK缓存里获取，
+            第一次访问不存在的时候，会自动将获取到的输出值压入本地缓存，下次调用同样接口参数相同的情况下
+            不会请求接口API，而是会直接获取本地缓存返回，建议将变化很不频繁的字典，配置对象数据可以缓存下，提高访问效率(默认过期时间60分钟)
+            ]]>
+            </param>
+            <returns>返回一个继承自：TopRespBase的数据对象</returns>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.DefaultApiLogger">
+            <summary>
+            默认日志打点
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.DefaultApiLogger.LOG_FILE_NAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.DefaultApiLogger.#cctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.DefaultApiLogger.Error(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.DefaultApiLogger.Warn(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.DefaultApiLogger.Info(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.DefaultCacheManager">
+            <summary>
+            默认SDK缓存器，默认使用静态字典对象作为缓存器；
+            作为默认的缓存器，在预知内容不会变化频繁的情况下可以使用下；
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.ICacheManager">
+            <summary>
+            缓存集合对象
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.ICacheManager.Set(System.String,System.Object,System.Int32)">
+            <summary>
+            设置缓存
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="data">缓存内容</param>
+            <param name="cacheTime">缓存时间，相对应与当前时间的分钟数</param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.ICacheManager.Get(System.String)">
+            <summary>
+            获取缓存
+            </summary>
+            <param name="key">缓存键</param>
+            <returns>不存在获取到了绝对过期时间返回null</returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.ICacheManager.GetAllKeys">
+            <summary>
+            获取所有的缓存键
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.DefaultCacheManager._cacheDictionary">
+            <summary>
+            缓存容器，使用当前进程内存来缓存数据
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.DefaultCacheManager.locker">
+            <summary>
+            用于设置缓存的时候，锁定缓存容器，防止并发
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.DefaultCacheManager.Set(System.String,System.Object,System.Int32)">
+            <summary>
+            注意直接设置会覆盖原始的缓存内容
+            </summary>
+            <param name="key">缓存键</param>
+            <param name="data">缓存对象</param>
+            <param name="cacheTime">相对应与当前时间的分钟数</param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.DefaultCacheManager.Get(System.String)">
+            <summary>
+            获取缓存内容
+            </summary>
+            <param name="key">缓存键</param>
+            <returns>缓存存在且绝对过期时间未过期的情况下返回缓存对象，否则返回null</returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.DefaultCacheManager.GetAllKeys">
+            <summary>
+            获取所有的缓存键
+            </summary>
+            <returns>当前缓存器里的所有缓存键</returns>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.HttpMethod">
+            <summary>
+            请求方式
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.HttpMethod.POST">
+            <summary>
+            HTTP-POST
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.HttpMethod.GET">
+            <summary>
+            HTTP-GET
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.HttpRespBody">
+            <summary>
+             HTTP请求返回对象
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.HttpRespBody._headers">
+            <summary>
+            用于保存http-Headers信息
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.HttpRespBody.#ctor(System.String)">
+            <summary>
+            构造输入内容
+            </summary>
+            <param name="body">返回的body数据</param>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.HttpRespBody.Body">
+            <summary>
+            返回的body数据
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.HttpRespBody.Headers">
+            <summary>
+            返回的头信息
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.HttpWebUtils">
+            <summary>
+            SDK客户端HTTP访问类
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.HttpWebUtils.DoPost(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Int32)">
+            <summary>
+            执行HTTP POST请求。
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="parameters">请求参数</param>
+            <param name="timeout">超时时间</param>
+            <returns>HTTP响应</returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.HttpWebUtils.DoGet(System.String,System.Collections.Generic.IDictionary{System.String,System.String},System.Int32)">
+            <summary>
+            执行HTTP GET请求。
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="parameters">请求参数</param>
+            <param name="timeout">超时时间</param>
+            <returns>HTTP响应</returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.HttpWebUtils.CreateHttpWebRequest(System.String,System.String,System.Int32)">
+            <summary>
+            创建HttpWebRequest
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="method">POST/GET</param>
+            <param name="timeout">超时时间</param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.HttpWebUtils.HttpWebResponseToString(System.Net.HttpWebResponse,System.Text.Encoding)">
+            <summary>
+            把响应流转换为文本。
+            </summary>
+            <param name="httpResponse">响应流对象</param>
+            <param name="encoding">编码方式</param>
+            <returns>响应文本</returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.HttpWebUtils.BuildGetUrl(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            组装GET请求URL。
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="parameters">请求参数</param>
+            <returns>带参数的GET请求URL</returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.HttpWebUtils.BuildQuery(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            组装普通文本请求参数。
+            </summary>
+            <param name="parameters">Key-Value形式请求参数字典</param>
+            <returns>URL编码后的请求数据</returns>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.IApiRequest`1">
+            <summary>
+            TOP请求接口。
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.IApiRequest`1.GetApiName">
+            <summary>
+            获取TOP的API名称。比如：Product.Add
+            </summary>
+            <returns>API名称</returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.IApiRequest`1.GetHttpMethod">
+            <summary>
+            提交方式
+            </summary>
+            <returns>POST/GET</returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.IApiRequest`1.GetRequestJsonData">
+            <summary>
+            提交的Data消息体对象
+            </summary>
+            <returns>如果参数请求类定义了Data属性，那么方法进行封装Data格式化成JSON</returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.IApiRequest`1.GetReplaces">
+            <summary>
+            需要替换的一些东西，比如有时候可能JSON返回不是规则的，就需要进行进行将一些关键词进行替换掉 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.ObjectExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.ObjectExtensions.ToJson(System.Object)">
+            <summary>
+            序列化成JSON
+            </summary>
+            <param name="obj">任意对象类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.RequestBase`1">
+            <summary>
+            使用默认基类；
+            使用了一些默认的约定
+            1.GetRequestJsonData 方法会自动查找基础类是否了Data属性，如果有Data属性会指定将此对象转化成JSON对象
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.RequestBase`1.GetApiName">
+            <summary>
+            方法名称，对应于接口
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.RequestBase`1.GetHttpMethod">
+            <summary>
+            默认使用http-POST提交，需要改成GET的，请在实现类里重写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.RequestBase`1.GetReplaces">
+            <summary>
+            需要替换的一些东西，默认为空
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.RequestBase`1.GetRequestJsonData">
+            <summary>
+            继承的请求类型，在定义Data参数的时候会有2种方式，Data类型是一个可变类型
+            1.Data参数如果不属于string类型，那么框架将会进行序列化操作，格式化成JSON数据进行提交
+            2.如果Data参数定义成了string类型，那么系统将会直接使用字符串，而不会进行序列化，请注意设置的字符串为正确的JSON格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.RequestBase`1.UserId">
+            <summary>
+            SDK客户端调用者ID（在一些添加，修改接口中后台服务需要）
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.RequestBase`1.UserName">
+            <summary>
+            SDK客户端调用者名称（在一些添加，修改接口中后台服务需要）
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.ResponseBase">
+            <summary>
+            返回消息基类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.ResponseBase.Flag">
+            <summary>
+            消息代码:0代表成功，其他值代码失败（1系统错误，2密钥验证失败，3系统错误，4连接超时）
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.ResponseBase.FlagDescription">
+            <summary>
+            消息代码Flag描述，比如：SUCCESS，FAIL，EXCEPTION，TIMEOUT
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.ResponseBase.Info">
+            <summary>
+            返回信息，有可能是正确的消息，有可能是错误消息；
+            具体是错误信息还是仅仅是返回消息看Flag代码值,0为正确的消息，其他值为错误消息
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.ResponseBase.Resp_Body">
+            <summary>
+            响应原始内容，方便调试(请不要使用此返回数据作为格式化依据，而应该根据SDK提供的返回对象)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.ResponseBase.Resp_ReqData">
+            <summary>
+            HTTP GET请求的所有参数信息，方便调试
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.ResponseBase.Resp_Headers">
+            <summary>
+            服务器返回的Httpheader头信息，方便调试
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.ResponseFormat">
+            <summary>
+            接口输出模式
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.ResponseFormat.XML">
+            <summary>
+            序列化成XML格式
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.ResponseFormat.JSON">
+            <summary>
+            序列化成JSON格式
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.SdkConfiguration">
+            <summary>
+            SDK配置类
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.SdkConfiguration.GetNodeAttributes(System.Xml.XmlNode)">
+            <summary>
+            获取节点属性集合，注意键全部已经转换成小写形式，这样便于比对
+            </summary>
+            <param name="node">当前node节点</param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.SdkConfiguration.GetNodeAttribute(System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+            <summary>
+            根据字典获取指定值
+            </summary>
+            <param name="nodeAttributes">数据字典</param>
+            <param name="attributeName">key</param>
+            <returns></returns>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.SdkConfiguration.Create(System.Object,System.Object,System.Xml.XmlNode)">
+            <summary>
+            根据节点XML文件，创建出配置低、对象
+            </summary>
+            <param name="parent">当前节点对应的父节点对象</param>
+            <param name="configContext">配置文件上下文</param>
+            <param name="section">配置文件对应的节点XML文件</param>
+            <returns></returns>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.SdkConfiguration.ServerUrl">
+            <summary>
+            服务器地址
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.SdkConfiguration.AppKey">
+            <summary>
+            客户KEY
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.SdkConfiguration.AppSecret">
+            <summary>
+            客户端加密密钥
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.TypeExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.TypeExtensions.GetPropertyInfo(System.Type,System.String)">
+            <summary>
+            获取类型属性信息，参数类型为：System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.IgnoreCase
+            </summary>
+            <param name="type">类型</param>
+            <param name="propertyName">属性名称；忽略大小写</param>
+            <returns></returns>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.ApiDictionary">
+            <summary>
+            排序字典类，便于签名
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.ApiDictionary.DATE_TIME_FORMAT">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.ApiDictionary.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.ApiDictionary.#ctor(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            
+            </summary>
+            <param name="dictionary"></param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.ApiDictionary.Add(System.String,System.Object)">
+            <summary>
+            添加一个新的键值对。空键或者空值的键值对将会被忽略。
+            </summary>
+            <param name="key">键名称</param>
+            <param name="value">键对应的值，目前支持：string, int, long, double, bool, DateTime类型</param>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.ApiDictionary.Add(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdIdsGetRequest">
+            <summary>
+            获取各个服务ID流水主键
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdIdsGetRequest.GetApiName">
+            <summary>
+            调用接口名称，Frxs.Erp.Id.Ids.Get
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdIdsGetRequest.GetRequestJsonData”忽略有格式错误的 XML 注释 -->
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdIdsGetRequest.WID">
+            <summary>
+            仓库ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdIdsGetRequest.Type">
+            <summary>
+            请求的ID类型；空的数据类型为
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdIdsGetRequest.IDTypes">
+            <summary>
+            获取ID类型
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdIdsGetRequest.IDTypes.BuyBack">
+            <summary>
+            采购退货单据服务ID表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdIdsGetRequest.IDTypes.BuyOrder">
+            <summary>
+            采购单据服务ID表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdIdsGetRequest.IDTypes.CheckStock">
+            <summary>
+            库存盘点库单据服务ID表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdIdsGetRequest.IDTypes.CheckStockPlan">
+            <summary>
+            库存盘点库计划单据服务ID表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdIdsGetRequest.IDTypes.FeeID">
+            <summary>
+            销售库费用单据服务ID表2
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdIdsGetRequest.IDTypes.SaleBack">
+            <summary>
+            销售库退货单据服务ID表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdIdsGetRequest.IDTypes.SaleEdit">
+            <summary>
+            销售库销售订单修改服务ID表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdIdsGetRequest.IDTypes.SaleOrder">
+            <summary>
+            销售库单据服务ID表(预订，订单，共用)
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdIdsGetRequest.IDTypes.SaleSettle">
+            <summary>
+            销售库结算单据服务ID表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdIdsGetRequest.IDTypes.StockAdj">
+            <summary>
+            库存盘点库调整服务ID表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdIdsGetRequest.IDTypes.BaseInfoID">
+            <summary>
+            基础通用单据编号
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdIdsGetRequest.IDTypes.ShelfAdjust">
+            <summary>
+            货位调整单
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.Request.APIServerTimeGetRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.Request.APIServerTimeGetRequest.GetApiName">
+            <summary>
+            调用接口名称，API.ServerTime.Get
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:Frxs.Erp.ServiceCenter.ID.SDK.Request.APIServerTimeGetRequest.GetRequestJsonData”忽略有格式错误的 XML 注释 -->
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetListRequest">
+            <summary>
+            操作日志查询方法
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetListRequest.GetApiName">
+            <summary>
+            调用接口名称，Frxs.Erp.Id.XSOperatorLog.GetList
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetListRequest.GetRequestJsonData”忽略有格式错误的 XML 注释 -->
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetListRequest.PageIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetListRequest.PageSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetListRequest.SortBy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetListRequest.WID">
+            <summary>
+            系统ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetListRequest.IPAddress">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetListRequest.MenuID">
+            <summary>
+            菜单ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetListRequest.Action">
+            <summary>
+            动作值
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetListRequest.OperatorName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetListRequest.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetListRequest.BeginTime">
+            <summary>
+            搜索开始时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetListRequest.EndTime">
+            <summary>
+            搜索结束时间
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetMenuRequest">
+            <summary>
+            操作日志查询方法
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetMenuRequest.GetApiName">
+            <summary>
+            调用接口名称，Frxs.Erp.Id.XSOperatorLog.GetMenu
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetMenuRequest.GetRequestJsonData”忽略有格式错误的 XML 注释 -->
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetMenuRequest.PageIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetMenuRequest.PageSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetMenuRequest.SortBy">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetMenuRequest.WID">
+            <summary>
+            系统ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetMenuRequest.IPAddress">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetMenuRequest.MenuID">
+            <summary>
+            菜单ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetMenuRequest.Action">
+            <summary>
+            动作值
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetMenuRequest.OperatorName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetMenuRequest.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetMenuRequest.BeginTime">
+            <summary>
+            搜索开始时间
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogGetMenuRequest.EndTime">
+            <summary>
+            搜索结束时间
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest">
+            <summary>
+            操作日志写方法
+            </summary>
+        </member>
+        <member name="M:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.GetApiName">
+            <summary>
+            调用接口名称，Frxs.Erp.Id.XSOperatorLog.Write
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.GetRequestJsonData”忽略有格式错误的 XML 注释 -->
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.WID">
+            <summary>
+            系统ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.IPAddress">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuID">
+            <summary>
+            菜单ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.Action">
+            <summary>
+            动作值
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum">
+            <summary>
+            菜单ID
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.MS_1">
+            <summary>
+            基本设定
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.MS_2">
+            <summary>
+            商品资料
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_1">
+            <summary>
+            基本资料
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_2">
+            <summary>
+            商品管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_3">
+            <summary>
+            订单管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_4">
+            <summary>
+            促销管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_5">
+            <summary>
+            采购管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_6">
+            <summary>
+            财务管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_7">
+            <summary>
+            库存盘点
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_18">
+            <summary>
+            统计报表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.MS_1A">
+            <summary>
+            仓库管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.MS_1B">
+            <summary>
+            门店管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.MS_1C">
+            <summary>
+            供应商管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.MS_2A">
+            <summary>
+            基本分类
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.MS_2B">
+            <summary>
+            运营分类
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.MS_2C">
+            <summary>
+            商品添加
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.MS_2E">
+            <summary>
+            品牌管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.MS_2D">
+            <summary>
+            商品管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.MS_2F">
+            <summary>
+            商品规格
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.MS_2H">
+            <summary>
+            供应商类型
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_1A">
+            <summary>
+            仓库基本资料
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_1B">
+            <summary>
+            门店管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_1C">
+            <summary>
+            送货线路管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_1D">
+            <summary>
+            门店分组管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_1E">
+            <summary>
+            货区管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_1F">
+            <summary>
+            货位管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_1G">
+            <summary>
+            帐户管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_1H">
+            <summary>
+            拣货员管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_1Z">
+            <summary>
+            业务参数设定
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_2A">
+            <summary>
+            商品加入
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_2B">
+            <summary>
+            供应商管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_2C">
+            <summary>
+            商品管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_2D">
+            <summary>
+            配送价格调整单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_2E">
+            <summary>
+            进货价格调整单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_2F">
+            <summary>
+            费率积分调整单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_2G">
+            <summary>
+            门店平台费率调整单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_2H">
+            <summary>
+            门店商品限购单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_2I">
+            <summary>
+            商品货位调整单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_3A">
+            <summary>
+            订货平台预订单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_3B">
+            <summary>
+            销售订单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_3C">
+            <summary>
+            商品批量推荐
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_3D">
+            <summary>
+            待装区管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_3E">
+            <summary>
+            门店排单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_3F">
+            <summary>
+            发货顺序调整
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_3G">
+            <summary>
+            销售退货单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_4A">
+            <summary>
+            商品加入
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_4B">
+            <summary>
+            信息管理
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_4C">
+            <summary>
+            门店积分促销单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_5B">
+            <summary>
+            采购收货单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_5C">
+            <summary>
+            采购退货单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_5D">
+            <summary>
+            返配申请单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_5E">
+            <summary>
+            补货申请单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_6A">
+            <summary>
+            门店结算单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_6B">
+            <summary>
+            门店费用单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_7A">
+            <summary>
+            盘点计划
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_7B">
+            <summary>
+            盘点单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_7C">
+            <summary>
+            漏盘商品检查
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_7H">
+            <summary>
+            盘盈盘亏报表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_7D">
+            <summary>
+            盘点单确认
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_7E">
+            <summary>
+            盘盈单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_7F">
+            <summary>
+            盘亏单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_18A">
+            <summary>
+            采购商品汇总
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_18B">
+            <summary>
+            采购入库采购退货汇总
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_18C">
+            <summary>
+            采购入库采购退货明细
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_18D">
+            <summary>
+            业务分析报表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_18E">
+            <summary>
+            客户销售情况汇总表
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_18F">
+            <summary>
+            库存状态查询
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_18G">
+            <summary>
+            商品明细帐
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_18H">
+            <summary>
+            批发价调整金额差异
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_18I">
+            <summary>
+            门店费用单
+            </summary>
+        </member>
+        <member name="F:Frxs.Erp.ServiceCenter.ID.SDK.Request.FrxsErpIdXSOperatorLogWriteRequest.MenuIDEnum.WMS_18J">
+            <summary>
+            收款单汇总
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdIdsGetResp">
+            <summary>
+            获取各个服务ID流水主键
+            </summary>
+        </member>
+        <!-- 对于成员“P:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdIdsGetResp.Data”忽略有格式错误的 XML 注释 -->
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.Resp.APIServerTimeGetResp">
+            <summary>
+            
+            </summary>
+        </member>
+        <!-- 对于成员“P:Frxs.Erp.ServiceCenter.ID.SDK.Resp.APIServerTimeGetResp.Data”忽略有格式错误的 XML 注释 -->
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetListResp">
+            <summary>
+            操作日志查询方法
+            </summary>
+        </member>
+        <!-- 对于成员“P:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetListResp.Data”忽略有格式错误的 XML 注释 -->
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetListResp.FrxsErpIdXSOperatorLogGetListRespData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetListResp.FrxsErpIdXSOperatorLogGetListRespData.TotalRecords">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetListResp.FrxsErpIdXSOperatorLogGetListRespData.ItemList">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetListResp.XSOperatorLog">
+            <summary>
+            XSOperatorLog实体类
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetListResp.XSOperatorLog.ID">
+            <summary>
+            主键ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetListResp.XSOperatorLog.IPAddress">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetListResp.XSOperatorLog.WID">
+            <summary>
+            仓库ID(为0时，代表为总部)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetListResp.XSOperatorLog.MenuID">
+            <summary>
+            模块编号(找不到时; 填0:参见SysMenu.MenuID)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetListResp.XSOperatorLog.MenuName">
+            <summary>
+            模块名称(找不到时:填其他;参见SysMenu.MenuName
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetListResp.XSOperatorLog.Action">
+            <summary>
+            动作:即按下单据表头按钮的名称或基本资料的按钮名称(登录;退出;添加;编辑;删除;确认;反确认;过帐;结算;打印;停用;立即生效;....)
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetListResp.XSOperatorLog.Remark">
+            <summary>
+            对[1050001,10006]完成了过帐;对[00891]商品进行了删除;
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetListResp.XSOperatorLog.OperatorID">
+            <summary>
+            操作用户ID
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetListResp.XSOperatorLog.OperatorName">
+            <summary>
+            操作用户名称
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetListResp.XSOperatorLog.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetMenuResp">
+            <summary>
+            操作日志查询方法
+            </summary>
+        </member>
+        <!-- 对于成员“P:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetMenuResp.Data”忽略有格式错误的 XML 注释 -->
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetMenuResp.FrxsErpIdXSOperatorLogGetMenuRespData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetMenuResp.FrxsErpIdXSOperatorLogGetMenuRespData.menus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetMenuResp.XSOperatorLogMenu">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetMenuResp.XSOperatorLogMenu.MenuID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogGetMenuResp.XSOperatorLogMenu.MenuName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogWriteResp">
+            <summary>
+            操作日志写方法
+            </summary>
+        </member>
+        <!-- 对于成员“P:Frxs.Erp.ServiceCenter.ID.SDK.Resp.FrxsErpIdXSOperatorLogWriteResp.Data”忽略有格式错误的 XML 注释 -->
+    </members>
+</doc>

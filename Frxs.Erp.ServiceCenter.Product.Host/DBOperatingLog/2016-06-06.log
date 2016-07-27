@@ -1,0 +1,36 @@
+
+2016/6/6 17:52:15
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.WProducts.GetCount
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]
+System.Data.SqlClient.SqlException (0x80131904): 在将 varchar 值 '赠0101' 转换成数据类型 int 时失败。
+   在 Frxs.Platform.DBUtility.DBHelper.GetSingle(String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Platform\Frxs.Platform.DBUtility\DBHelper.cs:行号 572
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsDAO.GetCount(String sql) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsDAO.cs:行号 949
+ClientConnectionId:fd919cd5-7281-4053-b996-4be4e4ac626b
+
+2016/6/6 17:52:57
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.WProducts.GetCount
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]
+System.Data.SqlClient.SqlException (0x80131904): 在将 varchar 值 '赠0101' 转换成数据类型 int 时失败。
+   在 Frxs.Platform.DBUtility.DBHelper.GetSingle(String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Platform\Frxs.Platform.DBUtility\DBHelper.cs:行号 572
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsDAO.GetCount(String sql) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsDAO.cs:行号 949
+ClientConnectionId:fd919cd5-7281-4053-b996-4be4e4ac626b
+
+2016/6/6 17:53:21
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.WProducts.GetCount
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]
+System.Data.SqlClient.SqlException (0x80131904): 在将 varchar 值 '赠0101' 转换成数据类型 int 时失败。
+   在 Frxs.Platform.DBUtility.DBHelper.GetSingle(String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Platform\Frxs.Platform.DBUtility\DBHelper.cs:行号 572
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsDAO.GetCount(String sql) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsDAO.cs:行号 949
+ClientConnectionId:fd919cd5-7281-4053-b996-4be4e4ac626b
+
+2016/6/6 17:54:36
+[操作]Frxs.ServiceCenter.Product.MSSQLDAL.WProducts.GetCount
+[数据源]server=192.168.3.32;database=FRXS_ERP_BASEDATA;
+[SQL语句]
+System.Data.SqlClient.SqlException (0x80131904): 在将 varchar 值 '赠0101' 转换成数据类型 int 时失败。
+   在 Frxs.Platform.DBUtility.DBHelper.GetSingle(String sql, IDbDataParameter[] parameters, Boolean isSql, Int32 timeOut) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Platform\Frxs.Platform.DBUtility\DBHelper.cs:行号 572
+   在 Frxs.Erp.ServiceCenter.Product.MSSQLDAL.WProductsDAO.GetCount(String sql) 位置 e:\MyWork\Code\ERP\trunk\Frxs.Erp.Project\Frxs.Erp.ServiceCenter\Frxs.Erp.ServiceCenter.Product.MSSQLDAL\WProductsDAO.cs:行号 949
+ClientConnectionId:fd919cd5-7281-4053-b996-4be4e4ac626b

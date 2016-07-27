@@ -1,0 +1,446 @@
+<!--
+ *************************************************************
+ * FRXS(ISC) zhangliang4629@163.com 2016/07/25 13:09:47.525
+ * ***********************************************************
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>同步消息发布端事件文档(V1.0)</title>
+    <style type="text/css">
+        html {
+            height: 100%;
+            margin: 0px;
+        }
+        body {
+            height: 100%;
+            width: 100%;
+            background: #ffffff;
+            color: #333;
+            font: normal 12px/1.5 'Arial', 'SimSun', 'Tahoma', 'Helvetica', 'sans-serif','Consolas';
+            text-align: left;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body style="font-family: Consolas;">
+    <table style="font-size: 14px; width: 99%; border-collapse: separate; padding: 10px; margin-top: 10px;">
+        <tr>
+            <td><b style="font-size: 24px; font-weight: bold;">数据同步系统(V1.0)事件文档(PublisherEvents)（共【30】事件）</b></td>
+            <td style="text-align: right;">发布时间:2016/07/25 13:09:47</td>
+        </tr>
+    </table>
+    <table style="font-size: 14px; width: 99%; background: #ff6a00; border-collapse: separate; padding: 10px; margin-top: 10px; border-spacing: 1px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;">
+        <tr style="font-size: 14px; font-weight: bold;">
+            <td style="width: 50px; height: 30px; text-align: center;">索引号</td>
+            <td>发布端事件(Publisher)</td>
+            <td>消费端事件(Consumer)</td>
+            <td>事件参数说明(EventArgs)</td>
+            <td>事件描述</td>
+            <td style="width:100px; text-align:center;">备注说明</td>
+        </tr>
+        <tr style="background: #f4f4f4;">
+            <td style="text-align: center; color: orangered"><b>1</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>AttributeCreated</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> attributeId)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnAttributeCreated</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>AttributeCreatedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>attributeId <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>商品规格编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">商品规格创建(Created)事件<br/>
+            备注：在规格（Attribute）中的使用<br/>
+            使用范围：规格（Attribute）新增操作中使用</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #ffffff;">
+            <td style="text-align: center; color: orangered"><b>2</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>AttributeChanged</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> attributeId)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnAttributeChanged</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>AttributeChangedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>attributeId <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>商品规格编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">商品规格变更(Changed)事件<br/>
+            备注：在规格（Attribute）、规格值（AttributeValue）中的使用<br/>
+            使用范围：规格（Attribute）编辑,规格值（AttributeValue）增删改 操作中使用</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #f4f4f4;">
+            <td style="text-align: center; color: orangered"><b>3</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>AttributeRemoved</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> attributeId)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnAttributeRemoved</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>AttributeRemovedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>attributeId <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>商品规格编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">商品规格移除(Remove)事件<br/>
+            备注：在 规格（Attribute）中的使用<br/>
+            使用范围：规格（Attribute）移除操作中使用</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #ffffff;">
+            <td style="text-align: center; color: orangered"><b>4</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>BrandCategoryCreated</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> brandId)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnBrandCategoryCreated</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>BrandCategoryCreatedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>brandId <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>品牌编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">品牌创建(Created)事件<br/>
+            备注：在 品牌（BrandCategory）中的使用<br/>
+            使用范围：品牌（BrandCategory）创建 操作中使用</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #f4f4f4;">
+            <td style="text-align: center; color: orangered"><b>5</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>BrandCategoryChanged</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> brandId)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnBrandCategoryChanged</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>BrandCategoryChangedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>brandId <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>品牌编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">品牌变更(Changed)事件<br/>
+            备注：在 品牌（BrandCategory）中的使用<br/>
+            使用范围：品牌（BrandCategory）编辑 操作中使用</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #ffffff;">
+            <td style="text-align: center; color: orangered"><b>6</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>BrandCategoryRemoved</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> brandId)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnBrandCategoryRemoved</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>BrandCategoryRemovedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>brandId <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>品牌编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">品牌移除(Remove)事件<br/>
+            备注：在 品牌（BrandCategory）中的使用<br/>
+            使用范围：品牌（BrandCategory）移除 操作中使用</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #f4f4f4;">
+            <td style="text-align: center; color: orangered"><b>7</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>CategoryCreated</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> categoryId)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnCategoryCreated</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>CategoryCreatedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>categoryId <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>基本分类编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">基本分类创建(Created)事件<br/>
+            备注：当基本分类在创建的时候，需要发布此事件<br/>
+            使用范围：基本分类（Category）创建 操作中使用</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #ffffff;">
+            <td style="text-align: center; color: orangered"><b>8</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>CategoryChanged</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> categoryId)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnCategoryChanged</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>CategoryChangedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>categoryId <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>基本分类编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">基本分类变更(Changed)事件<br/>
+            备注：在 基本分类（Category）中的使用<br/>
+            使用范围：基本分类（Category）编辑 操作中使用</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #f4f4f4;">
+            <td style="text-align: center; color: orangered"><b>9</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>CategoryRemoved</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> categoryId)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnCategoryRemoved</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>CategoryRemovedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>categoryId <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>基本分类编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">基本分类移除(Remove)事件<br/>
+            备注：在 基本分类（Category）中的使用<br/>
+            使用范围：基本分类（Category）移除 操作中使用</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #ffffff;">
+            <td style="text-align: center; color: orangered"><b>10</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>ProductCreated</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> productId)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnProductCreated</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>ProductCreatedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>productId <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>商品编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">商品创建(Created)事件<br/>
+            备注：商品创建会同时将其关联的母商品（BaseProduct）、商品规格属性关系列表（ProductAttribute）、商品规格图片（ProductAttributesPicture）、<br/>
+                  商品条码列表（ProductBarCodes）、母商品文字详情（ProductDescription）、母商品图片详情列表（ProductDescriptionPicture）<br/>
+                  商品主图列表（ProductPictureDetail）、商品供应商关系列表（ProductsVendor）、商品单位列表（ProductUnit） 同步过来<br/>
+            使用范围：商品创建 操作中使用</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #f4f4f4;">
+            <td style="text-align: center; color: orangered"><b>11</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>ProductChanged</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> productId)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnProductChanged</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>ProductChangedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>productId <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>商品编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">商品变更(Changed)事件<br/>
+            备注：在母商品（BaseProduct）、商品规格属性关系（ProductAttribute）、商品规格属性图片（ProductAttributesPicture）、<br/>
+                    商品条码（ProductBarCodes）、母商品图文详情（ProductDescription、ProductDescriptionPicture）、<br/>
+                    商品主图（ProductPictureDetail）、商品供应商关系（ProductsVendor）、商品单位（ProductUnit）中的使用<br/>
+            使用范围：商品更改、母商品增删改,商品规格属性关系列表增删改、商品规格属性图片增删改、商品条码列表增删改、母商品图文详情增删改、<br/>
+                     商品主图增删改、商品供应商关系列表增删改、商品单位列表增删改 操作中使用</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #ffffff;">
+            <td style="text-align: center; color: orangered"><b>12</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>ProductRemoved</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> productId)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnProductRemoved</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>ProductRemovedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>productId <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>商品编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">商品移除(Remove)事件<br/>
+            备注： 只同步商品（Product）中的数据（更改状态）过来<br/>
+            使用范围：商品移除 操作中使用</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #f4f4f4;">
+            <td style="text-align: center; color: orangered"><b>13</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>ShopCreated</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> shopID)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnShopCreated</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>ShopCreatedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>shopID <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>门店编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">门店创建(Created)事件</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #ffffff;">
+            <td style="text-align: center; color: orangered"><b>14</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>ShopChanged</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> shopID)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnShopChanged</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>ShopChangedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>shopID <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>门店编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">门店变更(Changed)事件</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #f4f4f4;">
+            <td style="text-align: center; color: orangered"><b>15</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>ShopRemoved</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> shopID)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnShopRemoved</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>ShopRemovedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>shopID <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>门店编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">门店移除(Remove)事件</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #ffffff;">
+            <td style="text-align: center; color: orangered"><b>16</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>ShopCategoryChanged</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> categoryId)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnShopCategoryChanged</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>ShopCategoryChangedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>categoryId <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>运营分类编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">运营分类变更(Changed)事件<br/>
+            备注：在  运营分类（ShopCategory）中的使用<br/>
+            使用范围：运营分类（ShopCategory）编辑 操作中使用</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #f4f4f4;">
+            <td style="text-align: center; color: orangered"><b>17</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>ShopCategoryCreated</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> categoryId)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnShopCategoryCreated</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>ShopCategoryCreatedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>categoryId <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>运营分类编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">运营分类创建(Created)事件<br/>
+            备注：在  运营分类（ShopCategory）中的使用<br/>
+            使用范围：运营分类（ShopCategory）创建 操作中使用</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #ffffff;">
+            <td style="text-align: center; color: orangered"><b>18</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>ShopCategoryRemoved</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> categoryId)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnShopCategoryRemoved</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>ShopCategoryRemovedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>categoryId <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>运营分类编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">运营分类移除(Remove)事件<br/>
+            备注：在  运营分类（ShopCategory）中的使用<br/>
+            使用范围：运营分类（ShopCategory）移除 操作中使用</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #f4f4f4;">
+            <td style="text-align: center; color: orangered"><b>19</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>SysDictCreated</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>string</span> dictCode)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnSysDictCreated</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>SysDictCreatedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>dictCode <span style='color:blue'>string</span>&nbsp;<label style='font-size:12px;color:#888888;'>数据字典编码</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">数据字典创建(Created)事件<br/>
+            备注：在数据字典主表（SysDict）中的使用，同时同步 相关数据字典明细（SysDictDetail）列表数据<br/>
+            使用范围：数据字典（SysDict）创建 操作中使用</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #ffffff;">
+            <td style="text-align: center; color: orangered"><b>20</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>SysDictChanged</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>string</span> dictCode)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnSysDictChanged</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>SysDictChangedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>dictCode <span style='color:blue'>string</span>&nbsp;<label style='font-size:12px;color:#888888;'>数据字典编码</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">数据字典 变更(Changed)事件<br/>
+            备注：在数据字典主表（SysDict）、数据字典明细表（SysDictDetail）中的使用<br/>
+            使用范围：数据字典（SysDict）编辑,数据字典明细表（SysDictDetail）增删改 操作中使用</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #f4f4f4;">
+            <td style="text-align: center; color: orangered"><b>21</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>SysDictRemoved</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>string</span> dictCode)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnSysDictRemoved</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>SysDictRemovedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>dictCode <span style='color:blue'>string</span>&nbsp;<label style='font-size:12px;color:#888888;'>数据字典编码</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">数据字典移除(Remove)事件<br/>
+            备注：在数据字典主表（SysDict）移除 数据的 同时 移除 相关数据字典明细（SysDictDetail）列表数据<br/>
+            使用范围：数据字典（SysDict）移除 操作中使用</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #ffffff;">
+            <td style="text-align: center; color: orangered"><b>22</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>VendorCreated</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> vendorID)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnVendorCreated</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>VendorCreatedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>vendorID <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>供应商编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">供应商创建(Created)事件</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #f4f4f4;">
+            <td style="text-align: center; color: orangered"><b>23</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>VendorChanged</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> vendorID)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnVendorChanged</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>VendorChangedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>vendorID <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>供应商编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">供应商变更(Changed)事件</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #ffffff;">
+            <td style="text-align: center; color: orangered"><b>24</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>VendorRemoved</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> vendorID)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnVendorRemoved</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>VendorRemovedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>vendorID <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>供应商编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">供应商移除(Remove)事件</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #f4f4f4;">
+            <td style="text-align: center; color: orangered"><b>25</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>VendorTypeCreated</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> vendorTypeID)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnVendorTypeCreated</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>VendorTypeCreatedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>vendorTypeID <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>供应商类型编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">供应商类型创建(Created)事件</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #ffffff;">
+            <td style="text-align: center; color: orangered"><b>26</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>VendorTypeChanged</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> vendorTypeID)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnVendorTypeChanged</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>VendorTypeChangedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>vendorTypeID <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>供应商类型编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">供应商类型变更(Changed)事件</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #f4f4f4;">
+            <td style="text-align: center; color: orangered"><b>27</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>VendorTypeRemoved</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> vendorTypeID)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnVendorTypeRemoved</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>VendorTypeRemovedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>vendorTypeID <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>供应商类型编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">供应商类型移除(Remove)事件</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #ffffff;">
+            <td style="text-align: center; color: orangered"><b>28</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>WarehouseCreated</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> wid)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnWarehouseCreated</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>WarehouseCreatedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>wid <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>仓库编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">仓库创建(Created)事件</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #f4f4f4;">
+            <td style="text-align: center; color: orangered"><b>29</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>WarehouseChanged</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> wid)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnWarehouseChanged</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>WarehouseChangedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>wid <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>仓库编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">仓库改变(Changed)事件</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+        <tr style="background: #ffffff;">
+            <td style="text-align: center; color: orangered"><b>30</b></td>
+            <td style="padding-left: 5px; width:300px;"><b>WarehouseRemoved</b><span style="font-size: 7pt; color: #888;">(<span style='color:blue'>int</span> wid)</span></td>
+            <td style="padding-left: 5px; width:500px;">
+                <b>OnWarehouseRemoved</b><span style="font-size: 7pt; color: #888;">(<span style='color: blue'>object</span> sender, <span style='color: blue'>WarehouseRemovedEventAgrs</span> e)</span>
+            </td>
+            <td style="width:300px">
+                <ul style="margin-left: -20px;"><li>wid <span style='color:blue'>int</span>&nbsp;<label style='font-size:12px;color:#888888;'>仓库编号</label></li></ul>
+            </td>
+            <td style="padding: 5px; font-size:12px; line-height:20px">仓库移除(Removed)事件</td>
+            <td style="text-align:center;">Base</td>
+        </tr>
+    </table>
+</body>
+</html>
